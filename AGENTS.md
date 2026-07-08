@@ -19,7 +19,12 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 테스트 러너는 아직 없다. 도입 시 이 문서를 갱신할 것.
 
-파일 수정 시 자동 훅(.claude/settings.json): Prettier 포맷, `.ts/.tsx`는 `tsc --noEmit` 타입 검사가 실행되어 타입 오류가 즉시 피드백된다.
+자동 훅(.claude/settings.json):
+
+- **파일 수정 후**: Prettier 포맷, `.ts/.tsx`는 `tsc --noEmit` 타입 검사가 실행되어 타입 오류가 즉시 피드백된다.
+- **`.env*` 읽기**: `.env.example`/`.sample`/`.template` 외의 실제 env 파일은 읽기 전 확인(ask)을 거친다 — 시크릿이 컨텍스트에 노출되는 것을 막기 위함. 값은 런타임/MCP가 `process.env`로 받으므로 보통 파일을 직접 읽을 필요는 없다.
+- **`.env*` 커밋**: `git add`/`git commit`에 env 파일이 섞이면 차단(deny)된다.
+- **`rm -rf`**: 재귀 삭제 명령은 실행 전 확인(ask)을 거친다.
 
 ## Stack & Architecture
 

@@ -22,8 +22,18 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cmd=$(jq -r '.tool_input.command // \"\"'); case \"$cmd\" in *\"rm -rf\"*|*\"rm -fr\"*) echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"ask\",\"permissionDecisionReason\":\"재귀 삭제(rm -rf) 명령 — 실행 전 사용자 확인이 필요합니다\"}}' ;; esac",
+            "command": "cmd=$(jq -r '.tool_input.command // \"\"'); case \"$cmd\" in *\"rm -rf\"*|*\"rm -fr\"*) echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"ask\",\"permissionDecisionReason\":\"재귀 삭제(rm -rf) 명령 — 실행 전 사용자 확인이 필요합니다\"}}'; exit 0 ;; esac; case \"$cmd\" in *\"git add\"*.env*|*\"git commit\"*.env*|*\"git add .env\"*|*\"git commit .env\"*) echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\".env 파일은 커밋할 수 없습니다 — 시크릿이 git에 들어갑니다\"}}' ;; esac",
             "statusMessage": "명령 안전성 검사 중..."
+          }
+        ]
+      },
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // \"\"'); b=$(basename \"$f\"); case \"$b\" in .env|.env.*) case \"$b\" in .env.example|.env.sample|.env.template) ;; *) echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"ask\",\"permissionDecisionReason\":\".env 파일 읽기 — 시크릿이 컨텍스트에 노출됩니다. 정말 필요한지 확인하세요\"}}' ;; esac ;; esac",
+            "statusMessage": ".env 접근 검사 중..."
           }
         ]
       }
