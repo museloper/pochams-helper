@@ -75,12 +75,9 @@ export type StatKey = (typeof STAT_KEYS)[number];
 export type StatSpread = Record<StatKey, number>;
 
 /**
- * Base stats of a specific form.
- *
- * NOTE: championsbattledata reports in-game *displayed* stats (e.g. Garchomp
- * hp 183), which are NOT the mainline base-stat values (hp 108). Which
- * convention we store here is still open — see the "챔피언스 종족값 의미 확정"
- * item in docs/DECISIONS.md. The type shape is unaffected either way.
+ * Mainline base stats of a specific form (e.g. Garchomp hp 108). Recovered
+ * during ingest by inverting the source's Lv50/31IV/0EV/neutral values; see
+ * scripts/ingest-pokemon.mjs and docs/DECISIONS.md.
  */
 export type BaseStats = StatSpread;
 
@@ -139,15 +136,25 @@ export type FormKind = "base" | "mega" | "regional" | "other";
  * (e.g. Garchomp vs. Mega Garchomp).
  */
 export interface PokemonForm {
-  /** Display name of this form, e.g. "Garchomp" or "Mega Garchomp". */
+  /** Source display name of this form, e.g. "Garchomp" or "Mega Garchomp". */
   name: string;
   kind: FormKind;
+  /** Localized names for this specific form (e.g. "메가한카리아스"). */
+  names: LocalizedName;
+  /** Sprite image URL for this form. Hotlinked; see docs/DECISIONS.md. */
+  sprite: string;
   /** 1 or 2 types, in the game's listed order. */
   types: PokemonType[];
   baseStats: BaseStats;
   /** Possible abilities for this form (names only for now). */
   abilities: string[];
 }
+
+/** Supported UI languages for names. */
+export type Language = "ko" | "en" | "ja";
+
+/** A display name in each supported language. */
+export type LocalizedName = Record<Language, string>;
 
 /**
  * A species entry in the Champions roster. Groups the base form with any
@@ -156,8 +163,13 @@ export interface PokemonForm {
 export interface Pokemon {
   /** URL/lookup slug, e.g. "garchomp". */
   slug: string;
-  /** Species display name (base form), English. Korean labels map separately. */
-  name: string;
+  /** Species display name in each supported language. */
+  names: LocalizedName;
+  /**
+   * Sprite image URL. Hotlinked from the source (not redistributed into the
+   * repo); see the asset-license note in docs/DECISIONS.md.
+   */
+  sprite: string;
   /** At least one form; `forms[0]` is the base form. */
   forms: PokemonForm[];
   /** Learnable move slugs, shared across forms. */
