@@ -7,10 +7,44 @@
       "Bash(npm run build *)",
       "Bash(npm run lint)",
       "Bash(npm run lint *)",
+      "Bash(npm run format)",
       "Bash(npm install)",
       "Bash(npm install *)",
       "Bash(npx tsc)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(npx prettier *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd=$(jq -r '.tool_input.command // \"\"'); case \"$cmd\" in *\"rm -rf\"*|*\"rm -fr\"*) echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"ask\",\"permissionDecisionReason\":\"재귀 삭제(rm -rf) 명령 — 실행 전 사용자 확인이 필요합니다\"}}' ;; esac",
+            "statusMessage": "명령 안전성 검사 중..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_response.filePath // .tool_input.file_path' | { read -r f; npx prettier --write --ignore-unknown \"$f\"; } 2>/dev/null || true",
+            "statusMessage": "Prettier 포맷 중..."
+          },
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // .tool_response.filePath // \"\"'); case \"$f\" in *.ts|*.tsx) out=$(npx tsc --noEmit 2>&1) || { echo \"$out\" >&2; exit 2; } ;; esac",
+            "timeout": 120,
+            "statusMessage": "TypeScript 타입 검사 중..."
+          }
+        ]
+      }
     ]
   }
 }

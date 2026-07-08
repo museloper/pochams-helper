@@ -1,4 +1,5 @@
 <!-- BEGIN:nextjs-agent-rules -->
+
 # This is NOT the Next.js you know
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
@@ -14,8 +15,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - `npm run dev` — 개발 서버 (http://localhost:3000)
 - `npm run build` — 프로덕션 빌드 + 타입 체크 (변경 후 이걸로 검증)
 - `npm run lint` — ESLint
+- `npm run format` — Prettier 전체 포맷 (파일 수정 시 훅이 자동 실행하므로 보통 직접 돌릴 필요 없음)
 
 테스트 러너는 아직 없다. 도입 시 이 문서를 갱신할 것.
+
+파일 수정 시 자동 훅(.claude/settings.json): Prettier 포맷, `.ts/.tsx`는 `tsc --noEmit` 타입 검사가 실행되어 타입 오류가 즉시 피드백된다.
 
 ## Stack & Architecture
 
