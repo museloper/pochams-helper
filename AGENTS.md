@@ -3,3 +3,35 @@
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
+
+# 포켓몬 챔피언스 헬퍼 (pochams-helper)
+
+포켓몬 챔피언스 대전을 위한 도구 사이트. 팀 빌딩, 상성 계산, 데미지 계산 기능을 제공한다.
+검색 유입(SEO)용 정적 페이지 + 북마크해서 쓰는 인터랙티브 계산기, 두 성격을 모두 가진다.
+
+## Commands
+
+- `npm run dev` — 개발 서버 (http://localhost:3000)
+- `npm run build` — 프로덕션 빌드 + 타입 체크 (변경 후 이걸로 검증)
+- `npm run lint` — ESLint
+
+테스트 러너는 아직 없다. 도입 시 이 문서를 갱신할 것.
+
+## Stack & Architecture
+
+Next.js 16 (App Router, Turbopack) + React 19 + TypeScript + Tailwind CSS v4.
+
+- `src/app/` — 라우트. 루트 레이아웃이 `providers.tsx`(TanStack Query, staleTime 1시간)로 전체를 감싼다. 페이지 제목은 layout.tsx의 title template(`%s | 포켓몬 챔피언스 헬퍼`)이 조합한다.
+- `src/components/` — 공용 UI 컴포넌트
+- `src/stores/` — Zustand 스토어 (클라이언트 상태: 팀 구성, 계산기 입력 등)
+- `src/lib/` — 순수 로직·유틸 (상성/데미지 계산은 React 없는 순수 함수로 여기에 둔다)
+- import는 `@/*` 별칭 사용 (`@/lib/...`, `@/components/...`)
+
+렌더링 원칙: 검색 노출이 필요한 콘텐츠 페이지(포켓몬/기술 정보 등)는 서버 컴포넌트 + 정적 생성, 계산기·팀 빌더 같은 인터랙티브 부분만 클라이언트 컴포넌트로 분리한다.
+
+- Tailwind v4는 설정 파일 없이 `src/app/globals.css`에서 CSS로 설정한다 (tailwind.config 만들지 말 것).
+
+## Conventions
+
+- UI 문구와 문서는 한국어, 코드(변수·함수·주석)는 영어.
+- 기능 계획은 `docs/ROADMAP.md`, 기술 결정 기록은 `docs/DECISIONS.md`를 따른다. 과거 결정을 바꿀 때는 DECISIONS.md에 새 항목을 추가한다.
