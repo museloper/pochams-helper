@@ -21,10 +21,19 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 자동 훅(.claude/settings.json):
 
-- **파일 수정 후**: Prettier 포맷, `.ts/.tsx`는 `tsc --noEmit` 타입 검사가 실행되어 타입 오류가 즉시 피드백된다.
+- **파일 수정 후**: Prettier 포맷 → ESLint(`--fix`) → `.ts/.tsx`는 `tsc --noEmit` 타입 검사가 실행되어 포맷·린트·타입 오류가 즉시 피드백된다.
 - **`.env*` 읽기**: `.env.example`/`.sample`/`.template` 외의 실제 env 파일은 읽기 전 확인(ask)을 거친다 — 시크릿이 컨텍스트에 노출되는 것을 막기 위함. 값은 런타임/MCP가 `process.env`로 받으므로 보통 파일을 직접 읽을 필요는 없다.
 - **`.env*` 커밋**: `git add`/`git commit`에 env 파일이 섞이면 차단(deny)된다.
+- **커밋 시크릿 스캔**: `git commit` 직전 staged diff에서 시크릿 패턴(`sk-…`, `AKIA…`, `ghp_…`, PEM 개인키)이 감지되면 확인(ask)을 거친다.
+- **`tailwind.config` 생성 / `@config` 지시어**: 차단(deny). Tailwind v4는 CSS-first이므로 설정은 `globals.css`의 `@theme`에만 둔다 (Conventions 참고).
 - **`rm -rf`**: 재귀 삭제 명령은 실행 전 확인(ask)을 거친다.
+
+### 도입 예정 훅 (조건 충족 시 추가할 것)
+
+아래는 아직 넣지 않았지만, 조건이 갖춰지면 `.claude/settings.json`에 추가하기로 한 훅이다. 해당 조건에 도달한 에이전트/기여자는 이 항목을 참고해 훅을 넣고, 넣은 뒤 이 목록에서 위 활성 목록으로 옮긴다.
+
+- **테스트 자동 실행** — _조건: 테스트 러너(예: Vitest) 도입 시._ 상성/데미지 계산은 `src/lib/`의 순수 함수라 유닛 테스트에 적합하다. `src/lib/**` 수정 시 관련 테스트만 돌리는 PostToolUse 훅, 또는 세션 종료 시 전체 테스트 1회 도는 Stop 훅으로 넣는다.
+- **최종 빌드 검증(Stop 훅)** — _조건: 프로젝트가 커져 "깨진 상태로 세션 종료"의 비용이 커질 때._ 세션 종료 시 `npm run build`를 1회 돌려 타입/빌드를 최종 검증한다. 매번 돌면 무거우므로 그전까지는 보류.
 
 ## Stack & Architecture
 

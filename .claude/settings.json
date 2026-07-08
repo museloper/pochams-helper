@@ -24,6 +24,11 @@
             "type": "command",
             "command": "cmd=$(jq -r '.tool_input.command // \"\"'); case \"$cmd\" in *\"rm -rf\"*|*\"rm -fr\"*) echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"ask\",\"permissionDecisionReason\":\"재귀 삭제(rm -rf) 명령 — 실행 전 사용자 확인이 필요합니다\"}}'; exit 0 ;; esac; case \"$cmd\" in *\"git add\"*.env*|*\"git commit\"*.env*|*\"git add .env\"*|*\"git commit .env\"*) echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\".env 파일은 커밋할 수 없습니다 — 시크릿이 git에 들어갑니다\"}}' ;; esac",
             "statusMessage": "명령 안전성 검사 중..."
+          },
+          {
+            "type": "command",
+            "command": "cmd=$(jq -r '.tool_input.command // \"\"'); case \"$cmd\" in *\"git commit\"*) added=$(git diff --cached 2>/dev/null | grep -E '^\\+'); if printf '%s' \"$added\" | grep -qE '(sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)'; then echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"ask\",\"permissionDecisionReason\":\"커밋 diff에서 시크릿으로 보이는 문자열이 감지되었습니다 — 하드코딩된 키가 아닌지 확인하세요\"}}'; fi ;; esac",
+            "statusMessage": "커밋 시크릿 스캔 중..."
           }
         ]
       },
@@ -36,6 +41,16 @@
             "statusMessage": ".env 접근 검사 중..."
           }
         ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // \"\"'); case \"$f\" in *tailwind.config.*) echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Tailwind v4는 CSS-first — tailwind.config 대신 globals.css의 @theme 블록에 설정하세요 (AGENTS.md 규칙)\"}}'; exit 0 ;; esac; case \"$f\" in *.css) content=$(jq -r '.tool_input.content // .tool_input.new_string // \"\"'); case \"$content\" in *@config*) echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"@config 지시어 금지 — 설정 정본은 globals.css의 @theme입니다\"}}' ;; esac ;; esac",
+            "statusMessage": "Tailwind 설정 규칙 검사 중..."
+          }
+        ]
       }
     ],
     "PostToolUse": [
@@ -46,6 +61,12 @@
             "type": "command",
             "command": "jq -r '.tool_response.filePath // .tool_input.file_path' | { read -r f; npx prettier --write --ignore-unknown \"$f\"; } 2>/dev/null || true",
             "statusMessage": "Prettier 포맷 중..."
+          },
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // .tool_response.filePath // \"\"'); case \"$f\" in *.ts|*.tsx|*.js|*.jsx|*.mjs) out=$(npx eslint --fix \"$f\" 2>&1) || { echo \"$out\" >&2; exit 2; } ;; esac",
+            "timeout": 120,
+            "statusMessage": "ESLint 검사 중..."
           },
           {
             "type": "command",
