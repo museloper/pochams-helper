@@ -8,7 +8,7 @@ AI와 협업할 때 이 문서가 작업의 기준이 된다.
 
 - [x] 프로젝트 초기 세팅 (Next.js 16 + TS + Tailwind v4 + Zustand + TanStack Query)
 - [x] AI 협업 문서 체계 (AGENTS.md, ROADMAP, DECISIONS)
-- [ ] 데이터 소스 결정: 포켓몬 챔피언스 데이터를 어디서 가져올지 (→ DECISIONS.md에 기록)
+- [x] 데이터 소스 결정: 포켓몬 챔피언스 데이터를 어디서 가져올지 (→ DECISIONS.md에 기록)
 - [ ] 포켓몬 기본 데이터 타입 정의 (`src/lib/types.ts`)
 
 ## Milestone 2 — 핵심 기능
