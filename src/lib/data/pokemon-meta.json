@@ -3,9 +3,9 @@
     "https://championsbattledata.com/api/index",
     "https://pokeapi.co/api/v2/pokemon-species"
   ],
-  "sourceDataVersion": "20260707201023095",
-  "sourceGeneratedAt": "2026-07-07T20:10:23.095Z",
-  "ingestedAt": "2026-07-08T08:36:42.000Z",
+  "sourceDataVersion": "20260708135735746",
+  "sourceGeneratedAt": "2026-07-08T13:57:35.746Z",
+  "ingestedAt": "2026-07-09T01:30:38.462Z",
   "count": 235,
   "note": "Fan-sourced snapshot; not official. baseStats are mainline base stats (recovered from the source's Lv50/31IV/0EV/neutral values). Sprites are hotlinked."
 }

@@ -91,24 +91,45 @@ function toSpecies(slug) {
     .replace(/-forme?$/, "");
 }
 
-/** Localized name for one form, from the base species names + form context. */
-function formNames(form, kind, speciesNames, region) {
-  const en = form.form_name;
-  const koBase = speciesNames.ko;
-  const jaBase = speciesNames.ja;
-  if (kind === "mega" && koBase && jaBase) {
-    const xy = / X$/.test(en) ? "X" : / Y$/.test(en) ? "Y" : "";
-    return {
-      ko: `메가${koBase}${xy ? ` ${xy}` : ""}`,
-      en,
-      ja: `メガ${jaBase}${xy}`,
-    };
+const REGION_WORD = {
+  alolan: "Alolan",
+  galarian: "Galarian",
+  hisuian: "Hisuian",
+  paldean: "Paldean",
+};
+
+/** Base species slug of a mega form, e.g. "Mega Charizard X" -> "charizard". */
+function megaBaseSlug(formName) {
+  return slugify(formName.replace(/^mega\s+/i, "").replace(/\s+(x|y)$/i, ""));
+}
+
+/**
+ * Localized name for a form from the base species names + form context.
+ * Megas -> "메가{종}[ X/Y]"; regional -> "{지역} {종}"; distinct forms keep an
+ * English descriptor, e.g. Rotom Heat -> "로토무 (Heat)".
+ */
+function localizedName(form, sp, region) {
+  const en = form.name;
+  if (form.kind === "mega" && sp.ko && sp.ja) {
+    const xy = / X$/.test(en) ? " X" : / Y$/.test(en) ? " Y" : "";
+    return { ko: `메가${sp.ko}${xy}`, en, ja: `メガ${sp.ja}${xy.trim()}` };
   }
   const prefix = region ? REGION_PREFIX[region] : null;
+  // Descriptor: form name minus the region word and species name (e.g. "Heat").
+  let desc = en;
+  const regionWord = region ? REGION_WORD[region] : null;
+  if (regionWord && desc.toLowerCase().startsWith(regionWord.toLowerCase())) {
+    desc = desc.slice(regionWord.length).trim();
+  }
+  if (sp.en && desc.toLowerCase().startsWith(sp.en.toLowerCase())) {
+    desc = desc.slice(sp.en.length).trim();
+  }
+  const ko = sp.ko ? `${prefix?.ko ?? ""}${sp.ko}` : en;
+  const ja = sp.ja ? `${prefix?.ja ?? ""}${sp.ja}` : en;
   return {
-    ko: koBase ? `${prefix?.ko ?? ""}${koBase}` : en,
+    ko: sp.ko && desc ? `${ko} (${desc})` : ko,
     en,
-    ja: jaBase ? `${prefix?.ja ?? ""}${jaBase}` : en,
+    ja: sp.ja && desc ? `${ja} (${desc})` : ja,
   };
 }
 
@@ -117,16 +138,15 @@ function buildSprite(imagePath) {
   return path ? `${ASSET_BASE}/${encodeURI(path)}` : "";
 }
 
-function mapForm(f, speciesNames, region, warn) {
-  const kind = mapKind(f.form_kind);
+/** Map a raw source form to our shape (localized names attached later). */
+function mapForm(f, warn) {
   const types = (f.types ?? []).map((t) => t.toLowerCase());
   for (const t of types) {
     if (!POKEMON_TYPES.has(t)) warn(`unknown type "${t}" on ${f.form_name}`);
   }
   return {
     name: f.form_name,
-    kind,
-    names: formNames(f, kind, speciesNames, region),
+    kind: mapKind(f.form_kind),
     sprite: buildSprite(f.image_path),
     types,
     baseStats: {
@@ -165,7 +185,11 @@ async function fetchSpeciesNames(base) {
   const byLang = Object.fromEntries(
     data.names.map((n) => [n.language.name, n.name]),
   );
-  return { ko: byLang.ko ?? null, ja: byLang.ja ?? byLang["ja-Hrkt"] ?? null };
+  return {
+    ko: byLang.ko ?? null,
+    ja: byLang.ja ?? byLang["ja-Hrkt"] ?? null,
+    en: byLang.en ?? null,
+  };
 }
 
 async function main() {
@@ -187,22 +211,35 @@ async function main() {
   const nameEntries = await pMap(uniqueBases, async (base) => {
     const names = await fetchSpeciesNames(base);
     if (!names) warn(`no PokéAPI species for "${base}"`);
-    return [base, names ?? { ko: null, ja: null }];
+    return [base, names ?? { ko: null, ja: null, en: null }];
   });
   const speciesNames = Object.fromEntries(nameEntries);
 
   const roster = index.pokemon.map((entry) => {
     const base = toSpecies(entry.slug);
     const region = detectRegion(entry.slug);
-    const names = speciesNames[base] ?? { ko: null, ja: null };
-    const forms = (entry.summary?.forms ?? []).map((f) =>
-      mapForm(f, names, region, warn),
+    const sp = speciesNames[base] ?? { ko: null, ja: null, en: null };
+    if (!sp.ko) warn(`falling back to English for "${entry.slug}" (ko)`);
+
+    // The source lists a species' whole family in every entry, so pick the form
+    // whose name matches this entry's slug as the representative — not forms[0].
+    const raw = (entry.summary?.forms ?? []).map((f) => mapForm(f, warn));
+    const rep = raw.find((f) => slugify(f.name) === entry.slug) ?? raw[0];
+    if (!raw.some((f) => slugify(f.name) === entry.slug)) {
+      warn(`no slug-matching form for "${entry.slug}", using forms[0]`);
+    }
+    // Megas belong to their base entry only (avoids cross-entry duplicates).
+    const ownMegas = raw.filter(
+      (f) => f.kind === "mega" && megaBaseSlug(f.name) === entry.slug,
     );
-    if (!names.ko) warn(`falling back to English for "${entry.slug}" (ko)`);
+
+    const forms = [rep, ...ownMegas]
+      .filter(Boolean)
+      .map((f) => ({ ...f, names: localizedName(f, sp, region) }));
     const primary = forms[0];
     return {
       slug: entry.slug,
-      // Species-level identity mirrors the primary form (used by list/detail pages).
+      // Species-level identity mirrors the representative form.
       names: primary?.names ?? {
         ko: entry.name,
         en: entry.name,
