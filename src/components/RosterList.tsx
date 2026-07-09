@@ -194,14 +194,14 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                 (최대 2개, 둘 다 가진 포켓몬)
               </span>
             </p>
-            <div className="mb-4 flex flex-wrap gap-1.5">
+            <div className="mb-4 flex flex-wrap items-center gap-2">
               <button
                 type="button"
                 onClick={() => setSelectedTypes([])}
                 className={
                   selectedTypes.length === 0
-                    ? "rounded-full bg-gray-900 px-3 py-1 text-xs font-medium text-white dark:bg-white dark:text-gray-900"
-                    : "rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
+                    ? "flex h-10 w-10 items-center justify-center rounded-lg bg-gray-900 text-xs font-medium text-white dark:bg-white dark:text-gray-900"
+                    : "flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
                 }
               >
                 전체
@@ -216,16 +216,25 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                     type="button"
                     disabled={disabled}
                     onClick={() => toggleType(type)}
-                    style={{ backgroundColor: info.bg, color: info.fg }}
+                    title={info.ko}
+                    aria-label={info.ko}
+                    aria-pressed={active}
                     className={
                       active
-                        ? "rounded-full px-3 py-1 text-xs font-medium ring-2 ring-gray-900 ring-offset-1 dark:ring-white dark:ring-offset-gray-900"
+                        ? "rounded-lg ring-2 ring-gray-900 dark:ring-white"
                         : disabled
-                          ? "rounded-full px-3 py-1 text-xs font-medium opacity-25"
-                          : "rounded-full px-3 py-1 text-xs font-medium opacity-80 hover:opacity-100"
+                          ? "rounded-lg opacity-25"
+                          : "rounded-lg opacity-90 hover:opacity-100"
                     }
                   >
-                    {info.ko}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`/types/${type}.png`}
+                      alt={info.ko}
+                      width={40}
+                      height={40}
+                      className="h-10 w-10 rounded-lg"
+                    />
                   </button>
                 );
               })}
