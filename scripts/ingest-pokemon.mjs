@@ -53,6 +53,20 @@ const REGION_PREFIX = {
   paldean: { ko: "팔데아 ", ja: "パルデア" },
 };
 
+// Official form names, keyed by entry slug, overriding the generic name builder
+// for forms whose real names don't follow the "{종} ({desc})" pattern.
+const NAME_OVERRIDES = {
+  "rotom-heat": { ko: "히트로토무", en: "Heat Rotom", ja: "ヒートロトム" },
+  "rotom-wash": { ko: "워시로토무", en: "Wash Rotom", ja: "ウォッシュロトム" },
+  "rotom-frost": {
+    ko: "프로스트로토무",
+    en: "Frost Rotom",
+    ja: "フロストロトム",
+  },
+  "rotom-fan": { ko: "스핀로토무", en: "Fan Rotom", ja: "スピンロトム" },
+  "rotom-mow": { ko: "커트로토무", en: "Mow Rotom", ja: "カットロトム" },
+};
+
 /** "Dragon Claw" -> "dragon-claw". */
 function slugify(name) {
   return name
@@ -233,9 +247,14 @@ async function main() {
       (f) => f.kind === "mega" && megaBaseSlug(f.name) === entry.slug,
     );
 
-    const forms = [rep, ...ownMegas]
-      .filter(Boolean)
-      .map((f) => ({ ...f, names: localizedName(f, sp, region) }));
+    const forms = [rep, ...ownMegas].filter(Boolean).map((f, i) => ({
+      ...f,
+      // The representative form (i === 0) may have an official-name override.
+      names:
+        i === 0 && NAME_OVERRIDES[entry.slug]
+          ? NAME_OVERRIDES[entry.slug]
+          : localizedName(f, sp, region),
+    }));
     const primary = forms[0];
     return {
       slug: entry.slug,

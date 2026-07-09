@@ -7125,6 +7125,88 @@
     ]
   },
   {
+    "slug": "rotom-fan",
+    "names": {
+      "ko": "스핀로토무",
+      "en": "Fan Rotom",
+      "ja": "スピンロトム"
+    },
+    "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Fan.png",
+    "forms": [
+      {
+        "name": "Rotom Fan",
+        "kind": "other",
+        "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Fan.png",
+        "types": [
+          "electric",
+          "flying"
+        ],
+        "baseStats": {
+          "hp": 50,
+          "atk": 65,
+          "def": 107,
+          "spa": 105,
+          "spd": 107,
+          "spe": 86
+        },
+        "abilities": [
+          "Levitate"
+        ],
+        "names": {
+          "ko": "스핀로토무",
+          "en": "Fan Rotom",
+          "ja": "スピンロトム"
+        }
+      }
+    ],
+    "learnableMoves": [
+      "air-slash",
+      "charge",
+      "charge-beam",
+      "confuse-ray",
+      "dark-pulse",
+      "discharge",
+      "double-team",
+      "eerie-impulse",
+      "electric-terrain",
+      "electro-ball",
+      "electroweb",
+      "endure",
+      "facade",
+      "foul-play",
+      "helping-hand",
+      "hex",
+      "hyper-voice",
+      "light-screen",
+      "nasty-plot",
+      "night-shade",
+      "pain-split",
+      "poltergeist",
+      "protect",
+      "rain-dance",
+      "reflect",
+      "rest",
+      "rising-voltage",
+      "round",
+      "shadow-ball",
+      "sleep-talk",
+      "snore",
+      "spite",
+      "stored-power",
+      "substitute",
+      "sunny-day",
+      "thief",
+      "thunder",
+      "thunder-shock",
+      "thunder-wave",
+      "thunderbolt",
+      "trick",
+      "uproar",
+      "volt-switch",
+      "will-o-wisp"
+    ]
+  },
+  {
     "slug": "farigiraf",
     "names": {
       "ko": "키키링",
@@ -7982,6 +8064,88 @@
       "triple-axel",
       "water-pulse",
       "weather-ball",
+      "will-o-wisp"
+    ]
+  },
+  {
+    "slug": "rotom-frost",
+    "names": {
+      "ko": "프로스트로토무",
+      "en": "Frost Rotom",
+      "ja": "フロストロトム"
+    },
+    "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Frost.png",
+    "forms": [
+      {
+        "name": "Rotom Frost",
+        "kind": "other",
+        "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Frost.png",
+        "types": [
+          "electric",
+          "ice"
+        ],
+        "baseStats": {
+          "hp": 50,
+          "atk": 65,
+          "def": 107,
+          "spa": 105,
+          "spd": 107,
+          "spe": 86
+        },
+        "abilities": [
+          "Levitate"
+        ],
+        "names": {
+          "ko": "프로스트로토무",
+          "en": "Frost Rotom",
+          "ja": "フロストロトム"
+        }
+      }
+    ],
+    "learnableMoves": [
+      "blizzard",
+      "charge",
+      "charge-beam",
+      "confuse-ray",
+      "dark-pulse",
+      "discharge",
+      "double-team",
+      "eerie-impulse",
+      "electric-terrain",
+      "electro-ball",
+      "electroweb",
+      "endure",
+      "facade",
+      "foul-play",
+      "helping-hand",
+      "hex",
+      "hyper-voice",
+      "light-screen",
+      "nasty-plot",
+      "night-shade",
+      "pain-split",
+      "poltergeist",
+      "protect",
+      "rain-dance",
+      "reflect",
+      "rest",
+      "rising-voltage",
+      "round",
+      "shadow-ball",
+      "sleep-talk",
+      "snore",
+      "spite",
+      "stored-power",
+      "substitute",
+      "sunny-day",
+      "thief",
+      "thunder",
+      "thunder-shock",
+      "thunder-wave",
+      "thunderbolt",
+      "trick",
+      "uproar",
+      "volt-switch",
       "will-o-wisp"
     ]
   },
@@ -10960,6 +11124,88 @@
       "uproar",
       "x-scissor",
       "zen-headbutt"
+    ]
+  },
+  {
+    "slug": "rotom-heat",
+    "names": {
+      "ko": "히트로토무",
+      "en": "Heat Rotom",
+      "ja": "ヒートロトム"
+    },
+    "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Heat.png",
+    "forms": [
+      {
+        "name": "Rotom Heat",
+        "kind": "other",
+        "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Heat.png",
+        "types": [
+          "electric",
+          "fire"
+        ],
+        "baseStats": {
+          "hp": 50,
+          "atk": 65,
+          "def": 107,
+          "spa": 105,
+          "spd": 107,
+          "spe": 86
+        },
+        "abilities": [
+          "Levitate"
+        ],
+        "names": {
+          "ko": "히트로토무",
+          "en": "Heat Rotom",
+          "ja": "ヒートロトム"
+        }
+      }
+    ],
+    "learnableMoves": [
+      "charge",
+      "charge-beam",
+      "confuse-ray",
+      "dark-pulse",
+      "discharge",
+      "double-team",
+      "eerie-impulse",
+      "electric-terrain",
+      "electro-ball",
+      "electroweb",
+      "endure",
+      "facade",
+      "foul-play",
+      "helping-hand",
+      "hex",
+      "hyper-voice",
+      "light-screen",
+      "nasty-plot",
+      "night-shade",
+      "overheat",
+      "pain-split",
+      "poltergeist",
+      "protect",
+      "rain-dance",
+      "reflect",
+      "rest",
+      "rising-voltage",
+      "round",
+      "shadow-ball",
+      "sleep-talk",
+      "snore",
+      "spite",
+      "stored-power",
+      "substitute",
+      "sunny-day",
+      "thief",
+      "thunder",
+      "thunder-shock",
+      "thunder-wave",
+      "thunderbolt",
+      "trick",
+      "uproar",
+      "volt-switch",
+      "will-o-wisp"
     ]
   },
   {
@@ -16032,6 +16278,88 @@
     ]
   },
   {
+    "slug": "rotom-mow",
+    "names": {
+      "ko": "커트로토무",
+      "en": "Mow Rotom",
+      "ja": "カットロトム"
+    },
+    "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Mow.png",
+    "forms": [
+      {
+        "name": "Rotom Mow",
+        "kind": "other",
+        "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Mow.png",
+        "types": [
+          "electric",
+          "grass"
+        ],
+        "baseStats": {
+          "hp": 50,
+          "atk": 65,
+          "def": 107,
+          "spa": 105,
+          "spd": 107,
+          "spe": 86
+        },
+        "abilities": [
+          "Levitate"
+        ],
+        "names": {
+          "ko": "커트로토무",
+          "en": "Mow Rotom",
+          "ja": "カットロトム"
+        }
+      }
+    ],
+    "learnableMoves": [
+      "charge",
+      "charge-beam",
+      "confuse-ray",
+      "dark-pulse",
+      "discharge",
+      "double-team",
+      "eerie-impulse",
+      "electric-terrain",
+      "electro-ball",
+      "electroweb",
+      "endure",
+      "facade",
+      "foul-play",
+      "helping-hand",
+      "hex",
+      "hyper-voice",
+      "leaf-storm",
+      "light-screen",
+      "nasty-plot",
+      "night-shade",
+      "pain-split",
+      "poltergeist",
+      "protect",
+      "rain-dance",
+      "reflect",
+      "rest",
+      "rising-voltage",
+      "round",
+      "shadow-ball",
+      "sleep-talk",
+      "snore",
+      "spite",
+      "stored-power",
+      "substitute",
+      "sunny-day",
+      "thief",
+      "thunder",
+      "thunder-shock",
+      "thunder-wave",
+      "thunderbolt",
+      "trick",
+      "uproar",
+      "volt-switch",
+      "will-o-wisp"
+    ]
+  },
+  {
     "slug": "mr-rime",
     "names": {
       "ko": "마임꽁꽁",
@@ -19075,416 +19403,6 @@
       "foul-play",
       "helping-hand",
       "hex",
-      "hyper-voice",
-      "light-screen",
-      "nasty-plot",
-      "night-shade",
-      "pain-split",
-      "poltergeist",
-      "protect",
-      "rain-dance",
-      "reflect",
-      "rest",
-      "rising-voltage",
-      "round",
-      "shadow-ball",
-      "sleep-talk",
-      "snore",
-      "spite",
-      "stored-power",
-      "substitute",
-      "sunny-day",
-      "thief",
-      "thunder",
-      "thunder-shock",
-      "thunder-wave",
-      "thunderbolt",
-      "trick",
-      "uproar",
-      "volt-switch",
-      "will-o-wisp"
-    ]
-  },
-  {
-    "slug": "rotom-fan",
-    "names": {
-      "ko": "로토무 (Fan)",
-      "en": "Rotom Fan",
-      "ja": "ロトム (Fan)"
-    },
-    "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Fan.png",
-    "forms": [
-      {
-        "name": "Rotom Fan",
-        "kind": "other",
-        "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Fan.png",
-        "types": [
-          "electric",
-          "flying"
-        ],
-        "baseStats": {
-          "hp": 50,
-          "atk": 65,
-          "def": 107,
-          "spa": 105,
-          "spd": 107,
-          "spe": 86
-        },
-        "abilities": [
-          "Levitate"
-        ],
-        "names": {
-          "ko": "로토무 (Fan)",
-          "en": "Rotom Fan",
-          "ja": "ロトム (Fan)"
-        }
-      }
-    ],
-    "learnableMoves": [
-      "air-slash",
-      "charge",
-      "charge-beam",
-      "confuse-ray",
-      "dark-pulse",
-      "discharge",
-      "double-team",
-      "eerie-impulse",
-      "electric-terrain",
-      "electro-ball",
-      "electroweb",
-      "endure",
-      "facade",
-      "foul-play",
-      "helping-hand",
-      "hex",
-      "hyper-voice",
-      "light-screen",
-      "nasty-plot",
-      "night-shade",
-      "pain-split",
-      "poltergeist",
-      "protect",
-      "rain-dance",
-      "reflect",
-      "rest",
-      "rising-voltage",
-      "round",
-      "shadow-ball",
-      "sleep-talk",
-      "snore",
-      "spite",
-      "stored-power",
-      "substitute",
-      "sunny-day",
-      "thief",
-      "thunder",
-      "thunder-shock",
-      "thunder-wave",
-      "thunderbolt",
-      "trick",
-      "uproar",
-      "volt-switch",
-      "will-o-wisp"
-    ]
-  },
-  {
-    "slug": "rotom-frost",
-    "names": {
-      "ko": "로토무 (Frost)",
-      "en": "Rotom Frost",
-      "ja": "ロトム (Frost)"
-    },
-    "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Frost.png",
-    "forms": [
-      {
-        "name": "Rotom Frost",
-        "kind": "other",
-        "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Frost.png",
-        "types": [
-          "electric",
-          "ice"
-        ],
-        "baseStats": {
-          "hp": 50,
-          "atk": 65,
-          "def": 107,
-          "spa": 105,
-          "spd": 107,
-          "spe": 86
-        },
-        "abilities": [
-          "Levitate"
-        ],
-        "names": {
-          "ko": "로토무 (Frost)",
-          "en": "Rotom Frost",
-          "ja": "ロトム (Frost)"
-        }
-      }
-    ],
-    "learnableMoves": [
-      "blizzard",
-      "charge",
-      "charge-beam",
-      "confuse-ray",
-      "dark-pulse",
-      "discharge",
-      "double-team",
-      "eerie-impulse",
-      "electric-terrain",
-      "electro-ball",
-      "electroweb",
-      "endure",
-      "facade",
-      "foul-play",
-      "helping-hand",
-      "hex",
-      "hyper-voice",
-      "light-screen",
-      "nasty-plot",
-      "night-shade",
-      "pain-split",
-      "poltergeist",
-      "protect",
-      "rain-dance",
-      "reflect",
-      "rest",
-      "rising-voltage",
-      "round",
-      "shadow-ball",
-      "sleep-talk",
-      "snore",
-      "spite",
-      "stored-power",
-      "substitute",
-      "sunny-day",
-      "thief",
-      "thunder",
-      "thunder-shock",
-      "thunder-wave",
-      "thunderbolt",
-      "trick",
-      "uproar",
-      "volt-switch",
-      "will-o-wisp"
-    ]
-  },
-  {
-    "slug": "rotom-heat",
-    "names": {
-      "ko": "로토무 (Heat)",
-      "en": "Rotom Heat",
-      "ja": "ロトム (Heat)"
-    },
-    "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Heat.png",
-    "forms": [
-      {
-        "name": "Rotom Heat",
-        "kind": "other",
-        "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Heat.png",
-        "types": [
-          "electric",
-          "fire"
-        ],
-        "baseStats": {
-          "hp": 50,
-          "atk": 65,
-          "def": 107,
-          "spa": 105,
-          "spd": 107,
-          "spe": 86
-        },
-        "abilities": [
-          "Levitate"
-        ],
-        "names": {
-          "ko": "로토무 (Heat)",
-          "en": "Rotom Heat",
-          "ja": "ロトム (Heat)"
-        }
-      }
-    ],
-    "learnableMoves": [
-      "charge",
-      "charge-beam",
-      "confuse-ray",
-      "dark-pulse",
-      "discharge",
-      "double-team",
-      "eerie-impulse",
-      "electric-terrain",
-      "electro-ball",
-      "electroweb",
-      "endure",
-      "facade",
-      "foul-play",
-      "helping-hand",
-      "hex",
-      "hyper-voice",
-      "light-screen",
-      "nasty-plot",
-      "night-shade",
-      "overheat",
-      "pain-split",
-      "poltergeist",
-      "protect",
-      "rain-dance",
-      "reflect",
-      "rest",
-      "rising-voltage",
-      "round",
-      "shadow-ball",
-      "sleep-talk",
-      "snore",
-      "spite",
-      "stored-power",
-      "substitute",
-      "sunny-day",
-      "thief",
-      "thunder",
-      "thunder-shock",
-      "thunder-wave",
-      "thunderbolt",
-      "trick",
-      "uproar",
-      "volt-switch",
-      "will-o-wisp"
-    ]
-  },
-  {
-    "slug": "rotom-mow",
-    "names": {
-      "ko": "로토무 (Mow)",
-      "en": "Rotom Mow",
-      "ja": "ロトム (Mow)"
-    },
-    "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Mow.png",
-    "forms": [
-      {
-        "name": "Rotom Mow",
-        "kind": "other",
-        "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Mow.png",
-        "types": [
-          "electric",
-          "grass"
-        ],
-        "baseStats": {
-          "hp": 50,
-          "atk": 65,
-          "def": 107,
-          "spa": 105,
-          "spd": 107,
-          "spe": 86
-        },
-        "abilities": [
-          "Levitate"
-        ],
-        "names": {
-          "ko": "로토무 (Mow)",
-          "en": "Rotom Mow",
-          "ja": "ロトム (Mow)"
-        }
-      }
-    ],
-    "learnableMoves": [
-      "charge",
-      "charge-beam",
-      "confuse-ray",
-      "dark-pulse",
-      "discharge",
-      "double-team",
-      "eerie-impulse",
-      "electric-terrain",
-      "electro-ball",
-      "electroweb",
-      "endure",
-      "facade",
-      "foul-play",
-      "helping-hand",
-      "hex",
-      "hyper-voice",
-      "leaf-storm",
-      "light-screen",
-      "nasty-plot",
-      "night-shade",
-      "pain-split",
-      "poltergeist",
-      "protect",
-      "rain-dance",
-      "reflect",
-      "rest",
-      "rising-voltage",
-      "round",
-      "shadow-ball",
-      "sleep-talk",
-      "snore",
-      "spite",
-      "stored-power",
-      "substitute",
-      "sunny-day",
-      "thief",
-      "thunder",
-      "thunder-shock",
-      "thunder-wave",
-      "thunderbolt",
-      "trick",
-      "uproar",
-      "volt-switch",
-      "will-o-wisp"
-    ]
-  },
-  {
-    "slug": "rotom-wash",
-    "names": {
-      "ko": "로토무 (Wash)",
-      "en": "Rotom Wash",
-      "ja": "ロトム (Wash)"
-    },
-    "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Wash.png",
-    "forms": [
-      {
-        "name": "Rotom Wash",
-        "kind": "other",
-        "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Wash.png",
-        "types": [
-          "electric",
-          "water"
-        ],
-        "baseStats": {
-          "hp": 50,
-          "atk": 65,
-          "def": 107,
-          "spa": 105,
-          "spd": 107,
-          "spe": 86
-        },
-        "abilities": [
-          "Levitate"
-        ],
-        "names": {
-          "ko": "로토무 (Wash)",
-          "en": "Rotom Wash",
-          "ja": "ロトム (Wash)"
-        }
-      }
-    ],
-    "learnableMoves": [
-      "charge",
-      "charge-beam",
-      "confuse-ray",
-      "dark-pulse",
-      "discharge",
-      "double-team",
-      "eerie-impulse",
-      "electric-terrain",
-      "electro-ball",
-      "electroweb",
-      "endure",
-      "facade",
-      "foul-play",
-      "helping-hand",
-      "hex",
-      "hydro-pump",
       "hyper-voice",
       "light-screen",
       "nasty-plot",
@@ -25017,6 +24935,88 @@
       "wild-charge",
       "will-o-wisp",
       "zen-headbutt"
+    ]
+  },
+  {
+    "slug": "rotom-wash",
+    "names": {
+      "ko": "워시로토무",
+      "en": "Wash Rotom",
+      "ja": "ウォッシュロトム"
+    },
+    "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Wash.png",
+    "forms": [
+      {
+        "name": "Rotom Wash",
+        "kind": "other",
+        "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Rotom%20Wash.png",
+        "types": [
+          "electric",
+          "water"
+        ],
+        "baseStats": {
+          "hp": 50,
+          "atk": 65,
+          "def": 107,
+          "spa": 105,
+          "spd": 107,
+          "spe": 86
+        },
+        "abilities": [
+          "Levitate"
+        ],
+        "names": {
+          "ko": "워시로토무",
+          "en": "Wash Rotom",
+          "ja": "ウォッシュロトム"
+        }
+      }
+    ],
+    "learnableMoves": [
+      "charge",
+      "charge-beam",
+      "confuse-ray",
+      "dark-pulse",
+      "discharge",
+      "double-team",
+      "eerie-impulse",
+      "electric-terrain",
+      "electro-ball",
+      "electroweb",
+      "endure",
+      "facade",
+      "foul-play",
+      "helping-hand",
+      "hex",
+      "hydro-pump",
+      "hyper-voice",
+      "light-screen",
+      "nasty-plot",
+      "night-shade",
+      "pain-split",
+      "poltergeist",
+      "protect",
+      "rain-dance",
+      "reflect",
+      "rest",
+      "rising-voltage",
+      "round",
+      "shadow-ball",
+      "sleep-talk",
+      "snore",
+      "spite",
+      "stored-power",
+      "substitute",
+      "sunny-day",
+      "thief",
+      "thunder",
+      "thunder-shock",
+      "thunder-wave",
+      "thunderbolt",
+      "trick",
+      "uproar",
+      "volt-switch",
+      "will-o-wisp"
     ]
   },
   {
