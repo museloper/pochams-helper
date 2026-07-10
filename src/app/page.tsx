@@ -17,10 +17,11 @@ const FEATURES: Feature[] = [
     ready: true,
   },
   {
-    emoji: "🛡️",
-    title: "팀 빌더",
-    desc: "6마리 구성과 팀 약점 요약",
-    ready: false,
+    href: "/speed",
+    emoji: "⚡",
+    title: "스피드 계산기",
+    desc: "성격·노력치별 스피드 라인 비교",
+    ready: true,
   },
   {
     emoji: "🔀",
