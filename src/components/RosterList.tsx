@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import type { Language, Pokemon, PokemonForm, PokemonType } from "@/lib/types";
 import { POKEMON_TYPES, STAT_KEYS } from "@/lib/types";
 import { TYPE_INFO } from "@/lib/typeInfo";
@@ -13,7 +14,7 @@ const LANGUAGES: { value: Language; label: string }[] = [
 ];
 
 /** A single displayable card: a species' primary form, or one of its megas. */
-type Unit = PokemonForm & { key: string };
+type Unit = PokemonForm & { key: string; slug: string };
 
 function bst(form: PokemonForm): number {
   return STAT_KEYS.reduce((sum, key) => sum + form.baseStats[key], 0);
@@ -51,6 +52,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
         return shown.map((form) => ({
           ...form,
           key: `${entry.slug}|${form.name}`,
+          slug: entry.slug,
         }));
       }),
     [pokemon],
@@ -122,38 +124,40 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
 
       <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((unit) => (
-          <li
-            key={unit.key}
-            className="flex items-center gap-3 rounded-lg border border-gray-200 p-3 dark:border-gray-700"
-          >
-            {/* Sprite is hotlinked from the source; plain img avoids remote-image config. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={unit.sprite}
-              alt={unit.names[lang]}
-              width={64}
-              height={64}
-              loading="lazy"
-              className="h-16 w-16 shrink-0 object-contain"
-            />
-            <div className="min-w-0 flex-1">
-              <div className="flex items-baseline justify-between gap-2">
-                <span className="truncate font-semibold">
-                  {unit.names[lang]}
-                </span>
-                <span
-                  className="shrink-0 text-xs text-gray-400"
-                  title="종족값 총합"
-                >
-                  종족값 {bst(unit)}
-                </span>
+          <li key={unit.key}>
+            <Link
+              href={`/pokemon/${unit.slug}`}
+              className="flex items-center gap-3 rounded-lg border border-gray-200 p-3 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500"
+            >
+              {/* Sprite is hotlinked from the source; plain img avoids remote-image config. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={unit.sprite}
+                alt={unit.names[lang]}
+                width={64}
+                height={64}
+                loading="lazy"
+                className="h-16 w-16 shrink-0 object-contain"
+              />
+              <div className="min-w-0 flex-1">
+                <div className="flex items-baseline justify-between gap-2">
+                  <span className="truncate font-semibold">
+                    {unit.names[lang]}
+                  </span>
+                  <span
+                    className="shrink-0 text-xs text-gray-400"
+                    title="종족값 총합"
+                  >
+                    종족값 {bst(unit)}
+                  </span>
+                </div>
+                <div className="mt-1 flex flex-wrap gap-1">
+                  {unit.types.map((type) => (
+                    <TypeBadge key={type} type={type} />
+                  ))}
+                </div>
               </div>
-              <div className="mt-1 flex flex-wrap gap-1">
-                {unit.types.map((type) => (
-                  <TypeBadge key={type} type={type} />
-                ))}
-              </div>
-            </div>
+            </Link>
           </li>
         ))}
       </ul>
