@@ -1,17 +1,26 @@
 import Link from "next/link";
+import { roster } from "@/lib/data/pokemon";
 
 type Feature = {
   href?: string;
   emoji: string;
+  /** Optional sprite shown instead of the emoji. */
+  image?: string;
   title: string;
   desc: string;
   ready: boolean;
 };
 
+/** Sprite of a species' base form, used for feature-card icons. */
+function spriteFor(slug: string): string | undefined {
+  return roster.find((p) => p.slug === slug)?.forms[0]?.sprite;
+}
+
 const FEATURES: Feature[] = [
   {
     href: "/pokemon",
     emoji: "📖",
+    image: spriteFor("rotom"),
     title: "포켓몬 도감",
     desc: "로스터 · 종족값 · 타입",
     ready: true,
@@ -19,6 +28,7 @@ const FEATURES: Feature[] = [
   {
     href: "/speed",
     emoji: "⚡",
+    image: spriteFor("pikachu"),
     title: "스피드 계산기",
     desc: "성격·노력치별 스피드 라인 비교",
     ready: true,
@@ -46,7 +56,18 @@ function FeatureCard({ feature }: { feature: Feature }) {
           : "flex h-full flex-col rounded-xl border border-gray-200 p-5 opacity-60 dark:border-gray-700"
       }
     >
-      <span className="text-3xl">{feature.emoji}</span>
+      {feature.image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={feature.image}
+          alt=""
+          width={48}
+          height={48}
+          className="h-12 w-12 object-contain"
+        />
+      ) : (
+        <span className="flex h-12 items-center text-3xl">{feature.emoji}</span>
+      )}
       <span className="mt-3 font-semibold">{feature.title}</span>
       <span className="mt-1 text-sm text-gray-500 dark:text-gray-400">
         {feature.desc}
