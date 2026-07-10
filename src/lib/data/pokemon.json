@@ -265,9 +265,9 @@
   {
     "slug": "aegislash-shield-forme",
     "names": {
-      "ko": "킬가르도 (Shield Forme)",
-      "en": "Aegislash Shield Forme",
-      "ja": "ギルガルド (Shield Forme)"
+      "ko": "킬가르도",
+      "en": "Aegislash",
+      "ja": "ギルガルド"
     },
     "sprite": "https://championsbattledata.com/pokemon_champions_assets/pokemon/Aegislash%20Shield%20Forme.png",
     "forms": [
@@ -291,9 +291,9 @@
           "Stance Change"
         ],
         "names": {
-          "ko": "킬가르도 (Shield Forme)",
-          "en": "Aegislash Shield Forme",
-          "ja": "ギルガルド (Shield Forme)"
+          "ko": "킬가르도",
+          "en": "Aegislash",
+          "ja": "ギルガルド"
         }
       }
     ],

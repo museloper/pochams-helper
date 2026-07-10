@@ -65,6 +65,12 @@ const NAME_OVERRIDES = {
   },
   "rotom-fan": { ko: "스핀로토무", en: "Fan Rotom", ja: "スピンロトム" },
   "rotom-mow": { ko: "커트로토무", en: "Mow Rotom", ja: "カットロトム" },
+  // Aegislash's default forme — drop the "(Shield Forme)" descriptor.
+  "aegislash-shield-forme": {
+    ko: "킬가르도",
+    en: "Aegislash",
+    ja: "ギルガルド",
+  },
 };
 
 /** "Dragon Claw" -> "dragon-claw". */
