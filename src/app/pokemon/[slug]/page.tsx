@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { roster } from "@/lib/data/pokemon";
-import type { PokemonForm, StatKey } from "@/lib/types";
+import { moves as moveDict } from "@/lib/data/moves";
+import type { Move, PokemonForm, StatKey } from "@/lib/types";
 import { STAT_KEYS } from "@/lib/types";
 import { TypeBadge } from "@/components/TypeBadge";
+import { MoveList } from "@/components/MoveList";
 
 const STAT_LABEL: Record<StatKey, string> = {
   hp: "HP",
@@ -14,18 +16,20 @@ const STAT_LABEL: Record<StatKey, string> = {
   spd: "특수방어",
   spe: "스피드",
 };
+// Per-stat bar colors (H·A·B·C·D·S), the conventional Pokémon stat palette.
+const STAT_COLOR: Record<StatKey, string> = {
+  hp: "#EF5350",
+  atk: "#FF8A3D",
+  def: "#FBC02D",
+  spa: "#5C9DF5",
+  spd: "#66BB6A",
+  spe: "#EC5D9E",
+};
 // Bar scaling; base stats rarely exceed this, values above just fill the bar.
 const STAT_MAX = 200;
 
 function bst(form: PokemonForm): number {
   return STAT_KEYS.reduce((sum, key) => sum + form.baseStats[key], 0);
-}
-
-function humanizeMove(slug: string): string {
-  return slug
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
 }
 
 export function generateStaticParams() {
@@ -94,8 +98,11 @@ function FormPanel({ form }: { form: PokemonForm }) {
                 </dd>
                 <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-100 dark:bg-gray-800">
                   <div
-                    className="h-full rounded-full bg-emerald-500"
-                    style={{ width: `${pct}%` }}
+                    className="h-full rounded-full"
+                    style={{
+                      width: `${pct}%`,
+                      backgroundColor: STAT_COLOR[key],
+                    }}
                   />
                 </div>
               </div>
@@ -111,10 +118,16 @@ function FormPanel({ form }: { form: PokemonForm }) {
         <div className="flex flex-wrap gap-2">
           {form.abilities.map((ability) => (
             <span
-              key={ability}
-              className="rounded-lg border border-gray-200 px-2.5 py-1 text-sm dark:border-gray-700"
+              key={ability.en}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 px-2.5 py-1 text-sm dark:border-gray-700"
+              title={ability.en}
             >
-              {ability}
+              {ability.ko}
+              {ability.hidden && (
+                <span className="rounded bg-purple-100 px-1 text-[10px] font-medium text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">
+                  드림
+                </span>
+              )}
             </span>
           ))}
         </div>
@@ -132,6 +145,10 @@ export default async function PokemonDetailPage({
   const pokemon = roster.find((p) => p.slug === slug);
   if (!pokemon) notFound();
 
+  const learnable: Move[] = pokemon.learnableMoves
+    .map((moveSlug) => moveDict[moveSlug])
+    .filter((move): move is Move => Boolean(move));
+
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 p-6">
       <Link
@@ -148,19 +165,10 @@ export default async function PokemonDetailPage({
       </div>
 
       <section className="mt-6">
-        <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400">
-          배울 수 있는 기술 ({pokemon.learnableMoves.length})
+        <h3 className="mb-3 text-sm font-semibold text-gray-500 dark:text-gray-400">
+          배울 수 있는 기술 ({learnable.length})
         </h3>
-        <div className="flex flex-wrap gap-1.5">
-          {pokemon.learnableMoves.map((move) => (
-            <span
-              key={move}
-              className="rounded-md bg-gray-100 px-2 py-0.5 text-xs text-gray-600 dark:bg-gray-800 dark:text-gray-300"
-            >
-              {humanizeMove(move)}
-            </span>
-          ))}
-        </div>
+        <MoveList moves={learnable} />
       </section>
     </main>
   );

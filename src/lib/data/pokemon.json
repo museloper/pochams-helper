@@ -24,15 +24,23 @@
           "spd": 85,
           "spe": 60
         },
-        "abilities": [
-          "Snow Warning",
-          "Soundproof"
-        ],
         "names": {
           "ko": "눈설왕",
           "en": "Abomasnow",
           "ja": "ユキノオー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "눈퍼뜨리기",
+            "en": "Snow Warning",
+            "hidden": false
+          },
+          {
+            "ko": "방음",
+            "en": "Soundproof",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Abomasnow",
@@ -50,14 +58,18 @@
           "spd": 105,
           "spe": 30
         },
-        "abilities": [
-          "Snow Warning"
-        ],
         "names": {
           "ko": "메가눈설왕",
           "en": "Mega Abomasnow",
           "ja": "メガユキノオー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "눈퍼뜨리기",
+            "en": "Snow Warning",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -152,16 +164,28 @@
           "spd": 60,
           "spe": 75
         },
-        "abilities": [
-          "Pressure",
-          "Super Luck",
-          "Justified"
-        ],
         "names": {
           "ko": "앱솔",
           "en": "Absol",
           "ja": "アブソル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "프레셔",
+            "en": "Pressure",
+            "hidden": false
+          },
+          {
+            "ko": "대운",
+            "en": "Super Luck",
+            "hidden": false
+          },
+          {
+            "ko": "정의의마음",
+            "en": "Justified",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Absol",
@@ -178,14 +202,18 @@
           "spd": 60,
           "spe": 115
         },
-        "abilities": [
-          "Magic Bounce"
-        ],
         "names": {
           "ko": "메가앱솔",
           "en": "Mega Absol",
           "ja": "メガアブソル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "매직미러",
+            "en": "Magic Bounce",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -287,14 +315,18 @@
           "spd": 140,
           "spe": 60
         },
-        "abilities": [
-          "Stance Change"
-        ],
         "names": {
           "ko": "킬가르도",
           "en": "Aegislash",
           "ja": "ギルガルド"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "배틀스위치",
+            "en": "Stance Change",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -316,7 +348,7 @@
       "hyper-beam",
       "iron-defense",
       "iron-head",
-      "king-s-shield",
+      "kings-shield",
       "metal-sound",
       "night-slash",
       "poltergeist",
@@ -370,16 +402,28 @@
           "spd": 75,
           "spe": 130
         },
-        "abilities": [
-          "Rock Head",
-          "Pressure",
-          "Unnerve"
-        ],
         "names": {
           "ko": "프테라",
           "en": "Aerodactyl",
           "ja": "プテラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "돌머리",
+            "en": "Rock Head",
+            "hidden": false
+          },
+          {
+            "ko": "프레셔",
+            "en": "Pressure",
+            "hidden": false
+          },
+          {
+            "ko": "긴장감",
+            "en": "Unnerve",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Aerodactyl",
@@ -397,14 +441,18 @@
           "spd": 95,
           "spe": 150
         },
-        "abilities": [
-          "Tough Claws"
-        ],
         "names": {
           "ko": "메가프테라",
           "en": "Mega Aerodactyl",
           "ja": "メガプテラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "단단한발톱",
+            "en": "Tough Claws",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -493,16 +541,28 @@
           "spd": 60,
           "spe": 50
         },
-        "abilities": [
-          "Sturdy",
-          "Rock Head",
-          "Heavy Metal"
-        ],
         "names": {
           "ko": "보스로라",
           "en": "Aggron",
           "ja": "ボスゴドラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "옹골참",
+            "en": "Sturdy",
+            "hidden": false
+          },
+          {
+            "ko": "돌머리",
+            "en": "Rock Head",
+            "hidden": false
+          },
+          {
+            "ko": "헤비메탈",
+            "en": "Heavy Metal",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Aggron",
@@ -519,14 +579,18 @@
           "spd": 80,
           "spe": 50
         },
-        "abilities": [
-          "Filter"
-        ],
         "names": {
           "ko": "메가보스로라",
           "en": "Mega Aggron",
           "ja": "メガボスゴドラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "필터",
+            "en": "Filter",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -639,16 +703,28 @@
           "spd": 95,
           "spe": 120
         },
-        "abilities": [
-          "Synchronize",
-          "Inner Focus",
-          "Magic Guard"
-        ],
         "names": {
           "ko": "후딘",
           "en": "Alakazam",
           "ja": "フーディン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "싱크로",
+            "en": "Synchronize",
+            "hidden": false
+          },
+          {
+            "ko": "정신력",
+            "en": "Inner Focus",
+            "hidden": false
+          },
+          {
+            "ko": "매직가드",
+            "en": "Magic Guard",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Alakazam",
@@ -665,14 +741,18 @@
           "spd": 105,
           "spe": 150
         },
-        "abilities": [
-          "Trace"
-        ],
         "names": {
           "ko": "메가후딘",
           "en": "Mega Alakazam",
           "ja": "メガフーディン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "트레이스",
+            "en": "Trace",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -762,15 +842,23 @@
           "spd": 121,
           "spe": 64
         },
-        "abilities": [
-          "Sweet Veil",
-          "Aroma Veil"
-        ],
         "names": {
           "ko": "마휘핑",
           "en": "Alcremie",
           "ja": "マホイップ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "스위트베일",
+            "en": "Sweet Veil",
+            "hidden": false
+          },
+          {
+            "ko": "아로마베일",
+            "en": "Aroma Veil",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -850,15 +938,23 @@
           "spd": 100,
           "spe": 109
         },
-        "abilities": [
-          "Snow Cloak",
-          "Snow Warning"
-        ],
         "names": {
           "ko": "알로라 나인테일",
           "en": "Alolan Ninetales",
           "ja": "アローラキュウコン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "눈숨기",
+            "en": "Snow Cloak",
+            "hidden": false
+          },
+          {
+            "ko": "눈퍼뜨리기",
+            "en": "Snow Warning",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -953,14 +1049,18 @@
           "spd": 85,
           "spe": 110
         },
-        "abilities": [
-          "Surge Surfer"
-        ],
         "names": {
           "ko": "알로라 라이츄",
           "en": "Alolan Raichu",
           "ja": "アローラライチュウ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "서핑테일",
+            "en": "Surge Surfer",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -1065,15 +1165,23 @@
           "spd": 105,
           "spe": 80
         },
-        "abilities": [
-          "Natural Cure",
-          "Cloud Nine"
-        ],
         "names": {
           "ko": "파비코리",
           "en": "Altaria",
           "ja": "チルタリス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "자연회복",
+            "en": "Natural Cure",
+            "hidden": false
+          },
+          {
+            "ko": "날씨부정",
+            "en": "Cloud Nine",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Altaria",
@@ -1091,14 +1199,18 @@
           "spd": 105,
           "spe": 80
         },
-        "abilities": [
-          "Pixilate"
-        ],
         "names": {
           "ko": "메가파비코리",
           "en": "Mega Altaria",
           "ja": "メガチルタリス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "페어리스킨",
+            "en": "Pixilate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -1193,15 +1305,23 @@
           "spd": 90,
           "spe": 55
         },
-        "abilities": [
-          "Static",
-          "Plus"
-        ],
         "names": {
           "ko": "전룡",
           "en": "Ampharos",
           "ja": "デンリュウ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "정전기",
+            "en": "Static",
+            "hidden": false
+          },
+          {
+            "ko": "플러스",
+            "en": "Plus",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Ampharos",
@@ -1219,14 +1339,18 @@
           "spd": 110,
           "spe": 45
         },
-        "abilities": [
-          "Mold Breaker"
-        ],
         "names": {
           "ko": "메가전룡",
           "en": "Mega Ampharos",
           "ja": "メガデンリュウ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "틀깨기",
+            "en": "Mold Breaker",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -1324,16 +1448,28 @@
           "spd": 90,
           "spe": 90
         },
-        "abilities": [
-          "Vital Spirit",
-          "Inner Focus",
-          "Defiant"
-        ],
         "names": {
           "ko": "저승갓숭",
           "en": "Annihilape",
           "ja": "コノヨザル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "의기양양",
+            "en": "Vital Spirit",
+            "hidden": false
+          },
+          {
+            "ko": "정신력",
+            "en": "Inner Focus",
+            "hidden": false
+          },
+          {
+            "ko": "오기",
+            "en": "Defiant",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -1439,16 +1575,28 @@
           "spd": 80,
           "spe": 30
         },
-        "abilities": [
-          "Ripen",
-          "Gluttony",
-          "Thick Fat"
-        ],
         "names": {
           "ko": "단지래플",
           "en": "Appletun",
           "ja": "タルップル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "숙성",
+            "en": "Ripen",
+            "hidden": false
+          },
+          {
+            "ko": "먹보",
+            "en": "Gluttony",
+            "hidden": false
+          },
+          {
+            "ko": "두꺼운지방",
+            "en": "Thick Fat",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -1530,15 +1678,23 @@
           "spd": 132,
           "spe": 42
         },
-        "abilities": [
-          "Water Bubble",
-          "Water Absorb"
-        ],
         "names": {
           "ko": "깨비물거미",
           "en": "Araquanid",
           "ja": "オニシズクモ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "수포",
+            "en": "Water Bubble",
+            "hidden": false
+          },
+          {
+            "ko": "저수",
+            "en": "Water Absorb",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -1619,16 +1775,28 @@
           "spd": 79,
           "spe": 80
         },
-        "abilities": [
-          "Intimidate",
-          "Shed Skin",
-          "Unnerve"
-        ],
         "names": {
           "ko": "아보크",
           "en": "Arbok",
           "ja": "アーボック"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "탈피",
+            "en": "Shed Skin",
+            "hidden": false
+          },
+          {
+            "ko": "긴장감",
+            "en": "Unnerve",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -1728,16 +1896,28 @@
           "spd": 80,
           "spe": 95
         },
-        "abilities": [
-          "Intimidate",
-          "Flash Fire",
-          "Justified"
-        ],
         "names": {
           "ko": "윈디",
           "en": "Arcanine",
           "ja": "ウインディ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "타오르는불꽃",
+            "en": "Flash Fire",
+            "hidden": false
+          },
+          {
+            "ko": "정의의마음",
+            "en": "Justified",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -1825,16 +2005,28 @@
           "spd": 65,
           "spe": 85
         },
-        "abilities": [
-          "Stamina",
-          "Sturdy",
-          "Stalwart"
-        ],
         "names": {
           "ko": "브리두라스",
           "en": "Archaludon",
           "ja": "ブリジュラス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "지구력",
+            "en": "Stamina",
+            "hidden": false
+          },
+          {
+            "ko": "옹골참",
+            "en": "Sturdy",
+            "hidden": false
+          },
+          {
+            "ko": "굳건한신념",
+            "en": "Stalwart",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -1916,16 +2108,28 @@
           "spd": 70,
           "spe": 40
         },
-        "abilities": [
-          "Swarm",
-          "Insomnia",
-          "Sniper"
-        ],
         "names": {
           "ko": "아리아도스",
           "en": "Ariados",
           "ja": "アリアドス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "벌레의알림",
+            "en": "Swarm",
+            "hidden": false
+          },
+          {
+            "ko": "불면",
+            "en": "Insomnia",
+            "hidden": false
+          },
+          {
+            "ko": "스나이퍼",
+            "en": "Sniper",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -2020,15 +2224,23 @@
           "spd": 80,
           "spe": 75
         },
-        "abilities": [
-          "Flash Fire",
-          "Weak Armor"
-        ],
         "names": {
           "ko": "카디나르마",
           "en": "Armarouge",
           "ja": "グレンアルマ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "타오르는불꽃",
+            "en": "Flash Fire",
+            "hidden": false
+          },
+          {
+            "ko": "깨어진갑옷",
+            "en": "Weak Armor",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -2113,15 +2325,23 @@
           "spd": 89,
           "spe": 29
         },
-        "abilities": [
-          "Healer",
-          "Aroma Veil"
-        ],
         "names": {
           "ko": "프레프티르",
           "en": "Aromatisse",
           "ja": "フレフワン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "치유의마음",
+            "en": "Healer",
+            "hidden": false
+          },
+          {
+            "ko": "아로마베일",
+            "en": "Aroma Veil",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -2199,16 +2419,28 @@
           "spd": 86,
           "spe": 50
         },
-        "abilities": [
-          "Healer",
-          "Regenerator",
-          "Klutz"
-        ],
         "names": {
           "ko": "다부니",
           "en": "Audino",
           "ja": "タブンネ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "치유의마음",
+            "en": "Healer",
+            "hidden": false
+          },
+          {
+            "ko": "재생력",
+            "en": "Regenerator",
+            "hidden": false
+          },
+          {
+            "ko": "서투름",
+            "en": "Klutz",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Audino",
@@ -2226,14 +2458,18 @@
           "spd": 126,
           "spe": 50
         },
-        "abilities": [
-          "Healer"
-        ],
         "names": {
           "ko": "메가다부니",
           "en": "Mega Audino",
           "ja": "メガタブンネ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "치유의마음",
+            "en": "Healer",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -2333,15 +2569,23 @@
           "spd": 92,
           "spe": 58
         },
-        "abilities": [
-          "Refrigerate",
-          "Snow Warning"
-        ],
         "names": {
           "ko": "아마루르가",
           "en": "Aurorus",
           "ja": "アマルルガ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "프리즈스킨",
+            "en": "Refrigerate",
+            "hidden": false
+          },
+          {
+            "ko": "눈퍼뜨리기",
+            "en": "Snow Warning",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -2427,16 +2671,28 @@
           "spd": 46,
           "spe": 28
         },
-        "abilities": [
-          "Own Tempo",
-          "Ice Body",
-          "Sturdy"
-        ],
         "names": {
           "ko": "크레베이스",
           "en": "Avalugg",
           "ja": "クレベース"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "마이페이스",
+            "en": "Own Tempo",
+            "hidden": false
+          },
+          {
+            "ko": "아이스바디",
+            "en": "Ice Body",
+            "hidden": false
+          },
+          {
+            "ko": "옹골참",
+            "en": "Sturdy",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -2516,16 +2772,28 @@
           "spd": 80,
           "spe": 50
         },
-        "abilities": [
-          "Thick Fat",
-          "Huge Power",
-          "Sap Sipper"
-        ],
         "names": {
           "ko": "마릴리",
           "en": "Azumarill",
           "ja": "マリルリ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "두꺼운지방",
+            "en": "Thick Fat",
+            "hidden": false
+          },
+          {
+            "ko": "천하장사",
+            "en": "Huge Power",
+            "hidden": false
+          },
+          {
+            "ko": "초식",
+            "en": "Sap Sipper",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -2621,16 +2889,28 @@
           "spd": 63,
           "spe": 65
         },
-        "abilities": [
-          "Insomnia",
-          "Frisk",
-          "Cursed Body"
-        ],
         "names": {
           "ko": "다크펫",
           "en": "Banette",
           "ja": "ジュペッタ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "불면",
+            "en": "Insomnia",
+            "hidden": false
+          },
+          {
+            "ko": "통찰",
+            "en": "Frisk",
+            "hidden": false
+          },
+          {
+            "ko": "저주받은바디",
+            "en": "Cursed Body",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Banette",
@@ -2647,14 +2927,18 @@
           "spd": 83,
           "spe": 75
         },
-        "abilities": [
-          "Prankster"
-        ],
         "names": {
           "ko": "메가다크펫",
           "en": "Mega Banette",
           "ja": "メガジュペッタ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "짓궂은마음",
+            "en": "Prankster",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -2751,16 +3035,28 @@
           "spd": 86,
           "spe": 68
         },
-        "abilities": [
-          "Tough Claws",
-          "Sniper",
-          "Pickpocket"
-        ],
         "names": {
           "ko": "거북손데스",
           "en": "Barbaracle",
           "ja": "ガメノデス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "단단한발톱",
+            "en": "Tough Claws",
+            "hidden": false
+          },
+          {
+            "ko": "스나이퍼",
+            "en": "Sniper",
+            "hidden": false
+          },
+          {
+            "ko": "나쁜손버릇",
+            "en": "Pickpocket",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Barbaracle",
@@ -2778,14 +3074,18 @@
           "spd": 106,
           "spe": 88
         },
-        "abilities": [
-          "Tough Claws"
-        ],
         "names": {
           "ko": "메가거북손데스",
           "en": "Mega Barbaracle",
           "ja": "メガガメノデス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "단단한발톱",
+            "en": "Tough Claws",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -2887,16 +3187,28 @@
           "spd": 75,
           "spe": 78
         },
-        "abilities": [
-          "Swift Swim",
-          "Adaptability",
-          "Mold Breaker"
-        ],
         "names": {
           "ko": "대쓰여너 (Female)",
           "en": "Basculegion Female",
           "ja": "イダイトウ (Female)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "쓱쓱",
+            "en": "Swift Swim",
+            "hidden": false
+          },
+          {
+            "ko": "적응력",
+            "en": "Adaptability",
+            "hidden": false
+          },
+          {
+            "ko": "틀깨기",
+            "en": "Mold Breaker",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -2976,16 +3288,28 @@
           "spd": 75,
           "spe": 78
         },
-        "abilities": [
-          "Swift Swim",
-          "Adaptability",
-          "Mold Breaker"
-        ],
         "names": {
           "ko": "대쓰여너 (Male)",
           "en": "Basculegion Male",
           "ja": "イダイトウ (Male)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "쓱쓱",
+            "en": "Swift Swim",
+            "hidden": false
+          },
+          {
+            "ko": "적응력",
+            "en": "Adaptability",
+            "hidden": false
+          },
+          {
+            "ko": "틀깨기",
+            "en": "Mold Breaker",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -3065,15 +3389,23 @@
           "spd": 138,
           "spe": 30
         },
-        "abilities": [
-          "Sturdy",
-          "Soundproof"
-        ],
         "names": {
           "ko": "바리톱스",
           "en": "Bastiodon",
           "ja": "トリデプス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "옹골참",
+            "en": "Sturdy",
+            "hidden": false
+          },
+          {
+            "ko": "방음",
+            "en": "Soundproof",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -3171,16 +3503,28 @@
           "spd": 80,
           "spe": 50
         },
-        "abilities": [
-          "Snow Cloak",
-          "Slush Rush",
-          "Swift Swim"
-        ],
         "names": {
           "ko": "툰베어",
           "en": "Beartic",
           "ja": "ツンベアー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "눈숨기",
+            "en": "Snow Cloak",
+            "hidden": false
+          },
+          {
+            "ko": "눈치우기",
+            "en": "Slush Rush",
+            "hidden": false
+          },
+          {
+            "ko": "쓱쓱",
+            "en": "Swift Swim",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -3286,15 +3630,23 @@
           "spd": 80,
           "spe": 75
         },
-        "abilities": [
-          "Swarm",
-          "Sniper"
-        ],
         "names": {
           "ko": "독침붕",
           "en": "Beedrill",
           "ja": "スピアー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "벌레의알림",
+            "en": "Swarm",
+            "hidden": false
+          },
+          {
+            "ko": "스나이퍼",
+            "en": "Sniper",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Beedrill",
@@ -3312,14 +3664,18 @@
           "spd": 80,
           "spe": 145
         },
-        "abilities": [
-          "Adaptability"
-        ],
         "names": {
           "ko": "메가독침붕",
           "en": "Mega Beedrill",
           "ja": "メガスピアー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "적응력",
+            "en": "Adaptability",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -3402,16 +3758,28 @@
           "spd": 83,
           "spe": 45
         },
-        "abilities": [
-          "Electromorphosis",
-          "Static",
-          "Damp"
-        ],
         "names": {
           "ko": "찌리배리",
           "en": "Bellibolt",
           "ja": "ハラバリー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "전기로바꾸기",
+            "en": "Electromorphosis",
+            "hidden": false
+          },
+          {
+            "ko": "정전기",
+            "en": "Static",
+            "hidden": false
+          },
+          {
+            "ko": "습기",
+            "en": "Damp",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -3480,15 +3848,23 @@
           "spd": 105,
           "spe": 78
         },
-        "abilities": [
-          "Torrent",
-          "Rain Dish"
-        ],
         "names": {
           "ko": "거북왕",
           "en": "Blastoise",
           "ja": "カメックス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "급류",
+            "en": "Torrent",
+            "hidden": false
+          },
+          {
+            "ko": "젖은접시",
+            "en": "Rain Dish",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Blastoise",
@@ -3505,14 +3881,18 @@
           "spd": 115,
           "spe": 78
         },
-        "abilities": [
-          "Mega Launcher"
-        ],
         "names": {
           "ko": "메가거북왕",
           "en": "Mega Blastoise",
           "ja": "メガカメックス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "메가런처",
+            "en": "Mega Launcher",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -3616,15 +3996,23 @@
           "spd": 70,
           "spe": 80
         },
-        "abilities": [
-          "Blaze",
-          "Speed Boost"
-        ],
         "names": {
           "ko": "번치코",
           "en": "Blaziken",
           "ja": "バシャーモ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "맹화",
+            "en": "Blaze",
+            "hidden": false
+          },
+          {
+            "ko": "가속",
+            "en": "Speed Boost",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Blaziken",
@@ -3642,14 +4030,18 @@
           "spd": 80,
           "spe": 100
         },
-        "abilities": [
-          "Speed Boost"
-        ],
         "names": {
           "ko": "메가번치코",
           "en": "Mega Blaziken",
           "ja": "メガバシャーモ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "가속",
+            "en": "Speed Boost",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -3758,16 +4150,28 @@
           "spd": 75,
           "spe": 40
         },
-        "abilities": [
-          "Magma Armor",
-          "Solid Rock",
-          "Anger Point"
-        ],
         "names": {
           "ko": "폭타",
           "en": "Camerupt",
           "ja": "バクーダ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "마그마의무장",
+            "en": "Magma Armor",
+            "hidden": false
+          },
+          {
+            "ko": "하드록",
+            "en": "Solid Rock",
+            "hidden": false
+          },
+          {
+            "ko": "분노의경혈",
+            "en": "Anger Point",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Camerupt",
@@ -3785,14 +4189,18 @@
           "spd": 105,
           "spe": 20
         },
-        "abilities": [
-          "Sheer Force"
-        ],
         "names": {
           "ko": "메가폭타",
           "en": "Mega Camerupt",
           "ja": "メガバクーダ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "우격다짐",
+            "en": "Sheer Force",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -3889,14 +4297,18 @@
           "spd": 70,
           "spe": 70
         },
-        "abilities": [
-          "Forecast"
-        ],
         "names": {
           "ko": "캐스퐁",
           "en": "Castform",
           "ja": "ポワルン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "기분파",
+            "en": "Forecast",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -3964,15 +4376,23 @@
           "spd": 100,
           "spe": 85
         },
-        "abilities": [
-          "Flash Fire",
-          "Weak Armor"
-        ],
         "names": {
           "ko": "파라블레이즈",
           "en": "Ceruledge",
           "ja": "ソウブレイズ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "타오르는불꽃",
+            "en": "Flash Fire",
+            "hidden": false
+          },
+          {
+            "ko": "깨어진갑옷",
+            "en": "Weak Armor",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -4058,16 +4478,28 @@
           "spd": 90,
           "spe": 80
         },
-        "abilities": [
-          "Flash Fire",
-          "Flame Body",
-          "Infiltrator"
-        ],
         "names": {
           "ko": "샹델라",
           "en": "Chandelure",
           "ja": "シャンデラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "타오르는불꽃",
+            "en": "Flash Fire",
+            "hidden": false
+          },
+          {
+            "ko": "불꽃몸",
+            "en": "Flame Body",
+            "hidden": false
+          },
+          {
+            "ko": "틈새포착",
+            "en": "Infiltrator",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Chandelure",
@@ -4085,14 +4517,18 @@
           "spd": 110,
           "spe": 90
         },
-        "abilities": [
-          "Infiltrator"
-        ],
         "names": {
           "ko": "메가샹델라",
           "en": "Mega Chandelure",
           "ja": "メガシャンデラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "틈새포착",
+            "en": "Infiltrator",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -4177,15 +4613,23 @@
           "spd": 85,
           "spe": 100
         },
-        "abilities": [
-          "Blaze",
-          "Solar Power"
-        ],
         "names": {
           "ko": "리자몽",
           "en": "Charizard",
           "ja": "リザードン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "맹화",
+            "en": "Blaze",
+            "hidden": false
+          },
+          {
+            "ko": "선파워",
+            "en": "Solar Power",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Charizard X",
@@ -4203,14 +4647,18 @@
           "spd": 85,
           "spe": 100
         },
-        "abilities": [
-          "Tough Claws"
-        ],
         "names": {
           "ko": "메가리자몽 X",
           "en": "Mega Charizard X",
           "ja": "メガリザードンX"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "단단한발톱",
+            "en": "Tough Claws",
+            "hidden": false
+          }
+        ]
       },
       {
         "name": "Mega Charizard Y",
@@ -4228,14 +4676,18 @@
           "spd": 115,
           "spe": 100
         },
-        "abilities": [
-          "Drought"
-        ],
         "names": {
           "ko": "메가리자몽 Y",
           "en": "Mega Charizard Y",
           "ja": "メガリザードンY"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "가뭄",
+            "en": "Drought",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -4338,15 +4790,23 @@
           "spd": 75,
           "spe": 64
         },
-        "abilities": [
-          "Overgrow",
-          "Bulletproof"
-        ],
         "names": {
           "ko": "브리가론",
           "en": "Chesnaught",
           "ja": "ブリガロン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심록",
+            "en": "Overgrow",
+            "hidden": false
+          },
+          {
+            "ko": "방탄",
+            "en": "Bulletproof",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Chesnaught",
@@ -4364,14 +4824,18 @@
           "spd": 115,
           "spe": 44
         },
-        "abilities": [
-          "Bulletproof"
-        ],
         "names": {
           "ko": "메가브리가론",
           "en": "Mega Chesnaught",
           "ja": "メガブリガロン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "방탄",
+            "en": "Bulletproof",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -4488,14 +4952,18 @@
           "spd": 90,
           "spe": 65
         },
-        "abilities": [
-          "Levitate"
-        ],
         "names": {
           "ko": "치렁",
           "en": "Chimecho",
           "ja": "チリーン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "Levitate",
+            "hidden": false
+          }
+        ]
       },
       {
         "name": "Mega Chimecho",
@@ -4513,14 +4981,18 @@
           "spd": 120,
           "spe": 65
         },
-        "abilities": [
-          "Levitate"
-        ],
         "names": {
           "ko": "메가치렁",
           "en": "Mega Chimecho",
           "ja": "メガチリーン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "Levitate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -4615,14 +5087,18 @@
           "spd": 89,
           "spe": 59
         },
-        "abilities": [
-          "Mega Launcher"
-        ],
         "names": {
           "ko": "블로스터",
           "en": "Clawitzer",
           "ja": "ブロスター"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "메가런처",
+            "en": "Mega Launcher",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -4704,16 +5180,28 @@
           "spd": 90,
           "spe": 60
         },
-        "abilities": [
-          "Cute Charm",
-          "Magic Guard",
-          "Unaware"
-        ],
         "names": {
           "ko": "픽시",
           "en": "Clefable",
           "ja": "ピクシー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "헤롱헤롱바디",
+            "en": "Cute Charm",
+            "hidden": false
+          },
+          {
+            "ko": "매직가드",
+            "en": "Magic Guard",
+            "hidden": false
+          },
+          {
+            "ko": "천진",
+            "en": "Unaware",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Clefable",
@@ -4731,14 +5219,18 @@
           "spd": 110,
           "spe": 70
         },
-        "abilities": [
-          "Magic Bounce"
-        ],
         "names": {
           "ko": "메가픽시",
           "en": "Mega Clefable",
           "ja": "メガピクシー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "매직미러",
+            "en": "Magic Bounce",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -4859,14 +5351,18 @@
           "spd": 105,
           "spe": 30
         },
-        "abilities": [
-          "Mummy"
-        ],
         "names": {
           "ko": "데스니칸",
           "en": "Cofagrigus",
           "ja": "デスカーン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "미라",
+            "en": "Mummy",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -4950,16 +5446,28 @@
           "spd": 65,
           "spe": 45
         },
-        "abilities": [
-          "Guts",
-          "Sheer Force",
-          "Iron Fist"
-        ],
         "names": {
           "ko": "노보청",
           "en": "Conkeldurr",
           "ja": "ローブシン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "근성",
+            "en": "Guts",
+            "hidden": false
+          },
+          {
+            "ko": "우격다짐",
+            "en": "Sheer Force",
+            "hidden": false
+          },
+          {
+            "ko": "철주먹",
+            "en": "Iron Fist",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -5051,16 +5559,28 @@
           "spd": 85,
           "spe": 67
         },
-        "abilities": [
-          "Pressure",
-          "Unnerve",
-          "Mirror Armor"
-        ],
         "names": {
           "ko": "아머까오",
           "en": "Corviknight",
           "ja": "アーマーガア"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "프레셔",
+            "en": "Pressure",
+            "hidden": false
+          },
+          {
+            "ko": "긴장감",
+            "en": "Unnerve",
+            "hidden": false
+          },
+          {
+            "ko": "미러아머",
+            "en": "Mirror Armor",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -5146,16 +5666,28 @@
           "spd": 67,
           "spe": 43
         },
-        "abilities": [
-          "Hyper Cutter",
-          "Iron Fist",
-          "Anger Point"
-        ],
         "names": {
           "ko": "모단단게",
           "en": "Crabominable",
           "ja": "ケケンカニ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "괴력집게",
+            "en": "Hyper Cutter",
+            "hidden": false
+          },
+          {
+            "ko": "철주먹",
+            "en": "Iron Fist",
+            "hidden": false
+          },
+          {
+            "ko": "분노의경혈",
+            "en": "Anger Point",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Crabominable",
@@ -5173,14 +5705,18 @@
           "spd": 107,
           "spe": 33
         },
-        "abilities": [
-          "Iron Fist"
-        ],
         "names": {
           "ko": "메가모단단게",
           "en": "Mega Crabominable",
           "ja": "メガケケンカニ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "철주먹",
+            "en": "Iron Fist",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -5274,15 +5810,23 @@
           "spd": 100,
           "spe": 70
         },
-        "abilities": [
-          "Overgrow",
-          "Long Reach"
-        ],
         "names": {
           "ko": "모크나이퍼",
           "en": "Decidueye",
           "ja": "ジュナイパー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심록",
+            "en": "Overgrow",
+            "hidden": false
+          },
+          {
+            "ko": "원격",
+            "en": "Long Reach",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -5379,16 +5923,28 @@
           "spd": 67,
           "spe": 101
         },
-        "abilities": [
-          "Cheek Pouch",
-          "Pickup",
-          "Plus"
-        ],
         "names": {
           "ko": "데덴네",
           "en": "Dedenne",
           "ja": "デデンネ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "볼주머니",
+            "en": "Cheek Pouch",
+            "hidden": false
+          },
+          {
+            "ko": "픽업",
+            "en": "Pickup",
+            "hidden": false
+          },
+          {
+            "ko": "플러스",
+            "en": "Plus",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -5469,15 +6025,23 @@
           "spd": 100,
           "spe": 104
         },
-        "abilities": [
-          "Blaze",
-          "Magician"
-        ],
         "names": {
           "ko": "마폭시",
           "en": "Delphox",
           "ja": "マフォクシー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "맹화",
+            "en": "Blaze",
+            "hidden": false
+          },
+          {
+            "ko": "매지션",
+            "en": "Magician",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Delphox",
@@ -5495,14 +6059,18 @@
           "spd": 125,
           "spe": 134
         },
-        "abilities": [
-          "Levitate"
-        ],
         "names": {
           "ko": "메가마폭시",
           "en": "Mega Delphox",
           "ja": "メガマフォクシー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "Levitate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -5605,16 +6173,28 @@
           "spd": 77,
           "spe": 78
         },
-        "abilities": [
-          "Pickup",
-          "Cheek Pouch",
-          "Huge Power"
-        ],
         "names": {
           "ko": "파르토",
           "en": "Diggersby",
           "ja": "ホルード"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "픽업",
+            "en": "Pickup",
+            "hidden": false
+          },
+          {
+            "ko": "볼주머니",
+            "en": "Cheek Pouch",
+            "hidden": false
+          },
+          {
+            "ko": "천하장사",
+            "en": "Huge Power",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -5702,15 +6282,23 @@
           "spd": 48,
           "spe": 48
         },
-        "abilities": [
-          "Limber",
-          "Imposter"
-        ],
         "names": {
           "ko": "메타몽",
           "en": "Ditto",
           "ja": "メタモン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "유연",
+            "en": "Limber",
+            "hidden": false
+          },
+          {
+            "ko": "괴짜",
+            "en": "Imposter",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -5742,16 +6330,28 @@
           "spd": 123,
           "spe": 44
         },
-        "abilities": [
-          "Poison Point",
-          "Poison Touch",
-          "Adaptability"
-        ],
         "names": {
           "ko": "드래캄",
           "en": "Dragalge",
           "ja": "ドラミドロ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "독가시",
+            "en": "Poison Point",
+            "hidden": false
+          },
+          {
+            "ko": "독수",
+            "en": "Poison Touch",
+            "hidden": false
+          },
+          {
+            "ko": "적응력",
+            "en": "Adaptability",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Dragalge",
@@ -5769,14 +6369,18 @@
           "spd": 163,
           "spe": 44
         },
-        "abilities": [
-          "Regenerator"
-        ],
         "names": {
           "ko": "메가드래캄",
           "en": "Mega Dragalge",
           "ja": "メガドラミドロ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "재생력",
+            "en": "Regenerator",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -5859,16 +6463,28 @@
           "spd": 75,
           "spe": 142
         },
-        "abilities": [
-          "Clear Body",
-          "Infiltrator",
-          "Cursed Body"
-        ],
         "names": {
           "ko": "드래펄트",
           "en": "Dragapult",
           "ja": "ドラパルト"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "클리어바디",
+            "en": "Clear Body",
+            "hidden": false
+          },
+          {
+            "ko": "틈새포착",
+            "en": "Infiltrator",
+            "hidden": false
+          },
+          {
+            "ko": "저주받은바디",
+            "en": "Cursed Body",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -5962,15 +6578,23 @@
           "spd": 100,
           "spe": 80
         },
-        "abilities": [
-          "Inner Focus",
-          "Multiscale"
-        ],
         "names": {
           "ko": "망나뇽",
           "en": "Dragonite",
           "ja": "カイリュー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "정신력",
+            "en": "Inner Focus",
+            "hidden": false
+          },
+          {
+            "ko": "멀티스케일",
+            "en": "Multiscale",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Dragonite",
@@ -5988,14 +6612,18 @@
           "spd": 125,
           "spe": 100
         },
-        "abilities": [
-          "Multiscale"
-        ],
         "names": {
           "ko": "메가망나뇽",
           "en": "Mega Dragonite",
           "ja": "メガカイリュー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "멀티스케일",
+            "en": "Multiscale",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -6109,16 +6737,28 @@
           "spd": 91,
           "spe": 36
         },
-        "abilities": [
-          "Berserk",
-          "Sap Sipper",
-          "Cloud Nine"
-        ],
         "names": {
           "ko": "할비롱",
           "en": "Drampa",
           "ja": "ジジーロン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "발끈",
+            "en": "Berserk",
+            "hidden": false
+          },
+          {
+            "ko": "초식",
+            "en": "Sap Sipper",
+            "hidden": false
+          },
+          {
+            "ko": "날씨부정",
+            "en": "Cloud Nine",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Drampa",
@@ -6136,14 +6776,18 @@
           "spd": 116,
           "spe": 36
         },
-        "abilities": [
-          "Berserk"
-        ],
         "names": {
           "ko": "메가할비롱",
           "en": "Mega Drampa",
           "ja": "メガジジーロン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "발끈",
+            "en": "Berserk",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -6239,14 +6883,18 @@
           "spd": 80,
           "spe": 50
         },
-        "abilities": [
-          "Levitate"
-        ],
         "names": {
           "ko": "저리더프",
           "en": "Eelektross",
           "ja": "シビルドン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "Levitate",
+            "hidden": false
+          }
+        ]
       },
       {
         "name": "Mega Eelektross",
@@ -6263,14 +6911,18 @@
           "spd": 90,
           "spe": 80
         },
-        "abilities": [
-          "Eelevate"
-        ],
         "names": {
           "ko": "메가저리더프",
           "en": "Mega Eelektross",
           "ja": "メガシビルドン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "Eelevate",
+            "en": "Eelevate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -6376,15 +7028,23 @@
           "spd": 65,
           "spe": 65
         },
-        "abilities": [
-          "Blaze",
-          "Reckless"
-        ],
         "names": {
           "ko": "염무왕",
           "en": "Emboar",
           "ja": "エンブオー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "맹화",
+            "en": "Blaze",
+            "hidden": false
+          },
+          {
+            "ko": "이판사판",
+            "en": "Reckless",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Emboar",
@@ -6402,14 +7062,18 @@
           "spd": 110,
           "spe": 75
         },
-        "abilities": [
-          "Mold Breaker"
-        ],
         "names": {
           "ko": "메가염무왕",
           "en": "Mega Emboar",
           "ja": "メガエンブオー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "틀깨기",
+            "en": "Mold Breaker",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -6519,15 +7183,23 @@
           "spd": 60,
           "spe": 103
         },
-        "abilities": [
-          "Static",
-          "Motor Drive"
-        ],
         "names": {
           "ko": "에몽가",
           "en": "Emolga",
           "ja": "エモンガ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "정전기",
+            "en": "Static",
+            "hidden": false
+          },
+          {
+            "ko": "전기엔진",
+            "en": "Motor Drive",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -6604,15 +7276,23 @@
           "spd": 101,
           "spe": 60
         },
-        "abilities": [
-          "Torrent",
-          "Competitive"
-        ],
         "names": {
           "ko": "엠페르트",
           "en": "Empoleon",
           "ja": "エンペルト"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "급류",
+            "en": "Torrent",
+            "hidden": false
+          },
+          {
+            "ko": "승기",
+            "en": "Competitive",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -6716,16 +7396,28 @@
           "spd": 60,
           "spe": 105
         },
-        "abilities": [
-          "Opportunist",
-          "Frisk",
-          "Speed Boost"
-        ],
         "names": {
           "ko": "클레스퍼트라",
           "en": "Espathra",
           "ja": "クエスパトラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "편승",
+            "en": "Opportunist",
+            "hidden": false
+          },
+          {
+            "ko": "통찰",
+            "en": "Frisk",
+            "hidden": false
+          },
+          {
+            "ko": "가속",
+            "en": "Speed Boost",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -6812,15 +7504,23 @@
           "spd": 95,
           "spe": 110
         },
-        "abilities": [
-          "Synchronize",
-          "Magic Bounce"
-        ],
         "names": {
           "ko": "에브이",
           "en": "Espeon",
           "ja": "エーフィ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "싱크로",
+            "en": "Synchronize",
+            "hidden": false
+          },
+          {
+            "ko": "매직미러",
+            "en": "Magic Bounce",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -6918,16 +7618,28 @@
           "spd": 65,
           "spe": 88
         },
-        "abilities": [
-          "Sand Rush",
-          "Sand Force",
-          "Mold Breaker"
-        ],
         "names": {
           "ko": "몰드류",
           "en": "Excadrill",
           "ja": "ドリュウズ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "모래헤치기",
+            "en": "Sand Rush",
+            "hidden": false
+          },
+          {
+            "ko": "모래의힘",
+            "en": "Sand Force",
+            "hidden": false
+          },
+          {
+            "ko": "틀깨기",
+            "en": "Mold Breaker",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Excadrill",
@@ -6945,14 +7657,18 @@
           "spd": 65,
           "spe": 103
         },
-        "abilities": [
-          "Piercing Drill"
-        ],
         "names": {
           "ko": "메가몰드류",
           "en": "Mega Excadrill",
           "ja": "メガドリュウズ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "관통드릴",
+            "en": "Piercing Drill",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -7035,15 +7751,23 @@
           "spd": 60,
           "spe": 75
         },
-        "abilities": [
-          "Battle Armor",
-          "Defiant"
-        ],
         "names": {
           "ko": "대여르",
           "en": "Falinks",
           "ja": "タイレーツ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "전투무장",
+            "en": "Battle Armor",
+            "hidden": false
+          },
+          {
+            "ko": "오기",
+            "en": "Defiant",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Falinks",
@@ -7060,14 +7784,18 @@
           "spd": 65,
           "spe": 100
         },
-        "abilities": [
-          "Defiant"
-        ],
         "names": {
           "ko": "메가대여르",
           "en": "Mega Falinks",
           "ja": "メガタイレーツ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "오기",
+            "en": "Defiant",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -7149,14 +7877,18 @@
           "spd": 107,
           "spe": 86
         },
-        "abilities": [
-          "Levitate"
-        ],
         "names": {
           "ko": "스핀로토무",
           "en": "Fan Rotom",
           "ja": "スピンロトム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "Levitate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -7231,16 +7963,28 @@
           "spd": 70,
           "spe": 60
         },
-        "abilities": [
-          "Cud Chew",
-          "Armor Tail",
-          "Sap Sipper"
-        ],
         "names": {
           "ko": "키키링",
           "en": "Farigiraf",
           "ja": "リキキリン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "되새김질",
+            "en": "Cud Chew",
+            "hidden": false
+          },
+          {
+            "ko": "테일아머",
+            "en": "Armor Tail",
+            "hidden": false
+          },
+          {
+            "ko": "초식",
+            "en": "Sap Sipper",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -7340,15 +8084,23 @@
           "spd": 83,
           "spe": 78
         },
-        "abilities": [
-          "Torrent",
-          "Sheer Force"
-        ],
         "names": {
           "ko": "장크로다일",
           "en": "Feraligatr",
           "ja": "オーダイル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "급류",
+            "en": "Torrent",
+            "hidden": false
+          },
+          {
+            "ko": "우격다짐",
+            "en": "Sheer Force",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Feraligatr",
@@ -7366,14 +8118,18 @@
           "spd": 93,
           "spe": 78
         },
-        "abilities": [
-          "Dragonize"
-        ],
         "names": {
           "ko": "메가장크로다일",
           "en": "Mega Feraligatr",
           "ja": "メガオーダイル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "드래곤스킨",
+            "en": "Dragonize",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -7486,16 +8242,28 @@
           "spd": 60,
           "spe": 70
         },
-        "abilities": [
-          "Ripen",
-          "Gluttony",
-          "Hustle"
-        ],
         "names": {
           "ko": "애프룡",
           "en": "Flapple",
           "ja": "アップリュー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "숙성",
+            "en": "Ripen",
+            "hidden": false
+          },
+          {
+            "ko": "먹보",
+            "en": "Gluttony",
+            "hidden": false
+          },
+          {
+            "ko": "의욕",
+            "en": "Hustle",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -7569,15 +8337,23 @@
           "spd": 110,
           "spe": 65
         },
-        "abilities": [
-          "Flash Fire",
-          "Guts"
-        ],
         "names": {
           "ko": "부스터",
           "en": "Flareon",
           "ja": "ブースター"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "타오르는불꽃",
+            "en": "Flash Fire",
+            "hidden": false
+          },
+          {
+            "ko": "근성",
+            "en": "Guts",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -7664,15 +8440,23 @@
           "spd": 128,
           "spe": 92
         },
-        "abilities": [
-          "Flower Veil",
-          "Symbiosis"
-        ],
         "names": {
           "ko": "플라엣테",
           "en": "Floette",
           "ja": "フラエッテ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "플라워베일",
+            "en": "Flower Veil",
+            "hidden": false
+          },
+          {
+            "ko": "공생",
+            "en": "Symbiosis",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Floette",
@@ -7689,14 +8473,18 @@
           "spd": 148,
           "spe": 102
         },
-        "abilities": [
-          "Fairy Aura"
-        ],
         "names": {
           "ko": "메가플라엣테",
           "en": "Mega Floette",
           "ja": "メガフラエッテ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "페어리오라",
+            "en": "Fairy Aura",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -7767,15 +8555,23 @@
           "spd": 154,
           "spe": 75
         },
-        "abilities": [
-          "Flower Veil",
-          "Symbiosis"
-        ],
         "names": {
           "ko": "플라제스 (Red Flower)",
           "en": "Florges Red Flower",
           "ja": "フラージェス (Red Flower)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "플라워베일",
+            "en": "Flower Veil",
+            "hidden": false
+          },
+          {
+            "ko": "공생",
+            "en": "Symbiosis",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -7852,15 +8648,23 @@
           "spd": 60,
           "spe": 40
         },
-        "abilities": [
-          "Sturdy",
-          "Overcoat"
-        ],
         "names": {
           "ko": "쏘콘",
           "en": "Forretress",
           "ja": "フォレトス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "옹골참",
+            "en": "Sturdy",
+            "hidden": false
+          },
+          {
+            "ko": "방진",
+            "en": "Overcoat",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -7960,15 +8764,23 @@
           "spd": 70,
           "spe": 110
         },
-        "abilities": [
-          "Snow Cloak",
-          "Cursed Body"
-        ],
         "names": {
           "ko": "눈여아",
           "en": "Froslass",
           "ja": "ユキメノコ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "눈숨기",
+            "en": "Snow Cloak",
+            "hidden": false
+          },
+          {
+            "ko": "저주받은바디",
+            "en": "Cursed Body",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Froslass",
@@ -7986,14 +8798,18 @@
           "spd": 100,
           "spe": 120
         },
-        "abilities": [
-          "Snow Warning"
-        ],
         "names": {
           "ko": "메가눈여아",
           "en": "Mega Froslass",
           "ja": "メガユキメノコ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "눈퍼뜨리기",
+            "en": "Snow Warning",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -8092,14 +8908,18 @@
           "spd": 107,
           "spe": 86
         },
-        "abilities": [
-          "Levitate"
-        ],
         "names": {
           "ko": "프로스트로토무",
           "en": "Frost Rotom",
           "ja": "フロストロトム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "Levitate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -8173,14 +8993,18 @@
           "spd": 90,
           "spe": 102
         },
-        "abilities": [
-          "Fur Coat"
-        ],
         "names": {
           "ko": "트리미앙 (Natural Form)",
           "en": "Furfrou Natural Form",
           "ja": "トリミアン (Natural Form)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "퍼코트",
+            "en": "Fur Coat",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -8251,16 +9075,28 @@
           "spd": 70,
           "spe": 30
         },
-        "abilities": [
-          "Quick Draw",
-          "Own Tempo",
-          "Regenerator"
-        ],
         "names": {
           "ko": "가라르 야도란",
           "en": "Galarian Slowbro",
           "ja": "ガラルヤドラン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "퀵드로",
+            "en": "Quick Draw",
+            "hidden": false
+          },
+          {
+            "ko": "마이페이스",
+            "en": "Own Tempo",
+            "hidden": false
+          },
+          {
+            "ko": "재생력",
+            "en": "Regenerator",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -8383,16 +9219,28 @@
           "spd": 110,
           "spe": 30
         },
-        "abilities": [
-          "Curious Medicine",
-          "Own Tempo",
-          "Regenerator"
-        ],
         "names": {
           "ko": "가라르 야도킹",
           "en": "Galarian Slowking",
           "ja": "ガラルヤドキング"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "기묘한약",
+            "en": "Curious Medicine",
+            "hidden": false
+          },
+          {
+            "ko": "마이페이스",
+            "en": "Own Tempo",
+            "hidden": false
+          },
+          {
+            "ko": "재생력",
+            "en": "Regenerator",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -8518,14 +9366,18 @@
           "spd": 84,
           "spe": 32
         },
-        "abilities": [
-          "Mimicry"
-        ],
         "names": {
           "ko": "가라르 메더",
           "en": "Galarian Stunfisk",
           "ja": "ガラルマッギョ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "의태",
+            "en": "Mimicry",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -8609,16 +9461,28 @@
           "spd": 115,
           "spe": 80
         },
-        "abilities": [
-          "Steadfast",
-          "Sharpness",
-          "Justified"
-        ],
         "names": {
           "ko": "엘레이드",
           "en": "Gallade",
           "ja": "エルレイド"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "불굴의마음",
+            "en": "Steadfast",
+            "hidden": false
+          },
+          {
+            "ko": "예리함",
+            "en": "Sharpness",
+            "hidden": false
+          },
+          {
+            "ko": "정의의마음",
+            "en": "Justified",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Gallade",
@@ -8636,14 +9500,18 @@
           "spd": 115,
           "spe": 110
         },
-        "abilities": [
-          "Inner Focus"
-        ],
         "names": {
           "ko": "메가엘레이드",
           "en": "Mega Gallade",
           "ja": "メガエルレイド"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "정신력",
+            "en": "Inner Focus",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -8778,16 +9646,28 @@
           "spd": 82,
           "spe": 75
         },
-        "abilities": [
-          "Stench",
-          "Weak Armor",
-          "Aftermath"
-        ],
         "names": {
           "ko": "더스트나",
           "en": "Garbodor",
           "ja": "ダストダス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "악취",
+            "en": "Stench",
+            "hidden": false
+          },
+          {
+            "ko": "깨어진갑옷",
+            "en": "Weak Armor",
+            "hidden": false
+          },
+          {
+            "ko": "유폭",
+            "en": "Aftermath",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -8871,15 +9751,23 @@
           "spd": 85,
           "spe": 102
         },
-        "abilities": [
-          "Sand Veil",
-          "Rough Skin"
-        ],
         "names": {
           "ko": "한카리아스",
           "en": "Garchomp",
           "ja": "ガブリアス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "모래숨기",
+            "en": "Sand Veil",
+            "hidden": false
+          },
+          {
+            "ko": "까칠한피부",
+            "en": "Rough Skin",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Garchomp",
@@ -8897,14 +9785,18 @@
           "spd": 95,
           "spe": 92
         },
-        "abilities": [
-          "Sand Force"
-        ],
         "names": {
           "ko": "메가한카리아스",
           "en": "Mega Garchomp",
           "ja": "メガガブリアス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "모래의힘",
+            "en": "Sand Force",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -8993,16 +9885,28 @@
           "spd": 115,
           "spe": 80
         },
-        "abilities": [
-          "Synchronize",
-          "Trace",
-          "Telepathy"
-        ],
         "names": {
           "ko": "가디안",
           "en": "Gardevoir",
           "ja": "サーナイト"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "싱크로",
+            "en": "Synchronize",
+            "hidden": false
+          },
+          {
+            "ko": "트레이스",
+            "en": "Trace",
+            "hidden": false
+          },
+          {
+            "ko": "텔레파시",
+            "en": "Telepathy",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Gardevoir",
@@ -9020,14 +9924,18 @@
           "spd": 135,
           "spe": 100
         },
-        "abilities": [
-          "Pixilate"
-        ],
         "names": {
           "ko": "메가가디안",
           "en": "Mega Gardevoir",
           "ja": "メガサーナイト"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "페어리스킨",
+            "en": "Pixilate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -9137,16 +10045,28 @@
           "spd": 90,
           "spe": 35
         },
-        "abilities": [
-          "Purifying Salt",
-          "Sturdy",
-          "Clear Body"
-        ],
         "names": {
           "ko": "콜로솔트",
           "en": "Garganacl",
           "ja": "キョジオーン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "정화의소금",
+            "en": "Purifying Salt",
+            "hidden": false
+          },
+          {
+            "ko": "옹골참",
+            "en": "Sturdy",
+            "hidden": false
+          },
+          {
+            "ko": "클리어바디",
+            "en": "Clear Body",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -9231,14 +10151,18 @@
           "spd": 75,
           "spe": 110
         },
-        "abilities": [
-          "Cursed Body"
-        ],
         "names": {
           "ko": "팬텀",
           "en": "Gengar",
           "ja": "ゲンガー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "저주받은바디",
+            "en": "Cursed Body",
+            "hidden": false
+          }
+        ]
       },
       {
         "name": "Mega Gengar",
@@ -9256,14 +10180,18 @@
           "spd": 95,
           "spe": 130
         },
-        "abilities": [
-          "Shadow Tag"
-        ],
         "names": {
           "ko": "메가팬텀",
           "en": "Mega Gengar",
           "ja": "メガゲンガー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "그림자밟기",
+            "en": "Shadow Tag",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -9370,14 +10298,18 @@
           "spd": 91,
           "spe": 84
         },
-        "abilities": [
-          "Good as Gold"
-        ],
         "names": {
           "ko": "타부자고",
           "en": "Gholdengo",
           "ja": "サーフゴー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "황금몸",
+            "en": "Good as Gold",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -9449,15 +10381,23 @@
           "spd": 95,
           "spe": 65
         },
-        "abilities": [
-          "Snow Cloak",
-          "Ice Body"
-        ],
         "names": {
           "ko": "글레이시아",
           "en": "Glaceon",
           "ja": "グレイシア"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "눈숨기",
+            "en": "Snow Cloak",
+            "hidden": false
+          },
+          {
+            "ko": "아이스바디",
+            "en": "Ice Body",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -9546,16 +10486,28 @@
           "spd": 80,
           "spe": 80
         },
-        "abilities": [
-          "Inner Focus",
-          "Ice Body",
-          "Moody"
-        ],
         "names": {
           "ko": "얼음귀신",
           "en": "Glalie",
           "ja": "オニゴーリ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "정신력",
+            "en": "Inner Focus",
+            "hidden": false
+          },
+          {
+            "ko": "아이스바디",
+            "en": "Ice Body",
+            "hidden": false
+          },
+          {
+            "ko": "변덕쟁이",
+            "en": "Moody",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Glalie",
@@ -9572,14 +10524,18 @@
           "spd": 80,
           "spe": 100
         },
-        "abilities": [
-          "Refrigerate"
-        ],
         "names": {
           "ko": "메가얼음귀신",
           "en": "Mega Glalie",
           "ja": "メガオニゴーリ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "프리즈스킨",
+            "en": "Refrigerate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -9666,15 +10622,23 @@
           "spd": 81,
           "spe": 86
         },
-        "abilities": [
-          "Toxic Debris",
-          "Corrosion"
-        ],
         "names": {
           "ko": "킬라플로르",
           "en": "Glimmora",
           "ja": "キラフロル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "독치장",
+            "en": "Toxic Debris",
+            "hidden": false
+          },
+          {
+            "ko": "부식",
+            "en": "Corrosion",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Glimmora",
@@ -9692,14 +10656,18 @@
           "spd": 96,
           "spe": 101
         },
-        "abilities": [
-          "Adaptability"
-        ],
         "names": {
           "ko": "메가킬라플로르",
           "en": "Mega Glimmora",
           "ja": "メガキラフロル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "적응력",
+            "en": "Adaptability",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -9776,16 +10744,28 @@
           "spd": 75,
           "spe": 95
         },
-        "abilities": [
-          "Hyper Cutter",
-          "Sand Veil",
-          "Poison Heal"
-        ],
         "names": {
           "ko": "글라이온",
           "en": "Gliscor",
           "ja": "グライオン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "괴력집게",
+            "en": "Hyper Cutter",
+            "hidden": false
+          },
+          {
+            "ko": "모래숨기",
+            "en": "Sand Veil",
+            "hidden": false
+          },
+          {
+            "ko": "포이즌힐",
+            "en": "Poison Heal",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -9893,16 +10873,28 @@
           "spd": 80,
           "spe": 55
         },
-        "abilities": [
-          "Iron Fist",
-          "Klutz",
-          "No Guard"
-        ],
         "names": {
           "ko": "골루그",
           "en": "Golurk",
           "ja": "ゴルーグ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "철주먹",
+            "en": "Iron Fist",
+            "hidden": false
+          },
+          {
+            "ko": "서투름",
+            "en": "Klutz",
+            "hidden": false
+          },
+          {
+            "ko": "노가드",
+            "en": "No Guard",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Golurk",
@@ -9920,14 +10912,18 @@
           "spd": 105,
           "spe": 55
         },
-        "abilities": [
-          "Unseen Fist"
-        ],
         "names": {
           "ko": "메가골루그",
           "en": "Mega Golurk",
           "ja": "メガゴルーグ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "보이지않는주먹",
+            "en": "Unseen Fist",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -10036,16 +11032,28 @@
           "spd": 150,
           "spe": 80
         },
-        "abilities": [
-          "Sap Sipper",
-          "Hydration",
-          "Gooey"
-        ],
         "names": {
           "ko": "미끄래곤",
           "en": "Goodra",
           "ja": "ヌメルゴン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "초식",
+            "en": "Sap Sipper",
+            "hidden": false
+          },
+          {
+            "ko": "촉촉바디",
+            "en": "Hydration",
+            "hidden": false
+          },
+          {
+            "ko": "미끈미끈",
+            "en": "Gooey",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -10143,16 +11151,28 @@
           "spd": 75,
           "spe": 84
         },
-        "abilities": [
-          "Pickup",
-          "Frisk",
-          "Insomnia"
-        ],
         "names": {
           "ko": "펌킨인",
           "en": "Gourgeist",
           "ja": "パンプジン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "픽업",
+            "en": "Pickup",
+            "hidden": false
+          },
+          {
+            "ko": "통찰",
+            "en": "Frisk",
+            "hidden": false
+          },
+          {
+            "ko": "불면",
+            "en": "Insomnia",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -10244,16 +11264,28 @@
           "spd": 75,
           "spe": 54
         },
-        "abilities": [
-          "Pickup",
-          "Frisk",
-          "Insomnia"
-        ],
         "names": {
           "ko": "펌킨인 (Jumbo Variety)",
           "en": "Gourgeist Jumbo Variety",
           "ja": "パンプジン (Jumbo Variety)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "픽업",
+            "en": "Pickup",
+            "hidden": false
+          },
+          {
+            "ko": "통찰",
+            "en": "Frisk",
+            "hidden": false
+          },
+          {
+            "ko": "불면",
+            "en": "Insomnia",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -10345,16 +11377,28 @@
           "spd": 75,
           "spe": 69
         },
-        "abilities": [
-          "Pickup",
-          "Frisk",
-          "Insomnia"
-        ],
         "names": {
           "ko": "펌킨인 (Large Variety)",
           "en": "Gourgeist Large Variety",
           "ja": "パンプジン (Large Variety)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "픽업",
+            "en": "Pickup",
+            "hidden": false
+          },
+          {
+            "ko": "통찰",
+            "en": "Frisk",
+            "hidden": false
+          },
+          {
+            "ko": "불면",
+            "en": "Insomnia",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -10446,16 +11490,28 @@
           "spd": 75,
           "spe": 99
         },
-        "abilities": [
-          "Pickup",
-          "Frisk",
-          "Insomnia"
-        ],
         "names": {
           "ko": "펌킨인 (Small Variety)",
           "en": "Gourgeist Small Variety",
           "ja": "パンプジン (Small Variety)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "픽업",
+            "en": "Pickup",
+            "hidden": false
+          },
+          {
+            "ko": "통찰",
+            "en": "Frisk",
+            "hidden": false
+          },
+          {
+            "ko": "불면",
+            "en": "Insomnia",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -10547,15 +11603,23 @@
           "spd": 71,
           "spe": 122
         },
-        "abilities": [
-          "Torrent",
-          "Protean"
-        ],
         "names": {
           "ko": "개굴닌자",
           "en": "Greninja",
           "ja": "ゲッコウガ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "급류",
+            "en": "Torrent",
+            "hidden": false
+          },
+          {
+            "ko": "변환자재",
+            "en": "Protean",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Greninja",
@@ -10573,14 +11637,18 @@
           "spd": 81,
           "spe": 142
         },
-        "abilities": [
-          "Protean"
-        ],
         "names": {
           "ko": "메가개굴닌자",
           "en": "Mega Greninja",
           "ja": "メガゲッコウガ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "변환자재",
+            "en": "Protean",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -10675,16 +11743,28 @@
           "spd": 75,
           "spe": 60
         },
-        "abilities": [
-          "Prankster",
-          "Frisk",
-          "Pickpocket"
-        ],
         "names": {
           "ko": "오롱털",
           "en": "Grimmsnarl",
           "ja": "オーロンゲ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "짓궂은마음",
+            "en": "Prankster",
+            "hidden": false
+          },
+          {
+            "ko": "통찰",
+            "en": "Frisk",
+            "hidden": false
+          },
+          {
+            "ko": "나쁜손버릇",
+            "en": "Pickpocket",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -10779,15 +11859,23 @@
           "spd": 100,
           "spe": 81
         },
-        "abilities": [
-          "Intimidate",
-          "Moxie"
-        ],
         "names": {
           "ko": "갸라도스",
           "en": "Gyarados",
           "ja": "ギャラドス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "자기과신",
+            "en": "Moxie",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Gyarados",
@@ -10805,14 +11893,18 @@
           "spd": 130,
           "spe": 81
         },
-        "abilities": [
-          "Mold Breaker"
-        ],
         "names": {
           "ko": "메가갸라도스",
           "en": "Mega Gyarados",
           "ja": "メガギャラドス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "틀깨기",
+            "en": "Mold Breaker",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -10910,16 +12002,28 @@
           "spd": 103,
           "spe": 29
         },
-        "abilities": [
-          "Healer",
-          "Anticipation",
-          "Magic Bounce"
-        ],
         "names": {
           "ko": "브리무음",
           "en": "Hatterene",
           "ja": "ブリムオン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "치유의마음",
+            "en": "Healer",
+            "hidden": false
+          },
+          {
+            "ko": "위험예지",
+            "en": "Anticipation",
+            "hidden": false
+          },
+          {
+            "ko": "매직미러",
+            "en": "Magic Bounce",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -11011,16 +12115,28 @@
           "spd": 63,
           "spe": 118
         },
-        "abilities": [
-          "Limber",
-          "Unburden",
-          "Mold Breaker"
-        ],
         "names": {
           "ko": "루차불",
           "en": "Hawlucha",
           "ja": "ルチャブル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "유연",
+            "en": "Limber",
+            "hidden": false
+          },
+          {
+            "ko": "곡예",
+            "en": "Unburden",
+            "hidden": false
+          },
+          {
+            "ko": "틀깨기",
+            "en": "Mold Breaker",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Hawlucha",
@@ -11038,14 +12154,18 @@
           "spd": 93,
           "spe": 118
         },
-        "abilities": [
-          "No Guard"
-        ],
         "names": {
           "ko": "메가루차불",
           "en": "Mega Hawlucha",
           "ja": "メガルチャブル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "노가드",
+            "en": "No Guard",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -11151,14 +12271,18 @@
           "spd": 107,
           "spe": 86
         },
-        "abilities": [
-          "Levitate"
-        ],
         "names": {
           "ko": "히트로토무",
           "en": "Heat Rotom",
           "ja": "ヒートロトム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "Levitate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -11233,16 +12357,28 @@
           "spd": 94,
           "spe": 109
         },
-        "abilities": [
-          "Dry Skin",
-          "Sand Veil",
-          "Solar Power"
-        ],
         "names": {
           "ko": "일레도리자드",
           "en": "Heliolisk",
           "ja": "エレザード"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "건조피부",
+            "en": "Dry Skin",
+            "hidden": false
+          },
+          {
+            "ko": "모래숨기",
+            "en": "Sand Veil",
+            "hidden": false
+          },
+          {
+            "ko": "선파워",
+            "en": "Solar Power",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -11337,16 +12473,28 @@
           "spd": 95,
           "spe": 85
         },
-        "abilities": [
-          "Swarm",
-          "Guts",
-          "Moxie"
-        ],
         "names": {
           "ko": "헤라크로스",
           "en": "Heracross",
           "ja": "ヘラクロス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "벌레의알림",
+            "en": "Swarm",
+            "hidden": false
+          },
+          {
+            "ko": "근성",
+            "en": "Guts",
+            "hidden": false
+          },
+          {
+            "ko": "자기과신",
+            "en": "Moxie",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Heracross",
@@ -11364,14 +12512,18 @@
           "spd": 105,
           "spe": 75
         },
-        "abilities": [
-          "Skill Link"
-        ],
         "names": {
           "ko": "메가헤라크로스",
           "en": "Mega Heracross",
           "ja": "メガヘラクロス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "스킬링크",
+            "en": "Skill Link",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -11467,15 +12619,23 @@
           "spd": 72,
           "spe": 47
         },
-        "abilities": [
-          "Sand Stream",
-          "Sand Force"
-        ],
         "names": {
           "ko": "하마돈",
           "en": "Hippowdon",
           "ja": "カバルドン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "모래날림",
+            "en": "Sand Stream",
+            "hidden": false
+          },
+          {
+            "ko": "모래의힘",
+            "en": "Sand Force",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -11557,16 +12717,28 @@
           "spd": 80,
           "spe": 90
         },
-        "abilities": [
-          "Intimidate",
-          "Flash Fire",
-          "Rock Head"
-        ],
         "names": {
           "ko": "히스이 윈디",
           "en": "Hisuian Arcanine",
           "ja": "ヒスイウインディ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "타오르는불꽃",
+            "en": "Flash Fire",
+            "hidden": false
+          },
+          {
+            "ko": "돌머리",
+            "en": "Rock Head",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -11661,16 +12833,28 @@
           "spd": 36,
           "spe": 38
         },
-        "abilities": [
-          "Strong Jaw",
-          "Ice Body",
-          "Sturdy"
-        ],
         "names": {
           "ko": "히스이 크레베이스",
           "en": "Hisuian Avalugg",
           "ja": "ヒスイクレベース"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "옹골찬턱",
+            "en": "Strong Jaw",
+            "hidden": false
+          },
+          {
+            "ko": "아이스바디",
+            "en": "Ice Body",
+            "hidden": false
+          },
+          {
+            "ko": "옹골참",
+            "en": "Sturdy",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -11750,15 +12934,23 @@
           "spd": 95,
           "spe": 60
         },
-        "abilities": [
-          "Overgrow",
-          "Scrappy"
-        ],
         "names": {
           "ko": "히스이 모크나이퍼",
           "en": "Hisuian Decidueye",
           "ja": "ヒスイジュナイパー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심록",
+            "en": "Overgrow",
+            "hidden": false
+          },
+          {
+            "ko": "배짱",
+            "en": "Scrappy",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -11855,16 +13047,28 @@
           "spd": 150,
           "spe": 60
         },
-        "abilities": [
-          "Sap Sipper",
-          "Shell Armor",
-          "Gooey"
-        ],
         "names": {
           "ko": "히스이 미끄래곤",
           "en": "Hisuian Goodra",
           "ja": "ヒスイヌメルゴン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "초식",
+            "en": "Sap Sipper",
+            "hidden": false
+          },
+          {
+            "ko": "조가비갑옷",
+            "en": "Shell Armor",
+            "hidden": false
+          },
+          {
+            "ko": "미끈미끈",
+            "en": "Gooey",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -11958,15 +13162,23 @@
           "spd": 65,
           "spe": 85
         },
-        "abilities": [
-          "Torrent",
-          "Sharpness"
-        ],
         "names": {
           "ko": "히스이 대검귀",
           "en": "Hisuian Samurott",
           "ja": "ヒスイダイケンキ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "급류",
+            "en": "Torrent",
+            "hidden": false
+          },
+          {
+            "ko": "예리함",
+            "en": "Sharpness",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -12064,15 +13276,23 @@
           "spd": 85,
           "spe": 95
         },
-        "abilities": [
-          "Blaze",
-          "Frisk"
-        ],
         "names": {
           "ko": "히스이 블레이범",
           "en": "Hisuian Typhlosion",
           "ja": "ヒスイバクフーン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "맹화",
+            "en": "Blaze",
+            "hidden": false
+          },
+          {
+            "ko": "통찰",
+            "en": "Frisk",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -12169,14 +13389,18 @@
           "spd": 60,
           "spe": 110
         },
-        "abilities": [
-          "Illusion"
-        ],
         "names": {
           "ko": "히스이 조로아크",
           "en": "Hisuian Zoroark",
           "ja": "ヒスイゾロアーク"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "일루전",
+            "en": "Illusion",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -12281,16 +13505,28 @@
           "spd": 80,
           "spe": 95
         },
-        "abilities": [
-          "Early Bird",
-          "Flash Fire",
-          "Unnerve"
-        ],
         "names": {
           "ko": "헬가",
           "en": "Houndoom",
           "ja": "ヘルガー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "일찍기상",
+            "en": "Early Bird",
+            "hidden": false
+          },
+          {
+            "ko": "타오르는불꽃",
+            "en": "Flash Fire",
+            "hidden": false
+          },
+          {
+            "ko": "긴장감",
+            "en": "Unnerve",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Houndoom",
@@ -12308,14 +13544,18 @@
           "spd": 90,
           "spe": 115
         },
-        "abilities": [
-          "Solar Power"
-        ],
         "names": {
           "ko": "메가헬가",
           "en": "Mega Houndoom",
           "ja": "メガヘルガー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "선파워",
+            "en": "Solar Power",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -12412,15 +13652,23 @@
           "spd": 97,
           "spe": 68
         },
-        "abilities": [
-          "Sand Rush",
-          "Fluffy"
-        ],
         "names": {
           "ko": "묘두기",
           "en": "Houndstone",
           "ja": "ハカドッグ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "모래헤치기",
+            "en": "Sand Rush",
+            "hidden": false
+          },
+          {
+            "ko": "복슬복슬",
+            "en": "Fluffy",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -12503,16 +13751,28 @@
           "spd": 80,
           "spe": 44
         },
-        "abilities": [
-          "Supersweet Syrup",
-          "Regenerator",
-          "Sticky Hold"
-        ],
         "names": {
           "ko": "과미드라",
           "en": "Hydrapple",
           "ja": "カミツオロチ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "감미로운꿀",
+            "en": "Supersweet Syrup",
+            "hidden": false
+          },
+          {
+            "ko": "재생력",
+            "en": "Regenerator",
+            "hidden": false
+          },
+          {
+            "ko": "점착",
+            "en": "Sticky Hold",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -12597,14 +13857,18 @@
           "spd": 90,
           "spe": 98
         },
-        "abilities": [
-          "Levitate"
-        ],
         "names": {
           "ko": "삼삼드래",
           "en": "Hydreigon",
           "ja": "サザンドラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "Levitate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -12714,15 +13978,23 @@
           "spd": 90,
           "spe": 60
         },
-        "abilities": [
-          "Blaze",
-          "Intimidate"
-        ],
         "names": {
           "ko": "어흥염",
           "en": "Incineroar",
           "ja": "ガオガエン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "맹화",
+            "en": "Blaze",
+            "hidden": false
+          },
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -12832,15 +14104,23 @@
           "spd": 71,
           "spe": 108
         },
-        "abilities": [
-          "Blaze",
-          "Iron Fist"
-        ],
         "names": {
           "ko": "초염몽",
           "en": "Infernape",
           "ja": "ゴウカザル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "맹화",
+            "en": "Blaze",
+            "hidden": false
+          },
+          {
+            "ko": "철주먹",
+            "en": "Iron Fist",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -12959,15 +14239,23 @@
           "spd": 95,
           "spe": 130
         },
-        "abilities": [
-          "Volt Absorb",
-          "Quick Feet"
-        ],
         "names": {
           "ko": "쥬피썬더",
           "en": "Jolteon",
           "ja": "サンダース"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "축전",
+            "en": "Volt Absorb",
+            "hidden": false
+          },
+          {
+            "ko": "속보",
+            "en": "Quick Feet",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -13057,16 +14345,28 @@
           "spd": 80,
           "spe": 90
         },
-        "abilities": [
-          "Early Bird",
-          "Scrappy",
-          "Inner Focus"
-        ],
         "names": {
           "ko": "캥카",
           "en": "Kangaskhan",
           "ja": "ガルーラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "일찍기상",
+            "en": "Early Bird",
+            "hidden": false
+          },
+          {
+            "ko": "배짱",
+            "en": "Scrappy",
+            "hidden": false
+          },
+          {
+            "ko": "정신력",
+            "en": "Inner Focus",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Kangaskhan",
@@ -13083,14 +14383,18 @@
           "spd": 100,
           "spe": 100
         },
-        "abilities": [
-          "Parental Bond"
-        ],
         "names": {
           "ko": "메가캥카",
           "en": "Mega Kangaskhan",
           "ja": "メガガルーラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부자유친",
+            "en": "Parental Bond",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -13188,16 +14492,28 @@
           "spd": 85,
           "spe": 50
         },
-        "abilities": [
-          "Defiant",
-          "Supreme Overlord",
-          "Pressure"
-        ],
         "names": {
           "ko": "대도각참",
           "en": "Kingambit",
           "ja": "ドドゲザン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "오기",
+            "en": "Defiant",
+            "hidden": false
+          },
+          {
+            "ko": "총대장",
+            "en": "Supreme Overlord",
+            "hidden": false
+          },
+          {
+            "ko": "프레셔",
+            "en": "Pressure",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -13280,16 +14596,28 @@
           "spd": 70,
           "spe": 85
         },
-        "abilities": [
-          "Swarm",
-          "Sheer Force",
-          "Sharpness"
-        ],
         "names": {
           "ko": "사마자르",
           "en": "Kleavor",
           "ja": "バサギリ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "벌레의알림",
+            "en": "Swarm",
+            "hidden": false
+          },
+          {
+            "ko": "우격다짐",
+            "en": "Sheer Force",
+            "hidden": false
+          },
+          {
+            "ko": "예리함",
+            "en": "Sharpness",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -13378,15 +14706,23 @@
           "spd": 87,
           "spe": 75
         },
-        "abilities": [
-          "Prankster",
-          "Magician"
-        ],
         "names": {
           "ko": "클레피",
           "en": "Klefki",
           "ja": "クレッフィ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "짓궂은마음",
+            "en": "Prankster",
+            "hidden": false
+          },
+          {
+            "ko": "매지션",
+            "en": "Magician",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -13462,16 +14798,28 @@
           "spd": 105,
           "spe": 85
         },
-        "abilities": [
-          "Bulletproof",
-          "Soundproof",
-          "Overcoat"
-        ],
         "names": {
           "ko": "짜랑고우거",
           "en": "Kommo-o",
           "ja": "ジャラランガ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "방탄",
+            "en": "Bulletproof",
+            "hidden": false
+          },
+          {
+            "ko": "방음",
+            "en": "Soundproof",
+            "hidden": false
+          },
+          {
+            "ko": "방진",
+            "en": "Overcoat",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -13580,16 +14928,28 @@
           "spd": 70,
           "spe": 92
         },
-        "abilities": [
-          "Intimidate",
-          "Moxie",
-          "Anger Point"
-        ],
         "names": {
           "ko": "악비아르",
           "en": "Krookodile",
           "ja": "ワルビアル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "자기과신",
+            "en": "Moxie",
+            "hidden": false
+          },
+          {
+            "ko": "분노의경혈",
+            "en": "Anger Point",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -13703,15 +15063,23 @@
           "spd": 65,
           "spe": 95
         },
-        "abilities": [
-          "Leaf Guard",
-          "Chlorophyll"
-        ],
         "names": {
           "ko": "리피아",
           "en": "Leafeon",
           "ja": "リーフィア"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "리프가드",
+            "en": "Leaf Guard",
+            "hidden": false
+          },
+          {
+            "ko": "엽록소",
+            "en": "Chlorophyll",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -13800,16 +15168,28 @@
           "spd": 50,
           "spe": 106
         },
-        "abilities": [
-          "Limber",
-          "Unburden",
-          "Prankster"
-        ],
         "names": {
           "ko": "레파르다스",
           "en": "Liepard",
           "ja": "レパルダス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "유연",
+            "en": "Limber",
+            "hidden": false
+          },
+          {
+            "ko": "곡예",
+            "en": "Unburden",
+            "hidden": false
+          },
+          {
+            "ko": "짓궂은마음",
+            "en": "Prankster",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -13899,16 +15279,28 @@
           "spd": 96,
           "spe": 105
         },
-        "abilities": [
-          "Cute Charm",
-          "Klutz",
-          "Limber"
-        ],
         "names": {
           "ko": "이어롭",
           "en": "Lopunny",
           "ja": "ミミロップ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "헤롱헤롱바디",
+            "en": "Cute Charm",
+            "hidden": false
+          },
+          {
+            "ko": "서투름",
+            "en": "Klutz",
+            "hidden": false
+          },
+          {
+            "ko": "유연",
+            "en": "Limber",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Lopunny",
@@ -13926,14 +15318,18 @@
           "spd": 96,
           "spe": 135
         },
-        "abilities": [
-          "Scrappy"
-        ],
         "names": {
           "ko": "메가이어롭",
           "en": "Mega Lopunny",
           "ja": "メガミミロップ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "배짱",
+            "en": "Scrappy",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -14044,16 +15440,28 @@
           "spd": 70,
           "spe": 90
         },
-        "abilities": [
-          "Steadfast",
-          "Inner Focus",
-          "Justified"
-        ],
         "names": {
           "ko": "루카리오",
           "en": "Lucario",
           "ja": "ルカリオ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "불굴의마음",
+            "en": "Steadfast",
+            "hidden": false
+          },
+          {
+            "ko": "정신력",
+            "en": "Inner Focus",
+            "hidden": false
+          },
+          {
+            "ko": "정의의마음",
+            "en": "Justified",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Lucario",
@@ -14071,14 +15479,18 @@
           "spd": 70,
           "spe": 112
         },
-        "abilities": [
-          "Adaptability"
-        ],
         "names": {
           "ko": "메가루카리오",
           "en": "Mega Lucario",
           "ja": "メガルカリオ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "적응력",
+            "en": "Adaptability",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -14193,16 +15605,28 @@
           "spd": 79,
           "spe": 70
         },
-        "abilities": [
-          "Rivalry",
-          "Intimidate",
-          "Guts"
-        ],
         "names": {
           "ko": "렌트라",
           "en": "Luxray",
           "ja": "レントラー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "투쟁심",
+            "en": "Rivalry",
+            "hidden": false
+          },
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "근성",
+            "en": "Guts",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -14286,16 +15710,28 @@
           "spd": 65,
           "spe": 112
         },
-        "abilities": [
-          "Keen Eye",
-          "Sand Rush",
-          "Steadfast"
-        ],
         "names": {
           "ko": "루가루암",
           "en": "Lycanroc",
           "ja": "ルガルガン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "날카로운눈",
+            "en": "Keen Eye",
+            "hidden": false
+          },
+          {
+            "ko": "모래헤치기",
+            "en": "Sand Rush",
+            "hidden": false
+          },
+          {
+            "ko": "불굴의마음",
+            "en": "Steadfast",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -14384,14 +15820,18 @@
           "spd": 65,
           "spe": 110
         },
-        "abilities": [
-          "Tough Claws"
-        ],
         "names": {
           "ko": "루가루암 (Dusk Form)",
           "en": "Lycanroc Dusk Form",
           "ja": "ルガルガン (Dusk Form)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "단단한발톱",
+            "en": "Tough Claws",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -14482,16 +15922,28 @@
           "spd": 75,
           "spe": 82
         },
-        "abilities": [
-          "Keen Eye",
-          "Vital Spirit",
-          "No Guard"
-        ],
         "names": {
           "ko": "루가루암 (Midnight Form)",
           "en": "Lycanroc Midnight Form",
           "ja": "ルガルガン (Midnight Form)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "날카로운눈",
+            "en": "Keen Eye",
+            "hidden": false
+          },
+          {
+            "ko": "의기양양",
+            "en": "Vital Spirit",
+            "hidden": false
+          },
+          {
+            "ko": "노가드",
+            "en": "No Guard",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -14591,16 +16043,28 @@
           "spd": 85,
           "spe": 55
         },
-        "abilities": [
-          "Guts",
-          "No Guard",
-          "Steadfast"
-        ],
         "names": {
           "ko": "괴력몬",
           "en": "Machamp",
           "ja": "カイリキー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "근성",
+            "en": "Guts",
+            "hidden": false
+          },
+          {
+            "ko": "노가드",
+            "en": "No Guard",
+            "hidden": false
+          },
+          {
+            "ko": "불굴의마음",
+            "en": "Steadfast",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -14697,16 +16161,28 @@
           "spd": 75,
           "spe": 73
         },
-        "abilities": [
-          "Contrary",
-          "Suction Cups",
-          "Infiltrator"
-        ],
         "names": {
           "ko": "칼라마네로",
           "en": "Malamar",
           "ja": "カラマネロ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심술꾸러기",
+            "en": "Contrary",
+            "hidden": false
+          },
+          {
+            "ko": "흡반",
+            "en": "Suction Cups",
+            "hidden": false
+          },
+          {
+            "ko": "틈새포착",
+            "en": "Infiltrator",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Malamar",
@@ -14724,14 +16200,18 @@
           "spd": 120,
           "spe": 88
         },
-        "abilities": [
-          "Contrary"
-        ],
         "names": {
           "ko": "메가칼라마네로",
           "en": "Mega Malamar",
           "ja": "メガカラマネロ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심술꾸러기",
+            "en": "Contrary",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -14830,16 +16310,28 @@
           "spd": 60,
           "spe": 80
         },
-        "abilities": [
-          "Oblivious",
-          "Snow Cloak",
-          "Thick Fat"
-        ],
         "names": {
           "ko": "맘모꾸리",
           "en": "Mamoswine",
           "ja": "マンムー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "둔감",
+            "en": "Oblivious",
+            "hidden": false
+          },
+          {
+            "ko": "눈숨기",
+            "en": "Snow Cloak",
+            "hidden": false
+          },
+          {
+            "ko": "두꺼운지방",
+            "en": "Thick Fat",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -14933,16 +16425,28 @@
           "spd": 60,
           "spe": 105
         },
-        "abilities": [
-          "Static",
-          "Lightning Rod",
-          "Minus"
-        ],
         "names": {
           "ko": "썬더볼트",
           "en": "Manectric",
           "ja": "ライボルト"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "정전기",
+            "en": "Static",
+            "hidden": false
+          },
+          {
+            "ko": "피뢰침",
+            "en": "Lightning Rod",
+            "hidden": false
+          },
+          {
+            "ko": "마이너스",
+            "en": "Minus",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Manectric",
@@ -14959,14 +16463,18 @@
           "spd": 80,
           "spe": 135
         },
-        "abilities": [
-          "Intimidate"
-        ],
         "names": {
           "ko": "메가썬더볼트",
           "en": "Mega Manectric",
           "ja": "メガライボルト"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -15046,16 +16554,28 @@
           "spd": 75,
           "spe": 111
         },
-        "abilities": [
-          "Friend Guard",
-          "Cheek Pouch",
-          "Technician"
-        ],
         "names": {
           "ko": "파밀리쥐",
           "en": "Maushold",
           "ja": "イッカネズミ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "프렌드가드",
+            "en": "Friend Guard",
+            "hidden": false
+          },
+          {
+            "ko": "볼주머니",
+            "en": "Cheek Pouch",
+            "hidden": false
+          },
+          {
+            "ko": "테크니션",
+            "en": "Technician",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -15137,16 +16657,28 @@
           "spd": 55,
           "spe": 50
         },
-        "abilities": [
-          "Hyper Cutter",
-          "Intimidate",
-          "Sheer Force"
-        ],
         "names": {
           "ko": "입치트",
           "en": "Mawile",
           "ja": "クチート"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "괴력집게",
+            "en": "Hyper Cutter",
+            "hidden": false
+          },
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "우격다짐",
+            "en": "Sheer Force",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Mawile",
@@ -15164,14 +16696,18 @@
           "spd": 95,
           "spe": 50
         },
-        "abilities": [
-          "Huge Power"
-        ],
         "names": {
           "ko": "메가입치트",
           "en": "Mega Mawile",
           "ja": "メガクチート"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "천하장사",
+            "en": "Huge Power",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -15273,15 +16809,23 @@
           "spd": 75,
           "spe": 80
         },
-        "abilities": [
-          "Pure Power",
-          "Telepathy"
-        ],
         "names": {
           "ko": "요가램",
           "en": "Medicham",
           "ja": "チャーレム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "순수한힘",
+            "en": "Pure Power",
+            "hidden": false
+          },
+          {
+            "ko": "텔레파시",
+            "en": "Telepathy",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Medicham",
@@ -15299,14 +16843,18 @@
           "spd": 85,
           "spe": 100
         },
-        "abilities": [
-          "Pure Power"
-        ],
         "names": {
           "ko": "메가요가램",
           "en": "Mega Medicham",
           "ja": "メガチャーレム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "순수한힘",
+            "en": "Pure Power",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -15413,15 +16961,23 @@
           "spd": 100,
           "spe": 80
         },
-        "abilities": [
-          "Overgrow",
-          "Leaf Guard"
-        ],
         "names": {
           "ko": "메가니움",
           "en": "Meganium",
           "ja": "メガニウム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심록",
+            "en": "Overgrow",
+            "hidden": false
+          },
+          {
+            "ko": "리프가드",
+            "en": "Leaf Guard",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Meganium",
@@ -15439,14 +16995,18 @@
           "spd": 115,
           "spe": 80
         },
-        "abilities": [
-          "Mega Sol"
-        ],
         "names": {
           "ko": "메가메가니움",
           "en": "Mega Meganium",
           "ja": "メガメガニウム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "메가솔라",
+            "en": "Mega Sol",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -15539,15 +17099,23 @@
           "spd": 70,
           "spe": 123
         },
-        "abilities": [
-          "Overgrow",
-          "Protean"
-        ],
         "names": {
           "ko": "마스카나",
           "en": "Meowscarada",
           "ja": "マスカーニャ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심록",
+            "en": "Overgrow",
+            "hidden": false
+          },
+          {
+            "ko": "변환자재",
+            "en": "Protean",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -15645,16 +17213,28 @@
           "spd": 81,
           "spe": 104
         },
-        "abilities": [
-          "Keen Eye",
-          "Infiltrator",
-          "Prankster"
-        ],
         "names": {
           "ko": "냐오닉스",
           "en": "Meowstic",
           "ja": "ニャオニクス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "날카로운눈",
+            "en": "Keen Eye",
+            "hidden": false
+          },
+          {
+            "ko": "틈새포착",
+            "en": "Infiltrator",
+            "hidden": false
+          },
+          {
+            "ko": "짓궂은마음",
+            "en": "Prankster",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Meowstic",
@@ -15671,14 +17251,18 @@
           "spd": 101,
           "spe": 124
         },
-        "abilities": [
-          "Trace"
-        ],
         "names": {
           "ko": "메가냐오닉스",
           "en": "Mega Meowstic",
           "ja": "メガニャオニクス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "Trace",
+            "en": "Trace",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -15768,16 +17352,28 @@
           "spd": 81,
           "spe": 104
         },
-        "abilities": [
-          "Keen Eye",
-          "Infiltrator",
-          "Competitive"
-        ],
         "names": {
           "ko": "냐오닉스 (Female)",
           "en": "Meowstic Female",
           "ja": "ニャオニクス (Female)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "날카로운눈",
+            "en": "Keen Eye",
+            "hidden": false
+          },
+          {
+            "ko": "틈새포착",
+            "en": "Infiltrator",
+            "hidden": false
+          },
+          {
+            "ko": "승기",
+            "en": "Competitive",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -15866,15 +17462,23 @@
           "spd": 90,
           "spe": 70
         },
-        "abilities": [
-          "Clear Body",
-          "Light Metal"
-        ],
         "names": {
           "ko": "메타그로스",
           "en": "Metagross",
           "ja": "メタグロス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "클리어바디",
+            "en": "Clear Body",
+            "hidden": false
+          },
+          {
+            "ko": "라이트메탈",
+            "en": "Light Metal",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Metagross",
@@ -15892,14 +17496,18 @@
           "spd": 110,
           "spe": 110
         },
-        "abilities": [
-          "Tough Claws"
-        ],
         "names": {
           "ko": "메가메타그로스",
           "en": "Mega Metagross",
           "ja": "メガメタグロス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "단단한발톱",
+            "en": "Tough Claws",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -15997,16 +17605,28 @@
           "spd": 125,
           "spe": 81
         },
-        "abilities": [
-          "Marvel Scale",
-          "Competitive",
-          "Cute Charm"
-        ],
         "names": {
           "ko": "밀로틱",
           "en": "Milotic",
           "ja": "ミロカロス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "이상한비늘",
+            "en": "Marvel Scale",
+            "hidden": false
+          },
+          {
+            "ko": "승기",
+            "en": "Competitive",
+            "hidden": false
+          },
+          {
+            "ko": "헤롱헤롱바디",
+            "en": "Cute Charm",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -16099,14 +17719,18 @@
           "spd": 105,
           "spe": 96
         },
-        "abilities": [
-          "Disguise"
-        ],
         "names": {
           "ko": "따라큐",
           "en": "Mimikyu",
           "ja": "ミミッキュ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "탈",
+            "en": "Disguise",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -16199,14 +17823,18 @@
           "spd": 58,
           "spe": 97
         },
-        "abilities": [
-          "Hunger Switch"
-        ],
         "names": {
           "ko": "모르페코",
           "en": "Morpeko",
           "ja": "モルペコ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "꼬르륵스위치",
+            "en": "Hunger Switch",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -16302,14 +17930,18 @@
           "spd": 107,
           "spe": 86
         },
-        "abilities": [
-          "Levitate"
-        ],
         "names": {
           "ko": "커트로토무",
           "en": "Mow Rotom",
           "ja": "カットロトム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "Levitate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -16384,16 +18016,28 @@
           "spd": 100,
           "spe": 70
         },
-        "abilities": [
-          "Tangled Feet",
-          "Screen Cleaner",
-          "Ice Body"
-        ],
         "names": {
           "ko": "마임꽁꽁",
           "en": "Mr. Rime",
           "ja": "バリコオル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "갈지자걸음",
+            "en": "Tangled Feet",
+            "hidden": false
+          },
+          {
+            "ko": "배리어프리",
+            "en": "Screen Cleaner",
+            "hidden": false
+          },
+          {
+            "ko": "아이스바디",
+            "en": "Ice Body",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -16517,16 +18161,28 @@
           "spd": 85,
           "spe": 35
         },
-        "abilities": [
-          "Own Tempo",
-          "Stamina",
-          "Inner Focus"
-        ],
         "names": {
           "ko": "만마드",
           "en": "Mudsdale",
           "ja": "バンバドロ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "마이페이스",
+            "en": "Own Tempo",
+            "hidden": false
+          },
+          {
+            "ko": "지구력",
+            "en": "Stamina",
+            "hidden": false
+          },
+          {
+            "ko": "정신력",
+            "en": "Inner Focus",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -16601,16 +18257,28 @@
           "spd": 95,
           "spe": 29
         },
-        "abilities": [
-          "Forewarn",
-          "Synchronize",
-          "Telepathy"
-        ],
         "names": {
           "ko": "몽얌나",
           "en": "Musharna",
           "ja": "ムシャーナ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "예지몽",
+            "en": "Forewarn",
+            "hidden": false
+          },
+          {
+            "ko": "싱크로",
+            "en": "Synchronize",
+            "hidden": false
+          },
+          {
+            "ko": "텔레파시",
+            "en": "Telepathy",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -16690,15 +18358,23 @@
           "spd": 100,
           "spe": 100
         },
-        "abilities": [
-          "Flash Fire",
-          "Drought"
-        ],
         "names": {
           "ko": "나인테일",
           "en": "Ninetales",
           "ja": "キュウコン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "타오르는불꽃",
+            "en": "Flash Fire",
+            "hidden": false
+          },
+          {
+            "ko": "가뭄",
+            "en": "Drought",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -16796,16 +18472,28 @@
           "spd": 80,
           "spe": 123
         },
-        "abilities": [
-          "Frisk",
-          "Infiltrator",
-          "Telepathy"
-        ],
         "names": {
           "ko": "음번",
           "en": "Noivern",
           "ja": "オンバーン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "통찰",
+            "en": "Frisk",
+            "hidden": false
+          },
+          {
+            "ko": "틈새포착",
+            "en": "Infiltrator",
+            "hidden": false
+          },
+          {
+            "ko": "텔레파시",
+            "en": "Telepathy",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -16900,16 +18588,28 @@
           "spd": 110,
           "spe": 60
         },
-        "abilities": [
-          "Inner Focus",
-          "Telepathy",
-          "Symbiosis"
-        ],
         "names": {
           "ko": "하랑우탄",
           "en": "Oranguru",
           "ja": "ヤレユータン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "정신력",
+            "en": "Inner Focus",
+            "hidden": false
+          },
+          {
+            "ko": "텔레파시",
+            "en": "Telepathy",
+            "hidden": false
+          },
+          {
+            "ko": "공생",
+            "en": "Symbiosis",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -17004,15 +18704,23 @@
           "spd": 55,
           "spe": 65
         },
-        "abilities": [
-          "Earth Eater",
-          "Sand Veil"
-        ],
         "names": {
           "ko": "꿈트렁",
           "en": "Orthworm",
           "ja": "ミミズズ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "흙먹기",
+            "en": "Earth Eater",
+            "hidden": false
+          },
+          {
+            "ko": "모래숨기",
+            "en": "Sand Veil",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -17083,16 +18791,28 @@
           "spd": 65,
           "spe": 85
         },
-        "abilities": [
-          "Poison Point",
-          "Swift Swim",
-          "Intimidate"
-        ],
         "names": {
           "ko": "장침바루",
           "en": "Overqwil",
           "ja": "ハリーマン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "독가시",
+            "en": "Poison Point",
+            "hidden": false
+          },
+          {
+            "ko": "쓱쓱",
+            "en": "Swift Swim",
+            "hidden": false
+          },
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -17182,14 +18902,18 @@
           "spd": 62,
           "spe": 100
         },
-        "abilities": [
-          "Zero to Hero"
-        ],
         "names": {
           "ko": "돌핀맨 (Zero Form)",
           "en": "Palafin Zero Form",
           "ja": "イルカマン (Zero Form)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "마이티체인지",
+            "en": "Zero to Hero",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -17279,16 +19003,28 @@
           "spd": 70,
           "spe": 100
         },
-        "abilities": [
-          "Intimidate",
-          "Anger Point",
-          "Cud Chew"
-        ],
         "names": {
           "ko": "팔데아 켄타로스 (Aqua Breed)",
           "en": "Paldean Tauros Aqua Breed",
           "ja": "パルデアケンタロス (Aqua Breed)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "분노의경혈",
+            "en": "Anger Point",
+            "hidden": false
+          },
+          {
+            "ko": "되새김질",
+            "en": "Cud Chew",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -17371,16 +19107,28 @@
           "spd": 70,
           "spe": 100
         },
-        "abilities": [
-          "Intimidate",
-          "Anger Point",
-          "Cud Chew"
-        ],
         "names": {
           "ko": "팔데아 켄타로스 (Blaze Breed)",
           "en": "Paldean Tauros Blaze Breed",
           "ja": "パルデアケンタロス (Blaze Breed)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "분노의경혈",
+            "en": "Anger Point",
+            "hidden": false
+          },
+          {
+            "ko": "되새김질",
+            "en": "Cud Chew",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -17463,16 +19211,28 @@
           "spd": 70,
           "spe": 100
         },
-        "abilities": [
-          "Intimidate",
-          "Anger Point",
-          "Cud Chew"
-        ],
         "names": {
           "ko": "팔데아 켄타로스 (Combat Breed)",
           "en": "Paldean Tauros Combat Breed",
           "ja": "パルデアケンタロス (Combat Breed)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "분노의경혈",
+            "en": "Anger Point",
+            "hidden": false
+          },
+          {
+            "ko": "되새김질",
+            "en": "Cud Chew",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -17551,16 +19311,28 @@
           "spd": 71,
           "spe": 58
         },
-        "abilities": [
-          "Iron Fist",
-          "Mold Breaker",
-          "Scrappy"
-        ],
         "names": {
           "ko": "부란다",
           "en": "Pangoro",
           "ja": "ゴロンダ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "철주먹",
+            "en": "Iron Fist",
+            "hidden": false
+          },
+          {
+            "ko": "틀깨기",
+            "en": "Mold Breaker",
+            "hidden": false
+          },
+          {
+            "ko": "배짱",
+            "en": "Scrappy",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -17671,15 +19443,23 @@
           "spd": 60,
           "spe": 80
         },
-        "abilities": [
-          "Receiver",
-          "Defiant"
-        ],
         "names": {
           "ko": "내던숭이",
           "en": "Passimian",
           "ja": "ナゲツケサル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "리시버",
+            "en": "Receiver",
+            "hidden": false
+          },
+          {
+            "ko": "오기",
+            "en": "Defiant",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -17776,16 +19556,28 @@
           "spd": 70,
           "spe": 65
         },
-        "abilities": [
-          "Keen Eye",
-          "Drizzle",
-          "Rain Dish"
-        ],
         "names": {
           "ko": "패리퍼",
           "en": "Pelipper",
           "ja": "ペリッパー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "날카로운눈",
+            "en": "Keen Eye",
+            "hidden": false
+          },
+          {
+            "ko": "잔비",
+            "en": "Drizzle",
+            "hidden": false
+          },
+          {
+            "ko": "젖은접시",
+            "en": "Rain Dish",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -17869,16 +19661,28 @@
           "spd": 70,
           "spe": 101
         },
-        "abilities": [
-          "Keen Eye",
-          "Tangled Feet",
-          "Big Pecks"
-        ],
         "names": {
           "ko": "피죤투",
           "en": "Pidgeot",
           "ja": "ピジョット"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "날카로운눈",
+            "en": "Keen Eye",
+            "hidden": false
+          },
+          {
+            "ko": "갈지자걸음",
+            "en": "Tangled Feet",
+            "hidden": false
+          },
+          {
+            "ko": "부풀린가슴",
+            "en": "Big Pecks",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Pidgeot",
@@ -17896,14 +19700,18 @@
           "spd": 80,
           "spe": 121
         },
-        "abilities": [
-          "No Guard"
-        ],
         "names": {
           "ko": "메가피죤투",
           "en": "Mega Pidgeot",
           "ja": "メガピジョット"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "노가드",
+            "en": "No Guard",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -17964,15 +19772,23 @@
           "spd": 50,
           "spe": 90
         },
-        "abilities": [
-          "Static",
-          "Lightning Rod"
-        ],
         "names": {
           "ko": "피카츄",
           "en": "Pikachu",
           "ja": "ピカチュウ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "정전기",
+            "en": "Static",
+            "hidden": false
+          },
+          {
+            "ko": "피뢰침",
+            "en": "Lightning Rod",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -18063,16 +19879,28 @@
           "spd": 70,
           "spe": 85
         },
-        "abilities": [
-          "Hyper Cutter",
-          "Mold Breaker",
-          "Moxie"
-        ],
         "names": {
           "ko": "쁘사이저",
           "en": "Pinsir",
           "ja": "カイロス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "괴력집게",
+            "en": "Hyper Cutter",
+            "hidden": false
+          },
+          {
+            "ko": "틀깨기",
+            "en": "Mold Breaker",
+            "hidden": false
+          },
+          {
+            "ko": "자기과신",
+            "en": "Moxie",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Pinsir",
@@ -18090,14 +19918,18 @@
           "spd": 90,
           "spe": 105
         },
-        "abilities": [
-          "Aerilate"
-        ],
         "names": {
           "ko": "메가쁘사이저",
           "en": "Mega Pinsir",
           "ja": "メガカイロス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "스카이스킨",
+            "en": "Aerilate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -18180,16 +20012,28 @@
           "spd": 100,
           "spe": 70
         },
-        "abilities": [
-          "Water Absorb",
-          "Damp",
-          "Drizzle"
-        ],
         "names": {
           "ko": "왕구리",
           "en": "Politoed",
           "ja": "ニョロトノ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "저수",
+            "en": "Water Absorb",
+            "hidden": false
+          },
+          {
+            "ko": "습기",
+            "en": "Damp",
+            "hidden": false
+          },
+          {
+            "ko": "잔비",
+            "en": "Drizzle",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -18276,15 +20120,23 @@
           "spd": 114,
           "spe": 70
         },
-        "abilities": [
-          "Weak Armor",
-          "Cursed Body"
-        ],
         "names": {
           "ko": "포트데스",
           "en": "Polteageist",
           "ja": "ポットデス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "깨어진갑옷",
+            "en": "Weak Armor",
+            "hidden": false
+          },
+          {
+            "ko": "저주받은바디",
+            "en": "Cursed Body",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -18361,15 +20213,23 @@
           "spd": 116,
           "spe": 60
         },
-        "abilities": [
-          "Torrent",
-          "Liquid Voice"
-        ],
         "names": {
           "ko": "누리레느",
           "en": "Primarina",
           "ja": "アシレーヌ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "급류",
+            "en": "Torrent",
+            "hidden": false
+          },
+          {
+            "ko": "촉촉보이스",
+            "en": "Liquid Voice",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -18464,16 +20324,28 @@
           "spd": 66,
           "spe": 106
         },
-        "abilities": [
-          "Rivalry",
-          "Unnerve",
-          "Moxie"
-        ],
         "names": {
           "ko": "화염레오",
           "en": "Pyroar",
           "ja": "カエンジシ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "투쟁심",
+            "en": "Rivalry",
+            "hidden": false
+          },
+          {
+            "ko": "긴장감",
+            "en": "Unnerve",
+            "hidden": false
+          },
+          {
+            "ko": "자기과신",
+            "en": "Moxie",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Pyroar",
@@ -18491,14 +20363,18 @@
           "spd": 86,
           "spe": 126
         },
-        "abilities": [
-          "Fire Mane"
-        ],
         "names": {
           "ko": "메가화염레오",
           "en": "Mega Pyroar",
           "ja": "メガカエンジシ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "Fire Mane",
+            "en": "Fire Mane",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -18578,15 +20454,23 @@
           "spd": 75,
           "spe": 85
         },
-        "abilities": [
-          "Torrent",
-          "Moxie"
-        ],
         "names": {
           "ko": "웨이니발",
           "en": "Quaquaval",
           "ja": "ウェーニバル"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "급류",
+            "en": "Torrent",
+            "hidden": false
+          },
+          {
+            "ko": "자기과신",
+            "en": "Moxie",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -18677,16 +20561,28 @@
           "spd": 55,
           "spe": 85
         },
-        "abilities": [
-          "Poison Point",
-          "Swift Swim",
-          "Intimidate"
-        ],
         "names": {
           "ko": "침바루",
           "en": "Qwilfish",
           "ja": "ハリーセン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "독가시",
+            "en": "Poison Point",
+            "hidden": false
+          },
+          {
+            "ko": "쓱쓱",
+            "en": "Swift Swim",
+            "hidden": false
+          },
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -18780,15 +20676,23 @@
           "spd": 80,
           "spe": 110
         },
-        "abilities": [
-          "Static",
-          "Lightning Rod"
-        ],
         "names": {
           "ko": "라이츄",
           "en": "Raichu",
           "ja": "ライチュウ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "정전기",
+            "en": "Static",
+            "hidden": false
+          },
+          {
+            "ko": "피뢰침",
+            "en": "Lightning Rod",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Raichu X",
@@ -18805,14 +20709,18 @@
           "spd": 95,
           "spe": 110
         },
-        "abilities": [
-          "Electric Surge"
-        ],
         "names": {
           "ko": "메가라이츄 X",
           "en": "Mega Raichu X",
           "ja": "メガライチュウX"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "일렉트릭메이커",
+            "en": "Electric Surge",
+            "hidden": false
+          }
+        ]
       },
       {
         "name": "Mega Raichu Y",
@@ -18829,14 +20737,18 @@
           "spd": 80,
           "spe": 130
         },
-        "abilities": [
-          "No Guard"
-        ],
         "names": {
           "ko": "메가라이츄 Y",
           "en": "Mega Raichu Y",
           "ja": "メガライチュウY"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "노가드",
+            "en": "No Guard",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -18932,15 +20844,23 @@
           "spd": 50,
           "spe": 58
         },
-        "abilities": [
-          "Mold Breaker",
-          "Sheer Force"
-        ],
         "names": {
           "ko": "램펄드",
           "en": "Rampardos",
           "ja": "ラムパルド"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "틀깨기",
+            "en": "Mold Breaker",
+            "hidden": false
+          },
+          {
+            "ko": "우격다짐",
+            "en": "Sheer Force",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -19044,16 +20964,28 @@
           "spd": 85,
           "spe": 30
         },
-        "abilities": [
-          "Overcoat",
-          "Magic Guard",
-          "Regenerator"
-        ],
         "names": {
           "ko": "란쿨루스",
           "en": "Reuniclus",
           "ja": "ランクルス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "방진",
+            "en": "Overcoat",
+            "hidden": false
+          },
+          {
+            "ko": "매직가드",
+            "en": "Magic Guard",
+            "hidden": false
+          },
+          {
+            "ko": "재생력",
+            "en": "Regenerator",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -19151,16 +21083,28 @@
           "spd": 55,
           "spe": 40
         },
-        "abilities": [
-          "Lightning Rod",
-          "Solid Rock",
-          "Reckless"
-        ],
         "names": {
           "ko": "거대코뿌리",
           "en": "Rhyperior",
           "ja": "ドサイドン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "피뢰침",
+            "en": "Lightning Rod",
+            "hidden": false
+          },
+          {
+            "ko": "하드록",
+            "en": "Solid Rock",
+            "hidden": false
+          },
+          {
+            "ko": "이판사판",
+            "en": "Reckless",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -19283,16 +21227,28 @@
           "spd": 105,
           "spe": 90
         },
-        "abilities": [
-          "Natural Cure",
-          "Poison Point",
-          "Technician"
-        ],
         "names": {
           "ko": "로즈레이드",
           "en": "Roserade",
           "ja": "ロズレイド"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "자연회복",
+            "en": "Natural Cure",
+            "hidden": false
+          },
+          {
+            "ko": "독가시",
+            "en": "Poison Point",
+            "hidden": false
+          },
+          {
+            "ko": "테크니션",
+            "en": "Technician",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -19377,14 +21333,18 @@
           "spd": 77,
           "spe": 91
         },
-        "abilities": [
-          "Levitate"
-        ],
         "names": {
           "ko": "로토무",
           "en": "Rotom",
           "ja": "ロトム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "Levitate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -19458,14 +21418,18 @@
           "spd": 105,
           "spe": 30
         },
-        "abilities": [
-          "Wandering Spirit"
-        ],
         "names": {
           "ko": "데스판",
           "en": "Runerigus",
           "ja": "デスバーン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "떠도는영혼",
+            "en": "Wandering Spirit",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -19566,16 +21530,28 @@
           "spd": 65,
           "spe": 50
         },
-        "abilities": [
-          "Keen Eye",
-          "Stall",
-          "Prankster"
-        ],
         "names": {
           "ko": "깜까미",
           "en": "Sableye",
           "ja": "ヤミラミ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "날카로운눈",
+            "en": "Keen Eye",
+            "hidden": false
+          },
+          {
+            "ko": "시간벌기",
+            "en": "Stall",
+            "hidden": false
+          },
+          {
+            "ko": "짓궂은마음",
+            "en": "Prankster",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Sableye",
@@ -19593,14 +21569,18 @@
           "spd": 115,
           "spe": 20
         },
-        "abilities": [
-          "Magic Bounce"
-        ],
         "names": {
           "ko": "메가깜까미",
           "en": "Mega Sableye",
           "ja": "メガヤミラミ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "매직미러",
+            "en": "Magic Bounce",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -19720,15 +21700,23 @@
           "spd": 60,
           "spe": 117
         },
-        "abilities": [
-          "Corrosion",
-          "Oblivious"
-        ],
         "names": {
           "ko": "염뉴트",
           "en": "Salazzle",
           "ja": "エンニュート"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부식",
+            "en": "Corrosion",
+            "hidden": false
+          },
+          {
+            "ko": "둔감",
+            "en": "Oblivious",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -19829,15 +21817,23 @@
           "spd": 70,
           "spe": 70
         },
-        "abilities": [
-          "Torrent",
-          "Shell Armor"
-        ],
         "names": {
           "ko": "대검귀",
           "en": "Samurott",
           "ja": "ダイケンキ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "급류",
+            "en": "Torrent",
+            "hidden": false
+          },
+          {
+            "ko": "조가비갑옷",
+            "en": "Shell Armor",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -19928,16 +21924,28 @@
           "spd": 70,
           "spe": 71
         },
-        "abilities": [
-          "Sand Spit",
-          "Shed Skin",
-          "Sand Veil"
-        ],
         "names": {
           "ko": "사다이사",
           "en": "Sandaconda",
           "ja": "サダイジャ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "모래뿜기",
+            "en": "Sand Spit",
+            "hidden": false
+          },
+          {
+            "ko": "탈피",
+            "en": "Shed Skin",
+            "hidden": false
+          },
+          {
+            "ko": "모래숨기",
+            "en": "Sand Veil",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -20016,15 +22024,23 @@
           "spd": 85,
           "spe": 120
         },
-        "abilities": [
-          "Overgrow",
-          "Unburden"
-        ],
         "names": {
           "ko": "나무킹",
           "en": "Sceptile",
           "ja": "ジュカイン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심록",
+            "en": "Overgrow",
+            "hidden": false
+          },
+          {
+            "ko": "곡예",
+            "en": "Unburden",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Sceptile",
@@ -20042,14 +22058,18 @@
           "spd": 85,
           "spe": 145
         },
-        "abilities": [
-          "Lightning Rod"
-        ],
         "names": {
           "ko": "메가나무킹",
           "en": "Mega Sceptile",
           "ja": "メガジュカイン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "피뢰침",
+            "en": "Lightning Rod",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -20157,16 +22177,28 @@
           "spd": 80,
           "spe": 65
         },
-        "abilities": [
-          "Swarm",
-          "Technician",
-          "Light Metal"
-        ],
         "names": {
           "ko": "핫삼",
           "en": "Scizor",
           "ja": "ハッサム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "벌레의알림",
+            "en": "Swarm",
+            "hidden": false
+          },
+          {
+            "ko": "테크니션",
+            "en": "Technician",
+            "hidden": false
+          },
+          {
+            "ko": "라이트메탈",
+            "en": "Light Metal",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Scizor",
@@ -20184,14 +22216,18 @@
           "spd": 100,
           "spe": 75
         },
-        "abilities": [
-          "Technician"
-        ],
         "names": {
           "ko": "메가핫삼",
           "en": "Mega Scizor",
           "ja": "メガハッサム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "테크니션",
+            "en": "Technician",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -20286,16 +22322,28 @@
           "spd": 69,
           "spe": 112
         },
-        "abilities": [
-          "Poison Point",
-          "Swarm",
-          "Speed Boost"
-        ],
         "names": {
           "ko": "펜드라",
           "en": "Scolipede",
           "ja": "ペンドラー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "독가시",
+            "en": "Poison Point",
+            "hidden": false
+          },
+          {
+            "ko": "벌레의알림",
+            "en": "Swarm",
+            "hidden": false
+          },
+          {
+            "ko": "가속",
+            "en": "Speed Boost",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Scolipede",
@@ -20313,14 +22361,18 @@
           "spd": 99,
           "spe": 62
         },
-        "abilities": [
-          "Shell Armor"
-        ],
         "names": {
           "ko": "메가펜드라",
           "en": "Mega Scolipede",
           "ja": "メガペンドラー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "조가비갑옷",
+            "en": "Shell Armor",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -20404,16 +22456,28 @@
           "spd": 65,
           "spe": 75
         },
-        "abilities": [
-          "Chlorophyll",
-          "Insomnia",
-          "Moody"
-        ],
         "names": {
           "ko": "스코빌런",
           "en": "Scovillain",
           "ja": "スコヴィラン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "엽록소",
+            "en": "Chlorophyll",
+            "hidden": false
+          },
+          {
+            "ko": "불면",
+            "en": "Insomnia",
+            "hidden": false
+          },
+          {
+            "ko": "변덕쟁이",
+            "en": "Moody",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Scovillain",
@@ -20431,14 +22495,18 @@
           "spd": 85,
           "spe": 75
         },
-        "abilities": [
-          "Spicy Spray"
-        ],
         "names": {
           "ko": "메가스코빌런",
           "en": "Mega Scovillain",
           "ja": "メガスコヴィラン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "하바네로분출",
+            "en": "Spicy Spray",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -20517,16 +22585,28 @@
           "spd": 115,
           "spe": 58
         },
-        "abilities": [
-          "Shed Skin",
-          "Moxie",
-          "Intimidate"
-        ],
         "names": {
           "ko": "곤율거니",
           "en": "Scrafty",
           "ja": "ズルズキン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "탈피",
+            "en": "Shed Skin",
+            "hidden": false
+          },
+          {
+            "ko": "자기과신",
+            "en": "Moxie",
+            "hidden": false
+          },
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Scrafty",
@@ -20544,14 +22624,18 @@
           "spd": 135,
           "spe": 68
         },
-        "abilities": [
-          "Intimidate"
-        ],
         "names": {
           "ko": "메가곤율거니",
           "en": "Mega Scrafty",
           "ja": "メガズルズキン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -20663,15 +22747,23 @@
           "spd": 95,
           "spe": 113
         },
-        "abilities": [
-          "Overgrow",
-          "Contrary"
-        ],
         "names": {
           "ko": "샤로다",
           "en": "Serperior",
           "ja": "ジャローダ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심록",
+            "en": "Overgrow",
+            "hidden": false
+          },
+          {
+            "ko": "심술꾸러기",
+            "en": "Contrary",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -20756,15 +22848,23 @@
           "spd": 40,
           "spe": 95
         },
-        "abilities": [
-          "Rough Skin",
-          "Speed Boost"
-        ],
         "names": {
           "ko": "샤크니아",
           "en": "Sharpedo",
           "ja": "サメハダー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "까칠한피부",
+            "en": "Rough Skin",
+            "hidden": false
+          },
+          {
+            "ko": "가속",
+            "en": "Speed Boost",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Sharpedo",
@@ -20782,14 +22882,18 @@
           "spd": 65,
           "spe": 105
         },
-        "abilities": [
-          "Strong Jaw"
-        ],
         "names": {
           "ko": "메가샤크니아",
           "en": "Mega Sharpedo",
           "ja": "メガサメハダー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "옹골찬턱",
+            "en": "Strong Jaw",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -20879,15 +22983,23 @@
           "spd": 63,
           "spe": 101
         },
-        "abilities": [
-          "Gluttony",
-          "Torrent"
-        ],
         "names": {
           "ko": "앗차키",
           "en": "Simipour",
           "ja": "ヒヤッキー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "먹보",
+            "en": "Gluttony",
+            "hidden": false
+          },
+          {
+            "ko": "급류",
+            "en": "Torrent",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -20971,15 +23083,23 @@
           "spd": 63,
           "spe": 101
         },
-        "abilities": [
-          "Gluttony",
-          "Overgrow"
-        ],
         "names": {
           "ko": "야나키",
           "en": "Simisage",
           "ja": "ヤナッキー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "먹보",
+            "en": "Gluttony",
+            "hidden": false
+          },
+          {
+            "ko": "심록",
+            "en": "Overgrow",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -21061,15 +23181,23 @@
           "spd": 63,
           "spe": 101
         },
-        "abilities": [
-          "Gluttony",
-          "Blaze"
-        ],
         "names": {
           "ko": "바오키",
           "en": "Simisear",
           "ja": "バオッキー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "먹보",
+            "en": "Gluttony",
+            "hidden": false
+          },
+          {
+            "ko": "맹화",
+            "en": "Blaze",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -21155,15 +23283,23 @@
           "spd": 80,
           "spe": 70
         },
-        "abilities": [
-          "Hospitality",
-          "Heatproof"
-        ],
         "names": {
           "ko": "그우린차",
           "en": "Sinistcha",
           "ja": "ヤバソチャ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "대접",
+            "en": "Hospitality",
+            "hidden": false
+          },
+          {
+            "ko": "내열",
+            "en": "Heatproof",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -21230,16 +23366,28 @@
           "spd": 70,
           "spe": 70
         },
-        "abilities": [
-          "Keen Eye",
-          "Sturdy",
-          "Weak Armor"
-        ],
         "names": {
           "ko": "무장조",
           "en": "Skarmory",
           "ja": "エアームド"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "날카로운눈",
+            "en": "Keen Eye",
+            "hidden": false
+          },
+          {
+            "ko": "옹골참",
+            "en": "Sturdy",
+            "hidden": false
+          },
+          {
+            "ko": "깨어진갑옷",
+            "en": "Weak Armor",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Skarmory",
@@ -21257,14 +23405,18 @@
           "spd": 100,
           "spe": 110
         },
-        "abilities": [
-          "Stalwart"
-        ],
         "names": {
           "ko": "메가무장조",
           "en": "Mega Skarmory",
           "ja": "メガエアームド"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "굳건한신념",
+            "en": "Stalwart",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -21346,15 +23498,23 @@
           "spd": 75,
           "spe": 66
         },
-        "abilities": [
-          "Blaze",
-          "Unaware"
-        ],
         "names": {
           "ko": "라우드본",
           "en": "Skeledirge",
           "ja": "ラウドボーン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "맹화",
+            "en": "Blaze",
+            "hidden": false
+          },
+          {
+            "ko": "천진",
+            "en": "Unaware",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -21442,16 +23602,28 @@
           "spd": 80,
           "spe": 30
         },
-        "abilities": [
-          "Oblivious",
-          "Own Tempo",
-          "Regenerator"
-        ],
         "names": {
           "ko": "야도란",
           "en": "Slowbro",
           "ja": "ヤドラン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "둔감",
+            "en": "Oblivious",
+            "hidden": false
+          },
+          {
+            "ko": "마이페이스",
+            "en": "Own Tempo",
+            "hidden": false
+          },
+          {
+            "ko": "재생력",
+            "en": "Regenerator",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Slowbro",
@@ -21469,14 +23641,18 @@
           "spd": 80,
           "spe": 30
         },
-        "abilities": [
-          "Shell Armor"
-        ],
         "names": {
           "ko": "메가야도란",
           "en": "Mega Slowbro",
           "ja": "メガヤドラン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "조가비갑옷",
+            "en": "Shell Armor",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -21585,16 +23761,28 @@
           "spd": 110,
           "spe": 30
         },
-        "abilities": [
-          "Oblivious",
-          "Own Tempo",
-          "Regenerator"
-        ],
         "names": {
           "ko": "야도킹",
           "en": "Slowking",
           "ja": "ヤドキング"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "둔감",
+            "en": "Oblivious",
+            "hidden": false
+          },
+          {
+            "ko": "마이페이스",
+            "en": "Own Tempo",
+            "hidden": false
+          },
+          {
+            "ko": "재생력",
+            "en": "Regenerator",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -21709,15 +23897,23 @@
           "spd": 75,
           "spe": 72
         },
-        "abilities": [
-          "Sweet Veil",
-          "Unburden"
-        ],
         "names": {
           "ko": "나루림",
           "en": "Slurpuff",
           "ja": "ペロリーム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "스위트베일",
+            "en": "Sweet Veil",
+            "hidden": false
+          },
+          {
+            "ko": "곡예",
+            "en": "Unburden",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -21790,16 +23986,28 @@
           "spd": 80,
           "spe": 120
         },
-        "abilities": [
-          "Pressure",
-          "Unburden",
-          "Poison Touch"
-        ],
         "names": {
           "ko": "포푸니크",
           "en": "Sneasler",
           "ja": "オオニューラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "프레셔",
+            "en": "Pressure",
+            "hidden": false
+          },
+          {
+            "ko": "곡예",
+            "en": "Unburden",
+            "hidden": false
+          },
+          {
+            "ko": "독수",
+            "en": "Poison Touch",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -21892,16 +24100,28 @@
           "spd": 110,
           "spe": 30
         },
-        "abilities": [
-          "Immunity",
-          "Thick Fat",
-          "Gluttony"
-        ],
         "names": {
           "ko": "잠만보",
           "en": "Snorlax",
           "ja": "カビゴン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "면역",
+            "en": "Immunity",
+            "hidden": false
+          },
+          {
+            "ko": "두꺼운지방",
+            "en": "Thick Fat",
+            "hidden": false
+          },
+          {
+            "ko": "먹보",
+            "en": "Gluttony",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -22015,15 +24235,23 @@
           "spd": 108,
           "spe": 35
         },
-        "abilities": [
-          "Pressure",
-          "Infiltrator"
-        ],
         "names": {
           "ko": "화강돌",
           "en": "Spiritomb",
           "ja": "ミカルゲ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "프레셔",
+            "en": "Pressure",
+            "hidden": false
+          },
+          {
+            "ko": "틈새포착",
+            "en": "Infiltrator",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -22108,15 +24336,23 @@
           "spd": 60,
           "spe": 100
         },
-        "abilities": [
-          "Intimidate",
-          "Reckless"
-        ],
         "names": {
           "ko": "찌르호크",
           "en": "Staraptor",
           "ja": "ムクホーク"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "이판사판",
+            "en": "Reckless",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Staraptor",
@@ -22134,14 +24370,18 @@
           "spd": 90,
           "spe": 110
         },
-        "abilities": [
-          "Contrary"
-        ],
         "names": {
           "ko": "메가찌르호크",
           "en": "Mega Staraptor",
           "ja": "メガムクホーク"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심술꾸러기",
+            "en": "Contrary",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -22215,16 +24455,28 @@
           "spd": 85,
           "spe": 115
         },
-        "abilities": [
-          "Illuminate",
-          "Natural Cure",
-          "Analytic"
-        ],
         "names": {
           "ko": "아쿠스타",
           "en": "Starmie",
           "ja": "スターミー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "발광",
+            "en": "Illuminate",
+            "hidden": false
+          },
+          {
+            "ko": "자연회복",
+            "en": "Natural Cure",
+            "hidden": false
+          },
+          {
+            "ko": "애널라이즈",
+            "en": "Analytic",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Starmie",
@@ -22242,14 +24494,18 @@
           "spd": 105,
           "spe": 120
         },
-        "abilities": [
-          "Huge Power"
-        ],
         "names": {
           "ko": "메가아쿠스타",
           "en": "Mega Starmie",
           "ja": "メガスターミー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "천하장사",
+            "en": "Huge Power",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -22342,16 +24598,28 @@
           "spd": 65,
           "spe": 30
         },
-        "abilities": [
-          "Rock Head",
-          "Sturdy",
-          "Sheer Force"
-        ],
         "names": {
           "ko": "강철톤",
           "en": "Steelix",
           "ja": "ハガネール"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "돌머리",
+            "en": "Rock Head",
+            "hidden": false
+          },
+          {
+            "ko": "옹골참",
+            "en": "Sturdy",
+            "hidden": false
+          },
+          {
+            "ko": "우격다짐",
+            "en": "Sheer Force",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Steelix",
@@ -22369,14 +24637,18 @@
           "spd": 95,
           "spe": 30
         },
-        "abilities": [
-          "Sand Force"
-        ],
         "names": {
           "ko": "메가강철톤",
           "en": "Mega Steelix",
           "ja": "メガハガネール"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "모래의힘",
+            "en": "Sand Force",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -22474,16 +24746,28 @@
           "spd": 99,
           "spe": 32
         },
-        "abilities": [
-          "Static",
-          "Limber",
-          "Sand Veil"
-        ],
         "names": {
           "ko": "메더",
           "en": "Stunfisk",
           "ja": "マッギョ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "정전기",
+            "en": "Static",
+            "hidden": false
+          },
+          {
+            "ko": "유연",
+            "en": "Limber",
+            "hidden": false
+          },
+          {
+            "ko": "모래숨기",
+            "en": "Sand Veil",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -22562,15 +24846,23 @@
           "spd": 90,
           "spe": 60
         },
-        "abilities": [
-          "Torrent",
-          "Damp"
-        ],
         "names": {
           "ko": "대짱이",
           "en": "Swampert",
           "ja": "ラグラージ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "급류",
+            "en": "Torrent",
+            "hidden": false
+          },
+          {
+            "ko": "습기",
+            "en": "Damp",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Swampert",
@@ -22588,14 +24880,18 @@
           "spd": 110,
           "spe": 70
         },
-        "abilities": [
-          "Swift Swim"
-        ],
         "names": {
           "ko": "메가대짱이",
           "en": "Mega Swampert",
           "ja": "メガラグラージ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "쓱쓱",
+            "en": "Swift Swim",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -22702,15 +24998,23 @@
           "spd": 130,
           "spe": 60
         },
-        "abilities": [
-          "Cute Charm",
-          "Pixilate"
-        ],
         "names": {
           "ko": "님피아",
           "en": "Sylveon",
           "ja": "ニンフィア"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "헤롱헤롱바디",
+            "en": "Cute Charm",
+            "hidden": false
+          },
+          {
+            "ko": "페어리스킨",
+            "en": "Pixilate",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -22798,15 +25102,23 @@
           "spd": 69,
           "spe": 126
         },
-        "abilities": [
-          "Flame Body",
-          "Gale Wings"
-        ],
         "names": {
           "ko": "파이어로",
           "en": "Talonflame",
           "ja": "ファイアロー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "불꽃몸",
+            "en": "Flame Body",
+            "hidden": false
+          },
+          {
+            "ko": "질풍날개",
+            "en": "Gale Wings",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -22887,16 +25199,28 @@
           "spd": 70,
           "spe": 110
         },
-        "abilities": [
-          "Intimidate",
-          "Anger Point",
-          "Sheer Force"
-        ],
         "names": {
           "ko": "켄타로스",
           "en": "Tauros",
           "ja": "ケンタロス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "분노의경혈",
+            "en": "Anger Point",
+            "hidden": false
+          },
+          {
+            "ko": "우격다짐",
+            "en": "Sheer Force",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -22984,16 +25308,28 @@
           "spd": 105,
           "spe": 94
         },
-        "abilities": [
-          "Mold Breaker",
-          "Own Tempo",
-          "Pickpocket"
-        ],
         "names": {
           "ko": "두드리짱",
           "en": "Tinkaton",
           "ja": "デカヌチャン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "틀깨기",
+            "en": "Mold Breaker",
+            "hidden": false
+          },
+          {
+            "ko": "마이페이스",
+            "en": "Own Tempo",
+            "hidden": false
+          },
+          {
+            "ko": "나쁜손버릇",
+            "en": "Pickpocket",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -23070,16 +25406,28 @@
           "spd": 70,
           "spe": 20
         },
-        "abilities": [
-          "White Smoke",
-          "Drought",
-          "Shell Armor"
-        ],
         "names": {
           "ko": "코터스",
           "en": "Torkoal",
           "ja": "コータス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "하얀연기",
+            "en": "White Smoke",
+            "hidden": false
+          },
+          {
+            "ko": "가뭄",
+            "en": "Drought",
+            "hidden": false
+          },
+          {
+            "ko": "조가비갑옷",
+            "en": "Shell Armor",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -23171,15 +25519,23 @@
           "spd": 85,
           "spe": 56
         },
-        "abilities": [
-          "Overgrow",
-          "Shell Armor"
-        ],
         "names": {
           "ko": "토대부기",
           "en": "Torterra",
           "ja": "ドダイトス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심록",
+            "en": "Overgrow",
+            "hidden": false
+          },
+          {
+            "ko": "조가비갑옷",
+            "en": "Shell Armor",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -23282,16 +25638,28 @@
           "spd": 75,
           "spe": 60
         },
-        "abilities": [
-          "Keen Eye",
-          "Skill Link",
-          "Sheer Force"
-        ],
         "names": {
           "ko": "왕큰부리",
           "en": "Toucannon",
           "ja": "ドデカバシ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "날카로운눈",
+            "en": "Keen Eye",
+            "hidden": false
+          },
+          {
+            "ko": "스킬링크",
+            "en": "Skill Link",
+            "hidden": false
+          },
+          {
+            "ko": "우격다짐",
+            "en": "Sheer Force",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -23376,16 +25744,28 @@
           "spd": 142,
           "spe": 35
         },
-        "abilities": [
-          "Merciless",
-          "Limber",
-          "Regenerator"
-        ],
         "names": {
           "ko": "더시마사리",
           "en": "Toxapex",
           "ja": "ドヒドイデ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "무도한행동",
+            "en": "Merciless",
+            "hidden": false
+          },
+          {
+            "ko": "유연",
+            "en": "Limber",
+            "hidden": false
+          },
+          {
+            "ko": "재생력",
+            "en": "Regenerator",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -23468,16 +25848,28 @@
           "spd": 65,
           "spe": 85
         },
-        "abilities": [
-          "Anticipation",
-          "Dry Skin",
-          "Poison Touch"
-        ],
         "names": {
           "ko": "독개굴",
           "en": "Toxicroak",
           "ja": "ドクロッグ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위험예지",
+            "en": "Anticipation",
+            "hidden": false
+          },
+          {
+            "ko": "건조피부",
+            "en": "Dry Skin",
+            "hidden": false
+          },
+          {
+            "ko": "독수",
+            "en": "Poison Touch",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -23589,16 +25981,28 @@
           "spd": 82,
           "spe": 56
         },
-        "abilities": [
-          "Natural Cure",
-          "Frisk",
-          "Harvest"
-        ],
         "names": {
           "ko": "대로트",
           "en": "Trevenant",
           "ja": "オーロット"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "자연회복",
+            "en": "Natural Cure",
+            "hidden": false
+          },
+          {
+            "ko": "통찰",
+            "en": "Frisk",
+            "hidden": false
+          },
+          {
+            "ko": "수확",
+            "en": "Harvest",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -23619,7 +26023,7 @@
       "energy-ball",
       "facade",
       "focus-blast",
-      "forest-s-curse",
+      "forests-curse",
       "foul-play",
       "giga-drain",
       "giga-impact",
@@ -23702,16 +26106,28 @@
           "spd": 98,
           "spe": 72
         },
-        "abilities": [
-          "Leaf Guard",
-          "Queenly Majesty",
-          "Sweet Veil"
-        ],
         "names": {
           "ko": "달코퀸",
           "en": "Tsareena",
           "ja": "アマージョ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "리프가드",
+            "en": "Leaf Guard",
+            "hidden": false
+          },
+          {
+            "ko": "여왕의위엄",
+            "en": "Queenly Majesty",
+            "hidden": false
+          },
+          {
+            "ko": "스위트베일",
+            "en": "Sweet Veil",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -23796,15 +26212,23 @@
           "spd": 85,
           "spe": 100
         },
-        "abilities": [
-          "Blaze",
-          "Flash Fire"
-        ],
         "names": {
           "ko": "블레이범",
           "en": "Typhlosion",
           "ja": "バクフーン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "맹화",
+            "en": "Blaze",
+            "hidden": false
+          },
+          {
+            "ko": "타오르는불꽃",
+            "en": "Flash Fire",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -23899,15 +26323,23 @@
           "spd": 100,
           "spe": 61
         },
-        "abilities": [
-          "Sand Stream",
-          "Unnerve"
-        ],
         "names": {
           "ko": "마기라스",
           "en": "Tyranitar",
           "ja": "バンギラス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "모래날림",
+            "en": "Sand Stream",
+            "hidden": false
+          },
+          {
+            "ko": "긴장감",
+            "en": "Unnerve",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Tyranitar",
@@ -23925,14 +26357,18 @@
           "spd": 120,
           "spe": 71
         },
-        "abilities": [
-          "Sand Stream"
-        ],
         "names": {
           "ko": "메가마기라스",
           "en": "Mega Tyranitar",
           "ja": "メガバンギラス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "모래날림",
+            "en": "Sand Stream",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -24055,15 +26491,23 @@
           "spd": 59,
           "spe": 71
         },
-        "abilities": [
-          "Strong Jaw",
-          "Rock Head"
-        ],
         "names": {
           "ko": "견고라스",
           "en": "Tyrantrum",
           "ja": "ガチゴラス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "옹골찬턱",
+            "en": "Strong Jaw",
+            "hidden": false
+          },
+          {
+            "ko": "돌머리",
+            "en": "Rock Head",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -24157,15 +26601,23 @@
           "spd": 130,
           "spe": 65
         },
-        "abilities": [
-          "Synchronize",
-          "Inner Focus"
-        ],
         "names": {
           "ko": "블래키",
           "en": "Umbreon",
           "ja": "ブラッキー"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "싱크로",
+            "en": "Synchronize",
+            "hidden": false
+          },
+          {
+            "ko": "정신력",
+            "en": "Inner Focus",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -24262,16 +26714,28 @@
           "spd": 95,
           "spe": 79
         },
-        "abilities": [
-          "Ice Body",
-          "Snow Warning",
-          "Weak Armor"
-        ],
         "names": {
           "ko": "배바닐라",
           "en": "Vanilluxe",
           "ja": "バイバニラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "아이스바디",
+            "en": "Ice Body",
+            "hidden": false
+          },
+          {
+            "ko": "눈퍼뜨리기",
+            "en": "Snow Warning",
+            "hidden": false
+          },
+          {
+            "ko": "깨어진갑옷",
+            "en": "Weak Armor",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -24344,15 +26808,23 @@
           "spd": 95,
           "spe": 65
         },
-        "abilities": [
-          "Water Absorb",
-          "Hydration"
-        ],
         "names": {
           "ko": "샤미드",
           "en": "Vaporeon",
           "ja": "シャワーズ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "저수",
+            "en": "Water Absorb",
+            "hidden": false
+          },
+          {
+            "ko": "촉촉바디",
+            "en": "Hydration",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -24443,15 +26915,23 @@
           "spd": 100,
           "spe": 80
         },
-        "abilities": [
-          "Overgrow",
-          "Chlorophyll"
-        ],
         "names": {
           "ko": "이상해꽃",
           "en": "Venusaur",
           "ja": "フシギバナ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "심록",
+            "en": "Overgrow",
+            "hidden": false
+          },
+          {
+            "ko": "엽록소",
+            "en": "Chlorophyll",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Venusaur",
@@ -24469,14 +26949,18 @@
           "spd": 120,
           "spe": 80
         },
-        "abilities": [
-          "Thick Fat"
-        ],
         "names": {
           "ko": "메가이상해꽃",
           "en": "Mega Venusaur",
           "ja": "メガフシギバナ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "두꺼운지방",
+            "en": "Thick Fat",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -24564,15 +27048,23 @@
           "spd": 70,
           "spe": 70
         },
-        "abilities": [
-          "Chlorophyll",
-          "Gluttony"
-        ],
         "names": {
           "ko": "우츠보트",
           "en": "Victreebel",
           "ja": "ウツボット"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "엽록소",
+            "en": "Chlorophyll",
+            "hidden": false
+          },
+          {
+            "ko": "먹보",
+            "en": "Gluttony",
+            "hidden": true
+          }
+        ]
       },
       {
         "name": "Mega Victreebel",
@@ -24590,14 +27082,18 @@
           "spd": 95,
           "spe": 70
         },
-        "abilities": [
-          "Innards Out"
-        ],
         "names": {
           "ko": "메가우츠보트",
           "en": "Mega Victreebel",
           "ja": "メガウツボット"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "내용물분출",
+            "en": "Innards Out",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -24688,15 +27184,23 @@
           "spd": 90,
           "spe": 50
         },
-        "abilities": [
-          "Chlorophyll",
-          "Effect Spore"
-        ],
         "names": {
           "ko": "라플레시아",
           "en": "Vileplume",
           "ja": "ラフレシア"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "엽록소",
+            "en": "Chlorophyll",
+            "hidden": false
+          },
+          {
+            "ko": "포자",
+            "en": "Effect Spore",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -24781,16 +27285,28 @@
           "spd": 50,
           "spe": 89
         },
-        "abilities": [
-          "Shield Dust",
-          "Compound Eyes",
-          "Friend Guard"
-        ],
         "names": {
           "ko": "비비용 (Fancy Pattern)",
           "en": "Vivillon Fancy Pattern",
           "ja": "ビビヨン (Fancy Pattern)"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "인분",
+            "en": "Shield Dust",
+            "hidden": false
+          },
+          {
+            "ko": "복안",
+            "en": "Compound Eyes",
+            "hidden": false
+          },
+          {
+            "ko": "프렌드가드",
+            "en": "Friend Guard",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -24864,15 +27380,23 @@
           "spd": 105,
           "spe": 100
         },
-        "abilities": [
-          "Flame Body",
-          "Swarm"
-        ],
         "names": {
           "ko": "불카모스",
           "en": "Volcarona",
           "ja": "ウルガモス"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "불꽃몸",
+            "en": "Flame Body",
+            "hidden": false
+          },
+          {
+            "ko": "벌레의알림",
+            "en": "Swarm",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -24962,14 +27486,18 @@
           "spd": 107,
           "spe": 86
         },
-        "abilities": [
-          "Levitate"
-        ],
         "names": {
           "ko": "워시로토무",
           "en": "Wash Rotom",
           "ja": "ウォッシュロトム"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "Levitate",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -25043,16 +27571,28 @@
           "spd": 69,
           "spe": 77
         },
-        "abilities": [
-          "Illuminate",
-          "Keen Eye",
-          "Analytic"
-        ],
         "names": {
           "ko": "보르그",
           "en": "Watchog",
           "ja": "ミルホッグ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "발광",
+            "en": "Illuminate",
+            "hidden": false
+          },
+          {
+            "ko": "날카로운눈",
+            "en": "Keen Eye",
+            "hidden": false
+          },
+          {
+            "ko": "애널라이즈",
+            "en": "Analytic",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -25135,15 +27675,23 @@
           "spd": 85,
           "spe": 125
         },
-        "abilities": [
-          "Pressure",
-          "Pickpocket"
-        ],
         "names": {
           "ko": "포푸니라",
           "en": "Weavile",
           "ja": "マニューラ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "프레셔",
+            "en": "Pressure",
+            "hidden": false
+          },
+          {
+            "ko": "나쁜손버릇",
+            "en": "Pickpocket",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -25247,16 +27795,28 @@
           "spd": 75,
           "spe": 116
         },
-        "abilities": [
-          "Prankster",
-          "Infiltrator",
-          "Chlorophyll"
-        ],
         "names": {
           "ko": "엘풍",
           "en": "Whimsicott",
           "ja": "エルフーン"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "짓궂은마음",
+            "en": "Prankster",
+            "hidden": false
+          },
+          {
+            "ko": "틈새포착",
+            "en": "Infiltrator",
+            "hidden": false
+          },
+          {
+            "ko": "엽록소",
+            "en": "Chlorophyll",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -25337,16 +27897,28 @@
           "spd": 75,
           "spe": 65
         },
-        "abilities": [
-          "Intimidate",
-          "Frisk",
-          "Sap Sipper"
-        ],
         "names": {
           "ko": "신비록",
           "en": "Wyrdeer",
           "ja": "アヤシシ"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "위협",
+            "en": "Intimidate",
+            "hidden": false
+          },
+          {
+            "ko": "통찰",
+            "en": "Frisk",
+            "hidden": false
+          },
+          {
+            "ko": "초식",
+            "en": "Sap Sipper",
+            "hidden": true
+          }
+        ]
       }
     ],
     "learnableMoves": [
@@ -25440,14 +28012,18 @@
           "spd": 60,
           "spe": 105
         },
-        "abilities": [
-          "Illusion"
-        ],
         "names": {
           "ko": "조로아크",
           "en": "Zoroark",
           "ja": "ゾロアーク"
-        }
+        },
+        "abilities": [
+          {
+            "ko": "일루전",
+            "en": "Illusion",
+            "hidden": false
+          }
+        ]
       }
     ],
     "learnableMoves": [

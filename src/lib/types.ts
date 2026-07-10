@@ -113,8 +113,10 @@ export type MoveCategory = "physical" | "special" | "status";
 export interface Move {
   /** URL/lookup slug, e.g. "dragon-claw". */
   slug: string;
-  /** Display name, English, e.g. "Dragon Claw". */
-  name: string;
+  /** Korean display name, e.g. "드래곤클로". */
+  ko: string;
+  /** English display name, e.g. "Dragon Claw". */
+  en: string;
   type: PokemonType;
   category: MoveCategory;
   /** Base power; `null` for status moves. */
@@ -129,6 +131,14 @@ export interface Move {
 
 /** Kind of form. Kept as a small union but open to more variants later. */
 export type FormKind = "base" | "mega" | "regional" | "other";
+
+/** An ability with localized names and whether it is the hidden (dream) ability. */
+export interface Ability {
+  ko: string;
+  en: string;
+  /** Hidden ability (드림 특성) vs. a regular ability. */
+  hidden: boolean;
+}
 
 /**
  * A concrete, battle-ready form. Calculators operate on a single form, since
@@ -146,8 +156,8 @@ export interface PokemonForm {
   /** 1 or 2 types, in the game's listed order. */
   types: PokemonType[];
   baseStats: BaseStats;
-  /** Possible abilities for this form (names only for now). */
-  abilities: string[];
+  /** Possible abilities for this form (normal first, then hidden). */
+  abilities: Ability[];
 }
 
 /** Supported UI languages for names. */

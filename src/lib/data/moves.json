@@ -1,0 +1,4853 @@
+{
+  "accelerock": {
+    "slug": "accelerock",
+    "ko": "액셀록",
+    "en": "Accelerock",
+    "type": "rock",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "acid-armor": {
+    "slug": "acid-armor",
+    "ko": "녹기",
+    "en": "Acid Armor",
+    "type": "poison",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "acid-spray": {
+    "slug": "acid-spray",
+    "ko": "애시드봄",
+    "en": "Acid Spray",
+    "type": "poison",
+    "category": "special",
+    "power": 40,
+    "accuracy": 100
+  },
+  "acrobatics": {
+    "slug": "acrobatics",
+    "ko": "애크러뱃",
+    "en": "Acrobatics",
+    "type": "flying",
+    "category": "physical",
+    "power": 55,
+    "accuracy": 100
+  },
+  "acupressure": {
+    "slug": "acupressure",
+    "ko": "경혈찌르기",
+    "en": "Acupressure",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "aerial-ace": {
+    "slug": "aerial-ace",
+    "ko": "제비반환",
+    "en": "Aerial Ace",
+    "type": "flying",
+    "category": "physical",
+    "power": 60,
+    "accuracy": null
+  },
+  "after-you": {
+    "slug": "after-you",
+    "ko": "당신먼저",
+    "en": "After You",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "agility": {
+    "slug": "agility",
+    "ko": "고속이동",
+    "en": "Agility",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "air-cutter": {
+    "slug": "air-cutter",
+    "ko": "에어커터",
+    "en": "Air Cutter",
+    "type": "flying",
+    "category": "special",
+    "power": 60,
+    "accuracy": 95
+  },
+  "air-slash": {
+    "slug": "air-slash",
+    "ko": "에어슬래시",
+    "en": "Air Slash",
+    "type": "flying",
+    "category": "special",
+    "power": 75,
+    "accuracy": 95
+  },
+  "alluring-voice": {
+    "slug": "alluring-voice",
+    "ko": "매혹의보이스",
+    "en": "Alluring Voice",
+    "type": "fairy",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "ally-switch": {
+    "slug": "ally-switch",
+    "ko": "사이드체인지",
+    "en": "Ally Switch",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "amnesia": {
+    "slug": "amnesia",
+    "ko": "망각술",
+    "en": "Amnesia",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "ancient-power": {
+    "slug": "ancient-power",
+    "ko": "원시의힘",
+    "en": "Ancient Power",
+    "type": "rock",
+    "category": "special",
+    "power": 60,
+    "accuracy": 100
+  },
+  "apple-acid": {
+    "slug": "apple-acid",
+    "ko": "사과산",
+    "en": "Apple Acid",
+    "type": "grass",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "aqua-cutter": {
+    "slug": "aqua-cutter",
+    "ko": "아쿠아커터",
+    "en": "Aqua Cutter",
+    "type": "water",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 100
+  },
+  "aqua-jet": {
+    "slug": "aqua-jet",
+    "ko": "아쿠아제트",
+    "en": "Aqua Jet",
+    "type": "water",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "aqua-ring": {
+    "slug": "aqua-ring",
+    "ko": "아쿠아링",
+    "en": "Aqua Ring",
+    "type": "water",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "aqua-step": {
+    "slug": "aqua-step",
+    "ko": "아쿠아스텝",
+    "en": "Aqua Step",
+    "type": "water",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "aqua-tail": {
+    "slug": "aqua-tail",
+    "ko": "아쿠아테일",
+    "en": "Aqua Tail",
+    "type": "water",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 90
+  },
+  "armor-cannon": {
+    "slug": "armor-cannon",
+    "ko": "아머캐논",
+    "en": "Armor Cannon",
+    "type": "fire",
+    "category": "special",
+    "power": 120,
+    "accuracy": 100
+  },
+  "aromatic-mist": {
+    "slug": "aromatic-mist",
+    "ko": "아로마미스트",
+    "en": "Aromatic Mist",
+    "type": "fairy",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "assurance": {
+    "slug": "assurance",
+    "ko": "승부굳히기",
+    "en": "Assurance",
+    "type": "dark",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "astonish": {
+    "slug": "astonish",
+    "ko": "놀래키기",
+    "en": "Astonish",
+    "type": "ghost",
+    "category": "physical",
+    "power": 30,
+    "accuracy": 100
+  },
+  "attract": {
+    "slug": "attract",
+    "ko": "헤롱헤롱",
+    "en": "Attract",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "aura-sphere": {
+    "slug": "aura-sphere",
+    "ko": "파동탄",
+    "en": "Aura Sphere",
+    "type": "fighting",
+    "category": "special",
+    "power": 80,
+    "accuracy": null
+  },
+  "aura-wheel": {
+    "slug": "aura-wheel",
+    "ko": "오라휠",
+    "en": "Aura Wheel",
+    "type": "electric",
+    "category": "physical",
+    "power": 110,
+    "accuracy": 100
+  },
+  "aurora-veil": {
+    "slug": "aurora-veil",
+    "ko": "오로라베일",
+    "en": "Aurora Veil",
+    "type": "ice",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "autotomize": {
+    "slug": "autotomize",
+    "ko": "바디퍼지",
+    "en": "Autotomize",
+    "type": "steel",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "avalanche": {
+    "slug": "avalanche",
+    "ko": "눈사태",
+    "en": "Avalanche",
+    "type": "ice",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "axe-kick": {
+    "slug": "axe-kick",
+    "ko": "발꿈치찍기",
+    "en": "Axe Kick",
+    "type": "fighting",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 90
+  },
+  "baby-doll-eyes": {
+    "slug": "baby-doll-eyes",
+    "ko": "초롱초롱눈동자",
+    "en": "Baby-Doll Eyes",
+    "type": "fairy",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "baneful-bunker": {
+    "slug": "baneful-bunker",
+    "ko": "토치카",
+    "en": "Baneful Bunker",
+    "type": "poison",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "barb-barrage": {
+    "slug": "barb-barrage",
+    "ko": "독침천발",
+    "en": "Barb Barrage",
+    "type": "poison",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "baton-pass": {
+    "slug": "baton-pass",
+    "ko": "배턴터치",
+    "en": "Baton Pass",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "beak-blast": {
+    "slug": "beak-blast",
+    "ko": "부리캐논",
+    "en": "Beak Blast",
+    "type": "flying",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 100
+  },
+  "beat-up": {
+    "slug": "beat-up",
+    "ko": "집단구타",
+    "en": "Beat Up",
+    "type": "dark",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "belch": {
+    "slug": "belch",
+    "ko": "트림",
+    "en": "Belch",
+    "type": "poison",
+    "category": "special",
+    "power": 120,
+    "accuracy": 90
+  },
+  "belly-drum": {
+    "slug": "belly-drum",
+    "ko": "배북",
+    "en": "Belly Drum",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "bind": {
+    "slug": "bind",
+    "ko": "조이기",
+    "en": "Bind",
+    "type": "normal",
+    "category": "physical",
+    "power": 15,
+    "accuracy": 85
+  },
+  "bite": {
+    "slug": "bite",
+    "ko": "물기",
+    "en": "Bite",
+    "type": "dark",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "bitter-blade": {
+    "slug": "bitter-blade",
+    "ko": "원념의칼",
+    "en": "Bitter Blade",
+    "type": "fire",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 100
+  },
+  "bitter-malice": {
+    "slug": "bitter-malice",
+    "ko": "천추지한",
+    "en": "Bitter Malice",
+    "type": "ghost",
+    "category": "special",
+    "power": 75,
+    "accuracy": 100
+  },
+  "blast-burn": {
+    "slug": "blast-burn",
+    "ko": "블라스트번",
+    "en": "Blast Burn",
+    "type": "fire",
+    "category": "special",
+    "power": 150,
+    "accuracy": 90
+  },
+  "blaze-kick": {
+    "slug": "blaze-kick",
+    "ko": "블레이즈킥",
+    "en": "Blaze Kick",
+    "type": "fire",
+    "category": "physical",
+    "power": 85,
+    "accuracy": 90
+  },
+  "blizzard": {
+    "slug": "blizzard",
+    "ko": "눈보라",
+    "en": "Blizzard",
+    "type": "ice",
+    "category": "special",
+    "power": 110,
+    "accuracy": 70
+  },
+  "block": {
+    "slug": "block",
+    "ko": "블록",
+    "en": "Block",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "body-press": {
+    "slug": "body-press",
+    "ko": "바디프레스",
+    "en": "Body Press",
+    "type": "fighting",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "body-slam": {
+    "slug": "body-slam",
+    "ko": "누르기",
+    "en": "Body Slam",
+    "type": "normal",
+    "category": "physical",
+    "power": 85,
+    "accuracy": 100
+  },
+  "bone-rush": {
+    "slug": "bone-rush",
+    "ko": "본러시",
+    "en": "Bone Rush",
+    "type": "ground",
+    "category": "physical",
+    "power": 25,
+    "accuracy": 90
+  },
+  "boomburst": {
+    "slug": "boomburst",
+    "ko": "폭음파",
+    "en": "Boomburst",
+    "type": "normal",
+    "category": "special",
+    "power": 140,
+    "accuracy": 100
+  },
+  "bounce": {
+    "slug": "bounce",
+    "ko": "뛰어오르기",
+    "en": "Bounce",
+    "type": "flying",
+    "category": "physical",
+    "power": 85,
+    "accuracy": 85
+  },
+  "brave-bird": {
+    "slug": "brave-bird",
+    "ko": "브레이브버드",
+    "en": "Brave Bird",
+    "type": "flying",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "breaking-swipe": {
+    "slug": "breaking-swipe",
+    "ko": "와이드브레이커",
+    "en": "Breaking Swipe",
+    "type": "dragon",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "brick-break": {
+    "slug": "brick-break",
+    "ko": "깨뜨리다",
+    "en": "Brick Break",
+    "type": "fighting",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 100
+  },
+  "brine": {
+    "slug": "brine",
+    "ko": "소금물",
+    "en": "Brine",
+    "type": "water",
+    "category": "special",
+    "power": 65,
+    "accuracy": 100
+  },
+  "brutal-swing": {
+    "slug": "brutal-swing",
+    "ko": "세차게휘두르기",
+    "en": "Brutal Swing",
+    "type": "dark",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "bug-bite": {
+    "slug": "bug-bite",
+    "ko": "벌레먹기",
+    "en": "Bug Bite",
+    "type": "bug",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "bug-buzz": {
+    "slug": "bug-buzz",
+    "ko": "벌레의야단법석",
+    "en": "Bug Buzz",
+    "type": "bug",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "bulk-up": {
+    "slug": "bulk-up",
+    "ko": "벌크업",
+    "en": "Bulk Up",
+    "type": "fighting",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "bulldoze": {
+    "slug": "bulldoze",
+    "ko": "땅고르기",
+    "en": "Bulldoze",
+    "type": "ground",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "bullet-punch": {
+    "slug": "bullet-punch",
+    "ko": "불릿펀치",
+    "en": "Bullet Punch",
+    "type": "steel",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "bullet-seed": {
+    "slug": "bullet-seed",
+    "ko": "씨기관총",
+    "en": "Bullet Seed",
+    "type": "grass",
+    "category": "physical",
+    "power": 25,
+    "accuracy": 100
+  },
+  "burn-up": {
+    "slug": "burn-up",
+    "ko": "불사르기",
+    "en": "Burn Up",
+    "type": "fire",
+    "category": "special",
+    "power": 130,
+    "accuracy": 100
+  },
+  "burning-jealousy": {
+    "slug": "burning-jealousy",
+    "ko": "질투의불꽃",
+    "en": "Burning Jealousy",
+    "type": "fire",
+    "category": "special",
+    "power": 70,
+    "accuracy": 100
+  },
+  "calm-mind": {
+    "slug": "calm-mind",
+    "ko": "명상",
+    "en": "Calm Mind",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "ceaseless-edge": {
+    "slug": "ceaseless-edge",
+    "ko": "비검천중파",
+    "en": "Ceaseless Edge",
+    "type": "dark",
+    "category": "physical",
+    "power": 65,
+    "accuracy": 90
+  },
+  "charge": {
+    "slug": "charge",
+    "ko": "충전",
+    "en": "Charge",
+    "type": "electric",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "charge-beam": {
+    "slug": "charge-beam",
+    "ko": "차지빔",
+    "en": "Charge Beam",
+    "type": "electric",
+    "category": "special",
+    "power": 50,
+    "accuracy": 90
+  },
+  "charm": {
+    "slug": "charm",
+    "ko": "애교부리기",
+    "en": "Charm",
+    "type": "fairy",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "chilling-water": {
+    "slug": "chilling-water",
+    "ko": "찬물끼얹기",
+    "en": "Chilling Water",
+    "type": "water",
+    "category": "special",
+    "power": 50,
+    "accuracy": 100
+  },
+  "chilly-reception": {
+    "slug": "chilly-reception",
+    "ko": "썰렁개그",
+    "en": "Chilly Reception",
+    "type": "ice",
+    "category": "status",
+    "power": 0,
+    "accuracy": null
+  },
+  "circle-throw": {
+    "slug": "circle-throw",
+    "ko": "배대뒤치기",
+    "en": "Circle Throw",
+    "type": "fighting",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 90
+  },
+  "clanging-scales": {
+    "slug": "clanging-scales",
+    "ko": "스케일노이즈",
+    "en": "Clanging Scales",
+    "type": "dragon",
+    "category": "special",
+    "power": 110,
+    "accuracy": 100
+  },
+  "clangorous-soul": {
+    "slug": "clangorous-soul",
+    "ko": "소울비트",
+    "en": "Clangorous Soul",
+    "type": "dragon",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "clear-smog": {
+    "slug": "clear-smog",
+    "ko": "클리어스모그",
+    "en": "Clear Smog",
+    "type": "poison",
+    "category": "special",
+    "power": 50,
+    "accuracy": null
+  },
+  "close-combat": {
+    "slug": "close-combat",
+    "ko": "인파이트",
+    "en": "Close Combat",
+    "type": "fighting",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "coaching": {
+    "slug": "coaching",
+    "ko": "코칭",
+    "en": "Coaching",
+    "type": "fighting",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "coil": {
+    "slug": "coil",
+    "ko": "똬리틀기",
+    "en": "Coil",
+    "type": "poison",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "comeuppance": {
+    "slug": "comeuppance",
+    "ko": "앙갚음",
+    "en": "Comeuppance",
+    "type": "dark",
+    "category": "physical",
+    "power": 1,
+    "accuracy": 100
+  },
+  "confuse-ray": {
+    "slug": "confuse-ray",
+    "ko": "이상한빛",
+    "en": "Confuse Ray",
+    "type": "ghost",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "confusion": {
+    "slug": "confusion",
+    "ko": "염동력",
+    "en": "Confusion",
+    "type": "psychic",
+    "category": "special",
+    "power": 50,
+    "accuracy": 100
+  },
+  "copycat": {
+    "slug": "copycat",
+    "ko": "흉내쟁이",
+    "en": "Copycat",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "corrosive-gas": {
+    "slug": "corrosive-gas",
+    "ko": "부식가스",
+    "en": "Corrosive Gas",
+    "type": "poison",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "cosmic-power": {
+    "slug": "cosmic-power",
+    "ko": "코스믹파워",
+    "en": "Cosmic Power",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "cotton-guard": {
+    "slug": "cotton-guard",
+    "ko": "코튼가드",
+    "en": "Cotton Guard",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "cotton-spore": {
+    "slug": "cotton-spore",
+    "ko": "목화포자",
+    "en": "Cotton Spore",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "counter": {
+    "slug": "counter",
+    "ko": "카운터",
+    "en": "Counter",
+    "type": "fighting",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "covet": {
+    "slug": "covet",
+    "ko": "탐내다",
+    "en": "Covet",
+    "type": "normal",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "crabhammer": {
+    "slug": "crabhammer",
+    "ko": "집게해머",
+    "en": "Crabhammer",
+    "type": "water",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 90
+  },
+  "crafty-shield": {
+    "slug": "crafty-shield",
+    "ko": "트릭가드",
+    "en": "Crafty Shield",
+    "type": "fairy",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "cross-chop": {
+    "slug": "cross-chop",
+    "ko": "크로스촙",
+    "en": "Cross Chop",
+    "type": "fighting",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 80
+  },
+  "cross-poison": {
+    "slug": "cross-poison",
+    "ko": "크로스포이즌",
+    "en": "Cross Poison",
+    "type": "poison",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 100
+  },
+  "crunch": {
+    "slug": "crunch",
+    "ko": "깨물어부수기",
+    "en": "Crunch",
+    "type": "dark",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "crush-claw": {
+    "slug": "crush-claw",
+    "ko": "브레이크클로",
+    "en": "Crush Claw",
+    "type": "normal",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 95
+  },
+  "curse": {
+    "slug": "curse",
+    "ko": "저주",
+    "en": "Curse",
+    "type": "ghost",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "dark-pulse": {
+    "slug": "dark-pulse",
+    "ko": "악의파동",
+    "en": "Dark Pulse",
+    "type": "dark",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "darkest-lariat": {
+    "slug": "darkest-lariat",
+    "ko": "DD래리어트",
+    "en": "Darkest Lariat",
+    "type": "dark",
+    "category": "physical",
+    "power": 85,
+    "accuracy": 100
+  },
+  "dazzling-gleam": {
+    "slug": "dazzling-gleam",
+    "ko": "매지컬샤인",
+    "en": "Dazzling Gleam",
+    "type": "fairy",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "decorate": {
+    "slug": "decorate",
+    "ko": "데코레이션",
+    "en": "Decorate",
+    "type": "fairy",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "defog": {
+    "slug": "defog",
+    "ko": "안개제거",
+    "en": "Defog",
+    "type": "flying",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "destiny-bond": {
+    "slug": "destiny-bond",
+    "ko": "길동무",
+    "en": "Destiny Bond",
+    "type": "ghost",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "detect": {
+    "slug": "detect",
+    "ko": "판별",
+    "en": "Detect",
+    "type": "fighting",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "dig": {
+    "slug": "dig",
+    "ko": "구멍파기",
+    "en": "Dig",
+    "type": "ground",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "dire-claw": {
+    "slug": "dire-claw",
+    "ko": "페이탈클로",
+    "en": "Dire Claw",
+    "type": "poison",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "disable": {
+    "slug": "disable",
+    "ko": "사슬묶기",
+    "en": "Disable",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "disarming-voice": {
+    "slug": "disarming-voice",
+    "ko": "차밍보이스",
+    "en": "Disarming Voice",
+    "type": "fairy",
+    "category": "special",
+    "power": 40,
+    "accuracy": null
+  },
+  "discharge": {
+    "slug": "discharge",
+    "ko": "방전",
+    "en": "Discharge",
+    "type": "electric",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "dive": {
+    "slug": "dive",
+    "ko": "다이빙",
+    "en": "Dive",
+    "type": "water",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "double-edge": {
+    "slug": "double-edge",
+    "ko": "이판사판태클",
+    "en": "Double-Edge",
+    "type": "normal",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "double-hit": {
+    "slug": "double-hit",
+    "ko": "더블어택",
+    "en": "Double Hit",
+    "type": "normal",
+    "category": "physical",
+    "power": 35,
+    "accuracy": 90
+  },
+  "double-team": {
+    "slug": "double-team",
+    "ko": "그림자분신",
+    "en": "Double Team",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "draco-meteor": {
+    "slug": "draco-meteor",
+    "ko": "용성군",
+    "en": "Draco Meteor",
+    "type": "dragon",
+    "category": "special",
+    "power": 130,
+    "accuracy": 90
+  },
+  "dragon-breath": {
+    "slug": "dragon-breath",
+    "ko": "용의숨결",
+    "en": "Dragon Breath",
+    "type": "dragon",
+    "category": "special",
+    "power": 60,
+    "accuracy": 100
+  },
+  "dragon-cheer": {
+    "slug": "dragon-cheer",
+    "ko": "드래곤옐",
+    "en": "Dragon Cheer",
+    "type": "dragon",
+    "category": "status",
+    "power": 0,
+    "accuracy": 0
+  },
+  "dragon-claw": {
+    "slug": "dragon-claw",
+    "ko": "드래곤클로",
+    "en": "Dragon Claw",
+    "type": "dragon",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "dragon-dance": {
+    "slug": "dragon-dance",
+    "ko": "용의춤",
+    "en": "Dragon Dance",
+    "type": "dragon",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "dragon-darts": {
+    "slug": "dragon-darts",
+    "ko": "드래곤애로",
+    "en": "Dragon Darts",
+    "type": "dragon",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "dragon-pulse": {
+    "slug": "dragon-pulse",
+    "ko": "용의파동",
+    "en": "Dragon Pulse",
+    "type": "dragon",
+    "category": "special",
+    "power": 85,
+    "accuracy": 100
+  },
+  "dragon-rush": {
+    "slug": "dragon-rush",
+    "ko": "드래곤다이브",
+    "en": "Dragon Rush",
+    "type": "dragon",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 75
+  },
+  "dragon-tail": {
+    "slug": "dragon-tail",
+    "ko": "드래곤테일",
+    "en": "Dragon Tail",
+    "type": "dragon",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 90
+  },
+  "drain-punch": {
+    "slug": "drain-punch",
+    "ko": "드레인펀치",
+    "en": "Drain Punch",
+    "type": "fighting",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 100
+  },
+  "draining-kiss": {
+    "slug": "draining-kiss",
+    "ko": "드레인키스",
+    "en": "Draining Kiss",
+    "type": "fairy",
+    "category": "special",
+    "power": 50,
+    "accuracy": 100
+  },
+  "drill-peck": {
+    "slug": "drill-peck",
+    "ko": "회전부리",
+    "en": "Drill Peck",
+    "type": "flying",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "drill-run": {
+    "slug": "drill-run",
+    "ko": "드릴라이너",
+    "en": "Drill Run",
+    "type": "ground",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 95
+  },
+  "dual-wingbeat": {
+    "slug": "dual-wingbeat",
+    "ko": "더블윙",
+    "en": "Dual Wingbeat",
+    "type": "flying",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 90
+  },
+  "dynamic-punch": {
+    "slug": "dynamic-punch",
+    "ko": "폭발펀치",
+    "en": "Dynamic Punch",
+    "type": "fighting",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 50
+  },
+  "earth-power": {
+    "slug": "earth-power",
+    "ko": "대지의힘",
+    "en": "Earth Power",
+    "type": "ground",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "earthquake": {
+    "slug": "earthquake",
+    "ko": "지진",
+    "en": "Earthquake",
+    "type": "ground",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 100
+  },
+  "echoed-voice": {
+    "slug": "echoed-voice",
+    "ko": "에코보이스",
+    "en": "Echoed Voice",
+    "type": "normal",
+    "category": "special",
+    "power": 40,
+    "accuracy": 100
+  },
+  "eerie-impulse": {
+    "slug": "eerie-impulse",
+    "ko": "괴전파",
+    "en": "Eerie Impulse",
+    "type": "electric",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "eerie-spell": {
+    "slug": "eerie-spell",
+    "ko": "섬뜩한주문",
+    "en": "Eerie Spell",
+    "type": "psychic",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "electric-terrain": {
+    "slug": "electric-terrain",
+    "ko": "일렉트릭필드",
+    "en": "Electric Terrain",
+    "type": "electric",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "electrify": {
+    "slug": "electrify",
+    "ko": "송전",
+    "en": "Electrify",
+    "type": "electric",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "electro-ball": {
+    "slug": "electro-ball",
+    "ko": "일렉트릭볼",
+    "en": "Electro Ball",
+    "type": "electric",
+    "category": "special",
+    "power": null,
+    "accuracy": 100
+  },
+  "electro-shot": {
+    "slug": "electro-shot",
+    "ko": "일렉트로빔",
+    "en": "Electro Shot",
+    "type": "electric",
+    "category": "special",
+    "power": 130,
+    "accuracy": 100
+  },
+  "electroweb": {
+    "slug": "electroweb",
+    "ko": "일렉트릭네트",
+    "en": "Electroweb",
+    "type": "electric",
+    "category": "special",
+    "power": 55,
+    "accuracy": 95
+  },
+  "encore": {
+    "slug": "encore",
+    "ko": "앙코르",
+    "en": "Encore",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "endeavor": {
+    "slug": "endeavor",
+    "ko": "죽기살기",
+    "en": "Endeavor",
+    "type": "normal",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "endure": {
+    "slug": "endure",
+    "ko": "버티기",
+    "en": "Endure",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "energy-ball": {
+    "slug": "energy-ball",
+    "ko": "에너지볼",
+    "en": "Energy Ball",
+    "type": "grass",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "entrainment": {
+    "slug": "entrainment",
+    "ko": "동료만들기",
+    "en": "Entrainment",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "eruption": {
+    "slug": "eruption",
+    "ko": "분화",
+    "en": "Eruption",
+    "type": "fire",
+    "category": "special",
+    "power": 150,
+    "accuracy": 100
+  },
+  "expanding-force": {
+    "slug": "expanding-force",
+    "ko": "와이드포스",
+    "en": "Expanding Force",
+    "type": "psychic",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "explosion": {
+    "slug": "explosion",
+    "ko": "대폭발",
+    "en": "Explosion",
+    "type": "normal",
+    "category": "physical",
+    "power": 250,
+    "accuracy": 100
+  },
+  "extrasensory": {
+    "slug": "extrasensory",
+    "ko": "신통력",
+    "en": "Extrasensory",
+    "type": "psychic",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "extreme-speed": {
+    "slug": "extreme-speed",
+    "ko": "신속",
+    "en": "Extreme Speed",
+    "type": "normal",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "facade": {
+    "slug": "facade",
+    "ko": "객기",
+    "en": "Facade",
+    "type": "normal",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 100
+  },
+  "fairy-lock": {
+    "slug": "fairy-lock",
+    "ko": "페어리록",
+    "en": "Fairy Lock",
+    "type": "fairy",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "fake-out": {
+    "slug": "fake-out",
+    "ko": "속이기",
+    "en": "Fake Out",
+    "type": "normal",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "fake-tears": {
+    "slug": "fake-tears",
+    "ko": "거짓울음",
+    "en": "Fake Tears",
+    "type": "dark",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "false-swipe": {
+    "slug": "false-swipe",
+    "ko": "칼등치기",
+    "en": "False Swipe",
+    "type": "normal",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "feather-dance": {
+    "slug": "feather-dance",
+    "ko": "깃털댄스",
+    "en": "Feather Dance",
+    "type": "flying",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "feint": {
+    "slug": "feint",
+    "ko": "페인트",
+    "en": "Feint",
+    "type": "normal",
+    "category": "physical",
+    "power": 30,
+    "accuracy": 100
+  },
+  "fell-stinger": {
+    "slug": "fell-stinger",
+    "ko": "마지막일침",
+    "en": "Fell Stinger",
+    "type": "bug",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "fickle-beam": {
+    "slug": "fickle-beam",
+    "ko": "변덕레이저",
+    "en": "Fickle Beam",
+    "type": "dragon",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "fiery-dance": {
+    "slug": "fiery-dance",
+    "ko": "불꽃춤",
+    "en": "Fiery Dance",
+    "type": "fire",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "final-gambit": {
+    "slug": "final-gambit",
+    "ko": "목숨걸기",
+    "en": "Final Gambit",
+    "type": "fighting",
+    "category": "special",
+    "power": null,
+    "accuracy": 100
+  },
+  "fire-blast": {
+    "slug": "fire-blast",
+    "ko": "불대문자",
+    "en": "Fire Blast",
+    "type": "fire",
+    "category": "special",
+    "power": 110,
+    "accuracy": 85
+  },
+  "fire-fang": {
+    "slug": "fire-fang",
+    "ko": "불꽃엄니",
+    "en": "Fire Fang",
+    "type": "fire",
+    "category": "physical",
+    "power": 65,
+    "accuracy": 95
+  },
+  "fire-lash": {
+    "slug": "fire-lash",
+    "ko": "불꽃채찍",
+    "en": "Fire Lash",
+    "type": "fire",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "fire-pledge": {
+    "slug": "fire-pledge",
+    "ko": "불꽃의맹세",
+    "en": "Fire Pledge",
+    "type": "fire",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "fire-punch": {
+    "slug": "fire-punch",
+    "ko": "불꽃펀치",
+    "en": "Fire Punch",
+    "type": "fire",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 100
+  },
+  "fire-spin": {
+    "slug": "fire-spin",
+    "ko": "회오리불꽃",
+    "en": "Fire Spin",
+    "type": "fire",
+    "category": "special",
+    "power": 35,
+    "accuracy": 85
+  },
+  "first-impression": {
+    "slug": "first-impression",
+    "ko": "만나자마자",
+    "en": "First Impression",
+    "type": "bug",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 100
+  },
+  "fissure": {
+    "slug": "fissure",
+    "ko": "땅가르기",
+    "en": "Fissure",
+    "type": "ground",
+    "category": "physical",
+    "power": null,
+    "accuracy": 30
+  },
+  "flail": {
+    "slug": "flail",
+    "ko": "바둥바둥",
+    "en": "Flail",
+    "type": "normal",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "flame-charge": {
+    "slug": "flame-charge",
+    "ko": "니트로차지",
+    "en": "Flame Charge",
+    "type": "fire",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "flame-wheel": {
+    "slug": "flame-wheel",
+    "ko": "화염바퀴",
+    "en": "Flame Wheel",
+    "type": "fire",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "flamethrower": {
+    "slug": "flamethrower",
+    "ko": "화염방사",
+    "en": "Flamethrower",
+    "type": "fire",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "flare-blitz": {
+    "slug": "flare-blitz",
+    "ko": "플레어드라이브",
+    "en": "Flare Blitz",
+    "type": "fire",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "flash-cannon": {
+    "slug": "flash-cannon",
+    "ko": "러스터캐논",
+    "en": "Flash Cannon",
+    "type": "steel",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "flatter": {
+    "slug": "flatter",
+    "ko": "부추기기",
+    "en": "Flatter",
+    "type": "dark",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "fling": {
+    "slug": "fling",
+    "ko": "내던지기",
+    "en": "Fling",
+    "type": "dark",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "flip-turn": {
+    "slug": "flip-turn",
+    "ko": "퀵턴",
+    "en": "Flip Turn",
+    "type": "water",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "flower-trick": {
+    "slug": "flower-trick",
+    "ko": "트릭플라워",
+    "en": "Flower Trick",
+    "type": "grass",
+    "category": "physical",
+    "power": 70,
+    "accuracy": null
+  },
+  "fly": {
+    "slug": "fly",
+    "ko": "공중날기",
+    "en": "Fly",
+    "type": "flying",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 95
+  },
+  "flying-press": {
+    "slug": "flying-press",
+    "ko": "플라잉프레스",
+    "en": "Flying Press",
+    "type": "fighting",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 95
+  },
+  "focus-blast": {
+    "slug": "focus-blast",
+    "ko": "기합구슬",
+    "en": "Focus Blast",
+    "type": "fighting",
+    "category": "special",
+    "power": 120,
+    "accuracy": 70
+  },
+  "focus-energy": {
+    "slug": "focus-energy",
+    "ko": "기충전",
+    "en": "Focus Energy",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "focus-punch": {
+    "slug": "focus-punch",
+    "ko": "힘껏펀치",
+    "en": "Focus Punch",
+    "type": "fighting",
+    "category": "physical",
+    "power": 150,
+    "accuracy": 100
+  },
+  "follow-me": {
+    "slug": "follow-me",
+    "ko": "날따름",
+    "en": "Follow Me",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "forests-curse": {
+    "slug": "forests-curse",
+    "ko": "숲의저주",
+    "en": "Forest’s Curse",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "foul-play": {
+    "slug": "foul-play",
+    "ko": "속임수",
+    "en": "Foul Play",
+    "type": "dark",
+    "category": "physical",
+    "power": 95,
+    "accuracy": 100
+  },
+  "freeze-dry": {
+    "slug": "freeze-dry",
+    "ko": "프리즈드라이",
+    "en": "Freeze-Dry",
+    "type": "ice",
+    "category": "special",
+    "power": 70,
+    "accuracy": 100
+  },
+  "frenzy-plant": {
+    "slug": "frenzy-plant",
+    "ko": "하드플랜트",
+    "en": "Frenzy Plant",
+    "type": "grass",
+    "category": "special",
+    "power": 150,
+    "accuracy": 90
+  },
+  "frost-breath": {
+    "slug": "frost-breath",
+    "ko": "얼음숨결",
+    "en": "Frost Breath",
+    "type": "ice",
+    "category": "special",
+    "power": 60,
+    "accuracy": 90
+  },
+  "fury-cutter": {
+    "slug": "fury-cutter",
+    "ko": "연속자르기",
+    "en": "Fury Cutter",
+    "type": "bug",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 95
+  },
+  "fury-swipes": {
+    "slug": "fury-swipes",
+    "ko": "마구할퀴기",
+    "en": "Fury Swipes",
+    "type": "normal",
+    "category": "physical",
+    "power": 18,
+    "accuracy": 80
+  },
+  "future-sight": {
+    "slug": "future-sight",
+    "ko": "미래예지",
+    "en": "Future Sight",
+    "type": "psychic",
+    "category": "special",
+    "power": 120,
+    "accuracy": 100
+  },
+  "gastro-acid": {
+    "slug": "gastro-acid",
+    "ko": "위액",
+    "en": "Gastro Acid",
+    "type": "poison",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "giga-drain": {
+    "slug": "giga-drain",
+    "ko": "기가드레인",
+    "en": "Giga Drain",
+    "type": "grass",
+    "category": "special",
+    "power": 75,
+    "accuracy": 100
+  },
+  "giga-impact": {
+    "slug": "giga-impact",
+    "ko": "기가임팩트",
+    "en": "Giga Impact",
+    "type": "normal",
+    "category": "physical",
+    "power": 150,
+    "accuracy": 90
+  },
+  "gigaton-hammer": {
+    "slug": "gigaton-hammer",
+    "ko": "거대해머",
+    "en": "Gigaton Hammer",
+    "type": "steel",
+    "category": "physical",
+    "power": 160,
+    "accuracy": 100
+  },
+  "glare": {
+    "slug": "glare",
+    "ko": "뱀눈초리",
+    "en": "Glare",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "grass-knot": {
+    "slug": "grass-knot",
+    "ko": "풀묶기",
+    "en": "Grass Knot",
+    "type": "grass",
+    "category": "special",
+    "power": null,
+    "accuracy": 100
+  },
+  "grassy-glide": {
+    "slug": "grassy-glide",
+    "ko": "그래스슬라이더",
+    "en": "Grassy Glide",
+    "type": "grass",
+    "category": "physical",
+    "power": 55,
+    "accuracy": 100
+  },
+  "grassy-terrain": {
+    "slug": "grassy-terrain",
+    "ko": "그래스필드",
+    "en": "Grassy Terrain",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "grav-apple": {
+    "slug": "grav-apple",
+    "ko": "G의힘",
+    "en": "Grav Apple",
+    "type": "grass",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "gravity": {
+    "slug": "gravity",
+    "ko": "중력",
+    "en": "Gravity",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "growth": {
+    "slug": "growth",
+    "ko": "성장",
+    "en": "Growth",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "guard-split": {
+    "slug": "guard-split",
+    "ko": "가드셰어",
+    "en": "Guard Split",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "guard-swap": {
+    "slug": "guard-swap",
+    "ko": "가드스왑",
+    "en": "Guard Swap",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "guillotine": {
+    "slug": "guillotine",
+    "ko": "가위자르기",
+    "en": "Guillotine",
+    "type": "normal",
+    "category": "physical",
+    "power": null,
+    "accuracy": 30
+  },
+  "gunk-shot": {
+    "slug": "gunk-shot",
+    "ko": "더스트슈트",
+    "en": "Gunk Shot",
+    "type": "poison",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 80
+  },
+  "gyro-ball": {
+    "slug": "gyro-ball",
+    "ko": "자이로볼",
+    "en": "Gyro Ball",
+    "type": "steel",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "hail": {
+    "slug": "hail",
+    "ko": "싸라기눈",
+    "en": "Hail",
+    "type": "ice",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "hammer-arm": {
+    "slug": "hammer-arm",
+    "ko": "암해머",
+    "en": "Hammer Arm",
+    "type": "fighting",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 90
+  },
+  "hard-press": {
+    "slug": "hard-press",
+    "ko": "하드프레스",
+    "en": "Hard Press",
+    "type": "steel",
+    "category": "physical",
+    "power": 0,
+    "accuracy": 100
+  },
+  "harden": {
+    "slug": "harden",
+    "ko": "단단해지기",
+    "en": "Harden",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "haze": {
+    "slug": "haze",
+    "ko": "흑안개",
+    "en": "Haze",
+    "type": "ice",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "head-smash": {
+    "slug": "head-smash",
+    "ko": "양날박치기",
+    "en": "Head Smash",
+    "type": "rock",
+    "category": "physical",
+    "power": 150,
+    "accuracy": 80
+  },
+  "headlong-rush": {
+    "slug": "headlong-rush",
+    "ko": "들이받기",
+    "en": "Headlong Rush",
+    "type": "ground",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "heal-bell": {
+    "slug": "heal-bell",
+    "ko": "치료방울",
+    "en": "Heal Bell",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "heal-pulse": {
+    "slug": "heal-pulse",
+    "ko": "치유파동",
+    "en": "Heal Pulse",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "healing-wish": {
+    "slug": "healing-wish",
+    "ko": "치유소원",
+    "en": "Healing Wish",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "heat-crash": {
+    "slug": "heat-crash",
+    "ko": "히트스탬프",
+    "en": "Heat Crash",
+    "type": "fire",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "heat-wave": {
+    "slug": "heat-wave",
+    "ko": "열풍",
+    "en": "Heat Wave",
+    "type": "fire",
+    "category": "special",
+    "power": 95,
+    "accuracy": 90
+  },
+  "heavy-slam": {
+    "slug": "heavy-slam",
+    "ko": "헤비봄버",
+    "en": "Heavy Slam",
+    "type": "steel",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "helping-hand": {
+    "slug": "helping-hand",
+    "ko": "도우미",
+    "en": "Helping Hand",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "hex": {
+    "slug": "hex",
+    "ko": "병상첨병",
+    "en": "Hex",
+    "type": "ghost",
+    "category": "special",
+    "power": 65,
+    "accuracy": 100
+  },
+  "high-horsepower": {
+    "slug": "high-horsepower",
+    "ko": "10만마력",
+    "en": "High Horsepower",
+    "type": "ground",
+    "category": "physical",
+    "power": 95,
+    "accuracy": 95
+  },
+  "high-jump-kick": {
+    "slug": "high-jump-kick",
+    "ko": "무릎차기",
+    "en": "High Jump Kick",
+    "type": "fighting",
+    "category": "physical",
+    "power": 130,
+    "accuracy": 90
+  },
+  "hone-claws": {
+    "slug": "hone-claws",
+    "ko": "손톱갈기",
+    "en": "Hone Claws",
+    "type": "dark",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "horn-drill": {
+    "slug": "horn-drill",
+    "ko": "뿔드릴",
+    "en": "Horn Drill",
+    "type": "normal",
+    "category": "physical",
+    "power": null,
+    "accuracy": 30
+  },
+  "horn-leech": {
+    "slug": "horn-leech",
+    "ko": "우드혼",
+    "en": "Horn Leech",
+    "type": "grass",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 100
+  },
+  "howl": {
+    "slug": "howl",
+    "ko": "멀리짖기",
+    "en": "Howl",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "hurricane": {
+    "slug": "hurricane",
+    "ko": "폭풍",
+    "en": "Hurricane",
+    "type": "flying",
+    "category": "special",
+    "power": 110,
+    "accuracy": 70
+  },
+  "hydro-cannon": {
+    "slug": "hydro-cannon",
+    "ko": "하이드로캐논",
+    "en": "Hydro Cannon",
+    "type": "water",
+    "category": "special",
+    "power": 150,
+    "accuracy": 90
+  },
+  "hydro-pump": {
+    "slug": "hydro-pump",
+    "ko": "하이드로펌프",
+    "en": "Hydro Pump",
+    "type": "water",
+    "category": "special",
+    "power": 110,
+    "accuracy": 80
+  },
+  "hyper-beam": {
+    "slug": "hyper-beam",
+    "ko": "파괴광선",
+    "en": "Hyper Beam",
+    "type": "normal",
+    "category": "special",
+    "power": 150,
+    "accuracy": 90
+  },
+  "hyper-voice": {
+    "slug": "hyper-voice",
+    "ko": "하이퍼보이스",
+    "en": "Hyper Voice",
+    "type": "normal",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "hypnosis": {
+    "slug": "hypnosis",
+    "ko": "최면술",
+    "en": "Hypnosis",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": 60
+  },
+  "ice-beam": {
+    "slug": "ice-beam",
+    "ko": "냉동빔",
+    "en": "Ice Beam",
+    "type": "ice",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "ice-fang": {
+    "slug": "ice-fang",
+    "ko": "얼음엄니",
+    "en": "Ice Fang",
+    "type": "ice",
+    "category": "physical",
+    "power": 65,
+    "accuracy": 95
+  },
+  "ice-hammer": {
+    "slug": "ice-hammer",
+    "ko": "아이스해머",
+    "en": "Ice Hammer",
+    "type": "ice",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 90
+  },
+  "ice-punch": {
+    "slug": "ice-punch",
+    "ko": "냉동펀치",
+    "en": "Ice Punch",
+    "type": "ice",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 100
+  },
+  "ice-shard": {
+    "slug": "ice-shard",
+    "ko": "얼음뭉치",
+    "en": "Ice Shard",
+    "type": "ice",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "ice-spinner": {
+    "slug": "ice-spinner",
+    "ko": "아이스스피너",
+    "en": "Ice Spinner",
+    "type": "ice",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "icicle-crash": {
+    "slug": "icicle-crash",
+    "ko": "고드름떨구기",
+    "en": "Icicle Crash",
+    "type": "ice",
+    "category": "physical",
+    "power": 85,
+    "accuracy": 90
+  },
+  "icicle-spear": {
+    "slug": "icicle-spear",
+    "ko": "고드름침",
+    "en": "Icicle Spear",
+    "type": "ice",
+    "category": "physical",
+    "power": 25,
+    "accuracy": 100
+  },
+  "icy-wind": {
+    "slug": "icy-wind",
+    "ko": "얼어붙은바람",
+    "en": "Icy Wind",
+    "type": "ice",
+    "category": "special",
+    "power": 55,
+    "accuracy": 95
+  },
+  "imprison": {
+    "slug": "imprison",
+    "ko": "봉인",
+    "en": "Imprison",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "infernal-parade": {
+    "slug": "infernal-parade",
+    "ko": "백귀야행",
+    "en": "Infernal Parade",
+    "type": "ghost",
+    "category": "special",
+    "power": 60,
+    "accuracy": 100
+  },
+  "inferno": {
+    "slug": "inferno",
+    "ko": "연옥",
+    "en": "Inferno",
+    "type": "fire",
+    "category": "special",
+    "power": 100,
+    "accuracy": 50
+  },
+  "infestation": {
+    "slug": "infestation",
+    "ko": "엉겨붙기",
+    "en": "Infestation",
+    "type": "bug",
+    "category": "special",
+    "power": 20,
+    "accuracy": 100
+  },
+  "ingrain": {
+    "slug": "ingrain",
+    "ko": "뿌리박기",
+    "en": "Ingrain",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "instruct": {
+    "slug": "instruct",
+    "ko": "지휘",
+    "en": "Instruct",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "iron-defense": {
+    "slug": "iron-defense",
+    "ko": "철벽",
+    "en": "Iron Defense",
+    "type": "steel",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "iron-head": {
+    "slug": "iron-head",
+    "ko": "아이언헤드",
+    "en": "Iron Head",
+    "type": "steel",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "iron-tail": {
+    "slug": "iron-tail",
+    "ko": "아이언테일",
+    "en": "Iron Tail",
+    "type": "steel",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 75
+  },
+  "jet-punch": {
+    "slug": "jet-punch",
+    "ko": "제트펀치",
+    "en": "Jet Punch",
+    "type": "water",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "kings-shield": {
+    "slug": "kings-shield",
+    "ko": "킹실드",
+    "en": "King’s Shield",
+    "type": "steel",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "knock-off": {
+    "slug": "knock-off",
+    "ko": "탁쳐서떨구기",
+    "en": "Knock Off",
+    "type": "dark",
+    "category": "physical",
+    "power": 65,
+    "accuracy": 100
+  },
+  "kowtow-cleave": {
+    "slug": "kowtow-cleave",
+    "ko": "도각참",
+    "en": "Kowtow Cleave",
+    "type": "dark",
+    "category": "physical",
+    "power": 85,
+    "accuracy": null
+  },
+  "lash-out": {
+    "slug": "lash-out",
+    "ko": "분풀이",
+    "en": "Lash Out",
+    "type": "dark",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 100
+  },
+  "last-resort": {
+    "slug": "last-resort",
+    "ko": "비장의무기",
+    "en": "Last Resort",
+    "type": "normal",
+    "category": "physical",
+    "power": 140,
+    "accuracy": 100
+  },
+  "last-respects": {
+    "slug": "last-respects",
+    "ko": "성묘",
+    "en": "Last Respects",
+    "type": "ghost",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "lava-plume": {
+    "slug": "lava-plume",
+    "ko": "분연",
+    "en": "Lava Plume",
+    "type": "fire",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "leaf-blade": {
+    "slug": "leaf-blade",
+    "ko": "리프블레이드",
+    "en": "Leaf Blade",
+    "type": "grass",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 100
+  },
+  "leaf-storm": {
+    "slug": "leaf-storm",
+    "ko": "리프스톰",
+    "en": "Leaf Storm",
+    "type": "grass",
+    "category": "special",
+    "power": 130,
+    "accuracy": 90
+  },
+  "leech-life": {
+    "slug": "leech-life",
+    "ko": "흡혈",
+    "en": "Leech Life",
+    "type": "bug",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "leech-seed": {
+    "slug": "leech-seed",
+    "ko": "씨뿌리기",
+    "en": "Leech Seed",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": 90
+  },
+  "lick": {
+    "slug": "lick",
+    "ko": "핥기",
+    "en": "Lick",
+    "type": "ghost",
+    "category": "physical",
+    "power": 30,
+    "accuracy": 100
+  },
+  "life-dew": {
+    "slug": "life-dew",
+    "ko": "생명의물방울",
+    "en": "Life Dew",
+    "type": "water",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "light-of-ruin": {
+    "slug": "light-of-ruin",
+    "ko": "파멸의빛",
+    "en": "Light of Ruin",
+    "type": "fairy",
+    "category": "special",
+    "power": 140,
+    "accuracy": 90
+  },
+  "light-screen": {
+    "slug": "light-screen",
+    "ko": "빛의장막",
+    "en": "Light Screen",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "liquidation": {
+    "slug": "liquidation",
+    "ko": "아쿠아브레이크",
+    "en": "Liquidation",
+    "type": "water",
+    "category": "physical",
+    "power": 85,
+    "accuracy": 100
+  },
+  "lock-on": {
+    "slug": "lock-on",
+    "ko": "록온",
+    "en": "Lock-On",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "low-kick": {
+    "slug": "low-kick",
+    "ko": "안다리걸기",
+    "en": "Low Kick",
+    "type": "fighting",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "low-sweep": {
+    "slug": "low-sweep",
+    "ko": "로킥",
+    "en": "Low Sweep",
+    "type": "fighting",
+    "category": "physical",
+    "power": 65,
+    "accuracy": 100
+  },
+  "lumina-crash": {
+    "slug": "lumina-crash",
+    "ko": "루미나콜리전",
+    "en": "Lumina Crash",
+    "type": "psychic",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "lunge": {
+    "slug": "lunge",
+    "ko": "덤벼들기",
+    "en": "Lunge",
+    "type": "bug",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "mach-punch": {
+    "slug": "mach-punch",
+    "ko": "마하펀치",
+    "en": "Mach Punch",
+    "type": "fighting",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "magic-coat": {
+    "slug": "magic-coat",
+    "ko": "매직코트",
+    "en": "Magic Coat",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "magic-powder": {
+    "slug": "magic-powder",
+    "ko": "마법가루",
+    "en": "Magic Powder",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "magic-room": {
+    "slug": "magic-room",
+    "ko": "매직룸",
+    "en": "Magic Room",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "magical-leaf": {
+    "slug": "magical-leaf",
+    "ko": "매지컬리프",
+    "en": "Magical Leaf",
+    "type": "grass",
+    "category": "special",
+    "power": 60,
+    "accuracy": null
+  },
+  "magnet-rise": {
+    "slug": "magnet-rise",
+    "ko": "전자부유",
+    "en": "Magnet Rise",
+    "type": "electric",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "magnetic-flux": {
+    "slug": "magnetic-flux",
+    "ko": "자기장조작",
+    "en": "Magnetic Flux",
+    "type": "electric",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "make-it-rain": {
+    "slug": "make-it-rain",
+    "ko": "골드러시",
+    "en": "Make It Rain",
+    "type": "steel",
+    "category": "special",
+    "power": 120,
+    "accuracy": 100
+  },
+  "matcha-gotcha": {
+    "slug": "matcha-gotcha",
+    "ko": "휘적휘적포",
+    "en": "Matcha Gotcha",
+    "type": "grass",
+    "category": "special",
+    "power": 80,
+    "accuracy": 90
+  },
+  "mean-look": {
+    "slug": "mean-look",
+    "ko": "검은눈빛",
+    "en": "Mean Look",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "mega-kick": {
+    "slug": "mega-kick",
+    "ko": "메가톤킥",
+    "en": "Mega Kick",
+    "type": "normal",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 75
+  },
+  "mega-punch": {
+    "slug": "mega-punch",
+    "ko": "메가톤펀치",
+    "en": "Mega Punch",
+    "type": "normal",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 85
+  },
+  "megahorn": {
+    "slug": "megahorn",
+    "ko": "메가혼",
+    "en": "Megahorn",
+    "type": "bug",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 85
+  },
+  "memento": {
+    "slug": "memento",
+    "ko": "추억의선물",
+    "en": "Memento",
+    "type": "dark",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "metal-burst": {
+    "slug": "metal-burst",
+    "ko": "메탈버스트",
+    "en": "Metal Burst",
+    "type": "steel",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "metal-claw": {
+    "slug": "metal-claw",
+    "ko": "메탈클로",
+    "en": "Metal Claw",
+    "type": "steel",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 95
+  },
+  "metal-sound": {
+    "slug": "metal-sound",
+    "ko": "금속음",
+    "en": "Metal Sound",
+    "type": "steel",
+    "category": "status",
+    "power": null,
+    "accuracy": 85
+  },
+  "meteor-beam": {
+    "slug": "meteor-beam",
+    "ko": "메테오빔",
+    "en": "Meteor Beam",
+    "type": "rock",
+    "category": "special",
+    "power": 120,
+    "accuracy": 90
+  },
+  "meteor-mash": {
+    "slug": "meteor-mash",
+    "ko": "코멧펀치",
+    "en": "Meteor Mash",
+    "type": "steel",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 90
+  },
+  "minimize": {
+    "slug": "minimize",
+    "ko": "작아지기",
+    "en": "Minimize",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "mirror-coat": {
+    "slug": "mirror-coat",
+    "ko": "미러코트",
+    "en": "Mirror Coat",
+    "type": "psychic",
+    "category": "special",
+    "power": null,
+    "accuracy": 100
+  },
+  "mist": {
+    "slug": "mist",
+    "ko": "흰안개",
+    "en": "Mist",
+    "type": "ice",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "misty-explosion": {
+    "slug": "misty-explosion",
+    "ko": "미스트버스트",
+    "en": "Misty Explosion",
+    "type": "fairy",
+    "category": "special",
+    "power": 100,
+    "accuracy": 100
+  },
+  "misty-terrain": {
+    "slug": "misty-terrain",
+    "ko": "미스트필드",
+    "en": "Misty Terrain",
+    "type": "fairy",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "moonblast": {
+    "slug": "moonblast",
+    "ko": "문포스",
+    "en": "Moonblast",
+    "type": "fairy",
+    "category": "special",
+    "power": 95,
+    "accuracy": 100
+  },
+  "moonlight": {
+    "slug": "moonlight",
+    "ko": "달빛",
+    "en": "Moonlight",
+    "type": "fairy",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "morning-sun": {
+    "slug": "morning-sun",
+    "ko": "아침햇살",
+    "en": "Morning Sun",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "mortal-spin": {
+    "slug": "mortal-spin",
+    "ko": "킬러스핀",
+    "en": "Mortal Spin",
+    "type": "poison",
+    "category": "physical",
+    "power": 30,
+    "accuracy": 100
+  },
+  "mountain-gale": {
+    "slug": "mountain-gale",
+    "ko": "빙산바람",
+    "en": "Mountain Gale",
+    "type": "ice",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 85
+  },
+  "mud-shot": {
+    "slug": "mud-shot",
+    "ko": "머드샷",
+    "en": "Mud Shot",
+    "type": "ground",
+    "category": "special",
+    "power": 55,
+    "accuracy": 95
+  },
+  "mud-slap": {
+    "slug": "mud-slap",
+    "ko": "진흙뿌리기",
+    "en": "Mud-Slap",
+    "type": "ground",
+    "category": "special",
+    "power": 20,
+    "accuracy": 100
+  },
+  "muddy-water": {
+    "slug": "muddy-water",
+    "ko": "탁류",
+    "en": "Muddy Water",
+    "type": "water",
+    "category": "special",
+    "power": 90,
+    "accuracy": 85
+  },
+  "mystical-fire": {
+    "slug": "mystical-fire",
+    "ko": "매지컬플레임",
+    "en": "Mystical Fire",
+    "type": "fire",
+    "category": "special",
+    "power": 75,
+    "accuracy": 100
+  },
+  "nasty-plot": {
+    "slug": "nasty-plot",
+    "ko": "나쁜음모",
+    "en": "Nasty Plot",
+    "type": "dark",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "night-daze": {
+    "slug": "night-daze",
+    "ko": "나이트버스트",
+    "en": "Night Daze",
+    "type": "dark",
+    "category": "special",
+    "power": 85,
+    "accuracy": 95
+  },
+  "night-shade": {
+    "slug": "night-shade",
+    "ko": "나이트헤드",
+    "en": "Night Shade",
+    "type": "ghost",
+    "category": "special",
+    "power": null,
+    "accuracy": 100
+  },
+  "night-slash": {
+    "slug": "night-slash",
+    "ko": "깜짝베기",
+    "en": "Night Slash",
+    "type": "dark",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 100
+  },
+  "no-retreat": {
+    "slug": "no-retreat",
+    "ko": "배수의진",
+    "en": "No Retreat",
+    "type": "fighting",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "noble-roar": {
+    "slug": "noble-roar",
+    "ko": "부르짖기",
+    "en": "Noble Roar",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "nuzzle": {
+    "slug": "nuzzle",
+    "ko": "볼부비부비",
+    "en": "Nuzzle",
+    "type": "electric",
+    "category": "physical",
+    "power": 20,
+    "accuracy": 100
+  },
+  "outrage": {
+    "slug": "outrage",
+    "ko": "역린",
+    "en": "Outrage",
+    "type": "dragon",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "overheat": {
+    "slug": "overheat",
+    "ko": "오버히트",
+    "en": "Overheat",
+    "type": "fire",
+    "category": "special",
+    "power": 130,
+    "accuracy": 90
+  },
+  "pain-split": {
+    "slug": "pain-split",
+    "ko": "아픔나누기",
+    "en": "Pain Split",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "parabolic-charge": {
+    "slug": "parabolic-charge",
+    "ko": "파라볼라차지",
+    "en": "Parabolic Charge",
+    "type": "electric",
+    "category": "special",
+    "power": 65,
+    "accuracy": 100
+  },
+  "parting-shot": {
+    "slug": "parting-shot",
+    "ko": "막말내뱉기",
+    "en": "Parting Shot",
+    "type": "dark",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "payback": {
+    "slug": "payback",
+    "ko": "보복",
+    "en": "Payback",
+    "type": "dark",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "perish-song": {
+    "slug": "perish-song",
+    "ko": "멸망의노래",
+    "en": "Perish Song",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "petal-blizzard": {
+    "slug": "petal-blizzard",
+    "ko": "꽃보라",
+    "en": "Petal Blizzard",
+    "type": "grass",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 100
+  },
+  "petal-dance": {
+    "slug": "petal-dance",
+    "ko": "꽃잎댄스",
+    "en": "Petal Dance",
+    "type": "grass",
+    "category": "special",
+    "power": 120,
+    "accuracy": 100
+  },
+  "phantom-force": {
+    "slug": "phantom-force",
+    "ko": "고스트다이브",
+    "en": "Phantom Force",
+    "type": "ghost",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 100
+  },
+  "pin-missile": {
+    "slug": "pin-missile",
+    "ko": "바늘미사일",
+    "en": "Pin Missile",
+    "type": "bug",
+    "category": "physical",
+    "power": 25,
+    "accuracy": 95
+  },
+  "play-rough": {
+    "slug": "play-rough",
+    "ko": "치근거리기",
+    "en": "Play Rough",
+    "type": "fairy",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 90
+  },
+  "pluck": {
+    "slug": "pluck",
+    "ko": "쪼아대기",
+    "en": "Pluck",
+    "type": "flying",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "poison-fang": {
+    "slug": "poison-fang",
+    "ko": "맹독엄니",
+    "en": "Poison Fang",
+    "type": "poison",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "poison-jab": {
+    "slug": "poison-jab",
+    "ko": "독찌르기",
+    "en": "Poison Jab",
+    "type": "poison",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "poison-powder": {
+    "slug": "poison-powder",
+    "ko": "독가루",
+    "en": "Poison Powder",
+    "type": "poison",
+    "category": "status",
+    "power": null,
+    "accuracy": 75
+  },
+  "poison-tail": {
+    "slug": "poison-tail",
+    "ko": "포이즌테일",
+    "en": "Poison Tail",
+    "type": "poison",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "pollen-puff": {
+    "slug": "pollen-puff",
+    "ko": "꽃가루경단",
+    "en": "Pollen Puff",
+    "type": "bug",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "poltergeist": {
+    "slug": "poltergeist",
+    "ko": "폴터가이스트",
+    "en": "Poltergeist",
+    "type": "ghost",
+    "category": "physical",
+    "power": 110,
+    "accuracy": 90
+  },
+  "population-bomb": {
+    "slug": "population-bomb",
+    "ko": "찍찍베기",
+    "en": "Population Bomb",
+    "type": "normal",
+    "category": "physical",
+    "power": 20,
+    "accuracy": 90
+  },
+  "pounce": {
+    "slug": "pounce",
+    "ko": "달려들기",
+    "en": "Pounce",
+    "type": "bug",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "pound": {
+    "slug": "pound",
+    "ko": "막치기",
+    "en": "Pound",
+    "type": "normal",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "power-gem": {
+    "slug": "power-gem",
+    "ko": "파워젬",
+    "en": "Power Gem",
+    "type": "rock",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "power-split": {
+    "slug": "power-split",
+    "ko": "파워셰어",
+    "en": "Power Split",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "power-swap": {
+    "slug": "power-swap",
+    "ko": "파워스왑",
+    "en": "Power Swap",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "power-trick": {
+    "slug": "power-trick",
+    "ko": "파워트릭",
+    "en": "Power Trick",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "power-trip": {
+    "slug": "power-trip",
+    "ko": "기어오르기",
+    "en": "Power Trip",
+    "type": "dark",
+    "category": "physical",
+    "power": 20,
+    "accuracy": 100
+  },
+  "power-whip": {
+    "slug": "power-whip",
+    "ko": "파워휩",
+    "en": "Power Whip",
+    "type": "grass",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 85
+  },
+  "protect": {
+    "slug": "protect",
+    "ko": "방어",
+    "en": "Protect",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "psybeam": {
+    "slug": "psybeam",
+    "ko": "환상빔",
+    "en": "Psybeam",
+    "type": "psychic",
+    "category": "special",
+    "power": 65,
+    "accuracy": 100
+  },
+  "psych-up": {
+    "slug": "psych-up",
+    "ko": "자기암시",
+    "en": "Psych Up",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "psychic": {
+    "slug": "psychic",
+    "ko": "사이코키네시스",
+    "en": "Psychic",
+    "type": "psychic",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "psychic-fangs": {
+    "slug": "psychic-fangs",
+    "ko": "사이코팽",
+    "en": "Psychic Fangs",
+    "type": "psychic",
+    "category": "physical",
+    "power": 85,
+    "accuracy": 100
+  },
+  "psychic-noise": {
+    "slug": "psychic-noise",
+    "ko": "사이코노이즈",
+    "en": "Psychic Noise",
+    "type": "psychic",
+    "category": "special",
+    "power": 75,
+    "accuracy": 100
+  },
+  "psychic-terrain": {
+    "slug": "psychic-terrain",
+    "ko": "사이코필드",
+    "en": "Psychic Terrain",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "psycho-cut": {
+    "slug": "psycho-cut",
+    "ko": "사이코커터",
+    "en": "Psycho Cut",
+    "type": "psychic",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 100
+  },
+  "psyshield-bash": {
+    "slug": "psyshield-bash",
+    "ko": "배리어러시",
+    "en": "Psyshield Bash",
+    "type": "psychic",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 90
+  },
+  "psyshock": {
+    "slug": "psyshock",
+    "ko": "사이코쇼크",
+    "en": "Psyshock",
+    "type": "psychic",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "quash": {
+    "slug": "quash",
+    "ko": "순서미루기",
+    "en": "Quash",
+    "type": "dark",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "quick-attack": {
+    "slug": "quick-attack",
+    "ko": "전광석화",
+    "en": "Quick Attack",
+    "type": "normal",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "quick-guard": {
+    "slug": "quick-guard",
+    "ko": "패스트가드",
+    "en": "Quick Guard",
+    "type": "fighting",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "quiver-dance": {
+    "slug": "quiver-dance",
+    "ko": "나비춤",
+    "en": "Quiver Dance",
+    "type": "bug",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "rage-fist": {
+    "slug": "rage-fist",
+    "ko": "분노의주먹",
+    "en": "Rage Fist",
+    "type": "ghost",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "rage-powder": {
+    "slug": "rage-powder",
+    "ko": "분노가루",
+    "en": "Rage Powder",
+    "type": "bug",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "raging-bull": {
+    "slug": "raging-bull",
+    "ko": "레이징불",
+    "en": "Raging Bull",
+    "type": "normal",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 100
+  },
+  "raging-fury": {
+    "slug": "raging-fury",
+    "ko": "대격분",
+    "en": "Raging Fury",
+    "type": "fire",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "rain-dance": {
+    "slug": "rain-dance",
+    "ko": "비바라기",
+    "en": "Rain Dance",
+    "type": "water",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "rapid-spin": {
+    "slug": "rapid-spin",
+    "ko": "고속스핀",
+    "en": "Rapid Spin",
+    "type": "normal",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "razor-leaf": {
+    "slug": "razor-leaf",
+    "ko": "잎날가르기",
+    "en": "Razor Leaf",
+    "type": "grass",
+    "category": "physical",
+    "power": 55,
+    "accuracy": 95
+  },
+  "razor-shell": {
+    "slug": "razor-shell",
+    "ko": "셸블레이드",
+    "en": "Razor Shell",
+    "type": "water",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 95
+  },
+  "recover": {
+    "slug": "recover",
+    "ko": "HP회복",
+    "en": "Recover",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "recycle": {
+    "slug": "recycle",
+    "ko": "리사이클",
+    "en": "Recycle",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "reflect": {
+    "slug": "reflect",
+    "ko": "리플렉터",
+    "en": "Reflect",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "reflect-type": {
+    "slug": "reflect-type",
+    "ko": "미러타입",
+    "en": "Reflect Type",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "rest": {
+    "slug": "rest",
+    "ko": "잠자기",
+    "en": "Rest",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "retaliate": {
+    "slug": "retaliate",
+    "ko": "원수갚기",
+    "en": "Retaliate",
+    "type": "normal",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 100
+  },
+  "reversal": {
+    "slug": "reversal",
+    "ko": "기사회생",
+    "en": "Reversal",
+    "type": "fighting",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "rising-voltage": {
+    "slug": "rising-voltage",
+    "ko": "라이징볼트",
+    "en": "Rising Voltage",
+    "type": "electric",
+    "category": "special",
+    "power": 70,
+    "accuracy": 100
+  },
+  "roar": {
+    "slug": "roar",
+    "ko": "울부짖기",
+    "en": "Roar",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "rock-blast": {
+    "slug": "rock-blast",
+    "ko": "록블라스트",
+    "en": "Rock Blast",
+    "type": "rock",
+    "category": "physical",
+    "power": 25,
+    "accuracy": 90
+  },
+  "rock-polish": {
+    "slug": "rock-polish",
+    "ko": "록커트",
+    "en": "Rock Polish",
+    "type": "rock",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "rock-slide": {
+    "slug": "rock-slide",
+    "ko": "스톤샤워",
+    "en": "Rock Slide",
+    "type": "rock",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 90
+  },
+  "rock-smash": {
+    "slug": "rock-smash",
+    "ko": "바위깨기",
+    "en": "Rock Smash",
+    "type": "fighting",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "rock-tomb": {
+    "slug": "rock-tomb",
+    "ko": "암석봉인",
+    "en": "Rock Tomb",
+    "type": "rock",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 95
+  },
+  "rock-wrecker": {
+    "slug": "rock-wrecker",
+    "ko": "암석포",
+    "en": "Rock Wrecker",
+    "type": "rock",
+    "category": "physical",
+    "power": 150,
+    "accuracy": 90
+  },
+  "role-play": {
+    "slug": "role-play",
+    "ko": "역할",
+    "en": "Role Play",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "rollout": {
+    "slug": "rollout",
+    "ko": "구르기",
+    "en": "Rollout",
+    "type": "rock",
+    "category": "physical",
+    "power": 30,
+    "accuracy": 90
+  },
+  "roost": {
+    "slug": "roost",
+    "ko": "날개쉬기",
+    "en": "Roost",
+    "type": "flying",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "round": {
+    "slug": "round",
+    "ko": "돌림노래",
+    "en": "Round",
+    "type": "normal",
+    "category": "special",
+    "power": 60,
+    "accuracy": 100
+  },
+  "sacred-sword": {
+    "slug": "sacred-sword",
+    "ko": "성스러운칼",
+    "en": "Sacred Sword",
+    "type": "fighting",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 100
+  },
+  "safeguard": {
+    "slug": "safeguard",
+    "ko": "신비의부적",
+    "en": "Safeguard",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "salt-cure": {
+    "slug": "salt-cure",
+    "ko": "소금절이",
+    "en": "Salt Cure",
+    "type": "rock",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "sand-attack": {
+    "slug": "sand-attack",
+    "ko": "모래뿌리기",
+    "en": "Sand Attack",
+    "type": "ground",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "sand-tomb": {
+    "slug": "sand-tomb",
+    "ko": "모래지옥",
+    "en": "Sand Tomb",
+    "type": "ground",
+    "category": "physical",
+    "power": 35,
+    "accuracy": 85
+  },
+  "sandstorm": {
+    "slug": "sandstorm",
+    "ko": "모래바람",
+    "en": "Sandstorm",
+    "type": "rock",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "scald": {
+    "slug": "scald",
+    "ko": "열탕",
+    "en": "Scald",
+    "type": "water",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "scale-shot": {
+    "slug": "scale-shot",
+    "ko": "스케일샷",
+    "en": "Scale Shot",
+    "type": "dragon",
+    "category": "physical",
+    "power": 25,
+    "accuracy": 90
+  },
+  "scary-face": {
+    "slug": "scary-face",
+    "ko": "겁나는얼굴",
+    "en": "Scary Face",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "scorching-sands": {
+    "slug": "scorching-sands",
+    "ko": "열사의대지",
+    "en": "Scorching Sands",
+    "type": "ground",
+    "category": "special",
+    "power": 70,
+    "accuracy": 100
+  },
+  "screech": {
+    "slug": "screech",
+    "ko": "싫은소리",
+    "en": "Screech",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 85
+  },
+  "seed-bomb": {
+    "slug": "seed-bomb",
+    "ko": "씨폭탄",
+    "en": "Seed Bomb",
+    "type": "grass",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "seismic-toss": {
+    "slug": "seismic-toss",
+    "ko": "지구던지기",
+    "en": "Seismic Toss",
+    "type": "fighting",
+    "category": "physical",
+    "power": null,
+    "accuracy": 100
+  },
+  "self-destruct": {
+    "slug": "self-destruct",
+    "ko": "자폭",
+    "en": "Self-Destruct",
+    "type": "normal",
+    "category": "physical",
+    "power": 200,
+    "accuracy": 100
+  },
+  "shadow-ball": {
+    "slug": "shadow-ball",
+    "ko": "섀도볼",
+    "en": "Shadow Ball",
+    "type": "ghost",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "shadow-claw": {
+    "slug": "shadow-claw",
+    "ko": "섀도클로",
+    "en": "Shadow Claw",
+    "type": "ghost",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 100
+  },
+  "shadow-punch": {
+    "slug": "shadow-punch",
+    "ko": "섀도펀치",
+    "en": "Shadow Punch",
+    "type": "ghost",
+    "category": "physical",
+    "power": 60,
+    "accuracy": null
+  },
+  "shadow-sneak": {
+    "slug": "shadow-sneak",
+    "ko": "야습",
+    "en": "Shadow Sneak",
+    "type": "ghost",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "shed-tail": {
+    "slug": "shed-tail",
+    "ko": "꼬리자르기",
+    "en": "Shed Tail",
+    "type": "normal",
+    "category": "status",
+    "power": 0,
+    "accuracy": null
+  },
+  "sheer-cold": {
+    "slug": "sheer-cold",
+    "ko": "절대영도",
+    "en": "Sheer Cold",
+    "type": "ice",
+    "category": "special",
+    "power": null,
+    "accuracy": 30
+  },
+  "shell-side-arm": {
+    "slug": "shell-side-arm",
+    "ko": "셸암즈",
+    "en": "Shell Side Arm",
+    "type": "poison",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "shell-smash": {
+    "slug": "shell-smash",
+    "ko": "껍질깨기",
+    "en": "Shell Smash",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "shelter": {
+    "slug": "shelter",
+    "ko": "농성",
+    "en": "Shelter",
+    "type": "steel",
+    "category": "status",
+    "power": 0,
+    "accuracy": null
+  },
+  "shock-wave": {
+    "slug": "shock-wave",
+    "ko": "전격파",
+    "en": "Shock Wave",
+    "type": "electric",
+    "category": "special",
+    "power": 60,
+    "accuracy": null
+  },
+  "simple-beam": {
+    "slug": "simple-beam",
+    "ko": "심플빔",
+    "en": "Simple Beam",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "sing": {
+    "slug": "sing",
+    "ko": "노래하기",
+    "en": "Sing",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 55
+  },
+  "skill-swap": {
+    "slug": "skill-swap",
+    "ko": "스킬스왑",
+    "en": "Skill Swap",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "skitter-smack": {
+    "slug": "skitter-smack",
+    "ko": "엄습하는일격",
+    "en": "Skitter Smack",
+    "type": "bug",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 90
+  },
+  "sky-attack": {
+    "slug": "sky-attack",
+    "ko": "불새",
+    "en": "Sky Attack",
+    "type": "flying",
+    "category": "physical",
+    "power": 140,
+    "accuracy": 90
+  },
+  "slack-off": {
+    "slug": "slack-off",
+    "ko": "게으름피우기",
+    "en": "Slack Off",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "sleep-powder": {
+    "slug": "sleep-powder",
+    "ko": "수면가루",
+    "en": "Sleep Powder",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": 75
+  },
+  "sleep-talk": {
+    "slug": "sleep-talk",
+    "ko": "잠꼬대",
+    "en": "Sleep Talk",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "sludge-bomb": {
+    "slug": "sludge-bomb",
+    "ko": "오물폭탄",
+    "en": "Sludge Bomb",
+    "type": "poison",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "sludge-wave": {
+    "slug": "sludge-wave",
+    "ko": "오물웨이브",
+    "en": "Sludge Wave",
+    "type": "poison",
+    "category": "special",
+    "power": 95,
+    "accuracy": 100
+  },
+  "smack-down": {
+    "slug": "smack-down",
+    "ko": "떨어뜨리기",
+    "en": "Smack Down",
+    "type": "rock",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "smart-strike": {
+    "slug": "smart-strike",
+    "ko": "스마트혼",
+    "en": "Smart Strike",
+    "type": "steel",
+    "category": "physical",
+    "power": 70,
+    "accuracy": null
+  },
+  "smog": {
+    "slug": "smog",
+    "ko": "스모그",
+    "en": "Smog",
+    "type": "poison",
+    "category": "special",
+    "power": 30,
+    "accuracy": 70
+  },
+  "smokescreen": {
+    "slug": "smokescreen",
+    "ko": "연막",
+    "en": "Smokescreen",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "snap-trap": {
+    "slug": "snap-trap",
+    "ko": "집게덫",
+    "en": "Snap Trap",
+    "type": "grass",
+    "category": "physical",
+    "power": 35,
+    "accuracy": 100
+  },
+  "snarl": {
+    "slug": "snarl",
+    "ko": "바크아웃",
+    "en": "Snarl",
+    "type": "dark",
+    "category": "special",
+    "power": 55,
+    "accuracy": 95
+  },
+  "snore": {
+    "slug": "snore",
+    "ko": "코골기",
+    "en": "Snore",
+    "type": "normal",
+    "category": "special",
+    "power": 50,
+    "accuracy": 100
+  },
+  "snowscape": {
+    "slug": "snowscape",
+    "ko": "설경",
+    "en": "Snowscape",
+    "type": "ice",
+    "category": "status",
+    "power": 0,
+    "accuracy": null
+  },
+  "soak": {
+    "slug": "soak",
+    "ko": "물붓기",
+    "en": "Soak",
+    "type": "water",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "solar-beam": {
+    "slug": "solar-beam",
+    "ko": "솔라빔",
+    "en": "Solar Beam",
+    "type": "grass",
+    "category": "special",
+    "power": 120,
+    "accuracy": 100
+  },
+  "solar-blade": {
+    "slug": "solar-blade",
+    "ko": "솔라블레이드",
+    "en": "Solar Blade",
+    "type": "grass",
+    "category": "physical",
+    "power": 125,
+    "accuracy": 100
+  },
+  "spark": {
+    "slug": "spark",
+    "ko": "스파크",
+    "en": "Spark",
+    "type": "electric",
+    "category": "physical",
+    "power": 65,
+    "accuracy": 100
+  },
+  "sparkling-aria": {
+    "slug": "sparkling-aria",
+    "ko": "물거품아리아",
+    "en": "Sparkling Aria",
+    "type": "water",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "speed-swap": {
+    "slug": "speed-swap",
+    "ko": "스피드스왑",
+    "en": "Speed Swap",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "spicy-extract": {
+    "slug": "spicy-extract",
+    "ko": "하바네로엑기스",
+    "en": "Spicy Extract",
+    "type": "grass",
+    "category": "status",
+    "power": 0,
+    "accuracy": null
+  },
+  "spikes": {
+    "slug": "spikes",
+    "ko": "압정뿌리기",
+    "en": "Spikes",
+    "type": "ground",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "spiky-shield": {
+    "slug": "spiky-shield",
+    "ko": "니들가드",
+    "en": "Spiky Shield",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "spirit-break": {
+    "slug": "spirit-break",
+    "ko": "소울크래시",
+    "en": "Spirit Break",
+    "type": "fairy",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 100
+  },
+  "spirit-shackle": {
+    "slug": "spirit-shackle",
+    "ko": "그림자꿰매기",
+    "en": "Spirit Shackle",
+    "type": "ghost",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "spit-up": {
+    "slug": "spit-up",
+    "ko": "토해내기",
+    "en": "Spit Up",
+    "type": "normal",
+    "category": "special",
+    "power": null,
+    "accuracy": 100
+  },
+  "spite": {
+    "slug": "spite",
+    "ko": "원한",
+    "en": "Spite",
+    "type": "ghost",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "splash": {
+    "slug": "splash",
+    "ko": "튀어오르기",
+    "en": "Splash",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "stealth-rock": {
+    "slug": "stealth-rock",
+    "ko": "스텔스록",
+    "en": "Stealth Rock",
+    "type": "rock",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "steel-beam": {
+    "slug": "steel-beam",
+    "ko": "철제광선",
+    "en": "Steel Beam",
+    "type": "steel",
+    "category": "special",
+    "power": 140,
+    "accuracy": 95
+  },
+  "steel-roller": {
+    "slug": "steel-roller",
+    "ko": "아이언롤러",
+    "en": "Steel Roller",
+    "type": "steel",
+    "category": "physical",
+    "power": 130,
+    "accuracy": 100
+  },
+  "steel-wing": {
+    "slug": "steel-wing",
+    "ko": "강철날개",
+    "en": "Steel Wing",
+    "type": "steel",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 90
+  },
+  "sticky-web": {
+    "slug": "sticky-web",
+    "ko": "끈적끈적네트",
+    "en": "Sticky Web",
+    "type": "bug",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "stockpile": {
+    "slug": "stockpile",
+    "ko": "비축하기",
+    "en": "Stockpile",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "stomping-tantrum": {
+    "slug": "stomping-tantrum",
+    "ko": "분함의발구르기",
+    "en": "Stomping Tantrum",
+    "type": "ground",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 100
+  },
+  "stone-axe": {
+    "slug": "stone-axe",
+    "ko": "암석액스",
+    "en": "Stone Axe",
+    "type": "rock",
+    "category": "physical",
+    "power": 65,
+    "accuracy": 90
+  },
+  "stone-edge": {
+    "slug": "stone-edge",
+    "ko": "스톤에지",
+    "en": "Stone Edge",
+    "type": "rock",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 80
+  },
+  "stored-power": {
+    "slug": "stored-power",
+    "ko": "어시스트파워",
+    "en": "Stored Power",
+    "type": "psychic",
+    "category": "special",
+    "power": 20,
+    "accuracy": 100
+  },
+  "storm-throw": {
+    "slug": "storm-throw",
+    "ko": "업어후리기",
+    "en": "Storm Throw",
+    "type": "fighting",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "strength-sap": {
+    "slug": "strength-sap",
+    "ko": "힘흡수",
+    "en": "Strength Sap",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "string-shot": {
+    "slug": "string-shot",
+    "ko": "실뿜기",
+    "en": "String Shot",
+    "type": "bug",
+    "category": "status",
+    "power": null,
+    "accuracy": 95
+  },
+  "struggle-bug": {
+    "slug": "struggle-bug",
+    "ko": "벌레의저항",
+    "en": "Struggle Bug",
+    "type": "bug",
+    "category": "special",
+    "power": 50,
+    "accuracy": 100
+  },
+  "stuff-cheeks": {
+    "slug": "stuff-cheeks",
+    "ko": "볼가득넣기",
+    "en": "Stuff Cheeks",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "stun-spore": {
+    "slug": "stun-spore",
+    "ko": "저리가루",
+    "en": "Stun Spore",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": 75
+  },
+  "substitute": {
+    "slug": "substitute",
+    "ko": "대타출동",
+    "en": "Substitute",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "sucker-punch": {
+    "slug": "sucker-punch",
+    "ko": "기습",
+    "en": "Sucker Punch",
+    "type": "dark",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 100
+  },
+  "sunny-day": {
+    "slug": "sunny-day",
+    "ko": "쾌청",
+    "en": "Sunny Day",
+    "type": "fire",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "super-fang": {
+    "slug": "super-fang",
+    "ko": "분노의앞니",
+    "en": "Super Fang",
+    "type": "normal",
+    "category": "physical",
+    "power": null,
+    "accuracy": 90
+  },
+  "supercell-slam": {
+    "slug": "supercell-slam",
+    "ko": "썬더다이브",
+    "en": "Supercell Slam",
+    "type": "electric",
+    "category": "physical",
+    "power": 100,
+    "accuracy": 95
+  },
+  "superpower": {
+    "slug": "superpower",
+    "ko": "엄청난힘",
+    "en": "Superpower",
+    "type": "fighting",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "surf": {
+    "slug": "surf",
+    "ko": "파도타기",
+    "en": "Surf",
+    "type": "water",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "swagger": {
+    "slug": "swagger",
+    "ko": "뽐내기",
+    "en": "Swagger",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 85
+  },
+  "swallow": {
+    "slug": "swallow",
+    "ko": "꿀꺽",
+    "en": "Swallow",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "sweet-kiss": {
+    "slug": "sweet-kiss",
+    "ko": "천사의키스",
+    "en": "Sweet Kiss",
+    "type": "fairy",
+    "category": "status",
+    "power": null,
+    "accuracy": 75
+  },
+  "sweet-scent": {
+    "slug": "sweet-scent",
+    "ko": "달콤한향기",
+    "en": "Sweet Scent",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "swift": {
+    "slug": "swift",
+    "ko": "스피드스타",
+    "en": "Swift",
+    "type": "normal",
+    "category": "special",
+    "power": 60,
+    "accuracy": null
+  },
+  "switcheroo": {
+    "slug": "switcheroo",
+    "ko": "바꿔치기",
+    "en": "Switcheroo",
+    "type": "dark",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "swords-dance": {
+    "slug": "swords-dance",
+    "ko": "칼춤",
+    "en": "Swords Dance",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "synthesis": {
+    "slug": "synthesis",
+    "ko": "광합성",
+    "en": "Synthesis",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "syrup-bomb": {
+    "slug": "syrup-bomb",
+    "ko": "시럽봄",
+    "en": "Syrup Bomb",
+    "type": "grass",
+    "category": "special",
+    "power": 60,
+    "accuracy": 85
+  },
+  "tackle": {
+    "slug": "tackle",
+    "ko": "몸통박치기",
+    "en": "Tackle",
+    "type": "normal",
+    "category": "physical",
+    "power": 40,
+    "accuracy": 100
+  },
+  "tail-slap": {
+    "slug": "tail-slap",
+    "ko": "스위프뺨치기",
+    "en": "Tail Slap",
+    "type": "normal",
+    "category": "physical",
+    "power": 25,
+    "accuracy": 85
+  },
+  "tailwind": {
+    "slug": "tailwind",
+    "ko": "순풍",
+    "en": "Tailwind",
+    "type": "flying",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "take-down": {
+    "slug": "take-down",
+    "ko": "돌진",
+    "en": "Take Down",
+    "type": "normal",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 85
+  },
+  "taunt": {
+    "slug": "taunt",
+    "ko": "도발",
+    "en": "Taunt",
+    "type": "dark",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "tearful-look": {
+    "slug": "tearful-look",
+    "ko": "눈물그렁그렁",
+    "en": "Tearful Look",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "teatime": {
+    "slug": "teatime",
+    "ko": "다과회",
+    "en": "Teatime",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "teeter-dance": {
+    "slug": "teeter-dance",
+    "ko": "흔들흔들댄스",
+    "en": "Teeter Dance",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "temper-flare": {
+    "slug": "temper-flare",
+    "ko": "열불내기",
+    "en": "Temper Flare",
+    "type": "fire",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 100
+  },
+  "tera-blast": {
+    "slug": "tera-blast",
+    "ko": "테라버스트",
+    "en": "Tera Blast",
+    "type": "normal",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "terrain-pulse": {
+    "slug": "terrain-pulse",
+    "ko": "대지의파동",
+    "en": "Terrain Pulse",
+    "type": "normal",
+    "category": "special",
+    "power": 50,
+    "accuracy": 100
+  },
+  "thief": {
+    "slug": "thief",
+    "ko": "도둑질",
+    "en": "Thief",
+    "type": "dark",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "thrash": {
+    "slug": "thrash",
+    "ko": "난동부리기",
+    "en": "Thrash",
+    "type": "normal",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "throat-chop": {
+    "slug": "throat-chop",
+    "ko": "지옥찌르기",
+    "en": "Throat Chop",
+    "type": "dark",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "thunder": {
+    "slug": "thunder",
+    "ko": "번개",
+    "en": "Thunder",
+    "type": "electric",
+    "category": "special",
+    "power": 110,
+    "accuracy": 70
+  },
+  "thunder-fang": {
+    "slug": "thunder-fang",
+    "ko": "번개엄니",
+    "en": "Thunder Fang",
+    "type": "electric",
+    "category": "physical",
+    "power": 65,
+    "accuracy": 95
+  },
+  "thunder-punch": {
+    "slug": "thunder-punch",
+    "ko": "번개펀치",
+    "en": "Thunder Punch",
+    "type": "electric",
+    "category": "physical",
+    "power": 75,
+    "accuracy": 100
+  },
+  "thunder-shock": {
+    "slug": "thunder-shock",
+    "ko": "전기쇼크",
+    "en": "Thunder Shock",
+    "type": "electric",
+    "category": "special",
+    "power": 40,
+    "accuracy": 100
+  },
+  "thunder-wave": {
+    "slug": "thunder-wave",
+    "ko": "전기자석파",
+    "en": "Thunder Wave",
+    "type": "electric",
+    "category": "status",
+    "power": null,
+    "accuracy": 90
+  },
+  "thunderbolt": {
+    "slug": "thunderbolt",
+    "ko": "10만볼트",
+    "en": "Thunderbolt",
+    "type": "electric",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "tickle": {
+    "slug": "tickle",
+    "ko": "간지르기",
+    "en": "Tickle",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "tidy-up": {
+    "slug": "tidy-up",
+    "ko": "정리정돈",
+    "en": "Tidy Up",
+    "type": "normal",
+    "category": "status",
+    "power": 0,
+    "accuracy": null
+  },
+  "topsy-turvy": {
+    "slug": "topsy-turvy",
+    "ko": "뒤집어엎기",
+    "en": "Topsy-Turvy",
+    "type": "dark",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "torch-song": {
+    "slug": "torch-song",
+    "ko": "플레어송",
+    "en": "Torch Song",
+    "type": "fire",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "torment": {
+    "slug": "torment",
+    "ko": "트집",
+    "en": "Torment",
+    "type": "dark",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "toxic": {
+    "slug": "toxic",
+    "ko": "맹독",
+    "en": "Toxic",
+    "type": "poison",
+    "category": "status",
+    "power": null,
+    "accuracy": 90
+  },
+  "toxic-spikes": {
+    "slug": "toxic-spikes",
+    "ko": "독압정",
+    "en": "Toxic Spikes",
+    "type": "poison",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "toxic-thread": {
+    "slug": "toxic-thread",
+    "ko": "독실",
+    "en": "Toxic Thread",
+    "type": "poison",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "trailblaze": {
+    "slug": "trailblaze",
+    "ko": "개척하기",
+    "en": "Trailblaze",
+    "type": "grass",
+    "category": "physical",
+    "power": 50,
+    "accuracy": 100
+  },
+  "transform": {
+    "slug": "transform",
+    "ko": "변신",
+    "en": "Transform",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "tri-attack": {
+    "slug": "tri-attack",
+    "ko": "트라이어택",
+    "en": "Tri Attack",
+    "type": "normal",
+    "category": "special",
+    "power": 80,
+    "accuracy": 100
+  },
+  "trick": {
+    "slug": "trick",
+    "ko": "트릭",
+    "en": "Trick",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "trick-or-treat": {
+    "slug": "trick-or-treat",
+    "ko": "핼러윈",
+    "en": "Trick-or-Treat",
+    "type": "ghost",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "trick-room": {
+    "slug": "trick-room",
+    "ko": "트릭룸",
+    "en": "Trick Room",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "triple-arrows": {
+    "slug": "triple-arrows",
+    "ko": "3연화살",
+    "en": "Triple Arrows",
+    "type": "fighting",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 100
+  },
+  "triple-axel": {
+    "slug": "triple-axel",
+    "ko": "트리플악셀",
+    "en": "Triple Axel",
+    "type": "ice",
+    "category": "physical",
+    "power": 20,
+    "accuracy": 90
+  },
+  "trop-kick": {
+    "slug": "trop-kick",
+    "ko": "트로피컬킥",
+    "en": "Trop Kick",
+    "type": "grass",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 100
+  },
+  "twin-beam": {
+    "slug": "twin-beam",
+    "ko": "트윈빔",
+    "en": "Twin Beam",
+    "type": "psychic",
+    "category": "special",
+    "power": 40,
+    "accuracy": 100
+  },
+  "u-turn": {
+    "slug": "u-turn",
+    "ko": "유턴",
+    "en": "U-turn",
+    "type": "bug",
+    "category": "physical",
+    "power": 70,
+    "accuracy": 100
+  },
+  "upper-hand": {
+    "slug": "upper-hand",
+    "ko": "기선제압",
+    "en": "Upper Hand",
+    "type": "fighting",
+    "category": "physical",
+    "power": 65,
+    "accuracy": 100
+  },
+  "uproar": {
+    "slug": "uproar",
+    "ko": "소란피기",
+    "en": "Uproar",
+    "type": "normal",
+    "category": "special",
+    "power": 90,
+    "accuracy": 100
+  },
+  "vacuum-wave": {
+    "slug": "vacuum-wave",
+    "ko": "진공파",
+    "en": "Vacuum Wave",
+    "type": "fighting",
+    "category": "special",
+    "power": 40,
+    "accuracy": 100
+  },
+  "venom-drench": {
+    "slug": "venom-drench",
+    "ko": "베놈트랩",
+    "en": "Venom Drench",
+    "type": "poison",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "venoshock": {
+    "slug": "venoshock",
+    "ko": "베놈쇼크",
+    "en": "Venoshock",
+    "type": "poison",
+    "category": "special",
+    "power": 65,
+    "accuracy": 100
+  },
+  "volt-switch": {
+    "slug": "volt-switch",
+    "ko": "볼트체인지",
+    "en": "Volt Switch",
+    "type": "electric",
+    "category": "special",
+    "power": 70,
+    "accuracy": 100
+  },
+  "volt-tackle": {
+    "slug": "volt-tackle",
+    "ko": "볼트태클",
+    "en": "Volt Tackle",
+    "type": "electric",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "water-pulse": {
+    "slug": "water-pulse",
+    "ko": "물의파동",
+    "en": "Water Pulse",
+    "type": "water",
+    "category": "special",
+    "power": 60,
+    "accuracy": 100
+  },
+  "water-shuriken": {
+    "slug": "water-shuriken",
+    "ko": "물수리검",
+    "en": "Water Shuriken",
+    "type": "water",
+    "category": "special",
+    "power": 15,
+    "accuracy": 100
+  },
+  "water-spout": {
+    "slug": "water-spout",
+    "ko": "해수스파우팅",
+    "en": "Water Spout",
+    "type": "water",
+    "category": "special",
+    "power": 150,
+    "accuracy": 100
+  },
+  "waterfall": {
+    "slug": "waterfall",
+    "ko": "폭포오르기",
+    "en": "Waterfall",
+    "type": "water",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "wave-crash": {
+    "slug": "wave-crash",
+    "ko": "웨이브태클",
+    "en": "Wave Crash",
+    "type": "water",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "weather-ball": {
+    "slug": "weather-ball",
+    "ko": "웨더볼",
+    "en": "Weather Ball",
+    "type": "normal",
+    "category": "special",
+    "power": 50,
+    "accuracy": 100
+  },
+  "whirlpool": {
+    "slug": "whirlpool",
+    "ko": "바다회오리",
+    "en": "Whirlpool",
+    "type": "water",
+    "category": "special",
+    "power": 35,
+    "accuracy": 85
+  },
+  "whirlwind": {
+    "slug": "whirlwind",
+    "ko": "날려버리기",
+    "en": "Whirlwind",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "wide-guard": {
+    "slug": "wide-guard",
+    "ko": "와이드가드",
+    "en": "Wide Guard",
+    "type": "rock",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "wild-charge": {
+    "slug": "wild-charge",
+    "ko": "와일드볼트",
+    "en": "Wild Charge",
+    "type": "electric",
+    "category": "physical",
+    "power": 90,
+    "accuracy": 100
+  },
+  "will-o-wisp": {
+    "slug": "will-o-wisp",
+    "ko": "도깨비불",
+    "en": "Will-O-Wisp",
+    "type": "fire",
+    "category": "status",
+    "power": null,
+    "accuracy": 85
+  },
+  "wing-attack": {
+    "slug": "wing-attack",
+    "ko": "날개치기",
+    "en": "Wing Attack",
+    "type": "flying",
+    "category": "physical",
+    "power": 60,
+    "accuracy": 100
+  },
+  "wish": {
+    "slug": "wish",
+    "ko": "희망사항",
+    "en": "Wish",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "withdraw": {
+    "slug": "withdraw",
+    "ko": "껍질에숨기",
+    "en": "Withdraw",
+    "type": "water",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "wonder-room": {
+    "slug": "wonder-room",
+    "ko": "원더룸",
+    "en": "Wonder Room",
+    "type": "psychic",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "wood-hammer": {
+    "slug": "wood-hammer",
+    "ko": "우드해머",
+    "en": "Wood Hammer",
+    "type": "grass",
+    "category": "physical",
+    "power": 120,
+    "accuracy": 100
+  },
+  "work-up": {
+    "slug": "work-up",
+    "ko": "분발",
+    "en": "Work Up",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "worry-seed": {
+    "slug": "worry-seed",
+    "ko": "고민씨",
+    "en": "Worry Seed",
+    "type": "grass",
+    "category": "status",
+    "power": null,
+    "accuracy": 100
+  },
+  "wrap": {
+    "slug": "wrap",
+    "ko": "김밥말이",
+    "en": "Wrap",
+    "type": "normal",
+    "category": "physical",
+    "power": 15,
+    "accuracy": 90
+  },
+  "x-scissor": {
+    "slug": "x-scissor",
+    "ko": "시저크로스",
+    "en": "X-Scissor",
+    "type": "bug",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 100
+  },
+  "yawn": {
+    "slug": "yawn",
+    "ko": "하품",
+    "en": "Yawn",
+    "type": "normal",
+    "category": "status",
+    "power": null,
+    "accuracy": null
+  },
+  "zap-cannon": {
+    "slug": "zap-cannon",
+    "ko": "전자포",
+    "en": "Zap Cannon",
+    "type": "electric",
+    "category": "special",
+    "power": 120,
+    "accuracy": 50
+  },
+  "zen-headbutt": {
+    "slug": "zen-headbutt",
+    "ko": "사념의박치기",
+    "en": "Zen Headbutt",
+    "type": "psychic",
+    "category": "physical",
+    "power": 80,
+    "accuracy": 90
+  }
+}
