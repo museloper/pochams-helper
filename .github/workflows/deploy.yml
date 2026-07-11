@@ -24,7 +24,10 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
+      # npm install (not `npm ci`): the lock file omits some cross-platform
+      # optional deps (@tailwindcss/oxide wasm → @emnapi/*) that npm on macOS
+      # doesn't record, which npm ci's strict integrity check rejects on Linux.
+      - run: npm install --no-audit --no-fund
       - name: Build static site
         run: npm run build
         env:
