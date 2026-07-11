@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { Move, MoveCategory, PokemonType } from "@/lib/types";
 import { POKEMON_TYPES } from "@/lib/types";
+import { asset } from "@/lib/basePath";
 import { TypeBadge } from "@/components/TypeBadge";
 
 const CATEGORIES: { value: MoveCategory; label: string; badge: string }[] = [
@@ -122,7 +123,7 @@ export function MoveList({ moves }: { moves: Move[] }) {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`/types/${type}.png`}
+              src={asset(`/types/${type}.png`)}
               alt={type}
               width={32}
               height={32}

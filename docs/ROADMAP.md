@@ -21,7 +21,7 @@ AI와 협업할 때 이 문서가 작업의 기준이 된다.
 
 - [x] 포켓몬별 정적 페이지 (`/pokemon/[slug]`) — SSG (종족값·타입·특성·기술·폼)
 - [ ] 메타데이터·sitemap·OG 이미지 정비
-- [ ] 배포 (Vercel)
+- [ ] 배포 (GitHub Pages — 정적 추출 `output: export`, basePath `/pochams-helper`, Actions 워크플로)
 
 ## Backlog
 

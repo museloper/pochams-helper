@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Language, Pokemon, PokemonForm, PokemonType } from "@/lib/types";
 import { POKEMON_TYPES, STAT_KEYS } from "@/lib/types";
 import { TYPE_INFO } from "@/lib/typeInfo";
+import { asset } from "@/lib/basePath";
 import { TypeBadge } from "@/components/TypeBadge";
 
 const LANGUAGES: { value: Language; label: string }[] = [
@@ -233,7 +234,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`/types/${type}.png`}
+                      src={asset(`/types/${type}.png`)}
                       alt={info.ko}
                       width={40}
                       height={40}
