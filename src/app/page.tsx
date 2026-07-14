@@ -16,6 +16,12 @@ function spriteFor(slug: string): string | undefined {
   return roster.find((p) => p.slug === slug)?.forms[0]?.sprite;
 }
 
+/** Sprite of a specific form (matched by English name), for feature-card icons. */
+function formSpriteFor(slug: string, nameIncludes: string): string | undefined {
+  const forms = roster.find((p) => p.slug === slug)?.forms ?? [];
+  return forms.find((f) => f.names.en.includes(nameIncludes))?.sprite;
+}
+
 const FEATURES: Feature[] = [
   {
     href: "/pokemon",
@@ -40,10 +46,12 @@ const FEATURES: Feature[] = [
     ready: false,
   },
   {
+    href: "/damage",
     emoji: "💥",
+    image: formSpriteFor("gyarados", "Mega Gyarados"),
     title: "데미지 계산기",
-    desc: "실전 데미지 계산",
-    ready: false,
+    desc: "기술·노력치별 데미지와 확정/난수 1타",
+    ready: true,
   },
 ];
 
