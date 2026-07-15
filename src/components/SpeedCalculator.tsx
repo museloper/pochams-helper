@@ -12,6 +12,7 @@ import {
   speedStat,
   subMaxSpeed,
   withScarf,
+  withStage,
 } from "@/lib/speed";
 import { weaknesses } from "@/lib/typeChart";
 import { moves as moveDict } from "@/lib/data/moves";
@@ -101,6 +102,37 @@ function useUnits(pokemon: Pokemon[]): Unit[] {
   );
 }
 
+/** Compact −/+ stepper for a speed stat stage (rank, -6..+6). */
+function StageStepper({
+  value,
+  onChange,
+}: {
+  value: number;
+  onChange: (v: number) => void;
+}) {
+  return (
+    <div className="inline-flex items-center gap-1">
+      <button
+        type="button"
+        onClick={() => onChange(Math.max(-6, value - 1))}
+        className="flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 text-sm hover:border-gray-400 dark:border-gray-700"
+      >
+        −
+      </button>
+      <span className="w-9 text-center text-sm font-medium tabular-nums">
+        {value > 0 ? `+${value}` : value}
+      </span>
+      <button
+        type="button"
+        onClick={() => onChange(Math.min(6, value + 1))}
+        className="flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 text-sm hover:border-gray-400 dark:border-gray-700"
+      >
+        +
+      </button>
+    </div>
+  );
+}
+
 export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const units = useUnits(pokemon);
   const lang = useLanguage((s) => s.lang);
@@ -109,6 +141,8 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const [nature, setNature] = useState<SpeedNature>("neutral");
   const [ev, setEv] = useState(EV_MAX);
   const [scarf, setScarf] = useState(false);
+  const [myStage, setMyStage] = useState(0);
+  const [oppStage, setOppStage] = useState(0);
   const [target, setTarget] = useState("");
   const [weakOnly, setWeakOnly] = useState(false);
 
@@ -125,10 +159,15 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
     : [];
 
   const baseSpeed = selected ? speedStat(selected.spe, ev, nature) : null;
-  // Effective speed after my own Choice Scarf (issue #2): how far can I
-  // outrun with a scarf on?
+  // In-game order: stat-stage (rank, issue #3) first, then the Choice Scarf
+  // ×1.5 item modifier (issue #2).
   const mySpeed =
-    baseSpeed !== null ? (scarf ? withScarf(baseSpeed) : baseSpeed) : null;
+    baseSpeed !== null
+      ? (() => {
+          const staged = withStage(baseSpeed, myStage);
+          return scarf ? withScarf(staged) : staged;
+        })()
+      : null;
 
   const targetQuery = target.trim().toLowerCase();
   const matchesTarget = (u: Unit) =>
@@ -149,7 +188,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             .filter((u) => u.key !== selected.key && (g.allowMega || !u.isMega))
             .filter(matchesTarget)
             .filter(hasWeaknessMove)
-            .map((u) => ({ u, s: g.speed(u.spe) }))
+            .map((u) => ({ u, s: withStage(g.speed(u.spe), oppStage) }))
             .filter((x) => x.s >= mySpeed)
             .sort((a, b) => a.s - b.s)
         : [];
@@ -276,15 +315,26 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             </button>
           </div>
 
+          {/* My speed rank (stat stage) */}
+          <div>
+            <div className="mb-1 text-xs text-gray-500 dark:text-gray-400">
+              내 스피드 랭크
+            </div>
+            <StageStepper value={myStage} onChange={setMyStage} />
+          </div>
+
           {/* Result */}
           <div className="text-right">
             <div className="text-xs text-gray-500 dark:text-gray-400">
               내 스피드
             </div>
             <div className="text-2xl font-bold tabular-nums">{mySpeed}</div>
-            {scarf && (
+            {(scarf || myStage !== 0) && (
               <div className="text-xs text-violet-500">
-                구애스카프 ×1.5 (기본 {baseSpeed})
+                {myStage !== 0 &&
+                  `랭크 ${myStage > 0 ? `+${myStage}` : myStage}`}
+                {myStage !== 0 && scarf && " · "}
+                {scarf && "구애스카프 ×1.5"} (기본 {baseSpeed})
               </div>
             )}
           </div>
@@ -324,6 +374,12 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             >
               약점 공격기 보유만
             </button>
+            <div className="flex items-center gap-2 rounded-lg border border-gray-200 px-3 py-1 dark:border-gray-700">
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                상대 스피드 랭크
+              </span>
+              <StageStepper value={oppStage} onChange={setOppStage} />
+            </div>
           </div>
         </div>
       )}

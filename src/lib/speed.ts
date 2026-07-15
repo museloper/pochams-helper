@@ -51,6 +51,13 @@ export function withScarf(speed: number): number {
   return Math.floor(speed * 1.5);
 }
 
+/** Apply a stat stage (rank, -6..+6) to a speed. +n = ×(2+n)/2, -n = ×2/(2+n). */
+export function withStage(speed: number, stage: number): number {
+  const num = stage >= 0 ? 2 + stage : 2;
+  const den = stage >= 0 ? 2 : 2 - stage;
+  return Math.floor((speed * num) / den);
+}
+
 /** Choice Scarf speed: neutral-nature sub-max speed × 1.5. */
 export function scarfSpeed(baseSpe: number): number {
   return withScarf(subMaxSpeed(baseSpe));
