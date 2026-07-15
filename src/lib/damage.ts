@@ -36,6 +36,19 @@ export function withStage(stat: number, stage: number): number {
   return Math.floor((stat * num) / den);
 }
 
+// Moves whose base power differs per hit and accumulates across a fixed number
+// of hits (issue #4/#5). Stored as each hit's base power; the calculator models
+// the landed-hits total as one effective power via `cumulativePower`.
+export const MULTI_HIT_POWERS: Record<string, number[]> = {
+  "triple-axel": [20, 40, 60],
+};
+
+/** Total base power after `hits` landed hits (hits clamped to 0..perHit.length). */
+export function cumulativePower(perHit: number[], hits: number): number {
+  const n = Math.max(0, Math.min(perHit.length, hits));
+  return perHit.slice(0, n).reduce((sum, p) => sum + p, 0);
+}
+
 export interface DamageInput {
   power: number;
   /** Attacker's effective Atk (physical) or SpA (special), after item/ability. */

@@ -13,6 +13,8 @@ import type {
 import { POKEMON_TYPES } from "@/lib/types";
 import {
   EV_MAX,
+  MULTI_HIT_POWERS,
+  cumulativePower,
   damageRolls,
   hpValue,
   koVerdict,
@@ -384,6 +386,8 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const [atkItem, setAtkItem] = useState("");
   const [atkAbilityIdx, setAtkAbilityIdx] = useState(0);
   const [atkStage, setAtkStage] = useState(0);
+  // Landed-hit count for accumulating multi-hit moves (e.g. Triple Axel, #5).
+  const [hitCount, setHitCount] = useState(1);
 
   const [defenderKey, setDefenderKey] = useState<string | null>(null);
   const [defNature, setDefNature] = useState<StatNature>("neutral");
@@ -422,6 +426,13 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const physical = move?.category === "physical";
   const atkLabel = physical ? "공격" : "특공";
   const defLabel = physical ? "방어" : "특방";
+
+  // Accumulating multi-hit moves: total power depends on how many hits land.
+  const perHitPowers = move ? MULTI_HIT_POWERS[move.slug] : undefined;
+  const isMultiHit = !!perHitPowers;
+  const effectivePower = perHitPowers
+    ? cumulativePower(perHitPowers, hitCount)
+    : (move?.power ?? 0);
 
   // Effective stats.
   const attack = move
@@ -490,11 +501,11 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const typeEff = mods?.immune ? 0 : baseTypeEff;
   const stabMult = stab ? (mods?.stabMult ?? 1.5) : 1;
 
-  const canCompute = !!(move && defender && move.power && move.power > 0);
+  const canCompute = !!(move && defender && effectivePower > 0);
   const rolls =
     canCompute && mods
       ? damageRolls({
-          power: move!.power!,
+          power: effectivePower,
           attack: Math.floor(withStage(attack, atkStage) * mods.atkMult),
           defense: Math.floor(withStage(defenseStat, defStage) * mods.defMult),
           stabMult,
@@ -617,6 +628,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                           onClick={() => {
                             setMoveSlug(m.slug);
                             setMoveListOpen(false);
+                            setHitCount(MULTI_HIT_POWERS[m.slug]?.length ?? 1);
                           }}
                           className={
                             moveSlug === m.slug
@@ -687,6 +699,32 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     value={atkStage}
                     onChange={setAtkStage}
                   />
+                  {isMultiHit && perHitPowers && (
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400">
+                        명중 횟수
+                      </span>
+                      <div className="inline-flex rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
+                        {perHitPowers.map((_, i) => {
+                          const n = i + 1;
+                          return (
+                            <button
+                              key={n}
+                              type="button"
+                              onClick={() => setHitCount(n)}
+                              className={
+                                hitCount === n
+                                  ? "rounded-md bg-gray-900 px-2.5 py-1 text-xs font-medium text-white dark:bg-white dark:text-gray-900"
+                                  : "rounded-md px-2.5 py-1 text-xs text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
+                              }
+                            >
+                              {n}회
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
                 </>
               )}
 
@@ -798,6 +836,8 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                   <div className="text-xs text-gray-400">
                     타입 상성 ×{typeEff}
                     {stab && " · 자속"}
+                    {isMultiHit &&
+                      ` · ${hitCount}회 명중 위력 ${effectivePower}`}
                   </div>
                 </div>
               </div>
