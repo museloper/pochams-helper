@@ -19,12 +19,16 @@ AI와 협업할 때 이 문서가 작업의 기준이 된다.
 
 ## Milestone 3 — 검색 유입
 
+- [x] 포켓몬 도감 목록 (`/pokemon`) — 314장(종+메가), 타입/메가/선공기/와이드가드 필터,
+      H·A·B·C·D·S 정렬, 필터 유지(sessionStorage)
 - [x] 포켓몬별 정적 페이지 (`/pokemon/[slug]`) — SSG (종족값·타입·특성·기술·폼)
+- [x] 표시 언어(한/영/일) 전역 설정 (헤더 토글, Zustand+localStorage)
+- [x] 배포 (GitHub Pages — `output: export`, basePath `/pochams-helper`, Actions 워크플로)
+      → 라이브: https://museloper.github.io/pochams-helper/ , 리모트: museloper/pochams-helper
 - [ ] 메타데이터·sitemap·OG 이미지 정비
-- [ ] 배포 (GitHub Pages — 정적 추출 `output: export`, basePath `/pochams-helper`, Actions 워크플로)
 
 ## Backlog
 
+- 상성 계산기 (`typeChart.ts` 이미 있음 — 타입 입력 → 상성 배율)
 - 팀 공유 URL (팀 구성을 링크로 공유)
-- 다국어 지원 (영어)
 - 자주 쓰는 팀 로컬 저장
