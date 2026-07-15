@@ -2,10 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import type { Language, Pokemon, PokemonForm, PokemonType } from "@/lib/types";
+import type {
+  Language,
+  Pokemon,
+  PokemonForm,
+  PokemonType,
+  StatKey,
+} from "@/lib/types";
 import { POKEMON_TYPES, STAT_KEYS } from "@/lib/types";
 import { TYPE_INFO } from "@/lib/typeInfo";
 import { asset } from "@/lib/basePath";
+import { moves as moveDict } from "@/lib/data/moves";
 import { TypeBadge } from "@/components/TypeBadge";
 
 const LANGUAGES: { value: Language; label: string }[] = [
@@ -14,11 +21,34 @@ const LANGUAGES: { value: Language; label: string }[] = [
   { value: "ja", label: "日本語" },
 ];
 
+// H·A·B·C·D·S stat sort options.
+const STAT_SORTS: { key: StatKey; label: string }[] = [
+  { key: "hp", label: "H" },
+  { key: "atk", label: "A" },
+  { key: "def", label: "B" },
+  { key: "spa", label: "C" },
+  { key: "spd", label: "D" },
+  { key: "spe", label: "S" },
+];
+
 /** A single displayable card: a species' primary form, or one of its megas. */
-type Unit = PokemonForm & { key: string; slug: string };
+type Unit = PokemonForm & {
+  key: string;
+  slug: string;
+  hasPriority: boolean;
+  hasWideGuard: boolean;
+};
 
 function bst(form: PokemonForm): number {
   return STAT_KEYS.reduce((sum, key) => sum + form.baseStats[key], 0);
+}
+
+/** Does this species learn a damaging priority move (선공기)? */
+function hasPriorityMove(entry: Pokemon): boolean {
+  return entry.learnableMoves.some((slug) => {
+    const m = moveDict[slug];
+    return m && m.category !== "status" && m.priority > 0;
+  });
 }
 
 /**
@@ -30,7 +60,65 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
   const [lang, setLang] = useState<Language>("ko");
   const [selectedTypes, setSelectedTypes] = useState<PokemonType[]>([]);
   const [megaOnly, setMegaOnly] = useState(false);
+  const [priorityOnly, setPriorityOnly] = useState(false);
+  const [wideGuardOnly, setWideGuardOnly] = useState(false);
+  const [sortStat, setSortStat] = useState<StatKey | null>(null);
+  const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
   const [filterOpen, setFilterOpen] = useState(false);
+
+  // Persist filters across navigation (도감 → 상세 → 복귀) via sessionStorage.
+  // `loaded` (state, not ref) gates saving until the restore has applied, so the
+  // remount's first render can't overwrite storage with default values.
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect */
+    try {
+      const raw = sessionStorage.getItem("roster-filters");
+      if (raw) {
+        const f = JSON.parse(raw);
+        if (f.lang) setLang(f.lang);
+        if (Array.isArray(f.selectedTypes)) setSelectedTypes(f.selectedTypes);
+        if (typeof f.megaOnly === "boolean") setMegaOnly(f.megaOnly);
+        if (typeof f.priorityOnly === "boolean")
+          setPriorityOnly(f.priorityOnly);
+        if (typeof f.wideGuardOnly === "boolean")
+          setWideGuardOnly(f.wideGuardOnly);
+        if (f.sortStat === null || typeof f.sortStat === "string")
+          setSortStat(f.sortStat);
+        if (f.sortDir === "asc" || f.sortDir === "desc") setSortDir(f.sortDir);
+      }
+    } catch {
+      // ignore malformed storage
+    }
+    setLoaded(true);
+    /* eslint-enable react-hooks/set-state-in-effect */
+  }, []);
+  useEffect(() => {
+    if (!loaded) return;
+    const f = {
+      lang,
+      selectedTypes,
+      megaOnly,
+      priorityOnly,
+      wideGuardOnly,
+      sortStat,
+      sortDir,
+    };
+    try {
+      sessionStorage.setItem("roster-filters", JSON.stringify(f));
+    } catch {
+      // ignore quota errors
+    }
+  }, [
+    loaded,
+    lang,
+    selectedTypes,
+    megaOnly,
+    priorityOnly,
+    wideGuardOnly,
+    sortStat,
+    sortDir,
+  ]);
 
   const MAX_TYPES = 2;
   const toggleType = (type: PokemonType) =>
@@ -47,6 +135,8 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
   const units = useMemo<Unit[]>(
     () =>
       pokemon.flatMap((entry) => {
+        const priority = hasPriorityMove(entry);
+        const wideGuard = entry.learnableMoves.includes("wide-guard");
         const nonMega = entry.forms.filter((f) => f.kind !== "mega");
         const megas = entry.forms.filter((f) => f.kind === "mega");
         const shown = nonMega.length > 0 ? [nonMega[0], ...megas] : megas;
@@ -54,6 +144,8 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
           ...form,
           key: `${entry.slug}|${form.name}`,
           slug: entry.slug,
+          hasPriority: priority,
+          hasWideGuard: wideGuard,
         }));
       }),
     [pokemon],
@@ -62,10 +154,24 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
   const filtered = units.filter(
     (u) =>
       selectedTypes.every((t) => u.types.includes(t)) &&
-      (!megaOnly || u.kind === "mega"),
+      (!megaOnly || u.kind === "mega") &&
+      (!priorityOnly || u.hasPriority) &&
+      (!wideGuardOnly || u.hasWideGuard),
   );
 
-  const filterCount = selectedTypes.length + (megaOnly ? 1 : 0);
+  const sorted = sortStat
+    ? [...filtered].sort((a, b) => {
+        const diff = a.baseStats[sortStat] - b.baseStats[sortStat];
+        return sortDir === "asc" ? diff : -diff;
+      })
+    : filtered;
+
+  const filterCount =
+    selectedTypes.length +
+    (megaOnly ? 1 : 0) +
+    (priorityOnly ? 1 : 0) +
+    (wideGuardOnly ? 1 : 0) +
+    (sortStat ? 1 : 0);
 
   useEffect(() => {
     if (!filterOpen) return;
@@ -124,7 +230,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
       <p className="mb-3 text-xs text-gray-400">{filtered.length}종</p>
 
       <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((unit) => (
+        {sorted.map((unit) => (
           <li key={unit.key}>
             <Link
               href={`/pokemon/${unit.slug}`}
@@ -145,12 +251,22 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                   <span className="truncate font-semibold">
                     {unit.names[lang]}
                   </span>
-                  <span
-                    className="shrink-0 text-xs text-gray-400"
-                    title="종족값 총합"
-                  >
-                    종족값 {bst(unit)}
-                  </span>
+                  {sortStat ? (
+                    <span
+                      className="shrink-0 text-xs font-medium text-gray-500 dark:text-gray-300"
+                      title="선택한 능력치 종족값"
+                    >
+                      {STAT_SORTS.find((s) => s.key === sortStat)?.label}{" "}
+                      {unit.baseStats[sortStat]}
+                    </span>
+                  ) : (
+                    <span
+                      className="shrink-0 text-xs text-gray-400"
+                      title="종족값 총합"
+                    >
+                      종족값 {bst(unit)}
+                    </span>
+                  )}
                 </div>
                 <div className="mt-1 flex flex-wrap gap-1">
                   {unit.types.map((type) => (
@@ -246,19 +362,85 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
             </div>
 
             <p className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
-              폼
+              폼 · 기술
             </p>
-            <button
-              type="button"
-              onClick={() => setMegaOnly((v) => !v)}
-              className={
-                megaOnly
-                  ? "rounded-full bg-purple-600 px-3 py-1 text-xs font-medium text-white"
-                  : "rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
-              }
-            >
-              메가만
-            </button>
+            <div className="mb-4 flex flex-wrap gap-1.5">
+              <button
+                type="button"
+                onClick={() => setMegaOnly((v) => !v)}
+                className={
+                  megaOnly
+                    ? "rounded-full bg-purple-600 px-3 py-1 text-xs font-medium text-white"
+                    : "rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
+                }
+              >
+                메가만
+              </button>
+              <button
+                type="button"
+                onClick={() => setPriorityOnly((v) => !v)}
+                className={
+                  priorityOnly
+                    ? "rounded-full bg-amber-500 px-3 py-1 text-xs font-medium text-white"
+                    : "rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
+                }
+              >
+                선공기 보유
+              </button>
+              <button
+                type="button"
+                onClick={() => setWideGuardOnly((v) => !v)}
+                className={
+                  wideGuardOnly
+                    ? "rounded-full bg-teal-500 px-3 py-1 text-xs font-medium text-white"
+                    : "rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
+                }
+              >
+                와이드가드
+              </button>
+            </div>
+
+            <p className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
+              정렬 <span className="text-gray-400">(능력치순)</span>
+            </p>
+            <div className="mb-4 flex flex-wrap gap-1.5">
+              <button
+                type="button"
+                onClick={() => setSortStat(null)}
+                className={
+                  sortStat === null
+                    ? "rounded-full bg-gray-900 px-3 py-1 text-xs font-medium text-white dark:bg-white dark:text-gray-900"
+                    : "rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
+                }
+              >
+                기본
+              </button>
+              {STAT_SORTS.map((s) => (
+                <button
+                  key={s.key}
+                  type="button"
+                  onClick={() => setSortStat(sortStat === s.key ? null : s.key)}
+                  className={
+                    sortStat === s.key
+                      ? "h-7 w-7 rounded-full bg-gray-900 text-xs font-bold text-white dark:bg-white dark:text-gray-900"
+                      : "h-7 w-7 rounded-full border border-gray-200 text-xs font-bold text-gray-500 hover:border-gray-400 dark:border-gray-700"
+                  }
+                >
+                  {s.label}
+                </button>
+              ))}
+              {sortStat && (
+                <button
+                  type="button"
+                  onClick={() =>
+                    setSortDir((d) => (d === "asc" ? "desc" : "asc"))
+                  }
+                  className="ml-1 flex h-7 items-center rounded-full border border-gray-300 px-3 text-xs font-medium text-gray-600 hover:border-gray-400 dark:border-gray-600 dark:text-gray-300"
+                >
+                  {sortDir === "desc" ? "높은 순 ↓" : "낮은 순 ↑"}
+                </button>
+              )}
+            </div>
 
             <div className="mt-6 flex justify-between">
               <button
@@ -266,6 +448,10 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                 onClick={() => {
                   setSelectedTypes([]);
                   setMegaOnly(false);
+                  setPriorityOnly(false);
+                  setWideGuardOnly(false);
+                  setSortStat(null);
+                  setSortDir("desc");
                 }}
                 className="text-sm text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
               >

@@ -123,6 +123,8 @@ export interface Move {
   power: number | null;
   /** Accuracy in percent, or `null` for moves that bypass the accuracy check. */
   accuracy: number | null;
+  /** Move priority; > 0 means it moves before normal-priority moves. */
+  priority: number;
 }
 
 // ---------------------------------------------------------------------------

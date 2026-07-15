@@ -310,6 +310,7 @@ async function fetchMove(slug) {
     category: data.damage_class?.name ?? "status",
     power: data.power ?? null,
     accuracy: data.accuracy ?? null,
+    priority: data.priority ?? 0,
   };
 }
 
