@@ -1,7 +1,15 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { Ability, Move, Pokemon, PokemonType, StatKey } from "@/lib/types";
+import type {
+  Ability,
+  Language,
+  LocalizedName,
+  Move,
+  Pokemon,
+  PokemonType,
+  StatKey,
+} from "@/lib/types";
 import { POKEMON_TYPES } from "@/lib/types";
 import {
   EV_MAX,
@@ -25,13 +33,13 @@ import {
 } from "@/lib/battleModifiers";
 import { moves as moveDict } from "@/lib/data/moves";
 import { asset } from "@/lib/basePath";
+import { useLanguage } from "@/stores/useLanguage";
 import { TypeBadge } from "@/components/TypeBadge";
 
 type Unit = {
   key: string;
   slug: string;
-  ko: string;
-  en: string;
+  names: LocalizedName;
   sprite: string;
   types: PokemonType[];
   base: Record<StatKey, number>;
@@ -72,8 +80,7 @@ function useUnits(pokemon: Pokemon[]): Unit[] {
         return shown.map((form) => ({
           key: `${entry.slug}|${form.name}`,
           slug: entry.slug,
-          ko: form.names.ko,
-          en: form.names.en,
+          names: form.names,
           sprite: form.sprite,
           types: form.types,
           base: form.baseStats,
@@ -97,14 +104,16 @@ function PokemonSearch({
   onSelect: (key: string) => void;
   placeholder: string;
 }) {
+  const lang = useLanguage((s) => s.lang);
   const [query, setQuery] = useState("");
   const selected = units.find((u) => u.key === selectedKey) ?? null;
   const results = query.trim()
     ? units
         .filter(
           (u) =>
-            u.ko.includes(query) ||
-            u.en.toLowerCase().includes(query.toLowerCase()),
+            u.names.ko.includes(query) ||
+            u.names.en.toLowerCase().includes(query.toLowerCase()) ||
+            u.names.ja.includes(query),
         )
         .slice(0, 40)
     : [];
@@ -120,14 +129,14 @@ function PokemonSearch({
             height={56}
             className="h-14 w-14 shrink-0 object-contain"
           />
-          <span className="text-lg font-semibold">{selected.ko}</span>
+          <span className="text-lg font-semibold">{selected.names[lang]}</span>
         </div>
       )}
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder={selected ? selected.ko : placeholder}
+        placeholder={selected ? selected.names[lang] : placeholder}
         className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-gray-500 dark:border-gray-600 dark:bg-gray-900"
       />
       {results.length > 0 && (
@@ -150,7 +159,7 @@ function PokemonSearch({
                   height={28}
                   className="h-7 w-7"
                 />
-                <span className="flex-1">{u.ko}</span>
+                <span className="flex-1">{u.names[lang]}</span>
               </button>
             </li>
           ))}
@@ -225,6 +234,7 @@ function AbilityToggle({
   idx: number;
   onChange: (i: number) => void;
 }) {
+  const lang = useLanguage((s) => s.lang);
   return (
     <div className="flex items-center justify-between gap-2">
       <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400">
@@ -242,7 +252,7 @@ function AbilityToggle({
                 : "rounded-md px-2 py-1 text-xs text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
             }
           >
-            {a.ko}
+            {a[lang]}
             {a.hidden && " (드림)"}
           </button>
         ))}
@@ -360,6 +370,7 @@ function StageSelect({
 
 export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const units = useUnits(pokemon);
+  const lang = useLanguage((s) => s.lang);
 
   const [attackerKey, setAttackerKey] = useState<string | null>(null);
   const [moveSlug, setMoveSlug] = useState<string | null>(null);
@@ -402,7 +413,8 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
           (moveTypeFilter === null || m.type === moveTypeFilter) &&
           (!q ||
             m.ko.toLowerCase().includes(q) ||
-            m.en.toLowerCase().includes(q)),
+            m.en.toLowerCase().includes(q) ||
+            m.ja.includes(q)),
       )
     : [];
 
@@ -589,7 +601,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                         >
                           <TypeBadge type={m.type} />
                           <span className="min-w-0 flex-1 truncate">
-                            {m.ko}
+                            {m[lang]}
                           </span>
                           <span className="shrink-0 text-xs text-gray-400">
                             {m.category === "physical" ? "물리" : "특수"} ·{" "}
@@ -615,7 +627,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                   >
                     <TypeBadge type={move.type} />
                     <span className="min-w-0 flex-1 truncate text-left">
-                      {move.ko}
+                      {move[lang]}
                     </span>
                     {stab && (
                       <span className="shrink-0 text-xs text-rose-500">

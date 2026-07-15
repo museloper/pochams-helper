@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Move, MoveCategory, PokemonType } from "@/lib/types";
 import { POKEMON_TYPES } from "@/lib/types";
 import { asset } from "@/lib/basePath";
+import { useLanguage } from "@/stores/useLanguage";
 import { TypeBadge } from "@/components/TypeBadge";
 
 const CATEGORIES: { value: MoveCategory; label: string; badge: string }[] = [
@@ -41,6 +42,7 @@ function CategoryBadge({ category }: { category: MoveCategory }) {
 
 /** Learnable moves grouped by type, with type / category filters. */
 export function MoveList({ moves }: { moves: Move[] }) {
+  const lang = useLanguage((s) => s.lang);
   const [typeFilter, setTypeFilter] = useState<PokemonType | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<MoveCategory | null>(
     null,
@@ -148,7 +150,7 @@ export function MoveList({ moves }: { moves: Move[] }) {
                 >
                   <span className="flex min-w-0 items-center gap-2">
                     <CategoryBadge category={move.category} />
-                    <span className="truncate">{move.ko}</span>
+                    <span className="truncate">{move[lang]}</span>
                   </span>
                   <span className="shrink-0 text-xs text-gray-400 tabular-nums">
                     {move.category === "status"

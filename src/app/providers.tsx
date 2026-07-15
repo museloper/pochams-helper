@@ -1,9 +1,15 @@
 "use client";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLanguage } from "@/stores/useLanguage";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
+  // Rehydrate the persisted language after mount (store uses skipHydration).
+  useEffect(() => {
+    useLanguage.persist.rehydrate();
+  }, []);
+
   const [queryClient] = useState(
     () =>
       new QueryClient({

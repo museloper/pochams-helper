@@ -117,6 +117,8 @@ export interface Move {
   ko: string;
   /** English display name, e.g. "Dragon Claw". */
   en: string;
+  /** Japanese display name, e.g. "ドラゴンクロー". */
+  ja: string;
   type: PokemonType;
   category: MoveCategory;
   /** Base power; `null` for status moves. */
@@ -138,6 +140,7 @@ export type FormKind = "base" | "mega" | "regional" | "other";
 export interface Ability {
   ko: string;
   en: string;
+  ja: string;
   /** Hidden ability (드림 특성) vs. a regular ability. */
   hidden: boolean;
 }

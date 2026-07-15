@@ -293,7 +293,11 @@ async function fetchAbilityName(slug) {
   const by = Object.fromEntries(
     data.names.map((n) => [n.language.name, n.name]),
   );
-  return { ko: by.ko ?? null, en: by.en ?? null };
+  return {
+    ko: by.ko ?? null,
+    en: by.en ?? null,
+    ja: by.ja ?? by["ja-Hrkt"] ?? null,
+  };
 }
 
 async function fetchMove(slug) {
@@ -306,6 +310,7 @@ async function fetchMove(slug) {
     slug,
     ko: by.ko ?? by.en ?? humanize(slug),
     en: by.en ?? humanize(slug),
+    ja: by.ja ?? by["ja-Hrkt"] ?? by.en ?? humanize(slug),
     type: data.type?.name ?? "normal",
     category: data.damage_class?.name ?? "status",
     power: data.power ?? null,
@@ -402,6 +407,7 @@ async function main() {
         return {
           ko: n?.ko ?? n?.en ?? humanize(a.slug),
           en: n?.en ?? humanize(a.slug),
+          ja: n?.ja ?? n?.en ?? humanize(a.slug),
           hidden: a.hidden,
         };
       });
@@ -410,6 +416,7 @@ async function main() {
       f.abilities = f.sourceAbilities.map((en) => ({
         ko: en,
         en,
+        ja: en,
         hidden: false,
       }));
     }

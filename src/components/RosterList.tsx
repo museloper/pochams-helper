@@ -2,24 +2,13 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import type {
-  Language,
-  Pokemon,
-  PokemonForm,
-  PokemonType,
-  StatKey,
-} from "@/lib/types";
+import type { Pokemon, PokemonForm, PokemonType, StatKey } from "@/lib/types";
 import { POKEMON_TYPES, STAT_KEYS } from "@/lib/types";
 import { TYPE_INFO } from "@/lib/typeInfo";
 import { asset } from "@/lib/basePath";
 import { moves as moveDict } from "@/lib/data/moves";
+import { useLanguage } from "@/stores/useLanguage";
 import { TypeBadge } from "@/components/TypeBadge";
-
-const LANGUAGES: { value: Language; label: string }[] = [
-  { value: "ko", label: "한국어" },
-  { value: "en", label: "English" },
-  { value: "ja", label: "日本語" },
-];
 
 // H·A·B·C·D·S stat sort options.
 const STAT_SORTS: { key: StatKey; label: string }[] = [
@@ -57,7 +46,7 @@ function hasPriorityMove(entry: Pokemon): boolean {
  * so the initial HTML (Korean, unfiltered) is still prerendered for SEO.
  */
 export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
-  const [lang, setLang] = useState<Language>("ko");
+  const lang = useLanguage((s) => s.lang);
   const [selectedTypes, setSelectedTypes] = useState<PokemonType[]>([]);
   const [megaOnly, setMegaOnly] = useState(false);
   const [priorityOnly, setPriorityOnly] = useState(false);
@@ -76,7 +65,6 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
       const raw = sessionStorage.getItem("roster-filters");
       if (raw) {
         const f = JSON.parse(raw);
-        if (f.lang) setLang(f.lang);
         if (Array.isArray(f.selectedTypes)) setSelectedTypes(f.selectedTypes);
         if (typeof f.megaOnly === "boolean") setMegaOnly(f.megaOnly);
         if (typeof f.priorityOnly === "boolean")
@@ -96,7 +84,6 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
   useEffect(() => {
     if (!loaded) return;
     const f = {
-      lang,
       selectedTypes,
       megaOnly,
       priorityOnly,
@@ -111,7 +98,6 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
     }
   }, [
     loaded,
-    lang,
     selectedTypes,
     megaOnly,
     priorityOnly,
@@ -184,23 +170,6 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
   return (
     <>
       <div className="mb-3 flex items-center gap-2">
-        <div className="inline-flex rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
-          {LANGUAGES.map((language) => (
-            <button
-              key={language.value}
-              type="button"
-              onClick={() => setLang(language.value)}
-              className={
-                lang === language.value
-                  ? "rounded-md bg-gray-900 px-3 py-1 text-sm font-medium text-white dark:bg-white dark:text-gray-900"
-                  : "rounded-md px-3 py-1 text-sm text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
-              }
-            >
-              {language.label}
-            </button>
-          ))}
-        </div>
-
         <button
           type="button"
           onClick={() => setFilterOpen(true)}

@@ -33,11 +33,13 @@
           {
             "ko": "눈퍼뜨리기",
             "en": "Snow Warning",
+            "ja": "ゆきふらし",
             "hidden": false
           },
           {
             "ko": "방음",
             "en": "Soundproof",
+            "ja": "ぼうおん",
             "hidden": true
           }
         ]
@@ -67,6 +69,7 @@
           {
             "ko": "눈퍼뜨리기",
             "en": "Snow Warning",
+            "ja": "ゆきふらし",
             "hidden": false
           }
         ]
@@ -173,16 +176,19 @@
           {
             "ko": "프레셔",
             "en": "Pressure",
+            "ja": "プレッシャー",
             "hidden": false
           },
           {
             "ko": "대운",
             "en": "Super Luck",
+            "ja": "きょううん",
             "hidden": false
           },
           {
             "ko": "정의의마음",
             "en": "Justified",
+            "ja": "せいぎのこころ",
             "hidden": true
           }
         ]
@@ -211,6 +217,7 @@
           {
             "ko": "매직미러",
             "en": "Magic Bounce",
+            "ja": "マジックミラー",
             "hidden": false
           }
         ]
@@ -324,6 +331,7 @@
           {
             "ko": "배틀스위치",
             "en": "Stance Change",
+            "ja": "バトルスイッチ",
             "hidden": false
           }
         ]
@@ -411,16 +419,19 @@
           {
             "ko": "돌머리",
             "en": "Rock Head",
+            "ja": "いしあたま",
             "hidden": false
           },
           {
             "ko": "프레셔",
             "en": "Pressure",
+            "ja": "プレッシャー",
             "hidden": false
           },
           {
             "ko": "긴장감",
             "en": "Unnerve",
+            "ja": "きんちょうかん",
             "hidden": true
           }
         ]
@@ -450,6 +461,7 @@
           {
             "ko": "단단한발톱",
             "en": "Tough Claws",
+            "ja": "かたいツメ",
             "hidden": false
           }
         ]
@@ -550,16 +562,19 @@
           {
             "ko": "옹골참",
             "en": "Sturdy",
+            "ja": "がんじょう",
             "hidden": false
           },
           {
             "ko": "돌머리",
             "en": "Rock Head",
+            "ja": "いしあたま",
             "hidden": false
           },
           {
             "ko": "헤비메탈",
             "en": "Heavy Metal",
+            "ja": "ヘヴィメタル",
             "hidden": true
           }
         ]
@@ -588,6 +603,7 @@
           {
             "ko": "필터",
             "en": "Filter",
+            "ja": "フィルター",
             "hidden": false
           }
         ]
@@ -712,16 +728,19 @@
           {
             "ko": "싱크로",
             "en": "Synchronize",
+            "ja": "シンクロ",
             "hidden": false
           },
           {
             "ko": "정신력",
             "en": "Inner Focus",
+            "ja": "せいしんりょく",
             "hidden": false
           },
           {
             "ko": "매직가드",
             "en": "Magic Guard",
+            "ja": "マジックガード",
             "hidden": true
           }
         ]
@@ -750,6 +769,7 @@
           {
             "ko": "트레이스",
             "en": "Trace",
+            "ja": "トレース",
             "hidden": false
           }
         ]
@@ -851,11 +871,13 @@
           {
             "ko": "스위트베일",
             "en": "Sweet Veil",
+            "ja": "スイートベール",
             "hidden": false
           },
           {
             "ko": "아로마베일",
             "en": "Aroma Veil",
+            "ja": "アロマベール",
             "hidden": true
           }
         ]
@@ -947,11 +969,13 @@
           {
             "ko": "눈숨기",
             "en": "Snow Cloak",
+            "ja": "ゆきがくれ",
             "hidden": false
           },
           {
             "ko": "눈퍼뜨리기",
             "en": "Snow Warning",
+            "ja": "ゆきふらし",
             "hidden": true
           }
         ]
@@ -1058,6 +1082,7 @@
           {
             "ko": "서핑테일",
             "en": "Surge Surfer",
+            "ja": "サーフテール",
             "hidden": false
           }
         ]
@@ -1174,11 +1199,13 @@
           {
             "ko": "자연회복",
             "en": "Natural Cure",
+            "ja": "しぜんかいふく",
             "hidden": false
           },
           {
             "ko": "날씨부정",
             "en": "Cloud Nine",
+            "ja": "ノーてんき",
             "hidden": true
           }
         ]
@@ -1208,6 +1235,7 @@
           {
             "ko": "페어리스킨",
             "en": "Pixilate",
+            "ja": "フェアリースキン",
             "hidden": false
           }
         ]
@@ -1314,11 +1342,13 @@
           {
             "ko": "정전기",
             "en": "Static",
+            "ja": "せいでんき",
             "hidden": false
           },
           {
             "ko": "플러스",
             "en": "Plus",
+            "ja": "プラス",
             "hidden": true
           }
         ]
@@ -1348,6 +1378,7 @@
           {
             "ko": "틀깨기",
             "en": "Mold Breaker",
+            "ja": "かたやぶり",
             "hidden": false
           }
         ]
@@ -1457,16 +1488,19 @@
           {
             "ko": "의기양양",
             "en": "Vital Spirit",
+            "ja": "やるき",
             "hidden": false
           },
           {
             "ko": "정신력",
             "en": "Inner Focus",
+            "ja": "せいしんりょく",
             "hidden": false
           },
           {
             "ko": "오기",
             "en": "Defiant",
+            "ja": "まけんき",
             "hidden": true
           }
         ]
@@ -1584,16 +1618,19 @@
           {
             "ko": "숙성",
             "en": "Ripen",
+            "ja": "じゅくせい",
             "hidden": false
           },
           {
             "ko": "먹보",
             "en": "Gluttony",
+            "ja": "くいしんぼう",
             "hidden": false
           },
           {
             "ko": "두꺼운지방",
             "en": "Thick Fat",
+            "ja": "あついしぼう",
             "hidden": true
           }
         ]
@@ -1687,11 +1724,13 @@
           {
             "ko": "수포",
             "en": "Water Bubble",
+            "ja": "すいほう",
             "hidden": false
           },
           {
             "ko": "저수",
             "en": "Water Absorb",
+            "ja": "ちょすい",
             "hidden": true
           }
         ]
@@ -1784,16 +1823,19 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "탈피",
             "en": "Shed Skin",
+            "ja": "だっぴ",
             "hidden": false
           },
           {
             "ko": "긴장감",
             "en": "Unnerve",
+            "ja": "きんちょうかん",
             "hidden": true
           }
         ]
@@ -1905,16 +1947,19 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "타오르는불꽃",
             "en": "Flash Fire",
+            "ja": "もらいび",
             "hidden": false
           },
           {
             "ko": "정의의마음",
             "en": "Justified",
+            "ja": "せいぎのこころ",
             "hidden": true
           }
         ]
@@ -2014,16 +2059,19 @@
           {
             "ko": "지구력",
             "en": "Stamina",
+            "ja": "じきゅうりょく",
             "hidden": false
           },
           {
             "ko": "옹골참",
             "en": "Sturdy",
+            "ja": "がんじょう",
             "hidden": false
           },
           {
             "ko": "굳건한신념",
             "en": "Stalwart",
+            "ja": "すじがねいり",
             "hidden": true
           }
         ]
@@ -2117,16 +2165,19 @@
           {
             "ko": "벌레의알림",
             "en": "Swarm",
+            "ja": "むしのしらせ",
             "hidden": false
           },
           {
             "ko": "불면",
             "en": "Insomnia",
+            "ja": "ふみん",
             "hidden": false
           },
           {
             "ko": "스나이퍼",
             "en": "Sniper",
+            "ja": "スナイパー",
             "hidden": true
           }
         ]
@@ -2233,11 +2284,13 @@
           {
             "ko": "타오르는불꽃",
             "en": "Flash Fire",
+            "ja": "もらいび",
             "hidden": false
           },
           {
             "ko": "깨어진갑옷",
             "en": "Weak Armor",
+            "ja": "くだけるよろい",
             "hidden": true
           }
         ]
@@ -2334,11 +2387,13 @@
           {
             "ko": "치유의마음",
             "en": "Healer",
+            "ja": "いやしのこころ",
             "hidden": false
           },
           {
             "ko": "아로마베일",
             "en": "Aroma Veil",
+            "ja": "アロマベール",
             "hidden": true
           }
         ]
@@ -2428,16 +2483,19 @@
           {
             "ko": "치유의마음",
             "en": "Healer",
+            "ja": "いやしのこころ",
             "hidden": false
           },
           {
             "ko": "재생력",
             "en": "Regenerator",
+            "ja": "さいせいりょく",
             "hidden": false
           },
           {
             "ko": "서투름",
             "en": "Klutz",
+            "ja": "ぶきよう",
             "hidden": true
           }
         ]
@@ -2467,6 +2525,7 @@
           {
             "ko": "치유의마음",
             "en": "Healer",
+            "ja": "いやしのこころ",
             "hidden": false
           }
         ]
@@ -2578,11 +2637,13 @@
           {
             "ko": "프리즈스킨",
             "en": "Refrigerate",
+            "ja": "フリーズスキン",
             "hidden": false
           },
           {
             "ko": "눈퍼뜨리기",
             "en": "Snow Warning",
+            "ja": "ゆきふらし",
             "hidden": true
           }
         ]
@@ -2680,16 +2741,19 @@
           {
             "ko": "마이페이스",
             "en": "Own Tempo",
+            "ja": "マイペース",
             "hidden": false
           },
           {
             "ko": "아이스바디",
             "en": "Ice Body",
+            "ja": "アイスボディ",
             "hidden": false
           },
           {
             "ko": "옹골참",
             "en": "Sturdy",
+            "ja": "がんじょう",
             "hidden": true
           }
         ]
@@ -2781,16 +2845,19 @@
           {
             "ko": "두꺼운지방",
             "en": "Thick Fat",
+            "ja": "あついしぼう",
             "hidden": false
           },
           {
             "ko": "천하장사",
             "en": "Huge Power",
+            "ja": "ちからもち",
             "hidden": false
           },
           {
             "ko": "초식",
             "en": "Sap Sipper",
+            "ja": "そうしょく",
             "hidden": true
           }
         ]
@@ -2898,16 +2965,19 @@
           {
             "ko": "불면",
             "en": "Insomnia",
+            "ja": "ふみん",
             "hidden": false
           },
           {
             "ko": "통찰",
             "en": "Frisk",
+            "ja": "おみとおし",
             "hidden": false
           },
           {
             "ko": "저주받은바디",
             "en": "Cursed Body",
+            "ja": "のろわれボディ",
             "hidden": true
           }
         ]
@@ -2936,6 +3006,7 @@
           {
             "ko": "짓궂은마음",
             "en": "Prankster",
+            "ja": "いたずらごころ",
             "hidden": false
           }
         ]
@@ -3044,16 +3115,19 @@
           {
             "ko": "단단한발톱",
             "en": "Tough Claws",
+            "ja": "かたいツメ",
             "hidden": false
           },
           {
             "ko": "스나이퍼",
             "en": "Sniper",
+            "ja": "スナイパー",
             "hidden": false
           },
           {
             "ko": "나쁜손버릇",
             "en": "Pickpocket",
+            "ja": "わるいてぐせ",
             "hidden": true
           }
         ]
@@ -3083,6 +3157,7 @@
           {
             "ko": "단단한발톱",
             "en": "Tough Claws",
+            "ja": "かたいツメ",
             "hidden": false
           }
         ]
@@ -3196,16 +3271,19 @@
           {
             "ko": "쓱쓱",
             "en": "Swift Swim",
+            "ja": "すいすい",
             "hidden": false
           },
           {
             "ko": "적응력",
             "en": "Adaptability",
+            "ja": "てきおうりょく",
             "hidden": false
           },
           {
             "ko": "틀깨기",
             "en": "Mold Breaker",
+            "ja": "かたやぶり",
             "hidden": true
           }
         ]
@@ -3297,16 +3375,19 @@
           {
             "ko": "쓱쓱",
             "en": "Swift Swim",
+            "ja": "すいすい",
             "hidden": false
           },
           {
             "ko": "적응력",
             "en": "Adaptability",
+            "ja": "てきおうりょく",
             "hidden": false
           },
           {
             "ko": "틀깨기",
             "en": "Mold Breaker",
+            "ja": "かたやぶり",
             "hidden": true
           }
         ]
@@ -3398,11 +3479,13 @@
           {
             "ko": "옹골참",
             "en": "Sturdy",
+            "ja": "がんじょう",
             "hidden": false
           },
           {
             "ko": "방음",
             "en": "Soundproof",
+            "ja": "ぼうおん",
             "hidden": true
           }
         ]
@@ -3512,16 +3595,19 @@
           {
             "ko": "눈숨기",
             "en": "Snow Cloak",
+            "ja": "ゆきがくれ",
             "hidden": false
           },
           {
             "ko": "눈치우기",
             "en": "Slush Rush",
+            "ja": "ゆきかき",
             "hidden": false
           },
           {
             "ko": "쓱쓱",
             "en": "Swift Swim",
+            "ja": "すいすい",
             "hidden": true
           }
         ]
@@ -3639,11 +3725,13 @@
           {
             "ko": "벌레의알림",
             "en": "Swarm",
+            "ja": "むしのしらせ",
             "hidden": false
           },
           {
             "ko": "스나이퍼",
             "en": "Sniper",
+            "ja": "スナイパー",
             "hidden": true
           }
         ]
@@ -3673,6 +3761,7 @@
           {
             "ko": "적응력",
             "en": "Adaptability",
+            "ja": "てきおうりょく",
             "hidden": false
           }
         ]
@@ -3767,16 +3856,19 @@
           {
             "ko": "전기로바꾸기",
             "en": "Electromorphosis",
+            "ja": "でんきにかえる",
             "hidden": false
           },
           {
             "ko": "정전기",
             "en": "Static",
+            "ja": "せいでんき",
             "hidden": false
           },
           {
             "ko": "습기",
             "en": "Damp",
+            "ja": "しめりけ",
             "hidden": true
           }
         ]
@@ -3857,11 +3949,13 @@
           {
             "ko": "급류",
             "en": "Torrent",
+            "ja": "げきりゅう",
             "hidden": false
           },
           {
             "ko": "젖은접시",
             "en": "Rain Dish",
+            "ja": "あめうけざら",
             "hidden": true
           }
         ]
@@ -3890,6 +3984,7 @@
           {
             "ko": "메가런처",
             "en": "Mega Launcher",
+            "ja": "メガランチャー",
             "hidden": false
           }
         ]
@@ -4005,11 +4100,13 @@
           {
             "ko": "맹화",
             "en": "Blaze",
+            "ja": "もうか",
             "hidden": false
           },
           {
             "ko": "가속",
             "en": "Speed Boost",
+            "ja": "かそく",
             "hidden": true
           }
         ]
@@ -4039,6 +4136,7 @@
           {
             "ko": "가속",
             "en": "Speed Boost",
+            "ja": "かそく",
             "hidden": false
           }
         ]
@@ -4159,16 +4257,19 @@
           {
             "ko": "마그마의무장",
             "en": "Magma Armor",
+            "ja": "マグマのよろい",
             "hidden": false
           },
           {
             "ko": "하드록",
             "en": "Solid Rock",
+            "ja": "ハードロック",
             "hidden": false
           },
           {
             "ko": "분노의경혈",
             "en": "Anger Point",
+            "ja": "いかりのつぼ",
             "hidden": true
           }
         ]
@@ -4198,6 +4299,7 @@
           {
             "ko": "우격다짐",
             "en": "Sheer Force",
+            "ja": "ちからずく",
             "hidden": false
           }
         ]
@@ -4306,6 +4408,7 @@
           {
             "ko": "기분파",
             "en": "Forecast",
+            "ja": "てんきや",
             "hidden": false
           }
         ]
@@ -4385,11 +4488,13 @@
           {
             "ko": "타오르는불꽃",
             "en": "Flash Fire",
+            "ja": "もらいび",
             "hidden": false
           },
           {
             "ko": "깨어진갑옷",
             "en": "Weak Armor",
+            "ja": "くだけるよろい",
             "hidden": true
           }
         ]
@@ -4487,16 +4592,19 @@
           {
             "ko": "타오르는불꽃",
             "en": "Flash Fire",
+            "ja": "もらいび",
             "hidden": false
           },
           {
             "ko": "불꽃몸",
             "en": "Flame Body",
+            "ja": "ほのおのからだ",
             "hidden": false
           },
           {
             "ko": "틈새포착",
             "en": "Infiltrator",
+            "ja": "すりぬけ",
             "hidden": true
           }
         ]
@@ -4526,6 +4634,7 @@
           {
             "ko": "틈새포착",
             "en": "Infiltrator",
+            "ja": "すりぬけ",
             "hidden": false
           }
         ]
@@ -4622,11 +4731,13 @@
           {
             "ko": "맹화",
             "en": "Blaze",
+            "ja": "もうか",
             "hidden": false
           },
           {
             "ko": "선파워",
             "en": "Solar Power",
+            "ja": "サンパワー",
             "hidden": true
           }
         ]
@@ -4656,6 +4767,7 @@
           {
             "ko": "단단한발톱",
             "en": "Tough Claws",
+            "ja": "かたいツメ",
             "hidden": false
           }
         ]
@@ -4685,6 +4797,7 @@
           {
             "ko": "가뭄",
             "en": "Drought",
+            "ja": "ひでり",
             "hidden": false
           }
         ]
@@ -4799,11 +4912,13 @@
           {
             "ko": "심록",
             "en": "Overgrow",
+            "ja": "しんりょく",
             "hidden": false
           },
           {
             "ko": "방탄",
             "en": "Bulletproof",
+            "ja": "ぼうだん",
             "hidden": true
           }
         ]
@@ -4833,6 +4948,7 @@
           {
             "ko": "방탄",
             "en": "Bulletproof",
+            "ja": "ぼうだん",
             "hidden": false
           }
         ]
@@ -4961,6 +5077,7 @@
           {
             "ko": "부유",
             "en": "Levitate",
+            "ja": "ふゆう",
             "hidden": false
           }
         ]
@@ -4990,6 +5107,7 @@
           {
             "ko": "부유",
             "en": "Levitate",
+            "ja": "ふゆう",
             "hidden": false
           }
         ]
@@ -5096,6 +5214,7 @@
           {
             "ko": "메가런처",
             "en": "Mega Launcher",
+            "ja": "メガランチャー",
             "hidden": false
           }
         ]
@@ -5189,16 +5308,19 @@
           {
             "ko": "헤롱헤롱바디",
             "en": "Cute Charm",
+            "ja": "メロメロボディ",
             "hidden": false
           },
           {
             "ko": "매직가드",
             "en": "Magic Guard",
+            "ja": "マジックガード",
             "hidden": false
           },
           {
             "ko": "천진",
             "en": "Unaware",
+            "ja": "てんねん",
             "hidden": true
           }
         ]
@@ -5228,6 +5350,7 @@
           {
             "ko": "매직미러",
             "en": "Magic Bounce",
+            "ja": "マジックミラー",
             "hidden": false
           }
         ]
@@ -5360,6 +5483,7 @@
           {
             "ko": "미라",
             "en": "Mummy",
+            "ja": "ミイラ",
             "hidden": false
           }
         ]
@@ -5455,16 +5579,19 @@
           {
             "ko": "근성",
             "en": "Guts",
+            "ja": "こんじょう",
             "hidden": false
           },
           {
             "ko": "우격다짐",
             "en": "Sheer Force",
+            "ja": "ちからずく",
             "hidden": false
           },
           {
             "ko": "철주먹",
             "en": "Iron Fist",
+            "ja": "てつのこぶし",
             "hidden": true
           }
         ]
@@ -5568,16 +5695,19 @@
           {
             "ko": "프레셔",
             "en": "Pressure",
+            "ja": "プレッシャー",
             "hidden": false
           },
           {
             "ko": "긴장감",
             "en": "Unnerve",
+            "ja": "きんちょうかん",
             "hidden": false
           },
           {
             "ko": "미러아머",
             "en": "Mirror Armor",
+            "ja": "ミラーアーマー",
             "hidden": true
           }
         ]
@@ -5675,16 +5805,19 @@
           {
             "ko": "괴력집게",
             "en": "Hyper Cutter",
+            "ja": "かいりきバサミ",
             "hidden": false
           },
           {
             "ko": "철주먹",
             "en": "Iron Fist",
+            "ja": "てつのこぶし",
             "hidden": false
           },
           {
             "ko": "분노의경혈",
             "en": "Anger Point",
+            "ja": "いかりのつぼ",
             "hidden": true
           }
         ]
@@ -5714,6 +5847,7 @@
           {
             "ko": "철주먹",
             "en": "Iron Fist",
+            "ja": "てつのこぶし",
             "hidden": false
           }
         ]
@@ -5819,11 +5953,13 @@
           {
             "ko": "심록",
             "en": "Overgrow",
+            "ja": "しんりょく",
             "hidden": false
           },
           {
             "ko": "원격",
             "en": "Long Reach",
+            "ja": "えんかく",
             "hidden": true
           }
         ]
@@ -5932,16 +6068,19 @@
           {
             "ko": "볼주머니",
             "en": "Cheek Pouch",
+            "ja": "ほおぶくろ",
             "hidden": false
           },
           {
             "ko": "픽업",
             "en": "Pickup",
+            "ja": "ものひろい",
             "hidden": false
           },
           {
             "ko": "플러스",
             "en": "Plus",
+            "ja": "プラス",
             "hidden": true
           }
         ]
@@ -6034,11 +6173,13 @@
           {
             "ko": "맹화",
             "en": "Blaze",
+            "ja": "もうか",
             "hidden": false
           },
           {
             "ko": "매지션",
             "en": "Magician",
+            "ja": "マジシャン",
             "hidden": true
           }
         ]
@@ -6068,6 +6209,7 @@
           {
             "ko": "부유",
             "en": "Levitate",
+            "ja": "ふゆう",
             "hidden": false
           }
         ]
@@ -6182,16 +6324,19 @@
           {
             "ko": "픽업",
             "en": "Pickup",
+            "ja": "ものひろい",
             "hidden": false
           },
           {
             "ko": "볼주머니",
             "en": "Cheek Pouch",
+            "ja": "ほおぶくろ",
             "hidden": false
           },
           {
             "ko": "천하장사",
             "en": "Huge Power",
+            "ja": "ちからもち",
             "hidden": true
           }
         ]
@@ -6291,11 +6436,13 @@
           {
             "ko": "유연",
             "en": "Limber",
+            "ja": "じゅうなん",
             "hidden": false
           },
           {
             "ko": "괴짜",
             "en": "Imposter",
+            "ja": "かわりもの",
             "hidden": true
           }
         ]
@@ -6339,16 +6486,19 @@
           {
             "ko": "독가시",
             "en": "Poison Point",
+            "ja": "どくのトゲ",
             "hidden": false
           },
           {
             "ko": "독수",
             "en": "Poison Touch",
+            "ja": "どくしゅ",
             "hidden": false
           },
           {
             "ko": "적응력",
             "en": "Adaptability",
+            "ja": "てきおうりょく",
             "hidden": true
           }
         ]
@@ -6378,6 +6528,7 @@
           {
             "ko": "재생력",
             "en": "Regenerator",
+            "ja": "さいせいりょく",
             "hidden": false
           }
         ]
@@ -6472,16 +6623,19 @@
           {
             "ko": "클리어바디",
             "en": "Clear Body",
+            "ja": "クリアボディ",
             "hidden": false
           },
           {
             "ko": "틈새포착",
             "en": "Infiltrator",
+            "ja": "すりぬけ",
             "hidden": false
           },
           {
             "ko": "저주받은바디",
             "en": "Cursed Body",
+            "ja": "のろわれボディ",
             "hidden": true
           }
         ]
@@ -6587,11 +6741,13 @@
           {
             "ko": "정신력",
             "en": "Inner Focus",
+            "ja": "せいしんりょく",
             "hidden": false
           },
           {
             "ko": "멀티스케일",
             "en": "Multiscale",
+            "ja": "マルチスケイル",
             "hidden": true
           }
         ]
@@ -6621,6 +6777,7 @@
           {
             "ko": "멀티스케일",
             "en": "Multiscale",
+            "ja": "マルチスケイル",
             "hidden": false
           }
         ]
@@ -6746,16 +6903,19 @@
           {
             "ko": "발끈",
             "en": "Berserk",
+            "ja": "ぎゃくじょう",
             "hidden": false
           },
           {
             "ko": "초식",
             "en": "Sap Sipper",
+            "ja": "そうしょく",
             "hidden": false
           },
           {
             "ko": "날씨부정",
             "en": "Cloud Nine",
+            "ja": "ノーてんき",
             "hidden": true
           }
         ]
@@ -6785,6 +6945,7 @@
           {
             "ko": "발끈",
             "en": "Berserk",
+            "ja": "ぎゃくじょう",
             "hidden": false
           }
         ]
@@ -6892,6 +7053,7 @@
           {
             "ko": "부유",
             "en": "Levitate",
+            "ja": "ふゆう",
             "hidden": false
           }
         ]
@@ -6920,6 +7082,7 @@
           {
             "ko": "Eelevate",
             "en": "Eelevate",
+            "ja": "Eelevate",
             "hidden": false
           }
         ]
@@ -7037,11 +7200,13 @@
           {
             "ko": "맹화",
             "en": "Blaze",
+            "ja": "もうか",
             "hidden": false
           },
           {
             "ko": "이판사판",
             "en": "Reckless",
+            "ja": "すてみ",
             "hidden": true
           }
         ]
@@ -7071,6 +7236,7 @@
           {
             "ko": "틀깨기",
             "en": "Mold Breaker",
+            "ja": "かたやぶり",
             "hidden": false
           }
         ]
@@ -7192,11 +7358,13 @@
           {
             "ko": "정전기",
             "en": "Static",
+            "ja": "せいでんき",
             "hidden": false
           },
           {
             "ko": "전기엔진",
             "en": "Motor Drive",
+            "ja": "でんきエンジン",
             "hidden": true
           }
         ]
@@ -7285,11 +7453,13 @@
           {
             "ko": "급류",
             "en": "Torrent",
+            "ja": "げきりゅう",
             "hidden": false
           },
           {
             "ko": "승기",
             "en": "Competitive",
+            "ja": "かちき",
             "hidden": true
           }
         ]
@@ -7405,16 +7575,19 @@
           {
             "ko": "편승",
             "en": "Opportunist",
+            "ja": "びんじょう",
             "hidden": false
           },
           {
             "ko": "통찰",
             "en": "Frisk",
+            "ja": "おみとおし",
             "hidden": false
           },
           {
             "ko": "가속",
             "en": "Speed Boost",
+            "ja": "かそく",
             "hidden": true
           }
         ]
@@ -7513,11 +7686,13 @@
           {
             "ko": "싱크로",
             "en": "Synchronize",
+            "ja": "シンクロ",
             "hidden": false
           },
           {
             "ko": "매직미러",
             "en": "Magic Bounce",
+            "ja": "マジックミラー",
             "hidden": true
           }
         ]
@@ -7627,16 +7802,19 @@
           {
             "ko": "모래헤치기",
             "en": "Sand Rush",
+            "ja": "すなかき",
             "hidden": false
           },
           {
             "ko": "모래의힘",
             "en": "Sand Force",
+            "ja": "すなのちから",
             "hidden": false
           },
           {
             "ko": "틀깨기",
             "en": "Mold Breaker",
+            "ja": "かたやぶり",
             "hidden": true
           }
         ]
@@ -7666,6 +7844,7 @@
           {
             "ko": "관통드릴",
             "en": "Piercing Drill",
+            "ja": "かんつうドリル",
             "hidden": false
           }
         ]
@@ -7760,11 +7939,13 @@
           {
             "ko": "전투무장",
             "en": "Battle Armor",
+            "ja": "カブトアーマー",
             "hidden": false
           },
           {
             "ko": "오기",
             "en": "Defiant",
+            "ja": "まけんき",
             "hidden": true
           }
         ]
@@ -7793,6 +7974,7 @@
           {
             "ko": "오기",
             "en": "Defiant",
+            "ja": "まけんき",
             "hidden": false
           }
         ]
@@ -7886,6 +8068,7 @@
           {
             "ko": "부유",
             "en": "Levitate",
+            "ja": "ふゆう",
             "hidden": false
           }
         ]
@@ -7972,16 +8155,19 @@
           {
             "ko": "되새김질",
             "en": "Cud Chew",
+            "ja": "はんすう",
             "hidden": false
           },
           {
             "ko": "테일아머",
             "en": "Armor Tail",
+            "ja": "テイルアーマー",
             "hidden": false
           },
           {
             "ko": "초식",
             "en": "Sap Sipper",
+            "ja": "そうしょく",
             "hidden": true
           }
         ]
@@ -8093,11 +8279,13 @@
           {
             "ko": "급류",
             "en": "Torrent",
+            "ja": "げきりゅう",
             "hidden": false
           },
           {
             "ko": "우격다짐",
             "en": "Sheer Force",
+            "ja": "ちからずく",
             "hidden": true
           }
         ]
@@ -8127,6 +8315,7 @@
           {
             "ko": "드래곤스킨",
             "en": "Dragonize",
+            "ja": "ドラゴンスキン",
             "hidden": false
           }
         ]
@@ -8251,16 +8440,19 @@
           {
             "ko": "숙성",
             "en": "Ripen",
+            "ja": "じゅくせい",
             "hidden": false
           },
           {
             "ko": "먹보",
             "en": "Gluttony",
+            "ja": "くいしんぼう",
             "hidden": false
           },
           {
             "ko": "의욕",
             "en": "Hustle",
+            "ja": "はりきり",
             "hidden": true
           }
         ]
@@ -8346,11 +8538,13 @@
           {
             "ko": "타오르는불꽃",
             "en": "Flash Fire",
+            "ja": "もらいび",
             "hidden": false
           },
           {
             "ko": "근성",
             "en": "Guts",
+            "ja": "こんじょう",
             "hidden": true
           }
         ]
@@ -8449,11 +8643,13 @@
           {
             "ko": "플라워베일",
             "en": "Flower Veil",
+            "ja": "フラワーベール",
             "hidden": false
           },
           {
             "ko": "공생",
             "en": "Symbiosis",
+            "ja": "きょうせい",
             "hidden": true
           }
         ]
@@ -8482,6 +8678,7 @@
           {
             "ko": "페어리오라",
             "en": "Fairy Aura",
+            "ja": "フェアリーオーラ",
             "hidden": false
           }
         ]
@@ -8564,11 +8761,13 @@
           {
             "ko": "플라워베일",
             "en": "Flower Veil",
+            "ja": "フラワーベール",
             "hidden": false
           },
           {
             "ko": "공생",
             "en": "Symbiosis",
+            "ja": "きょうせい",
             "hidden": true
           }
         ]
@@ -8657,11 +8856,13 @@
           {
             "ko": "옹골참",
             "en": "Sturdy",
+            "ja": "がんじょう",
             "hidden": false
           },
           {
             "ko": "방진",
             "en": "Overcoat",
+            "ja": "ぼうじん",
             "hidden": true
           }
         ]
@@ -8773,11 +8974,13 @@
           {
             "ko": "눈숨기",
             "en": "Snow Cloak",
+            "ja": "ゆきがくれ",
             "hidden": false
           },
           {
             "ko": "저주받은바디",
             "en": "Cursed Body",
+            "ja": "のろわれボディ",
             "hidden": true
           }
         ]
@@ -8807,6 +9010,7 @@
           {
             "ko": "눈퍼뜨리기",
             "en": "Snow Warning",
+            "ja": "ゆきふらし",
             "hidden": false
           }
         ]
@@ -8917,6 +9121,7 @@
           {
             "ko": "부유",
             "en": "Levitate",
+            "ja": "ふゆう",
             "hidden": false
           }
         ]
@@ -9002,6 +9207,7 @@
           {
             "ko": "퍼코트",
             "en": "Fur Coat",
+            "ja": "ファーコート",
             "hidden": false
           }
         ]
@@ -9084,16 +9290,19 @@
           {
             "ko": "퀵드로",
             "en": "Quick Draw",
+            "ja": "クイックドロウ",
             "hidden": false
           },
           {
             "ko": "마이페이스",
             "en": "Own Tempo",
+            "ja": "マイペース",
             "hidden": false
           },
           {
             "ko": "재생력",
             "en": "Regenerator",
+            "ja": "さいせいりょく",
             "hidden": true
           }
         ]
@@ -9228,16 +9437,19 @@
           {
             "ko": "기묘한약",
             "en": "Curious Medicine",
+            "ja": "きみょうなくすり",
             "hidden": false
           },
           {
             "ko": "마이페이스",
             "en": "Own Tempo",
+            "ja": "マイペース",
             "hidden": false
           },
           {
             "ko": "재생력",
             "en": "Regenerator",
+            "ja": "さいせいりょく",
             "hidden": true
           }
         ]
@@ -9375,6 +9587,7 @@
           {
             "ko": "의태",
             "en": "Mimicry",
+            "ja": "ぎたい",
             "hidden": false
           }
         ]
@@ -9470,16 +9683,19 @@
           {
             "ko": "불굴의마음",
             "en": "Steadfast",
+            "ja": "ふくつのこころ",
             "hidden": false
           },
           {
             "ko": "예리함",
             "en": "Sharpness",
+            "ja": "きれあじ",
             "hidden": false
           },
           {
             "ko": "정의의마음",
             "en": "Justified",
+            "ja": "せいぎのこころ",
             "hidden": true
           }
         ]
@@ -9509,6 +9725,7 @@
           {
             "ko": "정신력",
             "en": "Inner Focus",
+            "ja": "せいしんりょく",
             "hidden": false
           }
         ]
@@ -9655,16 +9872,19 @@
           {
             "ko": "악취",
             "en": "Stench",
+            "ja": "あくしゅう",
             "hidden": false
           },
           {
             "ko": "깨어진갑옷",
             "en": "Weak Armor",
+            "ja": "くだけるよろい",
             "hidden": false
           },
           {
             "ko": "유폭",
             "en": "Aftermath",
+            "ja": "ゆうばく",
             "hidden": true
           }
         ]
@@ -9760,11 +9980,13 @@
           {
             "ko": "모래숨기",
             "en": "Sand Veil",
+            "ja": "すながくれ",
             "hidden": false
           },
           {
             "ko": "까칠한피부",
             "en": "Rough Skin",
+            "ja": "さめはだ",
             "hidden": true
           }
         ]
@@ -9794,6 +10016,7 @@
           {
             "ko": "모래의힘",
             "en": "Sand Force",
+            "ja": "すなのちから",
             "hidden": false
           }
         ]
@@ -9894,16 +10117,19 @@
           {
             "ko": "싱크로",
             "en": "Synchronize",
+            "ja": "シンクロ",
             "hidden": false
           },
           {
             "ko": "트레이스",
             "en": "Trace",
+            "ja": "トレース",
             "hidden": false
           },
           {
             "ko": "텔레파시",
             "en": "Telepathy",
+            "ja": "テレパシー",
             "hidden": true
           }
         ]
@@ -9933,6 +10159,7 @@
           {
             "ko": "페어리스킨",
             "en": "Pixilate",
+            "ja": "フェアリースキン",
             "hidden": false
           }
         ]
@@ -10054,16 +10281,19 @@
           {
             "ko": "정화의소금",
             "en": "Purifying Salt",
+            "ja": "きよめのしお",
             "hidden": false
           },
           {
             "ko": "옹골참",
             "en": "Sturdy",
+            "ja": "がんじょう",
             "hidden": false
           },
           {
             "ko": "클리어바디",
             "en": "Clear Body",
+            "ja": "クリアボディ",
             "hidden": true
           }
         ]
@@ -10160,6 +10390,7 @@
           {
             "ko": "저주받은바디",
             "en": "Cursed Body",
+            "ja": "のろわれボディ",
             "hidden": false
           }
         ]
@@ -10189,6 +10420,7 @@
           {
             "ko": "그림자밟기",
             "en": "Shadow Tag",
+            "ja": "かげふみ",
             "hidden": false
           }
         ]
@@ -10307,6 +10539,7 @@
           {
             "ko": "황금몸",
             "en": "Good as Gold",
+            "ja": "おうごんのからだ",
             "hidden": false
           }
         ]
@@ -10390,11 +10623,13 @@
           {
             "ko": "눈숨기",
             "en": "Snow Cloak",
+            "ja": "ゆきがくれ",
             "hidden": false
           },
           {
             "ko": "아이스바디",
             "en": "Ice Body",
+            "ja": "アイスボディ",
             "hidden": true
           }
         ]
@@ -10495,16 +10730,19 @@
           {
             "ko": "정신력",
             "en": "Inner Focus",
+            "ja": "せいしんりょく",
             "hidden": false
           },
           {
             "ko": "아이스바디",
             "en": "Ice Body",
+            "ja": "アイスボディ",
             "hidden": false
           },
           {
             "ko": "변덕쟁이",
             "en": "Moody",
+            "ja": "ムラっけ",
             "hidden": true
           }
         ]
@@ -10533,6 +10771,7 @@
           {
             "ko": "프리즈스킨",
             "en": "Refrigerate",
+            "ja": "フリーズスキン",
             "hidden": false
           }
         ]
@@ -10631,11 +10870,13 @@
           {
             "ko": "독치장",
             "en": "Toxic Debris",
+            "ja": "どくげしょう",
             "hidden": false
           },
           {
             "ko": "부식",
             "en": "Corrosion",
+            "ja": "ふしょく",
             "hidden": true
           }
         ]
@@ -10665,6 +10906,7 @@
           {
             "ko": "적응력",
             "en": "Adaptability",
+            "ja": "てきおうりょく",
             "hidden": false
           }
         ]
@@ -10753,16 +10995,19 @@
           {
             "ko": "괴력집게",
             "en": "Hyper Cutter",
+            "ja": "かいりきバサミ",
             "hidden": false
           },
           {
             "ko": "모래숨기",
             "en": "Sand Veil",
+            "ja": "すながくれ",
             "hidden": false
           },
           {
             "ko": "포이즌힐",
             "en": "Poison Heal",
+            "ja": "ポイズンヒール",
             "hidden": true
           }
         ]
@@ -10882,16 +11127,19 @@
           {
             "ko": "철주먹",
             "en": "Iron Fist",
+            "ja": "てつのこぶし",
             "hidden": false
           },
           {
             "ko": "서투름",
             "en": "Klutz",
+            "ja": "ぶきよう",
             "hidden": false
           },
           {
             "ko": "노가드",
             "en": "No Guard",
+            "ja": "ノーガード",
             "hidden": true
           }
         ]
@@ -10921,6 +11169,7 @@
           {
             "ko": "보이지않는주먹",
             "en": "Unseen Fist",
+            "ja": "ふかしのこぶし",
             "hidden": false
           }
         ]
@@ -11041,16 +11290,19 @@
           {
             "ko": "초식",
             "en": "Sap Sipper",
+            "ja": "そうしょく",
             "hidden": false
           },
           {
             "ko": "촉촉바디",
             "en": "Hydration",
+            "ja": "うるおいボディ",
             "hidden": false
           },
           {
             "ko": "미끈미끈",
             "en": "Gooey",
+            "ja": "ぬめぬめ",
             "hidden": true
           }
         ]
@@ -11160,16 +11412,19 @@
           {
             "ko": "픽업",
             "en": "Pickup",
+            "ja": "ものひろい",
             "hidden": false
           },
           {
             "ko": "통찰",
             "en": "Frisk",
+            "ja": "おみとおし",
             "hidden": false
           },
           {
             "ko": "불면",
             "en": "Insomnia",
+            "ja": "ふみん",
             "hidden": true
           }
         ]
@@ -11273,16 +11528,19 @@
           {
             "ko": "픽업",
             "en": "Pickup",
+            "ja": "ものひろい",
             "hidden": false
           },
           {
             "ko": "통찰",
             "en": "Frisk",
+            "ja": "おみとおし",
             "hidden": false
           },
           {
             "ko": "불면",
             "en": "Insomnia",
+            "ja": "ふみん",
             "hidden": true
           }
         ]
@@ -11386,16 +11644,19 @@
           {
             "ko": "픽업",
             "en": "Pickup",
+            "ja": "ものひろい",
             "hidden": false
           },
           {
             "ko": "통찰",
             "en": "Frisk",
+            "ja": "おみとおし",
             "hidden": false
           },
           {
             "ko": "불면",
             "en": "Insomnia",
+            "ja": "ふみん",
             "hidden": true
           }
         ]
@@ -11499,16 +11760,19 @@
           {
             "ko": "픽업",
             "en": "Pickup",
+            "ja": "ものひろい",
             "hidden": false
           },
           {
             "ko": "통찰",
             "en": "Frisk",
+            "ja": "おみとおし",
             "hidden": false
           },
           {
             "ko": "불면",
             "en": "Insomnia",
+            "ja": "ふみん",
             "hidden": true
           }
         ]
@@ -11612,11 +11876,13 @@
           {
             "ko": "급류",
             "en": "Torrent",
+            "ja": "げきりゅう",
             "hidden": false
           },
           {
             "ko": "변환자재",
             "en": "Protean",
+            "ja": "へんげんじざい",
             "hidden": true
           }
         ]
@@ -11646,6 +11912,7 @@
           {
             "ko": "변환자재",
             "en": "Protean",
+            "ja": "へんげんじざい",
             "hidden": false
           }
         ]
@@ -11752,16 +12019,19 @@
           {
             "ko": "짓궂은마음",
             "en": "Prankster",
+            "ja": "いたずらごころ",
             "hidden": false
           },
           {
             "ko": "통찰",
             "en": "Frisk",
+            "ja": "おみとおし",
             "hidden": false
           },
           {
             "ko": "나쁜손버릇",
             "en": "Pickpocket",
+            "ja": "わるいてぐせ",
             "hidden": true
           }
         ]
@@ -11868,11 +12138,13 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "자기과신",
             "en": "Moxie",
+            "ja": "じしんかじょう",
             "hidden": true
           }
         ]
@@ -11902,6 +12174,7 @@
           {
             "ko": "틀깨기",
             "en": "Mold Breaker",
+            "ja": "かたやぶり",
             "hidden": false
           }
         ]
@@ -12011,16 +12284,19 @@
           {
             "ko": "치유의마음",
             "en": "Healer",
+            "ja": "いやしのこころ",
             "hidden": false
           },
           {
             "ko": "위험예지",
             "en": "Anticipation",
+            "ja": "きけんよち",
             "hidden": false
           },
           {
             "ko": "매직미러",
             "en": "Magic Bounce",
+            "ja": "マジックミラー",
             "hidden": true
           }
         ]
@@ -12124,16 +12400,19 @@
           {
             "ko": "유연",
             "en": "Limber",
+            "ja": "じゅうなん",
             "hidden": false
           },
           {
             "ko": "곡예",
             "en": "Unburden",
+            "ja": "かるわざ",
             "hidden": false
           },
           {
             "ko": "틀깨기",
             "en": "Mold Breaker",
+            "ja": "かたやぶり",
             "hidden": true
           }
         ]
@@ -12163,6 +12442,7 @@
           {
             "ko": "노가드",
             "en": "No Guard",
+            "ja": "ノーガード",
             "hidden": false
           }
         ]
@@ -12280,6 +12560,7 @@
           {
             "ko": "부유",
             "en": "Levitate",
+            "ja": "ふゆう",
             "hidden": false
           }
         ]
@@ -12366,16 +12647,19 @@
           {
             "ko": "건조피부",
             "en": "Dry Skin",
+            "ja": "かんそうはだ",
             "hidden": false
           },
           {
             "ko": "모래숨기",
             "en": "Sand Veil",
+            "ja": "すながくれ",
             "hidden": false
           },
           {
             "ko": "선파워",
             "en": "Solar Power",
+            "ja": "サンパワー",
             "hidden": true
           }
         ]
@@ -12482,16 +12766,19 @@
           {
             "ko": "벌레의알림",
             "en": "Swarm",
+            "ja": "むしのしらせ",
             "hidden": false
           },
           {
             "ko": "근성",
             "en": "Guts",
+            "ja": "こんじょう",
             "hidden": false
           },
           {
             "ko": "자기과신",
             "en": "Moxie",
+            "ja": "じしんかじょう",
             "hidden": true
           }
         ]
@@ -12521,6 +12808,7 @@
           {
             "ko": "스킬링크",
             "en": "Skill Link",
+            "ja": "スキルリンク",
             "hidden": false
           }
         ]
@@ -12628,11 +12916,13 @@
           {
             "ko": "모래날림",
             "en": "Sand Stream",
+            "ja": "すなおこし",
             "hidden": false
           },
           {
             "ko": "모래의힘",
             "en": "Sand Force",
+            "ja": "すなのちから",
             "hidden": true
           }
         ]
@@ -12726,16 +13016,19 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "타오르는불꽃",
             "en": "Flash Fire",
+            "ja": "もらいび",
             "hidden": false
           },
           {
             "ko": "돌머리",
             "en": "Rock Head",
+            "ja": "いしあたま",
             "hidden": true
           }
         ]
@@ -12842,16 +13135,19 @@
           {
             "ko": "옹골찬턱",
             "en": "Strong Jaw",
+            "ja": "がんじょうあご",
             "hidden": false
           },
           {
             "ko": "아이스바디",
             "en": "Ice Body",
+            "ja": "アイスボディ",
             "hidden": false
           },
           {
             "ko": "옹골참",
             "en": "Sturdy",
+            "ja": "がんじょう",
             "hidden": true
           }
         ]
@@ -12943,11 +13239,13 @@
           {
             "ko": "심록",
             "en": "Overgrow",
+            "ja": "しんりょく",
             "hidden": false
           },
           {
             "ko": "배짱",
             "en": "Scrappy",
+            "ja": "きもったま",
             "hidden": true
           }
         ]
@@ -13056,16 +13354,19 @@
           {
             "ko": "초식",
             "en": "Sap Sipper",
+            "ja": "そうしょく",
             "hidden": false
           },
           {
             "ko": "조가비갑옷",
             "en": "Shell Armor",
+            "ja": "シェルアーマー",
             "hidden": false
           },
           {
             "ko": "미끈미끈",
             "en": "Gooey",
+            "ja": "ぬめぬめ",
             "hidden": true
           }
         ]
@@ -13171,11 +13472,13 @@
           {
             "ko": "급류",
             "en": "Torrent",
+            "ja": "げきりゅう",
             "hidden": false
           },
           {
             "ko": "예리함",
             "en": "Sharpness",
+            "ja": "きれあじ",
             "hidden": true
           }
         ]
@@ -13285,11 +13588,13 @@
           {
             "ko": "맹화",
             "en": "Blaze",
+            "ja": "もうか",
             "hidden": false
           },
           {
             "ko": "통찰",
             "en": "Frisk",
+            "ja": "おみとおし",
             "hidden": true
           }
         ]
@@ -13398,6 +13703,7 @@
           {
             "ko": "일루전",
             "en": "Illusion",
+            "ja": "イリュージョン",
             "hidden": false
           }
         ]
@@ -13514,16 +13820,19 @@
           {
             "ko": "일찍기상",
             "en": "Early Bird",
+            "ja": "はやおき",
             "hidden": false
           },
           {
             "ko": "타오르는불꽃",
             "en": "Flash Fire",
+            "ja": "もらいび",
             "hidden": false
           },
           {
             "ko": "긴장감",
             "en": "Unnerve",
+            "ja": "きんちょうかん",
             "hidden": true
           }
         ]
@@ -13553,6 +13862,7 @@
           {
             "ko": "선파워",
             "en": "Solar Power",
+            "ja": "サンパワー",
             "hidden": false
           }
         ]
@@ -13661,11 +13971,13 @@
           {
             "ko": "모래헤치기",
             "en": "Sand Rush",
+            "ja": "すなかき",
             "hidden": false
           },
           {
             "ko": "복슬복슬",
             "en": "Fluffy",
+            "ja": "もふもふ",
             "hidden": true
           }
         ]
@@ -13760,16 +14072,19 @@
           {
             "ko": "감미로운꿀",
             "en": "Supersweet Syrup",
+            "ja": "かんろなミツ",
             "hidden": false
           },
           {
             "ko": "재생력",
             "en": "Regenerator",
+            "ja": "さいせいりょく",
             "hidden": false
           },
           {
             "ko": "점착",
             "en": "Sticky Hold",
+            "ja": "ねんちゃく",
             "hidden": true
           }
         ]
@@ -13866,6 +14181,7 @@
           {
             "ko": "부유",
             "en": "Levitate",
+            "ja": "ふゆう",
             "hidden": false
           }
         ]
@@ -13987,11 +14303,13 @@
           {
             "ko": "맹화",
             "en": "Blaze",
+            "ja": "もうか",
             "hidden": false
           },
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": true
           }
         ]
@@ -14113,11 +14431,13 @@
           {
             "ko": "맹화",
             "en": "Blaze",
+            "ja": "もうか",
             "hidden": false
           },
           {
             "ko": "철주먹",
             "en": "Iron Fist",
+            "ja": "てつのこぶし",
             "hidden": true
           }
         ]
@@ -14248,11 +14568,13 @@
           {
             "ko": "축전",
             "en": "Volt Absorb",
+            "ja": "ちくでん",
             "hidden": false
           },
           {
             "ko": "속보",
             "en": "Quick Feet",
+            "ja": "はやあし",
             "hidden": true
           }
         ]
@@ -14354,16 +14676,19 @@
           {
             "ko": "일찍기상",
             "en": "Early Bird",
+            "ja": "はやおき",
             "hidden": false
           },
           {
             "ko": "배짱",
             "en": "Scrappy",
+            "ja": "きもったま",
             "hidden": false
           },
           {
             "ko": "정신력",
             "en": "Inner Focus",
+            "ja": "せいしんりょく",
             "hidden": true
           }
         ]
@@ -14392,6 +14717,7 @@
           {
             "ko": "부자유친",
             "en": "Parental Bond",
+            "ja": "おやこあい",
             "hidden": false
           }
         ]
@@ -14501,16 +14827,19 @@
           {
             "ko": "오기",
             "en": "Defiant",
+            "ja": "まけんき",
             "hidden": false
           },
           {
             "ko": "총대장",
             "en": "Supreme Overlord",
+            "ja": "そうだいしょう",
             "hidden": false
           },
           {
             "ko": "프레셔",
             "en": "Pressure",
+            "ja": "プレッシャー",
             "hidden": true
           }
         ]
@@ -14605,16 +14934,19 @@
           {
             "ko": "벌레의알림",
             "en": "Swarm",
+            "ja": "むしのしらせ",
             "hidden": false
           },
           {
             "ko": "우격다짐",
             "en": "Sheer Force",
+            "ja": "ちからずく",
             "hidden": false
           },
           {
             "ko": "예리함",
             "en": "Sharpness",
+            "ja": "きれあじ",
             "hidden": true
           }
         ]
@@ -14715,11 +15047,13 @@
           {
             "ko": "짓궂은마음",
             "en": "Prankster",
+            "ja": "いたずらごころ",
             "hidden": false
           },
           {
             "ko": "매지션",
             "en": "Magician",
+            "ja": "マジシャン",
             "hidden": true
           }
         ]
@@ -14807,16 +15141,19 @@
           {
             "ko": "방탄",
             "en": "Bulletproof",
+            "ja": "ぼうだん",
             "hidden": false
           },
           {
             "ko": "방음",
             "en": "Soundproof",
+            "ja": "ぼうおん",
             "hidden": false
           },
           {
             "ko": "방진",
             "en": "Overcoat",
+            "ja": "ぼうじん",
             "hidden": true
           }
         ]
@@ -14937,16 +15274,19 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "자기과신",
             "en": "Moxie",
+            "ja": "じしんかじょう",
             "hidden": false
           },
           {
             "ko": "분노의경혈",
             "en": "Anger Point",
+            "ja": "いかりのつぼ",
             "hidden": true
           }
         ]
@@ -15072,11 +15412,13 @@
           {
             "ko": "리프가드",
             "en": "Leaf Guard",
+            "ja": "リーフガード",
             "hidden": false
           },
           {
             "ko": "엽록소",
             "en": "Chlorophyll",
+            "ja": "ようりょくそ",
             "hidden": true
           }
         ]
@@ -15177,16 +15519,19 @@
           {
             "ko": "유연",
             "en": "Limber",
+            "ja": "じゅうなん",
             "hidden": false
           },
           {
             "ko": "곡예",
             "en": "Unburden",
+            "ja": "かるわざ",
             "hidden": false
           },
           {
             "ko": "짓궂은마음",
             "en": "Prankster",
+            "ja": "いたずらごころ",
             "hidden": true
           }
         ]
@@ -15288,16 +15633,19 @@
           {
             "ko": "헤롱헤롱바디",
             "en": "Cute Charm",
+            "ja": "メロメロボディ",
             "hidden": false
           },
           {
             "ko": "서투름",
             "en": "Klutz",
+            "ja": "ぶきよう",
             "hidden": false
           },
           {
             "ko": "유연",
             "en": "Limber",
+            "ja": "じゅうなん",
             "hidden": true
           }
         ]
@@ -15327,6 +15675,7 @@
           {
             "ko": "배짱",
             "en": "Scrappy",
+            "ja": "きもったま",
             "hidden": false
           }
         ]
@@ -15449,16 +15798,19 @@
           {
             "ko": "불굴의마음",
             "en": "Steadfast",
+            "ja": "ふくつのこころ",
             "hidden": false
           },
           {
             "ko": "정신력",
             "en": "Inner Focus",
+            "ja": "せいしんりょく",
             "hidden": false
           },
           {
             "ko": "정의의마음",
             "en": "Justified",
+            "ja": "せいぎのこころ",
             "hidden": true
           }
         ]
@@ -15488,6 +15840,7 @@
           {
             "ko": "적응력",
             "en": "Adaptability",
+            "ja": "てきおうりょく",
             "hidden": false
           }
         ]
@@ -15614,16 +15967,19 @@
           {
             "ko": "투쟁심",
             "en": "Rivalry",
+            "ja": "とうそうしん",
             "hidden": false
           },
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "근성",
             "en": "Guts",
+            "ja": "こんじょう",
             "hidden": true
           }
         ]
@@ -15719,16 +16075,19 @@
           {
             "ko": "날카로운눈",
             "en": "Keen Eye",
+            "ja": "するどいめ",
             "hidden": false
           },
           {
             "ko": "모래헤치기",
             "en": "Sand Rush",
+            "ja": "すなかき",
             "hidden": false
           },
           {
             "ko": "불굴의마음",
             "en": "Steadfast",
+            "ja": "ふくつのこころ",
             "hidden": true
           }
         ]
@@ -15829,6 +16188,7 @@
           {
             "ko": "단단한발톱",
             "en": "Tough Claws",
+            "ja": "かたいツメ",
             "hidden": false
           }
         ]
@@ -15931,16 +16291,19 @@
           {
             "ko": "날카로운눈",
             "en": "Keen Eye",
+            "ja": "するどいめ",
             "hidden": false
           },
           {
             "ko": "의기양양",
             "en": "Vital Spirit",
+            "ja": "やるき",
             "hidden": false
           },
           {
             "ko": "노가드",
             "en": "No Guard",
+            "ja": "ノーガード",
             "hidden": true
           }
         ]
@@ -16052,16 +16415,19 @@
           {
             "ko": "근성",
             "en": "Guts",
+            "ja": "こんじょう",
             "hidden": false
           },
           {
             "ko": "노가드",
             "en": "No Guard",
+            "ja": "ノーガード",
             "hidden": false
           },
           {
             "ko": "불굴의마음",
             "en": "Steadfast",
+            "ja": "ふくつのこころ",
             "hidden": true
           }
         ]
@@ -16170,16 +16536,19 @@
           {
             "ko": "심술꾸러기",
             "en": "Contrary",
+            "ja": "あまのじゃく",
             "hidden": false
           },
           {
             "ko": "흡반",
             "en": "Suction Cups",
+            "ja": "きゅうばん",
             "hidden": false
           },
           {
             "ko": "틈새포착",
             "en": "Infiltrator",
+            "ja": "すりぬけ",
             "hidden": true
           }
         ]
@@ -16209,6 +16578,7 @@
           {
             "ko": "심술꾸러기",
             "en": "Contrary",
+            "ja": "あまのじゃく",
             "hidden": false
           }
         ]
@@ -16319,16 +16689,19 @@
           {
             "ko": "둔감",
             "en": "Oblivious",
+            "ja": "どんかん",
             "hidden": false
           },
           {
             "ko": "눈숨기",
             "en": "Snow Cloak",
+            "ja": "ゆきがくれ",
             "hidden": false
           },
           {
             "ko": "두꺼운지방",
             "en": "Thick Fat",
+            "ja": "あついしぼう",
             "hidden": true
           }
         ]
@@ -16434,16 +16807,19 @@
           {
             "ko": "정전기",
             "en": "Static",
+            "ja": "せいでんき",
             "hidden": false
           },
           {
             "ko": "피뢰침",
             "en": "Lightning Rod",
+            "ja": "ひらいしん",
             "hidden": false
           },
           {
             "ko": "마이너스",
             "en": "Minus",
+            "ja": "マイナス",
             "hidden": true
           }
         ]
@@ -16472,6 +16848,7 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           }
         ]
@@ -16563,16 +16940,19 @@
           {
             "ko": "프렌드가드",
             "en": "Friend Guard",
+            "ja": "フレンドガード",
             "hidden": false
           },
           {
             "ko": "볼주머니",
             "en": "Cheek Pouch",
+            "ja": "ほおぶくろ",
             "hidden": false
           },
           {
             "ko": "테크니션",
             "en": "Technician",
+            "ja": "テクニシャン",
             "hidden": true
           }
         ]
@@ -16666,16 +17046,19 @@
           {
             "ko": "괴력집게",
             "en": "Hyper Cutter",
+            "ja": "かいりきバサミ",
             "hidden": false
           },
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "우격다짐",
             "en": "Sheer Force",
+            "ja": "ちからずく",
             "hidden": true
           }
         ]
@@ -16705,6 +17088,7 @@
           {
             "ko": "천하장사",
             "en": "Huge Power",
+            "ja": "ちからもち",
             "hidden": false
           }
         ]
@@ -16818,11 +17202,13 @@
           {
             "ko": "순수한힘",
             "en": "Pure Power",
+            "ja": "ヨガパワー",
             "hidden": false
           },
           {
             "ko": "텔레파시",
             "en": "Telepathy",
+            "ja": "テレパシー",
             "hidden": true
           }
         ]
@@ -16852,6 +17238,7 @@
           {
             "ko": "순수한힘",
             "en": "Pure Power",
+            "ja": "ヨガパワー",
             "hidden": false
           }
         ]
@@ -16970,11 +17357,13 @@
           {
             "ko": "심록",
             "en": "Overgrow",
+            "ja": "しんりょく",
             "hidden": false
           },
           {
             "ko": "리프가드",
             "en": "Leaf Guard",
+            "ja": "リーフガード",
             "hidden": true
           }
         ]
@@ -17004,6 +17393,7 @@
           {
             "ko": "메가솔라",
             "en": "Mega Sol",
+            "ja": "メガソーラー",
             "hidden": false
           }
         ]
@@ -17108,11 +17498,13 @@
           {
             "ko": "심록",
             "en": "Overgrow",
+            "ja": "しんりょく",
             "hidden": false
           },
           {
             "ko": "변환자재",
             "en": "Protean",
+            "ja": "へんげんじざい",
             "hidden": true
           }
         ]
@@ -17222,16 +17614,19 @@
           {
             "ko": "날카로운눈",
             "en": "Keen Eye",
+            "ja": "するどいめ",
             "hidden": false
           },
           {
             "ko": "틈새포착",
             "en": "Infiltrator",
+            "ja": "すりぬけ",
             "hidden": false
           },
           {
             "ko": "짓궂은마음",
             "en": "Prankster",
+            "ja": "いたずらごころ",
             "hidden": true
           }
         ]
@@ -17260,6 +17655,7 @@
           {
             "ko": "Trace",
             "en": "Trace",
+            "ja": "Trace",
             "hidden": false
           }
         ]
@@ -17361,16 +17757,19 @@
           {
             "ko": "날카로운눈",
             "en": "Keen Eye",
+            "ja": "するどいめ",
             "hidden": false
           },
           {
             "ko": "틈새포착",
             "en": "Infiltrator",
+            "ja": "すりぬけ",
             "hidden": false
           },
           {
             "ko": "승기",
             "en": "Competitive",
+            "ja": "かちき",
             "hidden": true
           }
         ]
@@ -17471,11 +17870,13 @@
           {
             "ko": "클리어바디",
             "en": "Clear Body",
+            "ja": "クリアボディ",
             "hidden": false
           },
           {
             "ko": "라이트메탈",
             "en": "Light Metal",
+            "ja": "ライトメタル",
             "hidden": true
           }
         ]
@@ -17505,6 +17906,7 @@
           {
             "ko": "단단한발톱",
             "en": "Tough Claws",
+            "ja": "かたいツメ",
             "hidden": false
           }
         ]
@@ -17614,16 +18016,19 @@
           {
             "ko": "이상한비늘",
             "en": "Marvel Scale",
+            "ja": "ふしぎなうろこ",
             "hidden": false
           },
           {
             "ko": "승기",
             "en": "Competitive",
+            "ja": "かちき",
             "hidden": false
           },
           {
             "ko": "헤롱헤롱바디",
             "en": "Cute Charm",
+            "ja": "メロメロボディ",
             "hidden": true
           }
         ]
@@ -17728,6 +18133,7 @@
           {
             "ko": "탈",
             "en": "Disguise",
+            "ja": "ばけのかわ",
             "hidden": false
           }
         ]
@@ -17832,6 +18238,7 @@
           {
             "ko": "꼬르륵스위치",
             "en": "Hunger Switch",
+            "ja": "はらぺこスイッチ",
             "hidden": false
           }
         ]
@@ -17939,6 +18346,7 @@
           {
             "ko": "부유",
             "en": "Levitate",
+            "ja": "ふゆう",
             "hidden": false
           }
         ]
@@ -18025,16 +18433,19 @@
           {
             "ko": "갈지자걸음",
             "en": "Tangled Feet",
+            "ja": "ちどりあし",
             "hidden": false
           },
           {
             "ko": "배리어프리",
             "en": "Screen Cleaner",
+            "ja": "バリアフリー",
             "hidden": false
           },
           {
             "ko": "아이스바디",
             "en": "Ice Body",
+            "ja": "アイスボディ",
             "hidden": true
           }
         ]
@@ -18170,16 +18581,19 @@
           {
             "ko": "마이페이스",
             "en": "Own Tempo",
+            "ja": "マイペース",
             "hidden": false
           },
           {
             "ko": "지구력",
             "en": "Stamina",
+            "ja": "じきゅうりょく",
             "hidden": false
           },
           {
             "ko": "정신력",
             "en": "Inner Focus",
+            "ja": "せいしんりょく",
             "hidden": true
           }
         ]
@@ -18266,16 +18680,19 @@
           {
             "ko": "예지몽",
             "en": "Forewarn",
+            "ja": "よちむ",
             "hidden": false
           },
           {
             "ko": "싱크로",
             "en": "Synchronize",
+            "ja": "シンクロ",
             "hidden": false
           },
           {
             "ko": "텔레파시",
             "en": "Telepathy",
+            "ja": "テレパシー",
             "hidden": true
           }
         ]
@@ -18367,11 +18784,13 @@
           {
             "ko": "타오르는불꽃",
             "en": "Flash Fire",
+            "ja": "もらいび",
             "hidden": false
           },
           {
             "ko": "가뭄",
             "en": "Drought",
+            "ja": "ひでり",
             "hidden": true
           }
         ]
@@ -18481,16 +18900,19 @@
           {
             "ko": "통찰",
             "en": "Frisk",
+            "ja": "おみとおし",
             "hidden": false
           },
           {
             "ko": "틈새포착",
             "en": "Infiltrator",
+            "ja": "すりぬけ",
             "hidden": false
           },
           {
             "ko": "텔레파시",
             "en": "Telepathy",
+            "ja": "テレパシー",
             "hidden": true
           }
         ]
@@ -18597,16 +19019,19 @@
           {
             "ko": "정신력",
             "en": "Inner Focus",
+            "ja": "せいしんりょく",
             "hidden": false
           },
           {
             "ko": "텔레파시",
             "en": "Telepathy",
+            "ja": "テレパシー",
             "hidden": false
           },
           {
             "ko": "공생",
             "en": "Symbiosis",
+            "ja": "きょうせい",
             "hidden": true
           }
         ]
@@ -18713,11 +19138,13 @@
           {
             "ko": "흙먹기",
             "en": "Earth Eater",
+            "ja": "どしょく",
             "hidden": false
           },
           {
             "ko": "모래숨기",
             "en": "Sand Veil",
+            "ja": "すながくれ",
             "hidden": true
           }
         ]
@@ -18800,16 +19227,19 @@
           {
             "ko": "독가시",
             "en": "Poison Point",
+            "ja": "どくのトゲ",
             "hidden": false
           },
           {
             "ko": "쓱쓱",
             "en": "Swift Swim",
+            "ja": "すいすい",
             "hidden": false
           },
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": true
           }
         ]
@@ -18911,6 +19341,7 @@
           {
             "ko": "마이티체인지",
             "en": "Zero to Hero",
+            "ja": "マイティチェンジ",
             "hidden": false
           }
         ]
@@ -19012,16 +19443,19 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "분노의경혈",
             "en": "Anger Point",
+            "ja": "いかりのつぼ",
             "hidden": false
           },
           {
             "ko": "되새김질",
             "en": "Cud Chew",
+            "ja": "はんすう",
             "hidden": true
           }
         ]
@@ -19116,16 +19550,19 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "분노의경혈",
             "en": "Anger Point",
+            "ja": "いかりのつぼ",
             "hidden": false
           },
           {
             "ko": "되새김질",
             "en": "Cud Chew",
+            "ja": "はんすう",
             "hidden": true
           }
         ]
@@ -19220,16 +19657,19 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "분노의경혈",
             "en": "Anger Point",
+            "ja": "いかりのつぼ",
             "hidden": false
           },
           {
             "ko": "되새김질",
             "en": "Cud Chew",
+            "ja": "はんすう",
             "hidden": true
           }
         ]
@@ -19320,16 +19760,19 @@
           {
             "ko": "철주먹",
             "en": "Iron Fist",
+            "ja": "てつのこぶし",
             "hidden": false
           },
           {
             "ko": "틀깨기",
             "en": "Mold Breaker",
+            "ja": "かたやぶり",
             "hidden": false
           },
           {
             "ko": "배짱",
             "en": "Scrappy",
+            "ja": "きもったま",
             "hidden": true
           }
         ]
@@ -19452,11 +19895,13 @@
           {
             "ko": "리시버",
             "en": "Receiver",
+            "ja": "レシーバー",
             "hidden": false
           },
           {
             "ko": "오기",
             "en": "Defiant",
+            "ja": "まけんき",
             "hidden": true
           }
         ]
@@ -19565,16 +20010,19 @@
           {
             "ko": "날카로운눈",
             "en": "Keen Eye",
+            "ja": "するどいめ",
             "hidden": false
           },
           {
             "ko": "잔비",
             "en": "Drizzle",
+            "ja": "あめふらし",
             "hidden": false
           },
           {
             "ko": "젖은접시",
             "en": "Rain Dish",
+            "ja": "あめうけざら",
             "hidden": true
           }
         ]
@@ -19670,16 +20118,19 @@
           {
             "ko": "날카로운눈",
             "en": "Keen Eye",
+            "ja": "するどいめ",
             "hidden": false
           },
           {
             "ko": "갈지자걸음",
             "en": "Tangled Feet",
+            "ja": "ちどりあし",
             "hidden": false
           },
           {
             "ko": "부풀린가슴",
             "en": "Big Pecks",
+            "ja": "はとむね",
             "hidden": true
           }
         ]
@@ -19709,6 +20160,7 @@
           {
             "ko": "노가드",
             "en": "No Guard",
+            "ja": "ノーガード",
             "hidden": false
           }
         ]
@@ -19781,11 +20233,13 @@
           {
             "ko": "정전기",
             "en": "Static",
+            "ja": "せいでんき",
             "hidden": false
           },
           {
             "ko": "피뢰침",
             "en": "Lightning Rod",
+            "ja": "ひらいしん",
             "hidden": true
           }
         ]
@@ -19888,16 +20342,19 @@
           {
             "ko": "괴력집게",
             "en": "Hyper Cutter",
+            "ja": "かいりきバサミ",
             "hidden": false
           },
           {
             "ko": "틀깨기",
             "en": "Mold Breaker",
+            "ja": "かたやぶり",
             "hidden": false
           },
           {
             "ko": "자기과신",
             "en": "Moxie",
+            "ja": "じしんかじょう",
             "hidden": true
           }
         ]
@@ -19927,6 +20384,7 @@
           {
             "ko": "스카이스킨",
             "en": "Aerilate",
+            "ja": "スカイスキン",
             "hidden": false
           }
         ]
@@ -20021,16 +20479,19 @@
           {
             "ko": "저수",
             "en": "Water Absorb",
+            "ja": "ちょすい",
             "hidden": false
           },
           {
             "ko": "습기",
             "en": "Damp",
+            "ja": "しめりけ",
             "hidden": false
           },
           {
             "ko": "잔비",
             "en": "Drizzle",
+            "ja": "あめふらし",
             "hidden": true
           }
         ]
@@ -20129,11 +20590,13 @@
           {
             "ko": "깨어진갑옷",
             "en": "Weak Armor",
+            "ja": "くだけるよろい",
             "hidden": false
           },
           {
             "ko": "저주받은바디",
             "en": "Cursed Body",
+            "ja": "のろわれボディ",
             "hidden": true
           }
         ]
@@ -20222,11 +20685,13 @@
           {
             "ko": "급류",
             "en": "Torrent",
+            "ja": "げきりゅう",
             "hidden": false
           },
           {
             "ko": "촉촉보이스",
             "en": "Liquid Voice",
+            "ja": "うるおいボイス",
             "hidden": true
           }
         ]
@@ -20333,16 +20798,19 @@
           {
             "ko": "투쟁심",
             "en": "Rivalry",
+            "ja": "とうそうしん",
             "hidden": false
           },
           {
             "ko": "긴장감",
             "en": "Unnerve",
+            "ja": "きんちょうかん",
             "hidden": false
           },
           {
             "ko": "자기과신",
             "en": "Moxie",
+            "ja": "じしんかじょう",
             "hidden": true
           }
         ]
@@ -20372,6 +20840,7 @@
           {
             "ko": "Fire Mane",
             "en": "Fire Mane",
+            "ja": "Fire Mane",
             "hidden": false
           }
         ]
@@ -20463,11 +20932,13 @@
           {
             "ko": "급류",
             "en": "Torrent",
+            "ja": "げきりゅう",
             "hidden": false
           },
           {
             "ko": "자기과신",
             "en": "Moxie",
+            "ja": "じしんかじょう",
             "hidden": true
           }
         ]
@@ -20570,16 +21041,19 @@
           {
             "ko": "독가시",
             "en": "Poison Point",
+            "ja": "どくのトゲ",
             "hidden": false
           },
           {
             "ko": "쓱쓱",
             "en": "Swift Swim",
+            "ja": "すいすい",
             "hidden": false
           },
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": true
           }
         ]
@@ -20685,11 +21159,13 @@
           {
             "ko": "정전기",
             "en": "Static",
+            "ja": "せいでんき",
             "hidden": false
           },
           {
             "ko": "피뢰침",
             "en": "Lightning Rod",
+            "ja": "ひらいしん",
             "hidden": true
           }
         ]
@@ -20718,6 +21194,7 @@
           {
             "ko": "일렉트릭메이커",
             "en": "Electric Surge",
+            "ja": "エレキメイカー",
             "hidden": false
           }
         ]
@@ -20746,6 +21223,7 @@
           {
             "ko": "노가드",
             "en": "No Guard",
+            "ja": "ノーガード",
             "hidden": false
           }
         ]
@@ -20853,11 +21331,13 @@
           {
             "ko": "틀깨기",
             "en": "Mold Breaker",
+            "ja": "かたやぶり",
             "hidden": false
           },
           {
             "ko": "우격다짐",
             "en": "Sheer Force",
+            "ja": "ちからずく",
             "hidden": true
           }
         ]
@@ -20973,16 +21453,19 @@
           {
             "ko": "방진",
             "en": "Overcoat",
+            "ja": "ぼうじん",
             "hidden": false
           },
           {
             "ko": "매직가드",
             "en": "Magic Guard",
+            "ja": "マジックガード",
             "hidden": false
           },
           {
             "ko": "재생력",
             "en": "Regenerator",
+            "ja": "さいせいりょく",
             "hidden": true
           }
         ]
@@ -21092,16 +21575,19 @@
           {
             "ko": "피뢰침",
             "en": "Lightning Rod",
+            "ja": "ひらいしん",
             "hidden": false
           },
           {
             "ko": "하드록",
             "en": "Solid Rock",
+            "ja": "ハードロック",
             "hidden": false
           },
           {
             "ko": "이판사판",
             "en": "Reckless",
+            "ja": "すてみ",
             "hidden": true
           }
         ]
@@ -21236,16 +21722,19 @@
           {
             "ko": "자연회복",
             "en": "Natural Cure",
+            "ja": "しぜんかいふく",
             "hidden": false
           },
           {
             "ko": "독가시",
             "en": "Poison Point",
+            "ja": "どくのトゲ",
             "hidden": false
           },
           {
             "ko": "테크니션",
             "en": "Technician",
+            "ja": "テクニシャン",
             "hidden": true
           }
         ]
@@ -21342,6 +21831,7 @@
           {
             "ko": "부유",
             "en": "Levitate",
+            "ja": "ふゆう",
             "hidden": false
           }
         ]
@@ -21427,6 +21917,7 @@
           {
             "ko": "떠도는영혼",
             "en": "Wandering Spirit",
+            "ja": "さまようたましい",
             "hidden": false
           }
         ]
@@ -21539,16 +22030,19 @@
           {
             "ko": "날카로운눈",
             "en": "Keen Eye",
+            "ja": "するどいめ",
             "hidden": false
           },
           {
             "ko": "시간벌기",
             "en": "Stall",
+            "ja": "あとだし",
             "hidden": false
           },
           {
             "ko": "짓궂은마음",
             "en": "Prankster",
+            "ja": "いたずらごころ",
             "hidden": true
           }
         ]
@@ -21578,6 +22072,7 @@
           {
             "ko": "매직미러",
             "en": "Magic Bounce",
+            "ja": "マジックミラー",
             "hidden": false
           }
         ]
@@ -21709,11 +22204,13 @@
           {
             "ko": "부식",
             "en": "Corrosion",
+            "ja": "ふしょく",
             "hidden": false
           },
           {
             "ko": "둔감",
             "en": "Oblivious",
+            "ja": "どんかん",
             "hidden": true
           }
         ]
@@ -21826,11 +22323,13 @@
           {
             "ko": "급류",
             "en": "Torrent",
+            "ja": "げきりゅう",
             "hidden": false
           },
           {
             "ko": "조가비갑옷",
             "en": "Shell Armor",
+            "ja": "シェルアーマー",
             "hidden": true
           }
         ]
@@ -21933,16 +22432,19 @@
           {
             "ko": "모래뿜기",
             "en": "Sand Spit",
+            "ja": "すなはき",
             "hidden": false
           },
           {
             "ko": "탈피",
             "en": "Shed Skin",
+            "ja": "だっぴ",
             "hidden": false
           },
           {
             "ko": "모래숨기",
             "en": "Sand Veil",
+            "ja": "すながくれ",
             "hidden": true
           }
         ]
@@ -22033,11 +22535,13 @@
           {
             "ko": "심록",
             "en": "Overgrow",
+            "ja": "しんりょく",
             "hidden": false
           },
           {
             "ko": "곡예",
             "en": "Unburden",
+            "ja": "かるわざ",
             "hidden": true
           }
         ]
@@ -22067,6 +22571,7 @@
           {
             "ko": "피뢰침",
             "en": "Lightning Rod",
+            "ja": "ひらいしん",
             "hidden": false
           }
         ]
@@ -22186,16 +22691,19 @@
           {
             "ko": "벌레의알림",
             "en": "Swarm",
+            "ja": "むしのしらせ",
             "hidden": false
           },
           {
             "ko": "테크니션",
             "en": "Technician",
+            "ja": "テクニシャン",
             "hidden": false
           },
           {
             "ko": "라이트메탈",
             "en": "Light Metal",
+            "ja": "ライトメタル",
             "hidden": true
           }
         ]
@@ -22225,6 +22733,7 @@
           {
             "ko": "테크니션",
             "en": "Technician",
+            "ja": "テクニシャン",
             "hidden": false
           }
         ]
@@ -22331,16 +22840,19 @@
           {
             "ko": "독가시",
             "en": "Poison Point",
+            "ja": "どくのトゲ",
             "hidden": false
           },
           {
             "ko": "벌레의알림",
             "en": "Swarm",
+            "ja": "むしのしらせ",
             "hidden": false
           },
           {
             "ko": "가속",
             "en": "Speed Boost",
+            "ja": "かそく",
             "hidden": true
           }
         ]
@@ -22370,6 +22882,7 @@
           {
             "ko": "조가비갑옷",
             "en": "Shell Armor",
+            "ja": "シェルアーマー",
             "hidden": false
           }
         ]
@@ -22465,16 +22978,19 @@
           {
             "ko": "엽록소",
             "en": "Chlorophyll",
+            "ja": "ようりょくそ",
             "hidden": false
           },
           {
             "ko": "불면",
             "en": "Insomnia",
+            "ja": "ふみん",
             "hidden": false
           },
           {
             "ko": "변덕쟁이",
             "en": "Moody",
+            "ja": "ムラっけ",
             "hidden": true
           }
         ]
@@ -22504,6 +23020,7 @@
           {
             "ko": "하바네로분출",
             "en": "Spicy Spray",
+            "ja": "とびだすハバネロ",
             "hidden": false
           }
         ]
@@ -22594,16 +23111,19 @@
           {
             "ko": "탈피",
             "en": "Shed Skin",
+            "ja": "だっぴ",
             "hidden": false
           },
           {
             "ko": "자기과신",
             "en": "Moxie",
+            "ja": "じしんかじょう",
             "hidden": false
           },
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": true
           }
         ]
@@ -22633,6 +23153,7 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           }
         ]
@@ -22756,11 +23277,13 @@
           {
             "ko": "심록",
             "en": "Overgrow",
+            "ja": "しんりょく",
             "hidden": false
           },
           {
             "ko": "심술꾸러기",
             "en": "Contrary",
+            "ja": "あまのじゃく",
             "hidden": true
           }
         ]
@@ -22857,11 +23380,13 @@
           {
             "ko": "까칠한피부",
             "en": "Rough Skin",
+            "ja": "さめはだ",
             "hidden": false
           },
           {
             "ko": "가속",
             "en": "Speed Boost",
+            "ja": "かそく",
             "hidden": true
           }
         ]
@@ -22891,6 +23416,7 @@
           {
             "ko": "옹골찬턱",
             "en": "Strong Jaw",
+            "ja": "がんじょうあご",
             "hidden": false
           }
         ]
@@ -22992,11 +23518,13 @@
           {
             "ko": "먹보",
             "en": "Gluttony",
+            "ja": "くいしんぼう",
             "hidden": false
           },
           {
             "ko": "급류",
             "en": "Torrent",
+            "ja": "げきりゅう",
             "hidden": true
           }
         ]
@@ -23092,11 +23620,13 @@
           {
             "ko": "먹보",
             "en": "Gluttony",
+            "ja": "くいしんぼう",
             "hidden": false
           },
           {
             "ko": "심록",
             "en": "Overgrow",
+            "ja": "しんりょく",
             "hidden": true
           }
         ]
@@ -23190,11 +23720,13 @@
           {
             "ko": "먹보",
             "en": "Gluttony",
+            "ja": "くいしんぼう",
             "hidden": false
           },
           {
             "ko": "맹화",
             "en": "Blaze",
+            "ja": "もうか",
             "hidden": true
           }
         ]
@@ -23292,11 +23824,13 @@
           {
             "ko": "대접",
             "en": "Hospitality",
+            "ja": "おもてなし",
             "hidden": false
           },
           {
             "ko": "내열",
             "en": "Heatproof",
+            "ja": "たいねつ",
             "hidden": true
           }
         ]
@@ -23375,16 +23909,19 @@
           {
             "ko": "날카로운눈",
             "en": "Keen Eye",
+            "ja": "するどいめ",
             "hidden": false
           },
           {
             "ko": "옹골참",
             "en": "Sturdy",
+            "ja": "がんじょう",
             "hidden": false
           },
           {
             "ko": "깨어진갑옷",
             "en": "Weak Armor",
+            "ja": "くだけるよろい",
             "hidden": true
           }
         ]
@@ -23414,6 +23951,7 @@
           {
             "ko": "굳건한신념",
             "en": "Stalwart",
+            "ja": "すじがねいり",
             "hidden": false
           }
         ]
@@ -23507,11 +24045,13 @@
           {
             "ko": "맹화",
             "en": "Blaze",
+            "ja": "もうか",
             "hidden": false
           },
           {
             "ko": "천진",
             "en": "Unaware",
+            "ja": "てんねん",
             "hidden": true
           }
         ]
@@ -23611,16 +24151,19 @@
           {
             "ko": "둔감",
             "en": "Oblivious",
+            "ja": "どんかん",
             "hidden": false
           },
           {
             "ko": "마이페이스",
             "en": "Own Tempo",
+            "ja": "マイペース",
             "hidden": false
           },
           {
             "ko": "재생력",
             "en": "Regenerator",
+            "ja": "さいせいりょく",
             "hidden": true
           }
         ]
@@ -23650,6 +24193,7 @@
           {
             "ko": "조가비갑옷",
             "en": "Shell Armor",
+            "ja": "シェルアーマー",
             "hidden": false
           }
         ]
@@ -23770,16 +24314,19 @@
           {
             "ko": "둔감",
             "en": "Oblivious",
+            "ja": "どんかん",
             "hidden": false
           },
           {
             "ko": "마이페이스",
             "en": "Own Tempo",
+            "ja": "マイペース",
             "hidden": false
           },
           {
             "ko": "재생력",
             "en": "Regenerator",
+            "ja": "さいせいりょく",
             "hidden": true
           }
         ]
@@ -23906,11 +24453,13 @@
           {
             "ko": "스위트베일",
             "en": "Sweet Veil",
+            "ja": "スイートベール",
             "hidden": false
           },
           {
             "ko": "곡예",
             "en": "Unburden",
+            "ja": "かるわざ",
             "hidden": true
           }
         ]
@@ -23995,16 +24544,19 @@
           {
             "ko": "프레셔",
             "en": "Pressure",
+            "ja": "プレッシャー",
             "hidden": false
           },
           {
             "ko": "곡예",
             "en": "Unburden",
+            "ja": "かるわざ",
             "hidden": false
           },
           {
             "ko": "독수",
             "en": "Poison Touch",
+            "ja": "どくしゅ",
             "hidden": true
           }
         ]
@@ -24109,16 +24661,19 @@
           {
             "ko": "면역",
             "en": "Immunity",
+            "ja": "めんえき",
             "hidden": false
           },
           {
             "ko": "두꺼운지방",
             "en": "Thick Fat",
+            "ja": "あついしぼう",
             "hidden": false
           },
           {
             "ko": "먹보",
             "en": "Gluttony",
+            "ja": "くいしんぼう",
             "hidden": true
           }
         ]
@@ -24244,11 +24799,13 @@
           {
             "ko": "프레셔",
             "en": "Pressure",
+            "ja": "プレッシャー",
             "hidden": false
           },
           {
             "ko": "틈새포착",
             "en": "Infiltrator",
+            "ja": "すりぬけ",
             "hidden": true
           }
         ]
@@ -24345,11 +24902,13 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "이판사판",
             "en": "Reckless",
+            "ja": "すてみ",
             "hidden": true
           }
         ]
@@ -24379,6 +24938,7 @@
           {
             "ko": "심술꾸러기",
             "en": "Contrary",
+            "ja": "あまのじゃく",
             "hidden": false
           }
         ]
@@ -24464,16 +25024,19 @@
           {
             "ko": "발광",
             "en": "Illuminate",
+            "ja": "はっこう",
             "hidden": false
           },
           {
             "ko": "자연회복",
             "en": "Natural Cure",
+            "ja": "しぜんかいふく",
             "hidden": false
           },
           {
             "ko": "애널라이즈",
             "en": "Analytic",
+            "ja": "アナライズ",
             "hidden": true
           }
         ]
@@ -24503,6 +25066,7 @@
           {
             "ko": "천하장사",
             "en": "Huge Power",
+            "ja": "ちからもち",
             "hidden": false
           }
         ]
@@ -24607,16 +25171,19 @@
           {
             "ko": "돌머리",
             "en": "Rock Head",
+            "ja": "いしあたま",
             "hidden": false
           },
           {
             "ko": "옹골참",
             "en": "Sturdy",
+            "ja": "がんじょう",
             "hidden": false
           },
           {
             "ko": "우격다짐",
             "en": "Sheer Force",
+            "ja": "ちからずく",
             "hidden": true
           }
         ]
@@ -24646,6 +25213,7 @@
           {
             "ko": "모래의힘",
             "en": "Sand Force",
+            "ja": "すなのちから",
             "hidden": false
           }
         ]
@@ -24755,16 +25323,19 @@
           {
             "ko": "정전기",
             "en": "Static",
+            "ja": "せいでんき",
             "hidden": false
           },
           {
             "ko": "유연",
             "en": "Limber",
+            "ja": "じゅうなん",
             "hidden": false
           },
           {
             "ko": "모래숨기",
             "en": "Sand Veil",
+            "ja": "すながくれ",
             "hidden": true
           }
         ]
@@ -24855,11 +25426,13 @@
           {
             "ko": "급류",
             "en": "Torrent",
+            "ja": "げきりゅう",
             "hidden": false
           },
           {
             "ko": "습기",
             "en": "Damp",
+            "ja": "しめりけ",
             "hidden": true
           }
         ]
@@ -24889,6 +25462,7 @@
           {
             "ko": "쓱쓱",
             "en": "Swift Swim",
+            "ja": "すいすい",
             "hidden": false
           }
         ]
@@ -25007,11 +25581,13 @@
           {
             "ko": "헤롱헤롱바디",
             "en": "Cute Charm",
+            "ja": "メロメロボディ",
             "hidden": false
           },
           {
             "ko": "페어리스킨",
             "en": "Pixilate",
+            "ja": "フェアリースキン",
             "hidden": true
           }
         ]
@@ -25111,11 +25687,13 @@
           {
             "ko": "불꽃몸",
             "en": "Flame Body",
+            "ja": "ほのおのからだ",
             "hidden": false
           },
           {
             "ko": "질풍날개",
             "en": "Gale Wings",
+            "ja": "はやてのつばさ",
             "hidden": true
           }
         ]
@@ -25208,16 +25786,19 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "분노의경혈",
             "en": "Anger Point",
+            "ja": "いかりのつぼ",
             "hidden": false
           },
           {
             "ko": "우격다짐",
             "en": "Sheer Force",
+            "ja": "ちからずく",
             "hidden": true
           }
         ]
@@ -25317,16 +25898,19 @@
           {
             "ko": "틀깨기",
             "en": "Mold Breaker",
+            "ja": "かたやぶり",
             "hidden": false
           },
           {
             "ko": "마이페이스",
             "en": "Own Tempo",
+            "ja": "マイペース",
             "hidden": false
           },
           {
             "ko": "나쁜손버릇",
             "en": "Pickpocket",
+            "ja": "わるいてぐせ",
             "hidden": true
           }
         ]
@@ -25415,16 +25999,19 @@
           {
             "ko": "하얀연기",
             "en": "White Smoke",
+            "ja": "しろいけむり",
             "hidden": false
           },
           {
             "ko": "가뭄",
             "en": "Drought",
+            "ja": "ひでり",
             "hidden": false
           },
           {
             "ko": "조가비갑옷",
             "en": "Shell Armor",
+            "ja": "シェルアーマー",
             "hidden": true
           }
         ]
@@ -25528,11 +26115,13 @@
           {
             "ko": "심록",
             "en": "Overgrow",
+            "ja": "しんりょく",
             "hidden": false
           },
           {
             "ko": "조가비갑옷",
             "en": "Shell Armor",
+            "ja": "シェルアーマー",
             "hidden": true
           }
         ]
@@ -25647,16 +26236,19 @@
           {
             "ko": "날카로운눈",
             "en": "Keen Eye",
+            "ja": "するどいめ",
             "hidden": false
           },
           {
             "ko": "스킬링크",
             "en": "Skill Link",
+            "ja": "スキルリンク",
             "hidden": false
           },
           {
             "ko": "우격다짐",
             "en": "Sheer Force",
+            "ja": "ちからずく",
             "hidden": true
           }
         ]
@@ -25753,16 +26345,19 @@
           {
             "ko": "무도한행동",
             "en": "Merciless",
+            "ja": "ひとでなし",
             "hidden": false
           },
           {
             "ko": "유연",
             "en": "Limber",
+            "ja": "じゅうなん",
             "hidden": false
           },
           {
             "ko": "재생력",
             "en": "Regenerator",
+            "ja": "さいせいりょく",
             "hidden": true
           }
         ]
@@ -25857,16 +26452,19 @@
           {
             "ko": "위험예지",
             "en": "Anticipation",
+            "ja": "きけんよち",
             "hidden": false
           },
           {
             "ko": "건조피부",
             "en": "Dry Skin",
+            "ja": "かんそうはだ",
             "hidden": false
           },
           {
             "ko": "독수",
             "en": "Poison Touch",
+            "ja": "どくしゅ",
             "hidden": true
           }
         ]
@@ -25990,16 +26588,19 @@
           {
             "ko": "자연회복",
             "en": "Natural Cure",
+            "ja": "しぜんかいふく",
             "hidden": false
           },
           {
             "ko": "통찰",
             "en": "Frisk",
+            "ja": "おみとおし",
             "hidden": false
           },
           {
             "ko": "수확",
             "en": "Harvest",
+            "ja": "しゅうかく",
             "hidden": true
           }
         ]
@@ -26115,16 +26716,19 @@
           {
             "ko": "리프가드",
             "en": "Leaf Guard",
+            "ja": "リーフガード",
             "hidden": false
           },
           {
             "ko": "여왕의위엄",
             "en": "Queenly Majesty",
+            "ja": "じょおうのいげん",
             "hidden": false
           },
           {
             "ko": "스위트베일",
             "en": "Sweet Veil",
+            "ja": "スイートベール",
             "hidden": true
           }
         ]
@@ -26221,11 +26825,13 @@
           {
             "ko": "맹화",
             "en": "Blaze",
+            "ja": "もうか",
             "hidden": false
           },
           {
             "ko": "타오르는불꽃",
             "en": "Flash Fire",
+            "ja": "もらいび",
             "hidden": true
           }
         ]
@@ -26332,11 +26938,13 @@
           {
             "ko": "모래날림",
             "en": "Sand Stream",
+            "ja": "すなおこし",
             "hidden": false
           },
           {
             "ko": "긴장감",
             "en": "Unnerve",
+            "ja": "きんちょうかん",
             "hidden": true
           }
         ]
@@ -26366,6 +26974,7 @@
           {
             "ko": "모래날림",
             "en": "Sand Stream",
+            "ja": "すなおこし",
             "hidden": false
           }
         ]
@@ -26500,11 +27109,13 @@
           {
             "ko": "옹골찬턱",
             "en": "Strong Jaw",
+            "ja": "がんじょうあご",
             "hidden": false
           },
           {
             "ko": "돌머리",
             "en": "Rock Head",
+            "ja": "いしあたま",
             "hidden": true
           }
         ]
@@ -26610,11 +27221,13 @@
           {
             "ko": "싱크로",
             "en": "Synchronize",
+            "ja": "シンクロ",
             "hidden": false
           },
           {
             "ko": "정신력",
             "en": "Inner Focus",
+            "ja": "せいしんりょく",
             "hidden": true
           }
         ]
@@ -26723,16 +27336,19 @@
           {
             "ko": "아이스바디",
             "en": "Ice Body",
+            "ja": "アイスボディ",
             "hidden": false
           },
           {
             "ko": "눈퍼뜨리기",
             "en": "Snow Warning",
+            "ja": "ゆきふらし",
             "hidden": false
           },
           {
             "ko": "깨어진갑옷",
             "en": "Weak Armor",
+            "ja": "くだけるよろい",
             "hidden": true
           }
         ]
@@ -26817,11 +27433,13 @@
           {
             "ko": "저수",
             "en": "Water Absorb",
+            "ja": "ちょすい",
             "hidden": false
           },
           {
             "ko": "촉촉바디",
             "en": "Hydration",
+            "ja": "うるおいボディ",
             "hidden": true
           }
         ]
@@ -26924,11 +27542,13 @@
           {
             "ko": "심록",
             "en": "Overgrow",
+            "ja": "しんりょく",
             "hidden": false
           },
           {
             "ko": "엽록소",
             "en": "Chlorophyll",
+            "ja": "ようりょくそ",
             "hidden": true
           }
         ]
@@ -26958,6 +27578,7 @@
           {
             "ko": "두꺼운지방",
             "en": "Thick Fat",
+            "ja": "あついしぼう",
             "hidden": false
           }
         ]
@@ -27057,11 +27678,13 @@
           {
             "ko": "엽록소",
             "en": "Chlorophyll",
+            "ja": "ようりょくそ",
             "hidden": false
           },
           {
             "ko": "먹보",
             "en": "Gluttony",
+            "ja": "くいしんぼう",
             "hidden": true
           }
         ]
@@ -27091,6 +27714,7 @@
           {
             "ko": "내용물분출",
             "en": "Innards Out",
+            "ja": "とびだすなかみ",
             "hidden": false
           }
         ]
@@ -27193,11 +27817,13 @@
           {
             "ko": "엽록소",
             "en": "Chlorophyll",
+            "ja": "ようりょくそ",
             "hidden": false
           },
           {
             "ko": "포자",
             "en": "Effect Spore",
+            "ja": "ほうし",
             "hidden": true
           }
         ]
@@ -27294,16 +27920,19 @@
           {
             "ko": "인분",
             "en": "Shield Dust",
+            "ja": "りんぷん",
             "hidden": false
           },
           {
             "ko": "복안",
             "en": "Compound Eyes",
+            "ja": "ふくがん",
             "hidden": false
           },
           {
             "ko": "프렌드가드",
             "en": "Friend Guard",
+            "ja": "フレンドガード",
             "hidden": true
           }
         ]
@@ -27389,11 +28018,13 @@
           {
             "ko": "불꽃몸",
             "en": "Flame Body",
+            "ja": "ほのおのからだ",
             "hidden": false
           },
           {
             "ko": "벌레의알림",
             "en": "Swarm",
+            "ja": "むしのしらせ",
             "hidden": true
           }
         ]
@@ -27495,6 +28126,7 @@
           {
             "ko": "부유",
             "en": "Levitate",
+            "ja": "ふゆう",
             "hidden": false
           }
         ]
@@ -27580,16 +28212,19 @@
           {
             "ko": "발광",
             "en": "Illuminate",
+            "ja": "はっこう",
             "hidden": false
           },
           {
             "ko": "날카로운눈",
             "en": "Keen Eye",
+            "ja": "するどいめ",
             "hidden": false
           },
           {
             "ko": "애널라이즈",
             "en": "Analytic",
+            "ja": "アナライズ",
             "hidden": true
           }
         ]
@@ -27684,11 +28319,13 @@
           {
             "ko": "프레셔",
             "en": "Pressure",
+            "ja": "プレッシャー",
             "hidden": false
           },
           {
             "ko": "나쁜손버릇",
             "en": "Pickpocket",
+            "ja": "わるいてぐせ",
             "hidden": true
           }
         ]
@@ -27804,16 +28441,19 @@
           {
             "ko": "짓궂은마음",
             "en": "Prankster",
+            "ja": "いたずらごころ",
             "hidden": false
           },
           {
             "ko": "틈새포착",
             "en": "Infiltrator",
+            "ja": "すりぬけ",
             "hidden": false
           },
           {
             "ko": "엽록소",
             "en": "Chlorophyll",
+            "ja": "ようりょくそ",
             "hidden": true
           }
         ]
@@ -27906,16 +28546,19 @@
           {
             "ko": "위협",
             "en": "Intimidate",
+            "ja": "いかく",
             "hidden": false
           },
           {
             "ko": "통찰",
             "en": "Frisk",
+            "ja": "おみとおし",
             "hidden": false
           },
           {
             "ko": "초식",
             "en": "Sap Sipper",
+            "ja": "そうしょく",
             "hidden": true
           }
         ]
@@ -28021,6 +28664,7 @@
           {
             "ko": "일루전",
             "en": "Illusion",
+            "ja": "イリュージョン",
             "hidden": false
           }
         ]

@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { Pokemon, PokemonType } from "@/lib/types";
+import type { LocalizedName, Pokemon, PokemonType } from "@/lib/types";
 import type { SpeedNature } from "@/lib/speed";
 import {
   EV_MAX,
@@ -14,13 +14,13 @@ import {
 } from "@/lib/speed";
 import { weaknesses } from "@/lib/typeChart";
 import { moves as moveDict } from "@/lib/data/moves";
+import { useLanguage } from "@/stores/useLanguage";
 import { TypeBadge } from "@/components/TypeBadge";
 
 type Unit = {
   key: string;
   slug: string;
-  ko: string;
-  en: string;
+  names: LocalizedName;
   sprite: string;
   spe: number;
   isMega: boolean;
@@ -88,8 +88,7 @@ function useUnits(pokemon: Pokemon[]): Unit[] {
         return shown.map((form) => ({
           key: `${entry.slug}|${form.name}`,
           slug: entry.slug,
-          ko: form.names.ko,
-          en: form.names.en,
+          names: form.names,
           sprite: form.sprite,
           spe: form.baseStats.spe,
           isMega: form.kind === "mega",
@@ -103,6 +102,7 @@ function useUnits(pokemon: Pokemon[]): Unit[] {
 
 export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const units = useUnits(pokemon);
+  const lang = useLanguage((s) => s.lang);
   const [query, setQuery] = useState("");
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [nature, setNature] = useState<SpeedNature>("neutral");
@@ -115,8 +115,9 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
     ? units
         .filter(
           (u) =>
-            u.ko.includes(query) ||
-            u.en.toLowerCase().includes(query.toLowerCase()),
+            u.names.ko.includes(query) ||
+            u.names.en.toLowerCase().includes(query.toLowerCase()) ||
+            u.names.ja.includes(query),
         )
         .slice(0, 40)
     : [];
@@ -126,8 +127,9 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const targetQuery = target.trim().toLowerCase();
   const matchesTarget = (u: Unit) =>
     !targetQuery ||
-    u.ko.toLowerCase().includes(targetQuery) ||
-    u.en.toLowerCase().includes(targetQuery);
+    u.names.ko.toLowerCase().includes(targetQuery) ||
+    u.names.en.toLowerCase().includes(targetQuery) ||
+    u.names.ja.toLowerCase().includes(targetQuery);
 
   // Attacking types the selected Pokémon is weak to (super-effective).
   const myWeaknesses = selected ? weaknesses(selected.types) : [];
@@ -157,7 +159,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder={selected ? selected.ko : "포켓몬 이름 검색…"}
+          placeholder={selected ? selected.names[lang] : "포켓몬 이름 검색…"}
           className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-gray-500 dark:border-gray-600 dark:bg-gray-900"
         />
         {results.length > 0 && (
@@ -180,7 +182,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     height={28}
                     className="h-7 w-7"
                   />
-                  <span className="flex-1">{u.ko}</span>
+                  <span className="flex-1">{u.names[lang]}</span>
                   <span className="text-xs text-gray-400">스피드 {u.spe}</span>
                 </button>
               </li>
@@ -201,7 +203,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
               className="h-12 w-12"
             />
             <div>
-              <div className="font-semibold">{selected.ko}</div>
+              <div className="font-semibold">{selected.names[lang]}</div>
               <div className="text-xs text-gray-400">
                 종족값 스피드 {selected.spe}
               </div>
@@ -333,7 +335,9 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                       height={28}
                       className="h-7 w-7 shrink-0"
                     />
-                    <span className="min-w-0 flex-1 truncate">{u.ko}</span>
+                    <span className="min-w-0 flex-1 truncate">
+                      {u.names[lang]}
+                    </span>
                     {s === mySpeed && (
                       <span className="shrink-0 rounded bg-amber-100 px-1 text-[10px] font-medium text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
                         동속
