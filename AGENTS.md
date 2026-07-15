@@ -53,3 +53,4 @@ Next.js 16 (App Router, Turbopack) + React 19 + TypeScript + Tailwind CSS v4.
 
 - UI 문구와 문서는 한국어, 코드(변수·함수·주석)는 영어.
 - 기능 계획은 `docs/ROADMAP.md`, 기술 결정 기록은 `docs/DECISIONS.md`를 따른다. 과거 결정을 바꿀 때는 DECISIONS.md에 새 항목을 추가한다.
+- GitHub 이슈에 대응하는 커밋은 메시지에 `Closes #N`을 넣어 기본 브랜치 push 시 이슈가 자동으로 닫히게 한다. `(#N)` 같은 단순 참조는 자동 close되지 않는다. 단, 이미 수동으로 닫힌 이슈에는 넣지 않는다.
