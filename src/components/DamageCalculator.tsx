@@ -392,6 +392,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const [defItem, setDefItem] = useState("");
   const [defAbilityIdx, setDefAbilityIdx] = useState(0);
   const [defStage, setDefStage] = useState(0);
+  const [hpPct, setHpPct] = useState(100);
 
   const attacker = units.find((u) => u.key === attackerKey) ?? null;
   const defender = units.find((u) => u.key === defenderKey) ?? null;
@@ -505,6 +506,30 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const min = rolls.length ? Math.min(...rolls) : 0;
   const max = rolls.length ? Math.max(...rolls) : 0;
   const verdict = rolls.length ? koVerdict(rolls, hp) : null;
+
+  // Survival check against an adjustable current HP (issue #1): does a single
+  // hit (e.g. a priority move) leave the defender standing at this HP%?
+  const currentHp = Math.max(1, Math.floor((hp * hpPct) / 100));
+  const survival: {
+    label: string;
+    tone: "ko" | "survive" | "random";
+    chance?: number;
+  } | null =
+    rolls.length && canCompute
+      ? min >= currentHp
+        ? { label: "쓰러짐 (확정 1타)", tone: "ko" }
+        : max < currentHp
+          ? { label: "견딤 (최대 데미지도 버팀)", tone: "survive" }
+          : {
+              label: "난수 1타",
+              tone: "random",
+              chance: rolls.filter((d) => d >= currentHp).length / rolls.length,
+            }
+      : null;
+  // Minimum HP needed to survive the max roll, as a % of full HP.
+  const survivePct =
+    hp > 0 ? Math.min(100, Math.ceil(((max + 1) / hp) * 100)) : 0;
+  const survivableAtFull = max < hp;
 
   return (
     <div>
@@ -690,6 +715,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             onSelect={(k) => {
               setDefenderKey(k);
               setDefAbilityIdx(0);
+              setHpPct(100);
               setDefItem(
                 units.find((u) => u.key === k)?.isMega ? "mega-stone" : "",
               );
@@ -791,6 +817,51 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     {defenseStat}
                   </div>
                 </div>
+              </div>
+
+              {/* HP adjustment: survive a single hit (e.g. priority move)? */}
+              <div className="mt-4 border-t border-gray-100 pt-4 dark:border-gray-800">
+                <div className="flex items-center gap-2">
+                  <span className="w-20 shrink-0 text-xs text-gray-500 dark:text-gray-400">
+                    남은 체력
+                  </span>
+                  <input
+                    type="range"
+                    min={1}
+                    max={100}
+                    value={hpPct}
+                    onChange={(e) => setHpPct(Number(e.target.value))}
+                    className="min-w-0 flex-1 accent-sky-500"
+                  />
+                  <span className="w-24 shrink-0 text-right text-xs text-gray-500 tabular-nums dark:text-gray-400">
+                    {hpPct}% · {currentHp}
+                  </span>
+                </div>
+                {survival && (
+                  <div className="mt-2 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                    <div
+                      className={
+                        survival.tone === "survive"
+                          ? "text-sm font-semibold text-emerald-600 dark:text-emerald-400"
+                          : survival.tone === "ko"
+                            ? "text-sm font-semibold text-rose-600 dark:text-rose-400"
+                            : "text-sm font-semibold text-amber-600 dark:text-amber-400"
+                      }
+                    >
+                      {survival.label}
+                      {survival.chance !== undefined && (
+                        <span className="ml-1 text-xs">
+                          (쓰러질 확률 {(survival.chance * 100).toFixed(1)}%)
+                        </span>
+                      )}
+                    </div>
+                    <div className="text-xs text-gray-400">
+                      {survivableAtFull
+                        ? `견디려면 HP ${max + 1} 이상 (풀피의 ${survivePct}% 이상)`
+                        : "풀피에서도 최대 데미지에 쓰러짐"}
+                    </div>
+                  </div>
+                )}
               </div>
             </>
           ) : (
