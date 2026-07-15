@@ -11,6 +11,7 @@ import {
   scarfSpeed,
   speedStat,
   subMaxSpeed,
+  withScarf,
 } from "@/lib/speed";
 import { weaknesses } from "@/lib/typeChart";
 import { moves as moveDict } from "@/lib/data/moves";
@@ -107,6 +108,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [nature, setNature] = useState<SpeedNature>("neutral");
   const [ev, setEv] = useState(EV_MAX);
+  const [scarf, setScarf] = useState(false);
   const [target, setTarget] = useState("");
   const [weakOnly, setWeakOnly] = useState(false);
 
@@ -122,7 +124,11 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
         .slice(0, 40)
     : [];
 
-  const mySpeed = selected ? speedStat(selected.spe, ev, nature) : null;
+  const baseSpeed = selected ? speedStat(selected.spe, ev, nature) : null;
+  // Effective speed after my own Choice Scarf (issue #2): how far can I
+  // outrun with a scarf on?
+  const mySpeed =
+    baseSpeed !== null ? (scarf ? withScarf(baseSpeed) : baseSpeed) : null;
 
   const targetQuery = target.trim().toLowerCase();
   const matchesTarget = (u: Unit) =>
@@ -251,12 +257,36 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             />
           </div>
 
+          {/* Choice Scarf toggle (my own item) */}
+          <div>
+            <div className="mb-1 text-xs text-gray-500 dark:text-gray-400">
+              구애스카프
+            </div>
+            <button
+              type="button"
+              onClick={() => setScarf((v) => !v)}
+              aria-pressed={scarf}
+              className={
+                scarf
+                  ? "rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white"
+                  : "rounded-lg border border-gray-200 px-3 py-1 text-sm text-gray-500 hover:border-gray-400 dark:border-gray-700 dark:hover:text-gray-200"
+              }
+            >
+              {scarf ? "착용 (×1.5)" : "미착용"}
+            </button>
+          </div>
+
           {/* Result */}
           <div className="text-right">
             <div className="text-xs text-gray-500 dark:text-gray-400">
               내 스피드
             </div>
             <div className="text-2xl font-bold tabular-nums">{mySpeed}</div>
+            {scarf && (
+              <div className="text-xs text-violet-500">
+                구애스카프 ×1.5 (기본 {baseSpeed})
+              </div>
+            )}
           </div>
         </div>
       )}

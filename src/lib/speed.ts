@@ -46,7 +46,12 @@ export function maxSpeed(baseSpe: number): number {
   return speedStat(baseSpe, EV_MAX, "plus");
 }
 
+/** Apply a Choice Scarf to an already-computed speed (×1.5, floored). */
+export function withScarf(speed: number): number {
+  return Math.floor(speed * 1.5);
+}
+
 /** Choice Scarf speed: neutral-nature sub-max speed × 1.5. */
 export function scarfSpeed(baseSpe: number): number {
-  return Math.floor(subMaxSpeed(baseSpe) * 1.5);
+  return withScarf(subMaxSpeed(baseSpe));
 }
