@@ -226,8 +226,20 @@ function EvSlider({
         onChange={(e) => onChange(Number(e.target.value))}
         className="min-w-0 flex-1 accent-rose-500"
       />
-      <span className="w-12 shrink-0 text-right text-xs text-gray-500 tabular-nums dark:text-gray-400">
-        {value}/{EV_MAX}
+      <input
+        type="number"
+        min={0}
+        max={EV_MAX}
+        value={value}
+        onChange={(e) => {
+          const n = Number(e.target.value);
+          if (Number.isNaN(n)) return;
+          onChange(Math.max(0, Math.min(EV_MAX, n)));
+        }}
+        className="w-8 shrink-0 [appearance:textfield] rounded border border-gray-300 bg-transparent px-1 py-0.5 text-right text-xs tabular-nums outline-none focus:border-gray-500 dark:border-gray-600 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+      />
+      <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400">
+        /{EV_MAX}
       </span>
     </div>
   );

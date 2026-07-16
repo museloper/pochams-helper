@@ -294,10 +294,22 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
 
           {/* EV slider */}
           <div className="min-w-52 flex-1">
-            <div className="mb-1 flex justify-between text-xs text-gray-500 dark:text-gray-400">
+            <div className="mb-1 flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
               <span>{t("speed.ev")}</span>
-              <span className="tabular-nums">
-                {ev} / {EV_MAX}
+              <span className="flex items-center gap-1">
+                <input
+                  type="number"
+                  min={0}
+                  max={EV_MAX}
+                  value={ev}
+                  onChange={(e) => {
+                    const n = Number(e.target.value);
+                    if (Number.isNaN(n)) return;
+                    setEv(Math.max(0, Math.min(EV_MAX, n)));
+                  }}
+                  className="w-8 shrink-0 [appearance:textfield] rounded border border-gray-300 bg-transparent px-1 py-0.5 text-right text-xs tabular-nums outline-none focus:border-gray-500 dark:border-gray-600 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                />
+                <span className="tabular-nums">/ {EV_MAX}</span>
               </span>
             </div>
             <input
