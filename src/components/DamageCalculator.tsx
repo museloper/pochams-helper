@@ -11,6 +11,7 @@ import type {
 } from "@/lib/types";
 import { POKEMON_TYPES } from "@/lib/types";
 import {
+  DEFENSE_BASED_MOVES,
   EV_MAX,
   MULTI_HIT_POWERS,
   WEIGHT_BASED_MOVES,
@@ -433,7 +434,11 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
     : [];
 
   const physical = move?.category === "physical";
-  const atkLabel = t(physical ? "stat.attack" : "stat.spAttack");
+  // Body Press (physical) attacks with the user's Defense stat (issue #9).
+  const usesDefense = !!(move && DEFENSE_BASED_MOVES.has(move.slug));
+  const atkLabel = t(
+    usesDefense ? "stat.defense" : physical ? "stat.attack" : "stat.spAttack",
+  );
   const defLabel = t(physical ? "stat.defense" : "stat.spDefense");
 
   // Accumulating multi-hit moves: total power depends on how many hits land.
@@ -447,10 +452,14 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
       ? weightBasedPower(defender.weight)
       : (move?.power ?? 0);
 
-  // Effective stats.
+  // Effective stats. Body Press uses the user's Defense as the offensive stat.
   const attack = move
     ? statValue(
-        physical ? attacker!.base.atk : attacker!.base.spa,
+        usesDefense
+          ? attacker!.base.def
+          : physical
+            ? attacker!.base.atk
+            : attacker!.base.spa,
         atkEv,
         atkNature,
       )

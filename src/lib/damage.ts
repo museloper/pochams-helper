@@ -53,6 +53,9 @@ export function cumulativePower(perHit: number[], hits: number): number {
 // Low Kick share the same weight → power table.
 export const WEIGHT_BASED_MOVES = new Set(["grass-knot", "low-kick"]);
 
+// Physical moves that use the user's Defense stat instead of Attack (issue #9).
+export const DEFENSE_BASED_MOVES = new Set(["body-press"]);
+
 /** Grass Knot / Low Kick power from the target's weight in kilograms. */
 export function weightBasedPower(weightKg: number): number {
   if (weightKg >= 200) return 120;
