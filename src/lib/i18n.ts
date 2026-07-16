@@ -85,6 +85,12 @@ const ko = {
     "이 기술은 위력이 고정/가변이라 표준 데미지 계산을 할 수 없습니다.",
   "damage.emptyState":
     "공격 포켓몬과 기술, 방어 포켓몬을 선택하면 데미지와 확정/난수 1타 여부를 계산합니다.",
+  "damage.weather": "날씨",
+  "weather.none": "없음",
+  "weather.sun": "쾌청",
+  "weather.rain": "비",
+  "weather.sand": "모래바람",
+  "weather.snow": "눈",
 
   // Speed page
   "speed.pageTitle": "스피드 계산기",
@@ -223,6 +229,12 @@ const en: Record<Key, string> = {
     "This move has fixed/variable power, so standard damage cannot be calculated.",
   "damage.emptyState":
     "Pick an attacker with a move and a defender to calculate damage and OHKO/roll odds.",
+  "damage.weather": "Weather",
+  "weather.none": "None",
+  "weather.sun": "Sun",
+  "weather.rain": "Rain",
+  "weather.sand": "Sandstorm",
+  "weather.snow": "Snow",
 
   "speed.pageTitle": "Speed Calculator",
   "speed.pageSubtitle":
@@ -354,6 +366,12 @@ const ja: Record<Key, string> = {
     "この技は威力が固定/可変のため、標準ダメージ計算ができません。",
   "damage.emptyState":
     "攻撃ポケモンと技、防御ポケモンを選ぶとダメージと確定/乱数1発を計算します。",
+  "damage.weather": "天気",
+  "weather.none": "なし",
+  "weather.sun": "はれ",
+  "weather.rain": "あめ",
+  "weather.sand": "すなあらし",
+  "weather.snow": "ゆき",
 
   "speed.pageTitle": "素早さ計算機",
   "speed.pageSubtitle":

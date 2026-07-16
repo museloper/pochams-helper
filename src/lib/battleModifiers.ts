@@ -184,6 +184,52 @@ export function abilityMods(
   }
 }
 
+export type Weather = "none" | "sun" | "rain" | "sand" | "snow";
+
+export const WEATHER_OPTIONS: { value: Weather; ko: string }[] = [
+  { value: "none", ko: "없음" },
+  { value: "sun", ko: "쾌청 (불꽃 ×1.5 · 물 ×0.5)" },
+  { value: "rain", ko: "비 (물 ×1.5 · 불꽃 ×0.5)" },
+  { value: "sand", ko: "모래바람 (바위 방어 포켓몬 특방 ×1.5)" },
+  { value: "snow", ko: "눈 (얼음 방어 포켓몬 방어 ×1.5)" },
+];
+
+export interface WeatherContext {
+  moveType: PokemonType;
+  category: MoveCategory;
+  /** The defender's typing (for Sandstorm/Snow's per-type stat boosts). */
+  defenderTypes: PokemonType[];
+}
+
+/** Weather field effects: Sun/Rain boost or halve move power by type; Sandstorm
+ * and Snow raise Rock/Ice defenders' Sp. Def/Def respectively. */
+export function weatherMods(
+  weather: Weather,
+  ctx: WeatherContext,
+): Partial<Mods> {
+  const phys = ctx.category === "physical";
+  switch (weather) {
+    case "sun":
+      if (ctx.moveType === "fire") return { powerMult: 1.5 };
+      if (ctx.moveType === "water") return { powerMult: 0.5 };
+      return empty();
+    case "rain":
+      if (ctx.moveType === "water") return { powerMult: 1.5 };
+      if (ctx.moveType === "fire") return { powerMult: 0.5 };
+      return empty();
+    case "sand":
+      return !phys && ctx.defenderTypes.includes("rock")
+        ? { defMult: 1.5 }
+        : empty();
+    case "snow":
+      return phys && ctx.defenderTypes.includes("ice")
+        ? { defMult: 1.5 }
+        : empty();
+    default:
+      return empty();
+  }
+}
+
 /** Combine item/ability modifiers into a single set. */
 export function combineMods(parts: Partial<Mods>[]): Mods {
   const mods: Mods = {

@@ -28,12 +28,15 @@ import { effectiveness } from "@/lib/typeChart";
 import {
   ATTACKER_ITEMS,
   DEFENDER_ITEMS,
+  WEATHER_OPTIONS,
   abilityMods,
   combineMods,
   itemIconUrl,
   itemMods,
+  weatherMods,
   type ItemOption,
   type ModContext,
+  type Weather,
 } from "@/lib/battleModifiers";
 import { moves as moveDict } from "@/lib/data/moves";
 import { asset } from "@/lib/basePath";
@@ -71,6 +74,14 @@ const NATURES: { value: StatNature; key: TranslationKey }[] = [
 
 // A mega Pokémon must hold its Mega Stone, so its item is fixed.
 const MEGA_STONE_ITEMS: ItemOption[] = [{ id: "mega-stone", ko: "메가스톤" }];
+
+const WEATHER_LABEL_KEY: Record<Weather, TranslationKey> = {
+  none: "weather.none",
+  sun: "weather.sun",
+  rain: "weather.rain",
+  sand: "weather.sand",
+  snow: "weather.snow",
+};
 
 function useUnits(pokemon: Pokemon[]): Unit[] {
   return useMemo(
@@ -396,6 +407,9 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const lang = useLanguage((s) => s.lang);
   const t = useT();
 
+  // Shared field condition (issue #11), not attacker/defender-specific.
+  const [weather, setWeather] = useState<Weather>("none");
+
   const [attackerKey, setAttackerKey] = useState<string | null>(null);
   const [moveSlug, setMoveSlug] = useState<string | null>(null);
   const [moveQuery, setMoveQuery] = useState("");
@@ -529,6 +543,11 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
               typeEff: baseTypeEff,
             },
           ),
+          weatherMods(weather, {
+            category: move.category,
+            moveType: move.type,
+            defenderTypes: defender.types,
+          }),
         ])
       : null;
 
@@ -587,6 +606,30 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
 
   return (
     <div>
+      {/* Weather: shared field condition, affects both sides (issue #11). */}
+      <div className="mb-4 flex flex-wrap items-center gap-2">
+        <span className="text-xs text-gray-500 dark:text-gray-400">
+          {t("damage.weather")}
+        </span>
+        <div className="inline-flex flex-wrap rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
+          {WEATHER_OPTIONS.map((w) => (
+            <button
+              key={w.value}
+              type="button"
+              onClick={() => setWeather(w.value)}
+              title={w.ko}
+              className={
+                weather === w.value
+                  ? "rounded-md bg-gray-900 px-2.5 py-1 text-xs font-medium text-white dark:bg-white dark:text-gray-900"
+                  : "rounded-md px-2.5 py-1 text-xs text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
+              }
+            >
+              {t(WEATHER_LABEL_KEY[w.value])}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {/* Attacker */}
         <section className="rounded-xl border border-gray-200 p-4 dark:border-gray-700">
@@ -903,6 +946,8 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                         weight: defender.weight,
                         power: effectivePower,
                       })}`}
+                    {weather !== "none" &&
+                      ` · ${t("damage.weather")}: ${t(WEATHER_LABEL_KEY[weather])}`}
                   </div>
                 </div>
               </div>
