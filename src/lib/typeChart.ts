@@ -114,3 +114,27 @@ export function effectiveness(
 export function weaknesses(defending: PokemonType[]): PokemonType[] {
   return POKEMON_TYPES.filter((atk) => effectiveness(atk, defending) > 1);
 }
+
+export interface TypeMatchup {
+  mult: DamageMultiplier;
+  types: PokemonType[];
+}
+
+/**
+ * Attacking types grouped by their multiplier against this typing, ordered
+ * most-damaging → least (4×, 2×, ½×, ¼×, 0×). Neutral (1×) types are omitted.
+ */
+export function defensiveMatchups(defending: PokemonType[]): TypeMatchup[] {
+  const byMult = new Map<DamageMultiplier, PokemonType[]>();
+  for (const atk of POKEMON_TYPES) {
+    const mult = effectiveness(atk, defending);
+    if (mult === 1) continue;
+    const bucket = byMult.get(mult);
+    if (bucket) bucket.push(atk);
+    else byMult.set(mult, [atk]);
+  }
+  const order: DamageMultiplier[] = [4, 2, 0.5, 0.25, 0];
+  return order
+    .filter((mult) => byMult.has(mult))
+    .map((mult) => ({ mult, types: byMult.get(mult)! }));
+}

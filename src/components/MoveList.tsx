@@ -5,23 +5,28 @@ import type { Move, MoveCategory, PokemonType } from "@/lib/types";
 import { POKEMON_TYPES } from "@/lib/types";
 import { asset } from "@/lib/basePath";
 import { useLanguage } from "@/stores/useLanguage";
+import { useT, type TranslationKey } from "@/lib/i18n";
 import { TypeBadge } from "@/components/TypeBadge";
 
-const CATEGORIES: { value: MoveCategory; label: string; badge: string }[] = [
+const CATEGORIES: {
+  value: MoveCategory;
+  labelKey: TranslationKey;
+  badge: string;
+}[] = [
   {
     value: "physical",
-    label: "물리",
+    labelKey: "common.physical",
     badge:
       "bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300",
   },
   {
     value: "special",
-    label: "특수",
+    labelKey: "common.special",
     badge: "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
   },
   {
     value: "status",
-    label: "변화",
+    labelKey: "common.status",
     badge: "bg-gray-200 text-gray-600 dark:bg-gray-700 dark:text-gray-300",
   },
 ];
@@ -30,12 +35,13 @@ const CATEGORY_BY_VALUE = Object.fromEntries(
 );
 
 function CategoryBadge({ category }: { category: MoveCategory }) {
+  const t = useT();
   const c = CATEGORY_BY_VALUE[category];
   return (
     <span
       className={`shrink-0 rounded px-1 text-[10px] font-medium ${c.badge}`}
     >
-      {c.label}
+      {t(c.labelKey)}
     </span>
   );
 }
@@ -43,6 +49,7 @@ function CategoryBadge({ category }: { category: MoveCategory }) {
 /** Learnable moves grouped by type, with type / category filters. */
 export function MoveList({ moves }: { moves: Move[] }) {
   const lang = useLanguage((s) => s.lang);
+  const t = useT();
   const [typeFilter, setTypeFilter] = useState<PokemonType | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<MoveCategory | null>(
     null,
@@ -78,7 +85,7 @@ export function MoveList({ moves }: { moves: Move[] }) {
                 : "rounded-md px-2.5 py-1 text-xs text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
             }
           >
-            전체
+            {t("common.all")}
           </button>
           {CATEGORIES.map((c) => (
             <button
@@ -93,7 +100,7 @@ export function MoveList({ moves }: { moves: Move[] }) {
                   : "rounded-md px-2.5 py-1 text-xs text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
               }
             >
-              {c.label}
+              {t(c.labelKey)}
             </button>
           ))}
         </div>
@@ -109,7 +116,7 @@ export function MoveList({ moves }: { moves: Move[] }) {
               : "flex h-8 items-center rounded-md border border-gray-200 px-2.5 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
           }
         >
-          전체
+          {t("common.all")}
         </button>
         {presentTypes.map((type) => (
           <button
@@ -154,9 +161,9 @@ export function MoveList({ moves }: { moves: Move[] }) {
                   </span>
                   <span className="shrink-0 text-xs text-gray-400 tabular-nums">
                     {move.category === "status"
-                      ? "변화"
-                      : `위력 ${move.power ?? "-"}`}{" "}
-                    · 명중 {move.accuracy ?? "-"}
+                      ? t("common.status")
+                      : t("move.power", { power: move.power ?? "-" })}{" "}
+                    · {t("move.accuracy", { acc: move.accuracy ?? "-" })}
                   </span>
                 </div>
               ))}
@@ -164,7 +171,7 @@ export function MoveList({ moves }: { moves: Move[] }) {
           </div>
         ))}
         {groups.length === 0 && (
-          <p className="text-sm text-gray-400">해당 조건의 기술이 없습니다.</p>
+          <p className="text-sm text-gray-400">{t("moveList.empty")}</p>
         )}
       </div>
     </div>

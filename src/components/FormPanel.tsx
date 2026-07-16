@@ -1,17 +1,58 @@
 "use client";
 
-import type { Language, PokemonForm, StatKey } from "@/lib/types";
+import type {
+  DamageMultiplier,
+  Language,
+  PokemonForm,
+  StatKey,
+} from "@/lib/types";
 import { STAT_KEYS } from "@/lib/types";
 import { useLanguage } from "@/stores/useLanguage";
+import { useT, type TranslationKey } from "@/lib/i18n";
+import { defensiveMatchups } from "@/lib/typeChart";
 import { TypeBadge } from "@/components/TypeBadge";
 
-const STAT_LABEL: Record<StatKey, string> = {
-  hp: "HP",
-  atk: "공격",
-  def: "방어",
-  spa: "특수공격",
-  spd: "특수방어",
-  spe: "스피드",
+const STAT_LABEL_KEY: Record<StatKey, TranslationKey> = {
+  hp: "stat.hp",
+  atk: "stat.attack",
+  def: "stat.defense",
+  spa: "stat.spAttack",
+  spd: "stat.spDefense",
+  spe: "stat.speed",
+};
+
+// Matchup multiplier → label key + badge color (weak = red, resist = green).
+const MULT_STYLE: Record<
+  DamageMultiplier,
+  { key: TranslationKey; badge: string }
+> = {
+  4: {
+    key: "detail.mult.x4",
+    badge: "bg-red-200 text-red-800 dark:bg-red-900/50 dark:text-red-200",
+  },
+  2: {
+    key: "detail.mult.x2",
+    badge:
+      "bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300",
+  },
+  0.5: {
+    key: "detail.mult.xHalf",
+    badge:
+      "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300",
+  },
+  0.25: {
+    key: "detail.mult.xQuarter",
+    badge:
+      "bg-green-200 text-green-800 dark:bg-green-900/50 dark:text-green-200",
+  },
+  0: {
+    key: "detail.mult.x0",
+    badge: "bg-gray-200 text-gray-600 dark:bg-gray-700 dark:text-gray-300",
+  },
+  1: {
+    key: "detail.matchup",
+    badge: "",
+  },
 };
 // Per-stat bar colors (H·A·B·C·D·S), the conventional Pokémon stat palette.
 const STAT_COLOR: Record<StatKey, string> = {
@@ -37,6 +78,8 @@ function bst(form: PokemonForm): number {
 
 export function FormPanel({ form }: { form: PokemonForm }) {
   const lang = useLanguage((s) => s.lang);
+  const t = useT();
+  const matchups = defensiveMatchups(form.types);
   return (
     <section className="rounded-xl border border-gray-200 p-5 dark:border-gray-700">
       <div className="flex items-center gap-4">
@@ -64,10 +107,10 @@ export function FormPanel({ form }: { form: PokemonForm }) {
       <div className="mt-5">
         <div className="mb-2 flex items-baseline justify-between">
           <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400">
-            종족값
+            {t("detail.stats")}
           </h3>
           <span className="text-sm text-gray-500 dark:text-gray-400">
-            총합 {bst(form)}
+            {t("detail.total", { n: bst(form) })}
           </span>
         </div>
         <dl className="space-y-1.5">
@@ -77,7 +120,7 @@ export function FormPanel({ form }: { form: PokemonForm }) {
             return (
               <div key={key} className="flex items-center gap-3">
                 <dt className="w-16 shrink-0 text-xs text-gray-500 dark:text-gray-400">
-                  {STAT_LABEL[key]}
+                  {t(STAT_LABEL_KEY[key])}
                 </dt>
                 <dd className="w-8 shrink-0 text-right text-sm tabular-nums">
                   {value}
@@ -99,7 +142,7 @@ export function FormPanel({ form }: { form: PokemonForm }) {
 
       <div className="mt-5">
         <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400">
-          특성
+          {t("detail.abilities")}
         </h3>
         <div className="flex flex-wrap gap-2">
           {form.abilities.map((ability) => (
@@ -111,11 +154,37 @@ export function FormPanel({ form }: { form: PokemonForm }) {
               {ability[lang]}
               {ability.hidden && (
                 <span className="rounded bg-purple-100 px-1 text-[10px] font-medium text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">
-                  드림
+                  {t("detail.hiddenBadge")}
                 </span>
               )}
             </span>
           ))}
+        </div>
+      </div>
+
+      {/* Defensive matchups: weaknesses and resistances (issue #7). */}
+      <div className="mt-5">
+        <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400">
+          {t("detail.matchup")}
+        </h3>
+        <div className="space-y-1.5">
+          {matchups.map(({ mult, types }) => {
+            const style = MULT_STYLE[mult];
+            return (
+              <div key={mult} className="flex items-center gap-2">
+                <span
+                  className={`w-24 shrink-0 rounded px-1.5 py-0.5 text-center text-[11px] font-medium ${style.badge}`}
+                >
+                  {t(style.key)}
+                </span>
+                <div className="flex flex-wrap gap-1">
+                  {types.map((type) => (
+                    <TypeBadge key={type} type={type} />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

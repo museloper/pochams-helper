@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { roster } from "@/lib/data/pokemon";
 import { moves as moveDict } from "@/lib/data/moves";
 import type { Move } from "@/lib/types";
 import { MoveList } from "@/components/MoveList";
 import { FormPanel } from "@/components/FormPanel";
+import { DexBackLink, LearnableMovesHeading } from "@/components/DetailChrome";
 
 export function generateStaticParams() {
   return roster.map((pokemon) => ({ slug: pokemon.slug }));
@@ -40,12 +40,7 @@ export default async function PokemonDetailPage({
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 p-6">
-      <Link
-        href="/pokemon"
-        className="text-sm text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
-      >
-        ← 도감
-      </Link>
+      <DexBackLink />
 
       <div className="mt-4 space-y-4">
         {pokemon.forms.map((form) => (
@@ -54,9 +49,7 @@ export default async function PokemonDetailPage({
       </div>
 
       <section className="mt-6">
-        <h3 className="mb-3 text-sm font-semibold text-gray-500 dark:text-gray-400">
-          배울 수 있는 기술 ({learnable.length})
-        </h3>
+        <LearnableMovesHeading count={learnable.length} />
         <MoveList moves={learnable} />
       </section>
     </main>

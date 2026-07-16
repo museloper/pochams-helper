@@ -306,8 +306,8 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                     type="button"
                     disabled={disabled}
                     onClick={() => toggleType(type)}
-                    title={info.ko}
-                    aria-label={info.ko}
+                    title={info[lang]}
+                    aria-label={info[lang]}
                     aria-pressed={active}
                     className={
                       active
@@ -320,7 +320,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={asset(`/types/${type}.png`)}
-                      alt={info.ko}
+                      alt={info[lang]}
                       width={40}
                       height={40}
                       className="h-10 w-10 rounded-lg"

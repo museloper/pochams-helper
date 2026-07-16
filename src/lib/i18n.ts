@@ -130,6 +130,27 @@ const ko = {
   "speed.group.scarf": "구애스카프",
   "speed.group.scarfDesc": "준속 × 1.5",
   "speed.group.scarfNote": "준속 상태에서 구애스카프 적용 기준",
+
+  // Move list
+  "common.status": "변화",
+  "stat.speed": "스피드",
+  "move.power": "위력 {power}",
+  "move.accuracy": "명중 {acc}",
+  "moveList.empty": "해당 조건의 기술이 없습니다.",
+
+  // Pokémon detail page
+  "detail.backToDex": "← 도감",
+  "detail.learnableMoves": "배울 수 있는 기술 ({n})",
+  "detail.stats": "종족값",
+  "detail.total": "총합 {n}",
+  "detail.abilities": "특성",
+  "detail.hiddenBadge": "드림",
+  "detail.matchup": "약점 · 내구",
+  "detail.mult.x4": "×4 매우 약함",
+  "detail.mult.x2": "×2 약함",
+  "detail.mult.xHalf": "×½ 반감",
+  "detail.mult.xQuarter": "×¼ 반감",
+  "detail.mult.x0": "×0 무효",
 } as const;
 
 type Key = keyof typeof ko;
@@ -243,6 +264,25 @@ const en: Record<Key, string> = {
   "speed.group.scarf": "Choice Scarf",
   "speed.group.scarfDesc": "Sub-max × 1.5",
   "speed.group.scarfNote": "Choice Scarf on a sub-max spread",
+
+  "common.status": "Status",
+  "stat.speed": "Speed",
+  "move.power": "Power {power}",
+  "move.accuracy": "Acc {acc}",
+  "moveList.empty": "No moves match these filters.",
+
+  "detail.backToDex": "← Dex",
+  "detail.learnableMoves": "Learnable moves ({n})",
+  "detail.stats": "Base stats",
+  "detail.total": "Total {n}",
+  "detail.abilities": "Abilities",
+  "detail.hiddenBadge": "Hidden",
+  "detail.matchup": "Weaknesses · Resistances",
+  "detail.mult.x4": "×4 very weak",
+  "detail.mult.x2": "×2 weak",
+  "detail.mult.xHalf": "×½ resists",
+  "detail.mult.xQuarter": "×¼ resists",
+  "detail.mult.x0": "×0 immune",
 };
 
 const ja: Record<Key, string> = {
@@ -354,6 +394,25 @@ const ja: Record<Key, string> = {
   "speed.group.scarf": "こだわりスカーフ",
   "speed.group.scarfDesc": "準速 × 1.5",
   "speed.group.scarfNote": "準速にこだわりスカーフを適用した基準",
+
+  "common.status": "変化",
+  "stat.speed": "素早さ",
+  "move.power": "威力 {power}",
+  "move.accuracy": "命中 {acc}",
+  "moveList.empty": "この条件の技はありません。",
+
+  "detail.backToDex": "← 図鑑",
+  "detail.learnableMoves": "覚える技（{n}）",
+  "detail.stats": "種族値",
+  "detail.total": "合計 {n}",
+  "detail.abilities": "とくせい",
+  "detail.hiddenBadge": "隠れ",
+  "detail.matchup": "弱点 · 耐性",
+  "detail.mult.x4": "×4 とても弱い",
+  "detail.mult.x2": "×2 弱い",
+  "detail.mult.xHalf": "×½ 半減",
+  "detail.mult.xQuarter": "×¼ 半減",
+  "detail.mult.x0": "×0 無効",
 };
 
 const DICTS: Record<Language, Record<Key, string>> = { ko, en, ja };
