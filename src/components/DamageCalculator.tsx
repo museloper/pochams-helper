@@ -13,11 +13,13 @@ import { POKEMON_TYPES } from "@/lib/types";
 import {
   EV_MAX,
   MULTI_HIT_POWERS,
+  WEIGHT_BASED_MOVES,
   cumulativePower,
   damageRolls,
   hpValue,
   koVerdict,
   statValue,
+  weightBasedPower,
   withStage,
   type StatNature,
 } from "@/lib/damage";
@@ -45,6 +47,7 @@ type Unit = {
   sprite: string;
   types: PokemonType[];
   base: Record<StatKey, number>;
+  weight: number;
   abilities: Ability[];
   damagingMoves: Move[];
   isMega: boolean;
@@ -86,6 +89,7 @@ function useUnits(pokemon: Pokemon[]): Unit[] {
           sprite: form.sprite,
           types: form.types,
           base: form.baseStats,
+          weight: form.weight,
           abilities: form.abilities,
           damagingMoves,
           isMega: form.kind === "mega",
@@ -435,9 +439,13 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   // Accumulating multi-hit moves: total power depends on how many hits land.
   const perHitPowers = move ? MULTI_HIT_POWERS[move.slug] : undefined;
   const isMultiHit = !!perHitPowers;
+  // Weight-based moves (Grass Knot / Low Kick): power from the target's weight.
+  const isWeightBased = !!(move && WEIGHT_BASED_MOVES.has(move.slug));
   const effectivePower = perHitPowers
     ? cumulativePower(perHitPowers, hitCount)
-    : (move?.power ?? 0);
+    : isWeightBased && defender
+      ? weightBasedPower(defender.weight)
+      : (move?.power ?? 0);
 
   // Effective stats.
   const attack = move
@@ -866,6 +874,12 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     {isMultiHit &&
                       ` · ${t("damage.multiHitInfo", {
                         hits: hitCount,
+                        power: effectivePower,
+                      })}`}
+                    {isWeightBased &&
+                      defender &&
+                      ` · ${t("damage.weightInfo", {
+                        weight: defender.weight,
                         power: effectivePower,
                       })}`}
                   </div>

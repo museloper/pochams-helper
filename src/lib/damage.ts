@@ -49,6 +49,20 @@ export function cumulativePower(perHit: number[], hits: number): number {
   return perHit.slice(0, n).reduce((sum, p) => sum + p, 0);
 }
 
+// Moves whose power is set by the target's weight (issue #6): Grass Knot and
+// Low Kick share the same weight → power table.
+export const WEIGHT_BASED_MOVES = new Set(["grass-knot", "low-kick"]);
+
+/** Grass Knot / Low Kick power from the target's weight in kilograms. */
+export function weightBasedPower(weightKg: number): number {
+  if (weightKg >= 200) return 120;
+  if (weightKg >= 100) return 100;
+  if (weightKg >= 50) return 80;
+  if (weightKg >= 25) return 60;
+  if (weightKg >= 10) return 40;
+  return 20;
+}
+
 export interface DamageInput {
   power: number;
   /** Attacker's effective Atk (physical) or SpA (special), after item/ability. */

@@ -16,7 +16,7 @@ import { fileURLToPath } from "node:url";
 
 const INDEX_URL = "https://championsbattledata.com/api/index";
 const ASSET_BASE = "https://championsbattledata.com";
-const POKEAPI = "https://pokeapi.co/api/v2";
+export const POKEAPI = "https://pokeapi.co/api/v2";
 const OUT_DIR = join(
   dirname(fileURLToPath(import.meta.url)),
   "..",
@@ -129,7 +129,7 @@ function detectRegion(slug) {
 }
 
 /** Reduce a Champions slug to its base PokéAPI species slug. */
-function toSpecies(slug) {
+export function toSpecies(slug) {
   return slug
     .replace(/^(alolan|galarian|hisuian|paldean)-/, "")
     .replace(/^rotom-(fan|frost|heat|mow|wash)$/, "rotom")
@@ -147,7 +147,7 @@ function megaBaseSlug(formName) {
 }
 
 /** Candidate PokéAPI /pokemon ids for a Champions entry slug, best first. */
-function apiKeyCandidates(slug) {
+export function apiKeyCandidates(slug) {
   const c = [slug];
   const push = (v) => v && v !== slug && !c.includes(v) && c.push(v);
   const paldeanTauros = slug.match(/^paldean-tauros-(\w+)-breed$/);
@@ -179,7 +179,7 @@ function apiKeyCandidates(slug) {
 }
 
 /** PokéAPI /pokemon id for a mega form, e.g. "Mega Charizard X" -> "charizard-mega-x". */
-function megaApiKey(formName) {
+export function megaApiKey(formName) {
   const xy = / X$/.test(formName) ? "-x" : / Y$/.test(formName) ? "-y" : "";
   return `${megaBaseSlug(formName)}-mega${xy}`;
 }
@@ -242,7 +242,7 @@ function mapForm(f, warn) {
 }
 
 /** Run `fn` over `items` with bounded concurrency. */
-async function pMap(items, fn, concurrency = 16) {
+export async function pMap(items, fn, concurrency = 16) {
   const results = new Array(items.length);
   let cursor = 0;
   async function worker() {
@@ -255,7 +255,7 @@ async function pMap(items, fn, concurrency = 16) {
   return results;
 }
 
-async function getJson(url) {
+export async function getJson(url) {
   const res = await fetch(url);
   return res.ok ? res.json() : null;
 }
@@ -483,7 +483,11 @@ async function main() {
   }
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Only run the full ingest when executed directly, so helper functions can be
+// imported (e.g. by scripts/add-weight.mjs) without side effects.
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

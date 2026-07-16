@@ -160,6 +160,8 @@ export interface PokemonForm {
   sprite: string;
   /** 1 or 2 types, in the game's listed order. */
   types: PokemonType[];
+  /** Weight in kilograms (for weight-based moves like Grass Knot / Low Kick). */
+  weight: number;
   baseStats: BaseStats;
   /** Possible abilities for this form (normal first, then hidden). */
   abilities: Ability[];

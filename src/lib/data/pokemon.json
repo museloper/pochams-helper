@@ -16,6 +16,7 @@
           "grass",
           "ice"
         ],
+        "weight": 135.5,
         "baseStats": {
           "hp": 90,
           "atk": 92,
@@ -52,6 +53,7 @@
           "grass",
           "ice"
         ],
+        "weight": 185,
         "baseStats": {
           "hp": 90,
           "atk": 132,
@@ -159,6 +161,7 @@
         "types": [
           "dark"
         ],
+        "weight": 47,
         "baseStats": {
           "hp": 65,
           "atk": 130,
@@ -200,6 +203,7 @@
         "types": [
           "dark"
         ],
+        "weight": 49,
         "baseStats": {
           "hp": 65,
           "atk": 150,
@@ -314,6 +318,7 @@
           "steel",
           "ghost"
         ],
+        "weight": 53,
         "baseStats": {
           "hp": 60,
           "atk": 50,
@@ -402,6 +407,7 @@
           "rock",
           "flying"
         ],
+        "weight": 59,
         "baseStats": {
           "hp": 80,
           "atk": 105,
@@ -444,6 +450,7 @@
           "rock",
           "flying"
         ],
+        "weight": 79,
         "baseStats": {
           "hp": 80,
           "atk": 135,
@@ -545,6 +552,7 @@
           "steel",
           "rock"
         ],
+        "weight": 360,
         "baseStats": {
           "hp": 70,
           "atk": 110,
@@ -586,6 +594,7 @@
         "types": [
           "steel"
         ],
+        "weight": 395,
         "baseStats": {
           "hp": 70,
           "atk": 140,
@@ -711,6 +720,7 @@
         "types": [
           "psychic"
         ],
+        "weight": 48,
         "baseStats": {
           "hp": 55,
           "atk": 50,
@@ -752,6 +762,7 @@
         "types": [
           "psychic"
         ],
+        "weight": 48,
         "baseStats": {
           "hp": 55,
           "atk": 50,
@@ -854,6 +865,7 @@
         "types": [
           "fairy"
         ],
+        "weight": 0.5,
         "baseStats": {
           "hp": 65,
           "atk": 60,
@@ -952,6 +964,7 @@
           "ice",
           "fairy"
         ],
+        "weight": 19.9,
         "baseStats": {
           "hp": 73,
           "atk": 67,
@@ -1065,6 +1078,7 @@
           "electric",
           "psychic"
         ],
+        "weight": 21,
         "baseStats": {
           "hp": 60,
           "atk": 85,
@@ -1182,6 +1196,7 @@
           "dragon",
           "flying"
         ],
+        "weight": 20.6,
         "baseStats": {
           "hp": 75,
           "atk": 70,
@@ -1218,6 +1233,7 @@
           "dragon",
           "fairy"
         ],
+        "weight": 20.6,
         "baseStats": {
           "hp": 75,
           "atk": 110,
@@ -1325,6 +1341,7 @@
         "types": [
           "electric"
         ],
+        "weight": 61.5,
         "baseStats": {
           "hp": 90,
           "atk": 75,
@@ -1361,6 +1378,7 @@
           "electric",
           "dragon"
         ],
+        "weight": 61.5,
         "baseStats": {
           "hp": 90,
           "atk": 95,
@@ -1471,6 +1489,7 @@
           "fighting",
           "ghost"
         ],
+        "weight": 56,
         "baseStats": {
           "hp": 110,
           "atk": 115,
@@ -1601,6 +1620,7 @@
           "grass",
           "dragon"
         ],
+        "weight": 13,
         "baseStats": {
           "hp": 110,
           "atk": 85,
@@ -1707,6 +1727,7 @@
           "water",
           "bug"
         ],
+        "weight": 82,
         "baseStats": {
           "hp": 68,
           "atk": 70,
@@ -1806,6 +1827,7 @@
         "types": [
           "poison"
         ],
+        "weight": 65,
         "baseStats": {
           "hp": 60,
           "atk": 95,
@@ -1930,6 +1952,7 @@
         "types": [
           "fire"
         ],
+        "weight": 155,
         "baseStats": {
           "hp": 90,
           "atk": 110,
@@ -2042,6 +2065,7 @@
           "steel",
           "dragon"
         ],
+        "weight": 60,
         "baseStats": {
           "hp": 90,
           "atk": 105,
@@ -2148,6 +2172,7 @@
           "bug",
           "poison"
         ],
+        "weight": 33.5,
         "baseStats": {
           "hp": 70,
           "atk": 90,
@@ -2267,6 +2292,7 @@
           "fire",
           "psychic"
         ],
+        "weight": 85,
         "baseStats": {
           "hp": 85,
           "atk": 60,
@@ -2370,6 +2396,7 @@
         "types": [
           "fairy"
         ],
+        "weight": 15.5,
         "baseStats": {
           "hp": 101,
           "atk": 72,
@@ -2466,6 +2493,7 @@
         "types": [
           "normal"
         ],
+        "weight": 31,
         "baseStats": {
           "hp": 103,
           "atk": 60,
@@ -2508,6 +2536,7 @@
           "normal",
           "fairy"
         ],
+        "weight": 32,
         "baseStats": {
           "hp": 103,
           "atk": 60,
@@ -2620,6 +2649,7 @@
           "rock",
           "ice"
         ],
+        "weight": 225,
         "baseStats": {
           "hp": 123,
           "atk": 77,
@@ -2724,6 +2754,7 @@
         "types": [
           "ice"
         ],
+        "weight": 505,
         "baseStats": {
           "hp": 95,
           "atk": 117,
@@ -2828,6 +2859,7 @@
           "water",
           "fairy"
         ],
+        "weight": 28.5,
         "baseStats": {
           "hp": 100,
           "atk": 50,
@@ -2948,6 +2980,7 @@
         "types": [
           "ghost"
         ],
+        "weight": 12.5,
         "baseStats": {
           "hp": 64,
           "atk": 115,
@@ -2989,6 +3022,7 @@
         "types": [
           "ghost"
         ],
+        "weight": 13,
         "baseStats": {
           "hp": 64,
           "atk": 165,
@@ -3098,6 +3132,7 @@
           "rock",
           "water"
         ],
+        "weight": 96,
         "baseStats": {
           "hp": 72,
           "atk": 105,
@@ -3140,6 +3175,7 @@
           "rock",
           "fighting"
         ],
+        "weight": 100,
         "baseStats": {
           "hp": 72,
           "atk": 140,
@@ -3254,6 +3290,7 @@
           "water",
           "ghost"
         ],
+        "weight": 110,
         "baseStats": {
           "hp": 120,
           "atk": 92,
@@ -3358,6 +3395,7 @@
           "water",
           "ghost"
         ],
+        "weight": 110,
         "baseStats": {
           "hp": 120,
           "atk": 112,
@@ -3462,6 +3500,7 @@
           "rock",
           "steel"
         ],
+        "weight": 149.5,
         "baseStats": {
           "hp": 60,
           "atk": 52,
@@ -3578,6 +3617,7 @@
         "types": [
           "ice"
         ],
+        "weight": 260,
         "baseStats": {
           "hp": 95,
           "atk": 130,
@@ -3708,6 +3748,7 @@
           "bug",
           "poison"
         ],
+        "weight": 29.5,
         "baseStats": {
           "hp": 65,
           "atk": 90,
@@ -3744,6 +3785,7 @@
           "bug",
           "poison"
         ],
+        "weight": 40.5,
         "baseStats": {
           "hp": 65,
           "atk": 150,
@@ -3839,6 +3881,7 @@
         "types": [
           "electric"
         ],
+        "weight": 113,
         "baseStats": {
           "hp": 109,
           "atk": 64,
@@ -3932,6 +3975,7 @@
         "types": [
           "water"
         ],
+        "weight": 85.5,
         "baseStats": {
           "hp": 79,
           "atk": 83,
@@ -3967,6 +4011,7 @@
         "types": [
           "water"
         ],
+        "weight": 101.1,
         "baseStats": {
           "hp": 79,
           "atk": 103,
@@ -4083,6 +4128,7 @@
           "fire",
           "fighting"
         ],
+        "weight": 52,
         "baseStats": {
           "hp": 80,
           "atk": 120,
@@ -4119,6 +4165,7 @@
           "fire",
           "fighting"
         ],
+        "weight": 52,
         "baseStats": {
           "hp": 80,
           "atk": 160,
@@ -4240,6 +4287,7 @@
           "fire",
           "ground"
         ],
+        "weight": 220,
         "baseStats": {
           "hp": 70,
           "atk": 100,
@@ -4282,6 +4330,7 @@
           "fire",
           "ground"
         ],
+        "weight": 320.5,
         "baseStats": {
           "hp": 70,
           "atk": 120,
@@ -4391,6 +4440,7 @@
         "types": [
           "normal"
         ],
+        "weight": 0.8,
         "baseStats": {
           "hp": 70,
           "atk": 70,
@@ -4471,6 +4521,7 @@
           "fire",
           "ghost"
         ],
+        "weight": 62,
         "baseStats": {
           "hp": 75,
           "atk": 125,
@@ -4575,6 +4626,7 @@
           "ghost",
           "fire"
         ],
+        "weight": 34.3,
         "baseStats": {
           "hp": 60,
           "atk": 55,
@@ -4617,6 +4669,7 @@
           "ghost",
           "fire"
         ],
+        "weight": 69.6,
         "baseStats": {
           "hp": 60,
           "atk": 75,
@@ -4714,6 +4767,7 @@
           "fire",
           "flying"
         ],
+        "weight": 90.5,
         "baseStats": {
           "hp": 78,
           "atk": 84,
@@ -4750,6 +4804,7 @@
           "fire",
           "dragon"
         ],
+        "weight": 110.5,
         "baseStats": {
           "hp": 78,
           "atk": 130,
@@ -4780,6 +4835,7 @@
           "fire",
           "flying"
         ],
+        "weight": 100.5,
         "baseStats": {
           "hp": 78,
           "atk": 104,
@@ -4895,6 +4951,7 @@
           "grass",
           "fighting"
         ],
+        "weight": 90,
         "baseStats": {
           "hp": 88,
           "atk": 107,
@@ -4931,6 +4988,7 @@
           "grass",
           "fighting"
         ],
+        "weight": 90,
         "baseStats": {
           "hp": 88,
           "atk": 137,
@@ -5060,6 +5118,7 @@
         "types": [
           "psychic"
         ],
+        "weight": 1,
         "baseStats": {
           "hp": 75,
           "atk": 50,
@@ -5090,6 +5149,7 @@
           "psychic",
           "steel"
         ],
+        "weight": 8,
         "baseStats": {
           "hp": 75,
           "atk": 50,
@@ -5197,6 +5257,7 @@
         "types": [
           "water"
         ],
+        "weight": 35.3,
         "baseStats": {
           "hp": 71,
           "atk": 73,
@@ -5291,6 +5352,7 @@
         "types": [
           "fairy"
         ],
+        "weight": 40,
         "baseStats": {
           "hp": 95,
           "atk": 70,
@@ -5333,6 +5395,7 @@
           "fairy",
           "flying"
         ],
+        "weight": 42.3,
         "baseStats": {
           "hp": 95,
           "atk": 80,
@@ -5466,6 +5529,7 @@
         "types": [
           "ghost"
         ],
+        "weight": 76.5,
         "baseStats": {
           "hp": 58,
           "atk": 50,
@@ -5562,6 +5626,7 @@
         "types": [
           "fighting"
         ],
+        "weight": 87,
         "baseStats": {
           "hp": 105,
           "atk": 140,
@@ -5678,6 +5743,7 @@
           "flying",
           "steel"
         ],
+        "weight": 75,
         "baseStats": {
           "hp": 98,
           "atk": 87,
@@ -5788,6 +5854,7 @@
           "fighting",
           "ice"
         ],
+        "weight": 180,
         "baseStats": {
           "hp": 97,
           "atk": 132,
@@ -5830,6 +5897,7 @@
           "fighting",
           "ice"
         ],
+        "weight": 252.8,
         "baseStats": {
           "hp": 97,
           "atk": 157,
@@ -5936,6 +6004,7 @@
           "grass",
           "ghost"
         ],
+        "weight": 36.6,
         "baseStats": {
           "hp": 78,
           "atk": 107,
@@ -6051,6 +6120,7 @@
           "electric",
           "fairy"
         ],
+        "weight": 2.2,
         "baseStats": {
           "hp": 67,
           "atk": 58,
@@ -6156,6 +6226,7 @@
           "fire",
           "psychic"
         ],
+        "weight": 39,
         "baseStats": {
           "hp": 75,
           "atk": 69,
@@ -6192,6 +6263,7 @@
           "fire",
           "psychic"
         ],
+        "weight": 39,
         "baseStats": {
           "hp": 75,
           "atk": 69,
@@ -6307,6 +6379,7 @@
           "normal",
           "ground"
         ],
+        "weight": 42.4,
         "baseStats": {
           "hp": 85,
           "atk": 56,
@@ -6419,6 +6492,7 @@
         "types": [
           "normal"
         ],
+        "weight": 4,
         "baseStats": {
           "hp": 48,
           "atk": 48,
@@ -6469,6 +6543,7 @@
           "poison",
           "dragon"
         ],
+        "weight": 81.5,
         "baseStats": {
           "hp": 65,
           "atk": 75,
@@ -6511,6 +6586,7 @@
           "poison",
           "dragon"
         ],
+        "weight": 100.3,
         "baseStats": {
           "hp": 65,
           "atk": 85,
@@ -6606,6 +6682,7 @@
           "dragon",
           "ghost"
         ],
+        "weight": 50,
         "baseStats": {
           "hp": 88,
           "atk": 120,
@@ -6724,6 +6801,7 @@
           "dragon",
           "flying"
         ],
+        "weight": 210,
         "baseStats": {
           "hp": 91,
           "atk": 134,
@@ -6760,6 +6838,7 @@
           "dragon",
           "flying"
         ],
+        "weight": 290,
         "baseStats": {
           "hp": 91,
           "atk": 124,
@@ -6886,6 +6965,7 @@
           "normal",
           "dragon"
         ],
+        "weight": 185,
         "baseStats": {
           "hp": 78,
           "atk": 60,
@@ -6928,6 +7008,7 @@
           "normal",
           "dragon"
         ],
+        "weight": 240.5,
         "baseStats": {
           "hp": 78,
           "atk": 85,
@@ -7036,6 +7117,7 @@
         "types": [
           "electric"
         ],
+        "weight": 80.5,
         "baseStats": {
           "hp": 85,
           "atk": 115,
@@ -7065,6 +7147,7 @@
         "types": [
           "electric"
         ],
+        "weight": 180,
         "baseStats": {
           "hp": 85,
           "atk": 145,
@@ -7183,6 +7266,7 @@
           "fire",
           "fighting"
         ],
+        "weight": 150,
         "baseStats": {
           "hp": 110,
           "atk": 123,
@@ -7219,6 +7303,7 @@
           "fire",
           "fighting"
         ],
+        "weight": 180.3,
         "baseStats": {
           "hp": 110,
           "atk": 148,
@@ -7341,6 +7426,7 @@
           "electric",
           "flying"
         ],
+        "weight": 5,
         "baseStats": {
           "hp": 55,
           "atk": 75,
@@ -7436,6 +7522,7 @@
           "water",
           "steel"
         ],
+        "weight": 84.5,
         "baseStats": {
           "hp": 84,
           "atk": 86,
@@ -7558,6 +7645,7 @@
         "types": [
           "psychic"
         ],
+        "weight": 90,
         "baseStats": {
           "hp": 95,
           "atk": 60,
@@ -7669,6 +7757,7 @@
         "types": [
           "psychic"
         ],
+        "weight": 26.5,
         "baseStats": {
           "hp": 65,
           "atk": 65,
@@ -7785,6 +7874,7 @@
           "ground",
           "steel"
         ],
+        "weight": 40.4,
         "baseStats": {
           "hp": 110,
           "atk": 135,
@@ -7827,6 +7917,7 @@
           "ground",
           "steel"
         ],
+        "weight": 60,
         "baseStats": {
           "hp": 110,
           "atk": 165,
@@ -7922,6 +8013,7 @@
         "types": [
           "fighting"
         ],
+        "weight": 62,
         "baseStats": {
           "hp": 65,
           "atk": 100,
@@ -7957,6 +8049,7 @@
         "types": [
           "fighting"
         ],
+        "weight": 99,
         "baseStats": {
           "hp": 65,
           "atk": 135,
@@ -8051,6 +8144,7 @@
           "electric",
           "flying"
         ],
+        "weight": 0.3,
         "baseStats": {
           "hp": 50,
           "atk": 65,
@@ -8138,6 +8232,7 @@
           "normal",
           "psychic"
         ],
+        "weight": 160,
         "baseStats": {
           "hp": 120,
           "atk": 90,
@@ -8262,6 +8357,7 @@
         "types": [
           "water"
         ],
+        "weight": 88.8,
         "baseStats": {
           "hp": 85,
           "atk": 105,
@@ -8298,6 +8394,7 @@
           "water",
           "dragon"
         ],
+        "weight": 108.8,
         "baseStats": {
           "hp": 85,
           "atk": 160,
@@ -8423,6 +8520,7 @@
           "grass",
           "dragon"
         ],
+        "weight": 1,
         "baseStats": {
           "hp": 70,
           "atk": 110,
@@ -8521,6 +8619,7 @@
         "types": [
           "fire"
         ],
+        "weight": 25,
         "baseStats": {
           "hp": 65,
           "atk": 130,
@@ -8626,6 +8725,7 @@
         "types": [
           "fairy"
         ],
+        "weight": 0.9,
         "baseStats": {
           "hp": 74,
           "atk": 65,
@@ -8661,6 +8761,7 @@
         "types": [
           "fairy"
         ],
+        "weight": 100.8,
         "baseStats": {
           "hp": 74,
           "atk": 85,
@@ -8744,6 +8845,7 @@
         "types": [
           "fairy"
         ],
+        "weight": 10,
         "baseStats": {
           "hp": 78,
           "atk": 65,
@@ -8839,6 +8941,7 @@
           "bug",
           "steel"
         ],
+        "weight": 125.8,
         "baseStats": {
           "hp": 75,
           "atk": 90,
@@ -8957,6 +9060,7 @@
           "ice",
           "ghost"
         ],
+        "weight": 26.6,
         "baseStats": {
           "hp": 70,
           "atk": 80,
@@ -8993,6 +9097,7 @@
           "ice",
           "ghost"
         ],
+        "weight": 29.6,
         "baseStats": {
           "hp": 70,
           "atk": 80,
@@ -9104,6 +9209,7 @@
           "electric",
           "ice"
         ],
+        "weight": 0.3,
         "baseStats": {
           "hp": 50,
           "atk": 65,
@@ -9190,6 +9296,7 @@
         "types": [
           "normal"
         ],
+        "weight": 28,
         "baseStats": {
           "hp": 75,
           "atk": 80,
@@ -9273,6 +9380,7 @@
           "poison",
           "psychic"
         ],
+        "weight": 70.5,
         "baseStats": {
           "hp": 95,
           "atk": 100,
@@ -9420,6 +9528,7 @@
           "poison",
           "psychic"
         ],
+        "weight": 79.5,
         "baseStats": {
           "hp": 95,
           "atk": 65,
@@ -9570,6 +9679,7 @@
           "ground",
           "steel"
         ],
+        "weight": 20.5,
         "baseStats": {
           "hp": 109,
           "atk": 81,
@@ -9666,6 +9776,7 @@
           "psychic",
           "fighting"
         ],
+        "weight": 52,
         "baseStats": {
           "hp": 68,
           "atk": 125,
@@ -9708,6 +9819,7 @@
           "psychic",
           "fighting"
         ],
+        "weight": 56.4,
         "baseStats": {
           "hp": 68,
           "atk": 165,
@@ -9855,6 +9967,7 @@
         "types": [
           "poison"
         ],
+        "weight": 107.3,
         "baseStats": {
           "hp": 80,
           "atk": 95,
@@ -9963,6 +10076,7 @@
           "dragon",
           "ground"
         ],
+        "weight": 95,
         "baseStats": {
           "hp": 108,
           "atk": 130,
@@ -9999,6 +10113,7 @@
           "dragon",
           "ground"
         ],
+        "weight": 95,
         "baseStats": {
           "hp": 108,
           "atk": 170,
@@ -10100,6 +10215,7 @@
           "psychic",
           "fairy"
         ],
+        "weight": 48.4,
         "baseStats": {
           "hp": 68,
           "atk": 65,
@@ -10142,6 +10258,7 @@
           "psychic",
           "fairy"
         ],
+        "weight": 48.4,
         "baseStats": {
           "hp": 68,
           "atk": 85,
@@ -10264,6 +10381,7 @@
         "types": [
           "rock"
         ],
+        "weight": 240,
         "baseStats": {
           "hp": 100,
           "atk": 100,
@@ -10373,6 +10491,7 @@
           "ghost",
           "poison"
         ],
+        "weight": 40.5,
         "baseStats": {
           "hp": 60,
           "atk": 65,
@@ -10403,6 +10522,7 @@
           "ghost",
           "poison"
         ],
+        "weight": 40.5,
         "baseStats": {
           "hp": 60,
           "atk": 65,
@@ -10522,6 +10642,7 @@
           "steel",
           "ghost"
         ],
+        "weight": 30,
         "baseStats": {
           "hp": 87,
           "atk": 60,
@@ -10606,6 +10727,7 @@
         "types": [
           "ice"
         ],
+        "weight": 25.9,
         "baseStats": {
           "hp": 65,
           "atk": 60,
@@ -10713,6 +10835,7 @@
         "types": [
           "ice"
         ],
+        "weight": 256.5,
         "baseStats": {
           "hp": 80,
           "atk": 80,
@@ -10754,6 +10877,7 @@
         "types": [
           "ice"
         ],
+        "weight": 350.2,
         "baseStats": {
           "hp": 80,
           "atk": 120,
@@ -10853,6 +10977,7 @@
           "rock",
           "poison"
         ],
+        "weight": 45,
         "baseStats": {
           "hp": 83,
           "atk": 55,
@@ -10889,6 +11014,7 @@
           "rock",
           "poison"
         ],
+        "weight": 77,
         "baseStats": {
           "hp": 83,
           "atk": 90,
@@ -10978,6 +11104,7 @@
           "ground",
           "flying"
         ],
+        "weight": 42.5,
         "baseStats": {
           "hp": 75,
           "atk": 95,
@@ -11110,6 +11237,7 @@
           "ground",
           "ghost"
         ],
+        "weight": 330,
         "baseStats": {
           "hp": 89,
           "atk": 124,
@@ -11152,6 +11280,7 @@
           "ground",
           "ghost"
         ],
+        "weight": 330,
         "baseStats": {
           "hp": 89,
           "atk": 159,
@@ -11273,6 +11402,7 @@
         "types": [
           "dragon"
         ],
+        "weight": 150.5,
         "baseStats": {
           "hp": 90,
           "atk": 100,
@@ -11395,6 +11525,7 @@
           "ghost",
           "grass"
         ],
+        "weight": 12.5,
         "baseStats": {
           "hp": 65,
           "atk": 90,
@@ -11511,6 +11642,7 @@
           "ghost",
           "grass"
         ],
+        "weight": 39,
         "baseStats": {
           "hp": 85,
           "atk": 100,
@@ -11627,6 +11759,7 @@
           "ghost",
           "grass"
         ],
+        "weight": 14,
         "baseStats": {
           "hp": 75,
           "atk": 95,
@@ -11743,6 +11876,7 @@
           "ghost",
           "grass"
         ],
+        "weight": 9.5,
         "baseStats": {
           "hp": 55,
           "atk": 85,
@@ -11859,6 +11993,7 @@
           "water",
           "dark"
         ],
+        "weight": 40,
         "baseStats": {
           "hp": 72,
           "atk": 95,
@@ -11895,6 +12030,7 @@
           "water",
           "dark"
         ],
+        "weight": 40,
         "baseStats": {
           "hp": 72,
           "atk": 125,
@@ -12002,6 +12138,7 @@
           "dark",
           "fairy"
         ],
+        "weight": 61,
         "baseStats": {
           "hp": 95,
           "atk": 120,
@@ -12121,6 +12258,7 @@
           "water",
           "flying"
         ],
+        "weight": 235,
         "baseStats": {
           "hp": 95,
           "atk": 125,
@@ -12157,6 +12295,7 @@
           "water",
           "dark"
         ],
+        "weight": 305,
         "baseStats": {
           "hp": 95,
           "atk": 155,
@@ -12267,6 +12406,7 @@
           "psychic",
           "fairy"
         ],
+        "weight": 5.1,
         "baseStats": {
           "hp": 57,
           "atk": 90,
@@ -12383,6 +12523,7 @@
           "fighting",
           "flying"
         ],
+        "weight": 21.5,
         "baseStats": {
           "hp": 78,
           "atk": 92,
@@ -12425,6 +12566,7 @@
           "fighting",
           "flying"
         ],
+        "weight": 25,
         "baseStats": {
           "hp": 78,
           "atk": 137,
@@ -12543,6 +12685,7 @@
           "electric",
           "fire"
         ],
+        "weight": 0.3,
         "baseStats": {
           "hp": 50,
           "atk": 65,
@@ -12630,6 +12773,7 @@
           "electric",
           "normal"
         ],
+        "weight": 21,
         "baseStats": {
           "hp": 62,
           "atk": 55,
@@ -12749,6 +12893,7 @@
           "bug",
           "fighting"
         ],
+        "weight": 54,
         "baseStats": {
           "hp": 80,
           "atk": 125,
@@ -12791,6 +12936,7 @@
           "bug",
           "fighting"
         ],
+        "weight": 62.5,
         "baseStats": {
           "hp": 80,
           "atk": 185,
@@ -12899,6 +13045,7 @@
         "types": [
           "ground"
         ],
+        "weight": 300,
         "baseStats": {
           "hp": 108,
           "atk": 112,
@@ -12999,6 +13146,7 @@
           "fire",
           "rock"
         ],
+        "weight": 168,
         "baseStats": {
           "hp": 95,
           "atk": 115,
@@ -13118,6 +13266,7 @@
           "ice",
           "rock"
         ],
+        "weight": 262.4,
         "baseStats": {
           "hp": 95,
           "atk": 127,
@@ -13222,6 +13371,7 @@
           "grass",
           "fighting"
         ],
+        "weight": 37,
         "baseStats": {
           "hp": 88,
           "atk": 112,
@@ -13337,6 +13487,7 @@
           "steel",
           "dragon"
         ],
+        "weight": 334.1,
         "baseStats": {
           "hp": 80,
           "atk": 100,
@@ -13455,6 +13606,7 @@
           "water",
           "dark"
         ],
+        "weight": 58.2,
         "baseStats": {
           "hp": 90,
           "atk": 108,
@@ -13571,6 +13723,7 @@
           "fire",
           "ghost"
         ],
+        "weight": 69.8,
         "baseStats": {
           "hp": 73,
           "atk": 84,
@@ -13686,6 +13839,7 @@
           "normal",
           "ghost"
         ],
+        "weight": 73,
         "baseStats": {
           "hp": 55,
           "atk": 100,
@@ -13803,6 +13957,7 @@
           "dark",
           "fire"
         ],
+        "weight": 35,
         "baseStats": {
           "hp": 75,
           "atk": 90,
@@ -13845,6 +14000,7 @@
           "dark",
           "fire"
         ],
+        "weight": 49.5,
         "baseStats": {
           "hp": 75,
           "atk": 90,
@@ -13954,6 +14110,7 @@
         "types": [
           "ghost"
         ],
+        "weight": 15,
         "baseStats": {
           "hp": 72,
           "atk": 101,
@@ -14055,6 +14212,7 @@
           "grass",
           "dragon"
         ],
+        "weight": 93,
         "baseStats": {
           "hp": 106,
           "atk": 80,
@@ -14164,6 +14322,7 @@
           "dark",
           "dragon"
         ],
+        "weight": 160,
         "baseStats": {
           "hp": 92,
           "atk": 105,
@@ -14286,6 +14445,7 @@
           "fire",
           "dark"
         ],
+        "weight": 83,
         "baseStats": {
           "hp": 95,
           "atk": 115,
@@ -14414,6 +14574,7 @@
           "fire",
           "fighting"
         ],
+        "weight": 55,
         "baseStats": {
           "hp": 76,
           "atk": 104,
@@ -14551,6 +14712,7 @@
         "types": [
           "electric"
         ],
+        "weight": 24.5,
         "baseStats": {
           "hp": 65,
           "atk": 65,
@@ -14659,6 +14821,7 @@
         "types": [
           "normal"
         ],
+        "weight": 80,
         "baseStats": {
           "hp": 105,
           "atk": 95,
@@ -14700,6 +14863,7 @@
         "types": [
           "normal"
         ],
+        "weight": 100,
         "baseStats": {
           "hp": 105,
           "atk": 125,
@@ -14810,6 +14974,7 @@
           "dark",
           "steel"
         ],
+        "weight": 120,
         "baseStats": {
           "hp": 100,
           "atk": 135,
@@ -14917,6 +15082,7 @@
           "bug",
           "rock"
         ],
+        "weight": 89,
         "baseStats": {
           "hp": 70,
           "atk": 135,
@@ -15030,6 +15196,7 @@
           "steel",
           "fairy"
         ],
+        "weight": 3,
         "baseStats": {
           "hp": 57,
           "atk": 80,
@@ -15124,6 +15291,7 @@
           "dragon",
           "fighting"
         ],
+        "weight": 78.2,
         "baseStats": {
           "hp": 75,
           "atk": 110,
@@ -15257,6 +15425,7 @@
           "ground",
           "dark"
         ],
+        "weight": 96.3,
         "baseStats": {
           "hp": 95,
           "atk": 117,
@@ -15395,6 +15564,7 @@
         "types": [
           "grass"
         ],
+        "weight": 25.5,
         "baseStats": {
           "hp": 65,
           "atk": 110,
@@ -15502,6 +15672,7 @@
         "types": [
           "dark"
         ],
+        "weight": 37.5,
         "baseStats": {
           "hp": 64,
           "atk": 88,
@@ -15616,6 +15787,7 @@
         "types": [
           "normal"
         ],
+        "weight": 33.3,
         "baseStats": {
           "hp": 65,
           "atk": 76,
@@ -15658,6 +15830,7 @@
           "normal",
           "fighting"
         ],
+        "weight": 28.3,
         "baseStats": {
           "hp": 65,
           "atk": 136,
@@ -15781,6 +15954,7 @@
           "fighting",
           "steel"
         ],
+        "weight": 54,
         "baseStats": {
           "hp": 70,
           "atk": 110,
@@ -15823,6 +15997,7 @@
           "fighting",
           "steel"
         ],
+        "weight": 57.5,
         "baseStats": {
           "hp": 70,
           "atk": 145,
@@ -15950,6 +16125,7 @@
         "types": [
           "electric"
         ],
+        "weight": 42,
         "baseStats": {
           "hp": 80,
           "atk": 120,
@@ -16058,6 +16234,7 @@
         "types": [
           "rock"
         ],
+        "weight": 25,
         "baseStats": {
           "hp": 75,
           "atk": 115,
@@ -16171,6 +16348,7 @@
         "types": [
           "rock"
         ],
+        "weight": 25,
         "baseStats": {
           "hp": 75,
           "atk": 117,
@@ -16274,6 +16452,7 @@
         "types": [
           "rock"
         ],
+        "weight": 25,
         "baseStats": {
           "hp": 85,
           "atk": 115,
@@ -16398,6 +16577,7 @@
         "types": [
           "fighting"
         ],
+        "weight": 130,
         "baseStats": {
           "hp": 90,
           "atk": 130,
@@ -16519,6 +16699,7 @@
           "dark",
           "psychic"
         ],
+        "weight": 47,
         "baseStats": {
           "hp": 86,
           "atk": 92,
@@ -16561,6 +16742,7 @@
           "dark",
           "psychic"
         ],
+        "weight": 69.8,
         "baseStats": {
           "hp": 86,
           "atk": 102,
@@ -16672,6 +16854,7 @@
           "ice",
           "ground"
         ],
+        "weight": 291,
         "baseStats": {
           "hp": 110,
           "atk": 130,
@@ -16790,6 +16973,7 @@
         "types": [
           "electric"
         ],
+        "weight": 40.2,
         "baseStats": {
           "hp": 70,
           "atk": 75,
@@ -16831,6 +17015,7 @@
         "types": [
           "electric"
         ],
+        "weight": 44,
         "baseStats": {
           "hp": 70,
           "atk": 75,
@@ -16923,6 +17108,7 @@
         "types": [
           "normal"
         ],
+        "weight": 2.8,
         "baseStats": {
           "hp": 74,
           "atk": 75,
@@ -17029,6 +17215,7 @@
           "steel",
           "fairy"
         ],
+        "weight": 11.5,
         "baseStats": {
           "hp": 50,
           "atk": 85,
@@ -17071,6 +17258,7 @@
           "steel",
           "fairy"
         ],
+        "weight": 23.5,
         "baseStats": {
           "hp": 50,
           "atk": 105,
@@ -17185,6 +17373,7 @@
           "fighting",
           "psychic"
         ],
+        "weight": 31.5,
         "baseStats": {
           "hp": 60,
           "atk": 60,
@@ -17221,6 +17410,7 @@
           "fighting",
           "psychic"
         ],
+        "weight": 31.5,
         "baseStats": {
           "hp": 60,
           "atk": 100,
@@ -17340,6 +17530,7 @@
         "types": [
           "grass"
         ],
+        "weight": 100.5,
         "baseStats": {
           "hp": 80,
           "atk": 82,
@@ -17376,6 +17567,7 @@
           "grass",
           "fairy"
         ],
+        "weight": 201,
         "baseStats": {
           "hp": 80,
           "atk": 92,
@@ -17481,6 +17673,7 @@
           "grass",
           "dark"
         ],
+        "weight": 31.2,
         "baseStats": {
           "hp": 76,
           "atk": 110,
@@ -17597,6 +17790,7 @@
         "types": [
           "psychic"
         ],
+        "weight": 8.5,
         "baseStats": {
           "hp": 74,
           "atk": 48,
@@ -17638,6 +17832,7 @@
         "types": [
           "psychic"
         ],
+        "weight": 0,
         "baseStats": {
           "hp": 74,
           "atk": 48,
@@ -17740,6 +17935,7 @@
         "types": [
           "psychic"
         ],
+        "weight": 8.5,
         "baseStats": {
           "hp": 74,
           "atk": 48,
@@ -17853,6 +18049,7 @@
           "steel",
           "psychic"
         ],
+        "weight": 550,
         "baseStats": {
           "hp": 80,
           "atk": 135,
@@ -17889,6 +18086,7 @@
           "steel",
           "psychic"
         ],
+        "weight": 942.9,
         "baseStats": {
           "hp": 80,
           "atk": 145,
@@ -17999,6 +18197,7 @@
         "types": [
           "water"
         ],
+        "weight": 162,
         "baseStats": {
           "hp": 95,
           "atk": 60,
@@ -18116,6 +18315,7 @@
           "ghost",
           "fairy"
         ],
+        "weight": 0.7,
         "baseStats": {
           "hp": 55,
           "atk": 90,
@@ -18221,6 +18421,7 @@
           "electric",
           "dark"
         ],
+        "weight": 3,
         "baseStats": {
           "hp": 58,
           "atk": 95,
@@ -18329,6 +18530,7 @@
           "electric",
           "grass"
         ],
+        "weight": 0.3,
         "baseStats": {
           "hp": 50,
           "atk": 65,
@@ -18416,6 +18618,7 @@
           "ice",
           "psychic"
         ],
+        "weight": 58.2,
         "baseStats": {
           "hp": 80,
           "atk": 85,
@@ -18564,6 +18767,7 @@
         "types": [
           "ground"
         ],
+        "weight": 920,
         "baseStats": {
           "hp": 100,
           "atk": 125,
@@ -18663,6 +18867,7 @@
         "types": [
           "psychic"
         ],
+        "weight": 60.5,
         "baseStats": {
           "hp": 116,
           "atk": 55,
@@ -18767,6 +18972,7 @@
         "types": [
           "fire"
         ],
+        "weight": 19.9,
         "baseStats": {
           "hp": 73,
           "atk": 76,
@@ -18883,6 +19089,7 @@
           "flying",
           "dragon"
         ],
+        "weight": 85,
         "baseStats": {
           "hp": 85,
           "atk": 70,
@@ -19002,6 +19209,7 @@
           "normal",
           "psychic"
         ],
+        "weight": 76,
         "baseStats": {
           "hp": 90,
           "atk": 60,
@@ -19121,6 +19329,7 @@
         "types": [
           "steel"
         ],
+        "weight": 310,
         "baseStats": {
           "hp": 70,
           "atk": 85,
@@ -19210,6 +19419,7 @@
           "dark",
           "poison"
         ],
+        "weight": 60.5,
         "baseStats": {
           "hp": 85,
           "atk": 115,
@@ -19324,6 +19534,7 @@
         "types": [
           "water"
         ],
+        "weight": 60.2,
         "baseStats": {
           "hp": 100,
           "atk": 70,
@@ -19426,6 +19637,7 @@
           "fighting",
           "water"
         ],
+        "weight": 110,
         "baseStats": {
           "hp": 75,
           "atk": 110,
@@ -19533,6 +19745,7 @@
           "fighting",
           "fire"
         ],
+        "weight": 85,
         "baseStats": {
           "hp": 75,
           "atk": 110,
@@ -19640,6 +19853,7 @@
         "types": [
           "fighting"
         ],
+        "weight": 115,
         "baseStats": {
           "hp": 75,
           "atk": 110,
@@ -19743,6 +19957,7 @@
           "fighting",
           "dark"
         ],
+        "weight": 136,
         "baseStats": {
           "hp": 95,
           "atk": 124,
@@ -19878,6 +20093,7 @@
         "types": [
           "fighting"
         ],
+        "weight": 82.8,
         "baseStats": {
           "hp": 100,
           "atk": 120,
@@ -19993,6 +20209,7 @@
           "water",
           "flying"
         ],
+        "weight": 28,
         "baseStats": {
           "hp": 60,
           "atk": 50,
@@ -20101,6 +20318,7 @@
           "normal",
           "flying"
         ],
+        "weight": 39.5,
         "baseStats": {
           "hp": 83,
           "atk": 80,
@@ -20143,6 +20361,7 @@
           "normal",
           "flying"
         ],
+        "weight": 50.5,
         "baseStats": {
           "hp": 83,
           "atk": 80,
@@ -20216,6 +20435,7 @@
         "types": [
           "electric"
         ],
+        "weight": 6,
         "baseStats": {
           "hp": 35,
           "atk": 55,
@@ -20325,6 +20545,7 @@
         "types": [
           "bug"
         ],
+        "weight": 55,
         "baseStats": {
           "hp": 65,
           "atk": 125,
@@ -20367,6 +20588,7 @@
           "bug",
           "flying"
         ],
+        "weight": 59,
         "baseStats": {
           "hp": 65,
           "atk": 155,
@@ -20462,6 +20684,7 @@
         "types": [
           "water"
         ],
+        "weight": 33.9,
         "baseStats": {
           "hp": 90,
           "atk": 75,
@@ -20573,6 +20796,7 @@
         "types": [
           "ghost"
         ],
+        "weight": 0.4,
         "baseStats": {
           "hp": 60,
           "atk": 65,
@@ -20668,6 +20892,7 @@
           "water",
           "fairy"
         ],
+        "weight": 44,
         "baseStats": {
           "hp": 80,
           "atk": 74,
@@ -20781,6 +21006,7 @@
           "fire",
           "normal"
         ],
+        "weight": 81.5,
         "baseStats": {
           "hp": 86,
           "atk": 68,
@@ -20823,6 +21049,7 @@
           "fire",
           "normal"
         ],
+        "weight": 93.3,
         "baseStats": {
           "hp": 86,
           "atk": 88,
@@ -20915,6 +21142,7 @@
           "water",
           "fighting"
         ],
+        "weight": 61.9,
         "baseStats": {
           "hp": 85,
           "atk": 120,
@@ -21024,6 +21252,7 @@
           "water",
           "poison"
         ],
+        "weight": 3.9,
         "baseStats": {
           "hp": 65,
           "atk": 95,
@@ -21142,6 +21371,7 @@
         "types": [
           "electric"
         ],
+        "weight": 30,
         "baseStats": {
           "hp": 60,
           "atk": 90,
@@ -21177,6 +21407,7 @@
         "types": [
           "electric"
         ],
+        "weight": 38,
         "baseStats": {
           "hp": 60,
           "atk": 135,
@@ -21206,6 +21437,7 @@
         "types": [
           "electric"
         ],
+        "weight": 26,
         "baseStats": {
           "hp": 60,
           "atk": 100,
@@ -21314,6 +21546,7 @@
         "types": [
           "rock"
         ],
+        "weight": 102.5,
         "baseStats": {
           "hp": 97,
           "atk": 165,
@@ -21436,6 +21669,7 @@
         "types": [
           "psychic"
         ],
+        "weight": 20.1,
         "baseStats": {
           "hp": 110,
           "atk": 65,
@@ -21558,6 +21792,7 @@
           "ground",
           "rock"
         ],
+        "weight": 282.8,
         "baseStats": {
           "hp": 115,
           "atk": 140,
@@ -21705,6 +21940,7 @@
           "grass",
           "poison"
         ],
+        "weight": 14.5,
         "baseStats": {
           "hp": 60,
           "atk": 70,
@@ -21814,6 +22050,7 @@
           "electric",
           "ghost"
         ],
+        "weight": 0.3,
         "baseStats": {
           "hp": 50,
           "atk": 50,
@@ -21900,6 +22137,7 @@
           "ground",
           "ghost"
         ],
+        "weight": 66.6,
         "baseStats": {
           "hp": 58,
           "atk": 95,
@@ -22013,6 +22251,7 @@
           "dark",
           "ghost"
         ],
+        "weight": 11,
         "baseStats": {
           "hp": 50,
           "atk": 75,
@@ -22055,6 +22294,7 @@
           "dark",
           "ghost"
         ],
+        "weight": 161,
         "baseStats": {
           "hp": 50,
           "atk": 85,
@@ -22187,6 +22427,7 @@
           "poison",
           "fire"
         ],
+        "weight": 22.2,
         "baseStats": {
           "hp": 68,
           "atk": 64,
@@ -22306,6 +22547,7 @@
         "types": [
           "water"
         ],
+        "weight": 94.6,
         "baseStats": {
           "hp": 95,
           "atk": 100,
@@ -22415,6 +22657,7 @@
         "types": [
           "ground"
         ],
+        "weight": 65.5,
         "baseStats": {
           "hp": 72,
           "atk": 107,
@@ -22518,6 +22761,7 @@
         "types": [
           "grass"
         ],
+        "weight": 52.2,
         "baseStats": {
           "hp": 70,
           "atk": 85,
@@ -22554,6 +22798,7 @@
           "grass",
           "dragon"
         ],
+        "weight": 55.2,
         "baseStats": {
           "hp": 70,
           "atk": 110,
@@ -22674,6 +22919,7 @@
           "bug",
           "steel"
         ],
+        "weight": 118,
         "baseStats": {
           "hp": 70,
           "atk": 130,
@@ -22716,6 +22962,7 @@
           "bug",
           "steel"
         ],
+        "weight": 125,
         "baseStats": {
           "hp": 70,
           "atk": 150,
@@ -22823,6 +23070,7 @@
           "bug",
           "poison"
         ],
+        "weight": 200.5,
         "baseStats": {
           "hp": 60,
           "atk": 100,
@@ -22865,6 +23113,7 @@
           "bug",
           "poison"
         ],
+        "weight": 230.5,
         "baseStats": {
           "hp": 60,
           "atk": 140,
@@ -22961,6 +23210,7 @@
           "grass",
           "fire"
         ],
+        "weight": 15,
         "baseStats": {
           "hp": 65,
           "atk": 108,
@@ -23003,6 +23253,7 @@
           "grass",
           "fire"
         ],
+        "weight": 22,
         "baseStats": {
           "hp": 65,
           "atk": 138,
@@ -23094,6 +23345,7 @@
           "dark",
           "fighting"
         ],
+        "weight": 30,
         "baseStats": {
           "hp": 65,
           "atk": 90,
@@ -23136,6 +23388,7 @@
           "dark",
           "fighting"
         ],
+        "weight": 31,
         "baseStats": {
           "hp": 65,
           "atk": 130,
@@ -23260,6 +23513,7 @@
         "types": [
           "grass"
         ],
+        "weight": 63,
         "baseStats": {
           "hp": 75,
           "atk": 75,
@@ -23363,6 +23617,7 @@
           "water",
           "dark"
         ],
+        "weight": 88.8,
         "baseStats": {
           "hp": 70,
           "atk": 120,
@@ -23399,6 +23654,7 @@
           "water",
           "dark"
         ],
+        "weight": 130.3,
         "baseStats": {
           "hp": 70,
           "atk": 140,
@@ -23501,6 +23757,7 @@
         "types": [
           "water"
         ],
+        "weight": 29,
         "baseStats": {
           "hp": 75,
           "atk": 98,
@@ -23603,6 +23860,7 @@
         "types": [
           "grass"
         ],
+        "weight": 30.5,
         "baseStats": {
           "hp": 75,
           "atk": 98,
@@ -23703,6 +23961,7 @@
         "types": [
           "fire"
         ],
+        "weight": 28,
         "baseStats": {
           "hp": 75,
           "atk": 98,
@@ -23807,6 +24066,7 @@
           "grass",
           "ghost"
         ],
+        "weight": 2.2,
         "baseStats": {
           "hp": 71,
           "atk": 60,
@@ -23892,6 +24152,7 @@
           "steel",
           "flying"
         ],
+        "weight": 50.5,
         "baseStats": {
           "hp": 65,
           "atk": 80,
@@ -23934,6 +24195,7 @@
           "steel",
           "flying"
         ],
+        "weight": 40.4,
         "baseStats": {
           "hp": 65,
           "atk": 140,
@@ -24028,6 +24290,7 @@
           "fire",
           "ghost"
         ],
+        "weight": 326.5,
         "baseStats": {
           "hp": 104,
           "atk": 75,
@@ -24134,6 +24397,7 @@
           "water",
           "psychic"
         ],
+        "weight": 78.5,
         "baseStats": {
           "hp": 95,
           "atk": 75,
@@ -24176,6 +24440,7 @@
           "water",
           "psychic"
         ],
+        "weight": 120,
         "baseStats": {
           "hp": 95,
           "atk": 75,
@@ -24297,6 +24562,7 @@
           "water",
           "psychic"
         ],
+        "weight": 79.5,
         "baseStats": {
           "hp": 95,
           "atk": 75,
@@ -24436,6 +24702,7 @@
         "types": [
           "fairy"
         ],
+        "weight": 5,
         "baseStats": {
           "hp": 82,
           "atk": 80,
@@ -24527,6 +24794,7 @@
           "fighting",
           "poison"
         ],
+        "weight": 43,
         "baseStats": {
           "hp": 80,
           "atk": 130,
@@ -24644,6 +24912,7 @@
         "types": [
           "normal"
         ],
+        "weight": 460,
         "baseStats": {
           "hp": 160,
           "atk": 110,
@@ -24782,6 +25051,7 @@
           "ghost",
           "dark"
         ],
+        "weight": 108,
         "baseStats": {
           "hp": 50,
           "atk": 92,
@@ -24885,6 +25155,7 @@
           "normal",
           "flying"
         ],
+        "weight": 24.9,
         "baseStats": {
           "hp": 85,
           "atk": 120,
@@ -24921,6 +25192,7 @@
           "fighting",
           "flying"
         ],
+        "weight": 50,
         "baseStats": {
           "hp": 85,
           "atk": 140,
@@ -25007,6 +25279,7 @@
           "water",
           "psychic"
         ],
+        "weight": 80,
         "baseStats": {
           "hp": 60,
           "atk": 75,
@@ -25049,6 +25322,7 @@
           "water",
           "psychic"
         ],
+        "weight": 80,
         "baseStats": {
           "hp": 60,
           "atk": 100,
@@ -25154,6 +25428,7 @@
           "steel",
           "ground"
         ],
+        "weight": 400,
         "baseStats": {
           "hp": 75,
           "atk": 85,
@@ -25196,6 +25471,7 @@
           "steel",
           "ground"
         ],
+        "weight": 740,
         "baseStats": {
           "hp": 75,
           "atk": 125,
@@ -25306,6 +25582,7 @@
           "ground",
           "electric"
         ],
+        "weight": 11,
         "baseStats": {
           "hp": 109,
           "atk": 66,
@@ -25409,6 +25686,7 @@
           "water",
           "ground"
         ],
+        "weight": 81.9,
         "baseStats": {
           "hp": 100,
           "atk": 110,
@@ -25445,6 +25723,7 @@
           "water",
           "ground"
         ],
+        "weight": 102,
         "baseStats": {
           "hp": 100,
           "atk": 150,
@@ -25564,6 +25843,7 @@
         "types": [
           "fairy"
         ],
+        "weight": 23.5,
         "baseStats": {
           "hp": 95,
           "atk": 65,
@@ -25670,6 +25950,7 @@
           "fire",
           "flying"
         ],
+        "weight": 24.5,
         "baseStats": {
           "hp": 78,
           "atk": 81,
@@ -25769,6 +26050,7 @@
         "types": [
           "normal"
         ],
+        "weight": 88.4,
         "baseStats": {
           "hp": 75,
           "atk": 100,
@@ -25881,6 +26163,7 @@
           "fairy",
           "steel"
         ],
+        "weight": 112.8,
         "baseStats": {
           "hp": 85,
           "atk": 75,
@@ -25982,6 +26265,7 @@
         "types": [
           "fire"
         ],
+        "weight": 80.4,
         "baseStats": {
           "hp": 70,
           "atk": 85,
@@ -26098,6 +26382,7 @@
           "grass",
           "ground"
         ],
+        "weight": 310,
         "baseStats": {
           "hp": 95,
           "atk": 109,
@@ -26219,6 +26504,7 @@
           "normal",
           "flying"
         ],
+        "weight": 26,
         "baseStats": {
           "hp": 80,
           "atk": 120,
@@ -26328,6 +26614,7 @@
           "poison",
           "water"
         ],
+        "weight": 14.5,
         "baseStats": {
           "hp": 50,
           "atk": 63,
@@ -26435,6 +26722,7 @@
           "poison",
           "fighting"
         ],
+        "weight": 44.4,
         "baseStats": {
           "hp": 83,
           "atk": 106,
@@ -26571,6 +26859,7 @@
           "ghost",
           "grass"
         ],
+        "weight": 71,
         "baseStats": {
           "hp": 85,
           "atk": 110,
@@ -26699,6 +26988,7 @@
         "types": [
           "grass"
         ],
+        "weight": 21.4,
         "baseStats": {
           "hp": 72,
           "atk": 120,
@@ -26808,6 +27098,7 @@
         "types": [
           "fire"
         ],
+        "weight": 79.5,
         "baseStats": {
           "hp": 78,
           "atk": 84,
@@ -26921,6 +27212,7 @@
           "rock",
           "dark"
         ],
+        "weight": 202,
         "baseStats": {
           "hp": 100,
           "atk": 134,
@@ -26957,6 +27249,7 @@
           "rock",
           "dark"
         ],
+        "weight": 255,
         "baseStats": {
           "hp": 100,
           "atk": 164,
@@ -27092,6 +27385,7 @@
           "rock",
           "dragon"
         ],
+        "weight": 270,
         "baseStats": {
           "hp": 82,
           "atk": 121,
@@ -27204,6 +27498,7 @@
         "types": [
           "dark"
         ],
+        "weight": 27,
         "baseStats": {
           "hp": 95,
           "atk": 65,
@@ -27319,6 +27614,7 @@
         "types": [
           "ice"
         ],
+        "weight": 57.5,
         "baseStats": {
           "hp": 71,
           "atk": 95,
@@ -27416,6 +27712,7 @@
         "types": [
           "water"
         ],
+        "weight": 29,
         "baseStats": {
           "hp": 130,
           "atk": 65,
@@ -27525,6 +27822,7 @@
           "grass",
           "poison"
         ],
+        "weight": 100,
         "baseStats": {
           "hp": 80,
           "atk": 82,
@@ -27561,6 +27859,7 @@
           "grass",
           "poison"
         ],
+        "weight": 155.5,
         "baseStats": {
           "hp": 80,
           "atk": 100,
@@ -27661,6 +27960,7 @@
           "grass",
           "poison"
         ],
+        "weight": 15.5,
         "baseStats": {
           "hp": 80,
           "atk": 105,
@@ -27697,6 +27997,7 @@
           "grass",
           "poison"
         ],
+        "weight": 125.5,
         "baseStats": {
           "hp": 80,
           "atk": 125,
@@ -27800,6 +28101,7 @@
           "grass",
           "poison"
         ],
+        "weight": 18.6,
         "baseStats": {
           "hp": 75,
           "atk": 80,
@@ -27903,6 +28205,7 @@
           "bug",
           "flying"
         ],
+        "weight": 17,
         "baseStats": {
           "hp": 80,
           "atk": 52,
@@ -28001,6 +28304,7 @@
           "bug",
           "fire"
         ],
+        "weight": 46,
         "baseStats": {
           "hp": 85,
           "atk": 60,
@@ -28109,6 +28413,7 @@
           "electric",
           "water"
         ],
+        "weight": 0.3,
         "baseStats": {
           "hp": 50,
           "atk": 65,
@@ -28195,6 +28500,7 @@
         "types": [
           "normal"
         ],
+        "weight": 27,
         "baseStats": {
           "hp": 60,
           "atk": 85,
@@ -28302,6 +28608,7 @@
           "dark",
           "ice"
         ],
+        "weight": 34,
         "baseStats": {
           "hp": 70,
           "atk": 120,
@@ -28424,6 +28731,7 @@
           "grass",
           "fairy"
         ],
+        "weight": 6.6,
         "baseStats": {
           "hp": 60,
           "atk": 67,
@@ -28529,6 +28837,7 @@
           "normal",
           "psychic"
         ],
+        "weight": 95.1,
         "baseStats": {
           "hp": 103,
           "atk": 105,
@@ -28647,6 +28956,7 @@
         "types": [
           "dark"
         ],
+        "weight": 81.1,
         "baseStats": {
           "hp": 60,
           "atk": 105,
