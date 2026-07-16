@@ -17,7 +17,14 @@ import {
 import { weaknesses } from "@/lib/typeChart";
 import { moves as moveDict } from "@/lib/data/moves";
 import { useLanguage } from "@/stores/useLanguage";
+import { useT, type TranslationKey } from "@/lib/i18n";
 import { TypeBadge } from "@/components/TypeBadge";
+
+const NATURE_KEYS: Record<SpeedNature, TranslationKey> = {
+  plus: "speed.naturePlus",
+  neutral: "speed.natureNeutral",
+  minus: "speed.natureMinus",
+};
 
 type Unit = {
   key: string;
@@ -34,38 +41,38 @@ type Unit = {
 
 const GROUPS: {
   key: string;
-  label: string;
-  desc: string;
-  note?: string;
+  labelKey: TranslationKey;
+  descKey: TranslationKey;
+  noteKey?: TranslationKey;
   speed: (base: number) => number;
   allowMega: boolean;
 }[] = [
   {
     key: "min",
-    label: "최저속",
-    desc: "0 노력치 · -스피드",
+    labelKey: "speed.group.min",
+    descKey: "speed.group.minDesc",
     speed: minSpeed,
     allowMega: true,
   },
   {
     key: "submax",
-    label: "준속",
-    desc: "32 노력치 · 무보정",
+    labelKey: "speed.group.submax",
+    descKey: "speed.group.submaxDesc",
     speed: subMaxSpeed,
     allowMega: true,
   },
   {
     key: "max",
-    label: "최속",
-    desc: "32 노력치 · +스피드",
+    labelKey: "speed.group.max",
+    descKey: "speed.group.maxDesc",
     speed: maxSpeed,
     allowMega: true,
   },
   {
     key: "scarf",
-    label: "구애스카프",
-    desc: "준속 × 1.5",
-    note: "준속 상태에서 구애스카프 적용 기준",
+    labelKey: "speed.group.scarf",
+    descKey: "speed.group.scarfDesc",
+    noteKey: "speed.group.scarfNote",
     speed: scarfSpeed,
     allowMega: false,
   },
@@ -136,6 +143,7 @@ function StageStepper({
 export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const units = useUnits(pokemon);
   const lang = useLanguage((s) => s.lang);
+  const t = useT();
   const [query, setQuery] = useState("");
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [nature, setNature] = useState<SpeedNature>("neutral");
@@ -198,13 +206,17 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   return (
     <div>
       {/* Pokémon picker */}
-      <label className="mb-1 block text-sm font-medium">내 포켓몬</label>
+      <label className="mb-1 block text-sm font-medium">
+        {t("speed.myPokemon")}
+      </label>
       <div className="relative">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder={selected ? selected.names[lang] : "포켓몬 이름 검색…"}
+          placeholder={
+            selected ? selected.names[lang] : t("speed.searchPokemon")
+          }
           className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-gray-500 dark:border-gray-600 dark:bg-gray-900"
         />
         {results.length > 0 && (
@@ -228,7 +240,9 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     className="h-7 w-7"
                   />
                   <span className="flex-1">{u.names[lang]}</span>
-                  <span className="text-xs text-gray-400">스피드 {u.spe}</span>
+                  <span className="text-xs text-gray-400">
+                    {t("speed.speedN", { n: u.spe })}
+                  </span>
                 </button>
               </li>
             ))}
@@ -250,7 +264,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             <div>
               <div className="font-semibold">{selected.names[lang]}</div>
               <div className="text-xs text-gray-400">
-                종족값 스피드 {selected.spe}
+                {t("speed.baseSpeedN", { n: selected.spe })}
               </div>
             </div>
           </div>
@@ -258,7 +272,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
           {/* Nature */}
           <div>
             <div className="mb-1 text-xs text-gray-500 dark:text-gray-400">
-              성격
+              {t("speed.nature")}
             </div>
             <div className="inline-flex rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
               {SPEED_NATURES.map((n) => (
@@ -272,7 +286,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                       : "rounded-md px-3 py-1 text-sm text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
                   }
                 >
-                  {n.label}
+                  {t(NATURE_KEYS[n.value])}
                 </button>
               ))}
             </div>
@@ -281,7 +295,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
           {/* EV slider */}
           <div className="min-w-52 flex-1">
             <div className="mb-1 flex justify-between text-xs text-gray-500 dark:text-gray-400">
-              <span>스피드 노력치</span>
+              <span>{t("speed.ev")}</span>
               <span className="tabular-nums">
                 {ev} / {EV_MAX}
               </span>
@@ -299,7 +313,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
           {/* Choice Scarf toggle (my own item) */}
           <div>
             <div className="mb-1 text-xs text-gray-500 dark:text-gray-400">
-              구애스카프
+              {t("speed.scarf")}
             </div>
             <button
               type="button"
@@ -311,14 +325,14 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                   : "rounded-lg border border-gray-200 px-3 py-1 text-sm text-gray-500 hover:border-gray-400 dark:border-gray-700 dark:hover:text-gray-200"
               }
             >
-              {scarf ? "착용 (×1.5)" : "미착용"}
+              {t(scarf ? "speed.scarfOn" : "speed.scarfOff")}
             </button>
           </div>
 
           {/* My speed rank (stat stage) */}
           <div>
             <div className="mb-1 text-xs text-gray-500 dark:text-gray-400">
-              내 스피드 랭크
+              {t("speed.myRank")}
             </div>
             <StageStepper value={myStage} onChange={setMyStage} />
           </div>
@@ -326,15 +340,22 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
           {/* Result */}
           <div className="text-right">
             <div className="text-xs text-gray-500 dark:text-gray-400">
-              내 스피드
+              {t("speed.mySpeed")}
             </div>
             <div className="text-2xl font-bold tabular-nums">{mySpeed}</div>
             {(scarf || myStage !== 0) && (
               <div className="text-xs text-violet-500">
-                {myStage !== 0 &&
-                  `랭크 ${myStage > 0 ? `+${myStage}` : myStage}`}
-                {myStage !== 0 && scarf && " · "}
-                {scarf && "구애스카프 ×1.5"} (기본 {baseSpeed})
+                {[
+                  myStage !== 0
+                    ? t("speed.rankNote", {
+                        rank: myStage > 0 ? `+${myStage}` : myStage,
+                      })
+                    : null,
+                  scarf ? `${t("speed.scarf")} ×1.5` : null,
+                ]
+                  .filter(Boolean)
+                  .join(" · ")}{" "}
+                {t("speed.baseNote", { base: baseSpeed ?? 0 })}
               </div>
             )}
           </div>
@@ -346,12 +367,12 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
         <div className="mt-6 space-y-3">
           <div className="flex flex-wrap items-center gap-1.5 text-sm">
             <span className="mr-1 text-gray-500 dark:text-gray-400">
-              약점 타입
+              {t("speed.weakTypes")}
             </span>
             {myWeaknesses.length > 0 ? (
-              myWeaknesses.map((t) => <TypeBadge key={t} type={t} />)
+              myWeaknesses.map((wt) => <TypeBadge key={wt} type={wt} />)
             ) : (
-              <span className="text-gray-400">없음</span>
+              <span className="text-gray-400">{t("speed.none")}</span>
             )}
           </div>
           <div className="flex flex-wrap items-center gap-2">
@@ -359,7 +380,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
               type="text"
               value={target}
               onChange={(e) => setTarget(e.target.value)}
-              placeholder="타겟 포켓몬 검색 (그룹에서 필터)…"
+              placeholder={t("speed.targetSearch")}
               className="min-w-52 flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-gray-500 dark:border-gray-600 dark:bg-gray-900"
             />
             <button
@@ -372,11 +393,11 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                   : "rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-600 hover:border-gray-400 disabled:opacity-40 dark:border-gray-600 dark:text-gray-300"
               }
             >
-              약점 공격기 보유만
+              {t("speed.weakOnly")}
             </button>
             <div className="flex items-center gap-2 rounded-lg border border-gray-200 px-3 py-1 dark:border-gray-700">
               <span className="text-xs text-gray-500 dark:text-gray-400">
-                상대 스피드 랭크
+                {t("speed.oppRank")}
               </span>
               <StageStepper value={oppStage} onChange={setOppStage} />
             </div>
@@ -394,17 +415,17 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             >
               <div className="border-b border-gray-200 px-4 py-2.5 dark:border-gray-700">
                 <div className="flex items-baseline justify-between">
-                  <span className="font-semibold">{g.label}</span>
+                  <span className="font-semibold">{t(g.labelKey)}</span>
                   <span className="text-xs text-gray-400">
-                    {g.list.length}마리
+                    {t("speed.countN", { n: g.list.length })}
                   </span>
                 </div>
                 <div className="text-xs text-gray-400">
-                  {g.desc} 상대를 추월 못 함
+                  {t("speed.cantOutrun", { desc: t(g.descKey) })}
                 </div>
                 {/* Always render this line so all four headers align in height. */}
                 <div className="mt-0.5 text-[11px] text-gray-400">
-                  {g.note ?? " "}
+                  {g.noteKey ? t(g.noteKey) : " "}
                 </div>
               </div>
               <ul className="max-h-96 divide-y divide-gray-100 overflow-auto dark:divide-gray-800">
@@ -426,7 +447,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     </span>
                     {s === mySpeed && (
                       <span className="shrink-0 rounded bg-amber-100 px-1 text-[10px] font-medium text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
-                        동속
+                        {t("speed.tie")}
                       </span>
                     )}
                     <span className="shrink-0 text-xs text-gray-400 tabular-nums">
@@ -436,7 +457,9 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                 ))}
                 {g.list.length === 0 && (
                   <li className="px-3 py-3 text-center text-xs text-gray-400">
-                    {targetQuery ? "이 기준에선 추월 가능" : "전부 추월 가능"}
+                    {t(
+                      targetQuery ? "speed.filteredOutrun" : "speed.allOutrun",
+                    )}
                   </li>
                 )}
               </ul>
@@ -446,10 +469,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
       )}
 
       {!selected && (
-        <p className="mt-6 text-sm text-gray-400">
-          포켓몬을 선택하면 최저속·최속·구애스카프 기준으로 추월하지 못하는
-          상대를 보여줍니다.
-        </p>
+        <p className="mt-6 text-sm text-gray-400">{t("speed.emptyState")}</p>
       )}
     </div>
   );

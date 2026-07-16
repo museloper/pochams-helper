@@ -51,6 +51,7 @@ Next.js 16 (App Router, Turbopack) + React 19 + TypeScript + Tailwind CSS v4.
 
 ## Conventions
 
-- UI 문구와 문서는 한국어, 코드(변수·함수·주석)는 영어.
+- 문서는 한국어, 코드(변수·함수·주석)는 영어.
+- UI 문구는 다국어(한/영/일). 하드코딩하지 말고 `src/lib/i18n.ts` 사전에 키를 추가한 뒤 클라이언트 컴포넌트에서 `useT()`의 `t("key", vars?)`로 쓴다. 한국어가 소스이고 `en`/`ja`는 같은 키를 모두 채워야 한다(이슈 #8, DECISIONS 참고). 서버 컴포넌트의 가시 문구는 작은 클라이언트 컴포넌트로 추출해 번역한다.
 - 기능 계획은 `docs/ROADMAP.md`, 기술 결정 기록은 `docs/DECISIONS.md`를 따른다. 과거 결정을 바꿀 때는 DECISIONS.md에 새 항목을 추가한다.
 - GitHub 이슈에 대응하는 커밋은 메시지에 `Closes #N`을 넣어 기본 브랜치 push 시 이슈가 자동으로 닫히게 한다. `(#N)` 같은 단순 참조는 자동 close되지 않는다. 단, 이미 수동으로 닫힌 이슈에는 넣지 않는다.

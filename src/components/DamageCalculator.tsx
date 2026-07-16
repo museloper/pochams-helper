@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import type {
   Ability,
-  Language,
   LocalizedName,
   Move,
   Pokemon,
@@ -36,6 +35,7 @@ import {
 import { moves as moveDict } from "@/lib/data/moves";
 import { asset } from "@/lib/basePath";
 import { useLanguage } from "@/stores/useLanguage";
+import { useT, type TranslationKey } from "@/lib/i18n";
 import { TypeBadge } from "@/components/TypeBadge";
 
 type Unit = {
@@ -59,10 +59,10 @@ function abilitySlug(en: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
-const NATURES: { value: StatNature; label: string }[] = [
-  { value: "plus", label: "상승" },
-  { value: "neutral", label: "무보정" },
-  { value: "minus", label: "하락" },
+const NATURES: { value: StatNature; key: TranslationKey }[] = [
+  { value: "plus", key: "nature.plus" },
+  { value: "neutral", key: "nature.neutral" },
+  { value: "minus", key: "nature.minus" },
 ];
 
 // A mega Pokémon must hold its Mega Stone, so its item is fixed.
@@ -178,6 +178,7 @@ function NatureToggle({
   value: StatNature;
   onChange: (v: StatNature) => void;
 }) {
+  const t = useT();
   return (
     <div className="inline-flex rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
       {NATURES.map((n) => (
@@ -191,7 +192,7 @@ function NatureToggle({
               : "rounded-md px-2.5 py-1 text-xs text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
           }
         >
-          {n.label}
+          {t(n.key)}
         </button>
       ))}
     </div>
@@ -237,10 +238,11 @@ function AbilityToggle({
   onChange: (i: number) => void;
 }) {
   const lang = useLanguage((s) => s.lang);
+  const t = useT();
   return (
     <div className="flex items-center justify-between gap-2">
       <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400">
-        특성
+        {t("common.ability")}
       </span>
       <div className="inline-flex flex-wrap justify-end gap-0.5 rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
         {abilities.map((a, i) => (
@@ -255,7 +257,7 @@ function AbilityToggle({
             }
           >
             {a[lang]}
-            {a.hidden && " (드림)"}
+            {a.hidden && t("common.abilityHidden")}
           </button>
         ))}
       </div>
@@ -288,12 +290,13 @@ function ItemSelect({
   value: string;
   onChange: (v: string) => void;
 }) {
+  const t = useT();
   const [open, setOpen] = useState(false);
   const selected = items.find((it) => it.id === value) ?? items[0];
   return (
     <div className="flex items-center justify-between gap-2">
       <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400">
-        도구
+        {t("common.item")}
       </span>
       <div className="relative min-w-0 flex-1">
         <button
@@ -342,10 +345,11 @@ function StageSelect({
   value: number;
   onChange: (v: number) => void;
 }) {
+  const t = useT();
   return (
     <div className="flex items-center justify-between gap-2">
       <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400">
-        {label} 랭크
+        {t("common.rankOf", { stat: label })}
       </span>
       <div className="inline-flex items-center gap-1">
         <button
@@ -373,6 +377,7 @@ function StageSelect({
 export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const units = useUnits(pokemon);
   const lang = useLanguage((s) => s.lang);
+  const t = useT();
 
   const [attackerKey, setAttackerKey] = useState<string | null>(null);
   const [moveSlug, setMoveSlug] = useState<string | null>(null);
@@ -424,8 +429,8 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
     : [];
 
   const physical = move?.category === "physical";
-  const atkLabel = physical ? "공격" : "특공";
-  const defLabel = physical ? "방어" : "특방";
+  const atkLabel = t(physical ? "stat.attack" : "stat.spAttack");
+  const defLabel = t(physical ? "stat.defense" : "stat.spDefense");
 
   // Accumulating multi-hit moves: total power depends on how many hits land.
   const perHitPowers = move ? MULTI_HIT_POWERS[move.slug] : undefined;
@@ -517,6 +522,15 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const min = rolls.length ? Math.min(...rolls) : 0;
   const max = rolls.length ? Math.max(...rolls) : 0;
   const verdict = rolls.length ? koVerdict(rolls, hp) : null;
+  const verdictLabel = verdict
+    ? verdict.kind === "immune"
+      ? t("verdict.immune")
+      : verdict.kind === "ohko"
+        ? t("verdict.ohko")
+        : verdict.kind === "ohko-chance"
+          ? t("verdict.ohkoChance")
+          : t("verdict.nhko", { n: verdict.hits ?? 2 })
+    : null;
 
   // Survival check against an adjustable current HP (issue #1): does a single
   // hit (e.g. a priority move) leave the defender standing at this HP%?
@@ -528,11 +542,11 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   } | null =
     rolls.length && canCompute
       ? min >= currentHp
-        ? { label: "쓰러짐 (확정 1타)", tone: "ko" }
+        ? { label: t("damage.survivalKo"), tone: "ko" }
         : max < currentHp
-          ? { label: "견딤 (최대 데미지도 버팀)", tone: "survive" }
+          ? { label: t("damage.survivalSurvive"), tone: "survive" }
           : {
-              label: "난수 1타",
+              label: t("verdict.ohkoChance"),
               tone: "random",
               chance: rolls.filter((d) => d >= currentHp).length / rolls.length,
             }
@@ -548,7 +562,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
         {/* Attacker */}
         <section className="rounded-xl border border-gray-200 p-4 dark:border-gray-700">
           <h2 className="mb-2 text-sm font-semibold text-rose-600 dark:text-rose-400">
-            공격
+            {t("damage.attacker")}
           </h2>
           <PokemonSearch
             units={units}
@@ -564,7 +578,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                 units.find((u) => u.key === k)?.isMega ? "mega-stone" : "",
               );
             }}
-            placeholder="공격 포켓몬 검색…"
+            placeholder={t("damage.searchAttacker")}
           />
 
           {attacker && (
@@ -582,7 +596,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                           : "flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 text-[10px] text-gray-500 hover:border-gray-400 dark:border-gray-700"
                       }
                     >
-                      전체
+                      {t("common.all")}
                     </button>
                     {moveTypes.map((t) => (
                       <button
@@ -615,7 +629,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     type="text"
                     value={moveQuery}
                     onChange={(e) => setMoveQuery(e.target.value)}
-                    placeholder="기술 이름 검색 (선택)…"
+                    placeholder={t("damage.searchMove")}
                     className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-gray-500 dark:border-gray-600 dark:bg-gray-900"
                   />
 
@@ -641,15 +655,19 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                             {m[lang]}
                           </span>
                           <span className="shrink-0 text-xs text-gray-400">
-                            {m.category === "physical" ? "물리" : "특수"} ·{" "}
-                            {m.power ?? "—"}
+                            {t(
+                              m.category === "physical"
+                                ? "common.physical"
+                                : "common.special",
+                            )}{" "}
+                            · {m.power ?? "—"}
                           </span>
                         </button>
                       </li>
                     ))}
                     {filteredMoves.length === 0 && (
                       <li className="px-3 py-3 text-center text-xs text-gray-400">
-                        해당 기술이 없습니다
+                        {t("damage.noMoves")}
                       </li>
                     )}
                   </ul>
@@ -668,14 +686,15 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     </span>
                     {stab && (
                       <span className="shrink-0 text-xs text-rose-500">
-                        자속
+                        {t("damage.stab")}
                       </span>
                     )}
                     <span className="shrink-0 text-xs text-gray-400">
-                      {physical ? "물리" : "특수"} · {move.power ?? "—"}
+                      {t(physical ? "common.physical" : "common.special")} ·{" "}
+                      {move.power ?? "—"}
                     </span>
                     <span className="shrink-0 text-xs text-gray-400">
-                      변경 ▾
+                      {t("damage.change")}
                     </span>
                   </button>
                 )
@@ -684,13 +703,13 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
               {move && (
                 <>
                   <EvSlider
-                    label={`${atkLabel} 노력치`}
+                    label={t("common.evOf", { stat: atkLabel })}
                     value={atkEv}
                     onChange={setAtkEv}
                   />
                   <div className="flex items-center justify-between gap-2">
                     <span className="text-xs text-gray-500 dark:text-gray-400">
-                      {atkLabel} 성격
+                      {t("common.natureOf", { stat: atkLabel })}
                     </span>
                     <NatureToggle value={atkNature} onChange={setAtkNature} />
                   </div>
@@ -702,7 +721,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                   {isMultiHit && perHitPowers && (
                     <div className="flex items-center justify-between gap-2">
                       <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400">
-                        명중 횟수
+                        {t("damage.hitCount")}
                       </span>
                       <div className="inline-flex rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
                         {perHitPowers.map((_, i) => {
@@ -718,7 +737,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                                   : "rounded-md px-2.5 py-1 text-xs text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
                               }
                             >
-                              {n}회
+                              {t("common.hitsN", { n })}
                             </button>
                           );
                         })}
@@ -745,7 +764,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
         {/* Defender */}
         <section className="rounded-xl border border-gray-200 p-4 dark:border-gray-700">
           <h2 className="mb-2 text-sm font-semibold text-sky-600 dark:text-sky-400">
-            방어
+            {t("damage.defender")}
           </h2>
           <PokemonSearch
             units={units}
@@ -758,7 +777,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                 units.find((u) => u.key === k)?.isMega ? "mega-stone" : "",
               );
             }}
-            placeholder="방어 포켓몬 검색…"
+            placeholder={t("damage.searchDefender")}
           />
 
           {defender && (
@@ -768,20 +787,28 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                   <TypeBadge key={t} type={t} />
                 ))}
               </div>
-              <EvSlider label="HP 노력치" value={hpEv} onChange={setHpEv} />
               <EvSlider
-                label={`${move ? defLabel : "방어/특방"} 노력치`}
+                label={t("common.evOf", { stat: t("stat.hp") })}
+                value={hpEv}
+                onChange={setHpEv}
+              />
+              <EvSlider
+                label={t("common.evOf", {
+                  stat: move ? defLabel : t("stat.defBoth"),
+                })}
                 value={defEv}
                 onChange={setDefEv}
               />
               <div className="flex items-center justify-between gap-2">
                 <span className="text-xs text-gray-500 dark:text-gray-400">
-                  {move ? defLabel : "내구"} 성격
+                  {t("common.natureOf", {
+                    stat: move ? defLabel : t("stat.bulk"),
+                  })}
                 </span>
                 <NatureToggle value={defNature} onChange={setDefNature} />
               </div>
               <StageSelect
-                label={move ? defLabel : "방어"}
+                label={move ? defLabel : t("stat.defense")}
                 value={defStage}
                 onChange={setDefStage}
               />
@@ -808,25 +835,25 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
               <div className="flex flex-wrap items-end justify-between gap-4">
                 <div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">
-                    데미지 (HP 대비)
+                    {t("damage.dmgVsHp")}
                   </div>
                   <div className="text-2xl font-bold tabular-nums">
                     {((min / hp) * 100).toFixed(1)}% ~{" "}
                     {((max / hp) * 100).toFixed(1)}%
                   </div>
                   <div className="text-xs text-gray-400">
-                    {min} ~ {max} 데미지 · 상대 HP {hp}
+                    {t("damage.dmgDetail", { min, max, hp })}
                   </div>
                 </div>
                 <div className="text-right">
                   <div
                     className={
-                      verdict?.label === "확정 1타"
+                      verdict?.kind === "ohko"
                         ? "text-2xl font-bold text-rose-600 dark:text-rose-400"
                         : "text-2xl font-bold"
                     }
                   >
-                    {verdict?.label}
+                    {verdictLabel}
                     {verdict?.chance !== undefined && (
                       <span className="ml-1 text-base">
                         {(verdict.chance * 100).toFixed(1)}%
@@ -834,25 +861,34 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     )}
                   </div>
                   <div className="text-xs text-gray-400">
-                    타입 상성 ×{typeEff}
-                    {stab && " · 자속"}
+                    {t("damage.typeEff", { mult: typeEff })}
+                    {stab && ` · ${t("damage.stab")}`}
                     {isMultiHit &&
-                      ` · ${hitCount}회 명중 위력 ${effectivePower}`}
+                      ` · ${t("damage.multiHitInfo", {
+                        hits: hitCount,
+                        power: effectivePower,
+                      })}`}
                   </div>
                 </div>
               </div>
 
               <div className="mt-4 grid grid-cols-2 gap-3 border-t border-gray-100 pt-4 text-sm sm:grid-cols-3 dark:border-gray-800">
                 <div>
-                  <div className="text-xs text-gray-400">{atkLabel} 실수치</div>
+                  <div className="text-xs text-gray-400">
+                    {t("common.statValueOf", { stat: atkLabel })}
+                  </div>
                   <div className="font-semibold tabular-nums">{attack}</div>
                 </div>
                 <div>
-                  <div className="text-xs text-gray-400">상대 HP 실수치</div>
+                  <div className="text-xs text-gray-400">
+                    {t("damage.hpStat")}
+                  </div>
                   <div className="font-semibold tabular-nums">{hp}</div>
                 </div>
                 <div>
-                  <div className="text-xs text-gray-400">{defLabel} 실수치</div>
+                  <div className="text-xs text-gray-400">
+                    {t("common.statValueOf", { stat: defLabel })}
+                  </div>
                   <div className="font-semibold tabular-nums">
                     {defenseStat}
                   </div>
@@ -863,7 +899,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
               <div className="mt-4 border-t border-gray-100 pt-4 dark:border-gray-800">
                 <div className="flex items-center gap-2">
                   <span className="w-20 shrink-0 text-xs text-gray-500 dark:text-gray-400">
-                    남은 체력
+                    {t("damage.remainingHp")}
                   </span>
                   <input
                     type="range"
@@ -891,32 +927,34 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                       {survival.label}
                       {survival.chance !== undefined && (
                         <span className="ml-1 text-xs">
-                          (쓰러질 확률 {(survival.chance * 100).toFixed(1)}%)
+                          (
+                          {t("damage.faintChance", {
+                            pct: (survival.chance * 100).toFixed(1),
+                          })}
+                          )
                         </span>
                       )}
                     </div>
                     <div className="text-xs text-gray-400">
                       {survivableAtFull
-                        ? `견디려면 HP ${max + 1} 이상 (풀피의 ${survivePct}% 이상)`
-                        : "풀피에서도 최대 데미지에 쓰러짐"}
+                        ? t("damage.surviveThreshold", {
+                            hp: max + 1,
+                            pct: survivePct,
+                          })
+                        : t("damage.noSurvive")}
                     </div>
                   </div>
                 )}
               </div>
             </>
           ) : (
-            <p className="text-sm text-gray-400">
-              이 기술은 위력이 고정/가변이라 표준 데미지 계산을 할 수 없습니다.
-            </p>
+            <p className="text-sm text-gray-400">{t("damage.variablePower")}</p>
           )}
         </div>
       )}
 
       {!(attacker && move && defender) && (
-        <p className="mt-6 text-sm text-gray-400">
-          공격 포켓몬과 기술, 방어 포켓몬을 선택하면 데미지와 확정/난수 1타
-          여부를 계산합니다.
-        </p>
+        <p className="mt-6 text-sm text-gray-400">{t("damage.emptyState")}</p>
       )}
     </div>
   );

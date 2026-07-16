@@ -92,10 +92,14 @@ export function damageRolls({
   return rolls;
 }
 
+/** Language-agnostic KO classification; the UI formats the label (issue #8). */
+export type KoKind = "immune" | "ohko" | "ohko-chance" | "nhko";
+
 export interface KoResult {
-  /** e.g. "확정 1타", "난수 1타", "확정 2타". */
-  label: string;
-  /** OHKO/roll probability (0–1) when the KO is not guaranteed. */
+  kind: KoKind;
+  /** Number of hits to KO (for `nhko`). */
+  hits?: number;
+  /** OHKO probability (0–1) for `ohko-chance`. */
   chance?: number;
 }
 
@@ -103,14 +107,14 @@ export interface KoResult {
 export function koVerdict(rolls: number[], hp: number): KoResult {
   const min = Math.min(...rolls);
   const max = Math.max(...rolls);
-  if (max === 0) return { label: "효과 없음" };
-  if (min >= hp) return { label: "확정 1타" };
+  if (max === 0) return { kind: "immune" };
+  if (min >= hp) return { kind: "ohko" };
   if (max >= hp) {
     const koRolls = rolls.filter((d) => d >= hp).length;
-    return { label: "난수 1타", chance: koRolls / rolls.length };
+    return { kind: "ohko-chance", chance: koRolls / rolls.length };
   }
   // Guaranteed n-hit KO: smallest n where n × min roll reaches HP.
   let hits = 2;
   while (hits * min < hp) hits++;
-  return { label: `확정 ${hits}타` };
+  return { kind: "nhko", hits };
 }
