@@ -26,6 +26,28 @@ const NATURE_KEYS: Record<SpeedNature, TranslationKey> = {
   minus: "speed.natureMinus",
 };
 
+// Abilities that change Speed when active (weather/terrain/status/item). Most
+// double it; Quick Feet is ×1.5. Their triggers differ, so the UI just offers a
+// manual "activate" toggle rather than modeling each condition.
+const SPEED_ABILITY_MULT: Record<string, number> = {
+  "swift-swim": 2,
+  chlorophyll: 2,
+  "sand-rush": 2,
+  "slush-rush": 2,
+  "surge-surfer": 2,
+  unburden: 2,
+  "quick-feet": 1.5,
+};
+
+/** "Swift Swim" -> "swift-swim"; "Quick Feet" -> "quick-feet". */
+function abilitySlug(en: string): string {
+  return en
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 type Unit = {
   key: string;
   slug: string;
@@ -37,6 +59,8 @@ type Unit = {
   types: PokemonType[];
   /** Types this species has a damaging move of (for the weakness-move filter). */
   attackTypes: PokemonType[];
+  /** Speed-changing ability of this form, if any (for the activate toggle). */
+  speedAbility: { name: LocalizedName; mult: number } | null;
 };
 
 const GROUPS: {
@@ -94,18 +118,40 @@ function useUnits(pokemon: Pokemon[]): Unit[] {
         const nonMega = entry.forms.filter((f) => f.kind !== "mega");
         const megas = entry.forms.filter((f) => f.kind === "mega");
         const shown = nonMega.length > 0 ? [nonMega[0], ...megas] : megas;
-        return shown.map((form) => ({
-          key: `${entry.slug}|${form.name}`,
-          slug: entry.slug,
-          names: form.names,
-          sprite: form.sprite,
-          spe: form.baseStats.spe,
-          isMega: form.kind === "mega",
-          types: form.types,
-          attackTypes,
-        }));
+        return shown.map((form) => {
+          let speedAbility: Unit["speedAbility"] = null;
+          for (const a of form.abilities) {
+            const mult = SPEED_ABILITY_MULT[abilitySlug(a.en)];
+            if (mult) {
+              speedAbility = { name: { ko: a.ko, en: a.en, ja: a.ja }, mult };
+              break;
+            }
+          }
+          return {
+            key: `${entry.slug}|${form.name}`,
+            slug: entry.slug,
+            names: form.names,
+            sprite: form.sprite,
+            spe: form.baseStats.spe,
+            isMega: form.kind === "mega",
+            types: form.types,
+            attackTypes,
+            speedAbility,
+          };
+        });
       }),
     [pokemon],
+  );
+}
+
+/** Fixed-width toggle chip so switching on/off never changes its width
+ * (which would reflow the flex-wrap controls row). */
+function chipClass(active: boolean): string {
+  return (
+    "min-w-[6.5rem] whitespace-nowrap rounded-lg border px-3 py-1 text-center text-sm font-medium " +
+    (active
+      ? "border-violet-600 bg-violet-600 text-white"
+      : "border-gray-200 text-gray-500 hover:border-gray-400 dark:border-gray-700 dark:hover:text-gray-200")
   );
 }
 
@@ -149,6 +195,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const [nature, setNature] = useState<SpeedNature>("neutral");
   const [ev, setEv] = useState(EV_MAX);
   const [scarf, setScarf] = useState(false);
+  const [abilityActive, setAbilityActive] = useState(false);
   const [myStage, setMyStage] = useState(0);
   const [oppStage, setOppStage] = useState(0);
   const [target, setTarget] = useState("");
@@ -166,14 +213,17 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
         .slice(0, 40)
     : [];
 
+  const speedAbility = selected?.speedAbility ?? null;
   const baseSpeed = selected ? speedStat(selected.spe, ev, nature) : null;
-  // In-game order: stat-stage (rank, issue #3) first, then the Choice Scarf
-  // ×1.5 item modifier (issue #2).
+  // In-game order: stat-stage (rank, #3) first, then the ability multiplier
+  // (Swift Swim etc.), then the Choice Scarf ×1.5 item modifier (#2).
   const mySpeed =
     baseSpeed !== null
       ? (() => {
-          const staged = withStage(baseSpeed, myStage);
-          return scarf ? withScarf(staged) : staged;
+          let s = withStage(baseSpeed, myStage);
+          if (abilityActive && speedAbility)
+            s = Math.floor(s * speedAbility.mult);
+          return scarf ? withScarf(s) : s;
         })()
       : null;
 
@@ -228,6 +278,8 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                   onClick={() => {
                     setSelectedKey(u.key);
                     setQuery("");
+                    setAbilityActive(false);
+                    setScarf(false);
                   }}
                   className="flex w-full items-center gap-2 px-3 py-1.5 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
@@ -251,7 +303,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
       </div>
 
       {selected && (
-        <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3 rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+        <div className="mt-4 flex flex-wrap items-start gap-x-6 gap-y-3 rounded-lg border border-gray-200 p-4 dark:border-gray-700">
           <div className="flex items-center gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -293,7 +345,7 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
           </div>
 
           {/* EV slider */}
-          <div className="min-w-52 flex-1">
+          <div className="min-w-40 flex-1">
             <div className="mb-1 flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
               <span>{t("speed.ev")}</span>
               <span className="flex items-center gap-1">
@@ -322,24 +374,41 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             />
           </div>
 
-          {/* Choice Scarf toggle (my own item) */}
-          <div>
-            <div className="mb-1 text-xs text-gray-500 dark:text-gray-400">
-              {t("speed.scarf")}
+          {/* Choice Scarf toggle — hidden for megas (they must hold a Mega Stone). */}
+          {!selected.isMega && (
+            <div>
+              <div className="mb-1 text-xs text-gray-500 dark:text-gray-400">
+                {t("speed.scarf")}
+              </div>
+              <button
+                type="button"
+                onClick={() => setScarf((v) => !v)}
+                aria-pressed={scarf}
+                className={chipClass(scarf)}
+              >
+                {t(scarf ? "speed.scarfOn" : "speed.scarfOff")}
+              </button>
             </div>
-            <button
-              type="button"
-              onClick={() => setScarf((v) => !v)}
-              aria-pressed={scarf}
-              className={
-                scarf
-                  ? "rounded-lg bg-violet-600 px-3 py-1 text-sm font-medium text-white"
-                  : "rounded-lg border border-gray-200 px-3 py-1 text-sm text-gray-500 hover:border-gray-400 dark:border-gray-700 dark:hover:text-gray-200"
-              }
-            >
-              {t(scarf ? "speed.scarfOn" : "speed.scarfOff")}
-            </button>
-          </div>
+          )}
+
+          {/* Speed-changing ability toggle (Swift Swim ×2, Quick Feet ×1.5…) */}
+          {speedAbility && (
+            <div>
+              <div className="mb-1 text-xs text-gray-500 dark:text-gray-400">
+                {speedAbility.name[lang]}
+              </div>
+              <button
+                type="button"
+                onClick={() => setAbilityActive((v) => !v)}
+                aria-pressed={abilityActive}
+                className={chipClass(abilityActive)}
+              >
+                {abilityActive
+                  ? t("speed.abilityOn", { mult: speedAbility.mult })
+                  : t("speed.abilityOff")}
+              </button>
+            </div>
+          )}
 
           {/* My speed rank (stat stage) */}
           <div>
@@ -349,19 +418,23 @@ export function SpeedCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             <StageStepper value={myStage} onChange={setMyStage} />
           </div>
 
-          {/* Result */}
-          <div className="text-right">
+          {/* Result — fixed width so the note wraps inside instead of widening
+              the block (which would wrap the whole controls row to a new line). */}
+          <div className="ml-auto w-32 shrink-0 text-right">
             <div className="text-xs text-gray-500 dark:text-gray-400">
               {t("speed.mySpeed")}
             </div>
             <div className="text-2xl font-bold tabular-nums">{mySpeed}</div>
-            {(scarf || myStage !== 0) && (
+            {(scarf || myStage !== 0 || (abilityActive && speedAbility)) && (
               <div className="text-xs text-violet-500">
                 {[
                   myStage !== 0
                     ? t("speed.rankNote", {
                         rank: myStage > 0 ? `+${myStage}` : myStage,
                       })
+                    : null,
+                  abilityActive && speedAbility
+                    ? `${speedAbility.name[lang]} ×${speedAbility.mult}`
                     : null,
                   scarf ? `${t("speed.scarf")} ×1.5` : null,
                 ]
