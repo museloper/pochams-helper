@@ -8,6 +8,7 @@ import { TYPE_INFO } from "@/lib/typeInfo";
 import { asset } from "@/lib/basePath";
 import { moves as moveDict } from "@/lib/data/moves";
 import { useLanguage } from "@/stores/useLanguage";
+import { useT } from "@/lib/i18n";
 import { TypeBadge } from "@/components/TypeBadge";
 
 // H·A·B·C·D·S stat sort options.
@@ -47,6 +48,7 @@ function hasPriorityMove(entry: Pokemon): boolean {
  */
 export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
   const lang = useLanguage((s) => s.lang);
+  const t = useT();
   const [selectedTypes, setSelectedTypes] = useState<PokemonType[]>([]);
   const [megaOnly, setMegaOnly] = useState(false);
   const [priorityOnly, setPriorityOnly] = useState(false);
@@ -173,7 +175,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
         <button
           type="button"
           onClick={() => setFilterOpen(true)}
-          aria-label="필터"
+          aria-label={t("dex.filter")}
           className="relative inline-flex items-center gap-1.5 rounded-lg border border-gray-200 px-3 py-1.5 text-sm text-gray-600 hover:border-gray-400 dark:border-gray-700 dark:text-gray-300"
         >
           <svg
@@ -187,7 +189,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
           >
             <path d="M3 4.5h18l-7.5 9v5l-3 1.5v-6.5z" />
           </svg>
-          필터
+          {t("dex.filter")}
           {filterCount > 0 && (
             <span className="ml-0.5 rounded-full bg-gray-900 px-1.5 text-xs text-white dark:bg-white dark:text-gray-900">
               {filterCount}
@@ -196,7 +198,9 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
         </button>
       </div>
 
-      <p className="mb-3 text-xs text-gray-400">{filtered.length}종</p>
+      <p className="mb-3 text-xs text-gray-400">
+        {t("dex.countN", { n: filtered.length })}
+      </p>
 
       <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {sorted.map((unit) => (
@@ -223,7 +227,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                   {sortStat ? (
                     <span
                       className="shrink-0 text-xs font-medium text-gray-500 dark:text-gray-300"
-                      title="선택한 능력치 종족값"
+                      title={t("dex.selectedStatTitle")}
                     >
                       {STAT_SORTS.find((s) => s.key === sortStat)?.label}{" "}
                       {unit.baseStats[sortStat]}
@@ -231,9 +235,9 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                   ) : (
                     <span
                       className="shrink-0 text-xs text-gray-400"
-                      title="종족값 총합"
+                      title={t("dex.bstTitle")}
                     >
-                      종족값 {bst(unit)}
+                      {t("dex.bstN", { n: bst(unit) })}
                     </span>
                   )}
                 </div>
@@ -258,11 +262,11 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-base font-semibold">필터</h2>
+              <h2 className="text-base font-semibold">{t("dex.filter")}</h2>
               <button
                 type="button"
                 onClick={() => setFilterOpen(false)}
-                aria-label="닫기"
+                aria-label={t("common.close")}
                 className="rounded-md p-1 text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
               >
                 <svg
@@ -279,10 +283,8 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
             </div>
 
             <p className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
-              타입{" "}
-              <span className="text-gray-400">
-                (최대 2개, 둘 다 가진 포켓몬)
-              </span>
+              {t("dex.type")}{" "}
+              <span className="text-gray-400">{t("dex.typeHint")}</span>
             </p>
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <button
@@ -294,7 +296,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                     : "flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
                 }
               >
-                전체
+                {t("common.all")}
               </button>
               {POKEMON_TYPES.map((type) => {
                 const info = TYPE_INFO[type];
@@ -331,7 +333,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
             </div>
 
             <p className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
-              폼 · 기술
+              {t("dex.formsMoves")}
             </p>
             <div className="mb-4 flex flex-wrap gap-1.5">
               <button
@@ -343,7 +345,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                     : "rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
                 }
               >
-                메가만
+                {t("dex.megaOnly")}
               </button>
               <button
                 type="button"
@@ -354,7 +356,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                     : "rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
                 }
               >
-                선공기 보유
+                {t("dex.priorityOnly")}
               </button>
               <button
                 type="button"
@@ -365,12 +367,13 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                     : "rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
                 }
               >
-                와이드가드
+                {t("dex.wideGuard")}
               </button>
             </div>
 
             <p className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
-              정렬 <span className="text-gray-400">(능력치순)</span>
+              {t("dex.sort")}{" "}
+              <span className="text-gray-400">{t("dex.byStat")}</span>
             </p>
             <div className="mb-4 flex flex-wrap gap-1.5">
               <button
@@ -382,7 +385,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                     : "rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
                 }
               >
-                기본
+                {t("dex.default")}
               </button>
               {STAT_SORTS.map((s) => (
                 <button
@@ -406,7 +409,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                   }
                   className="ml-1 flex h-7 items-center rounded-full border border-gray-300 px-3 text-xs font-medium text-gray-600 hover:border-gray-400 dark:border-gray-600 dark:text-gray-300"
                 >
-                  {sortDir === "desc" ? "높은 순 ↓" : "낮은 순 ↑"}
+                  {sortDir === "desc" ? t("dex.sortDesc") : t("dex.sortAsc")}
                 </button>
               )}
             </div>
@@ -424,14 +427,14 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                 }}
                 className="text-sm text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
               >
-                초기화
+                {t("dex.reset")}
               </button>
               <button
                 type="button"
                 onClick={() => setFilterOpen(false)}
                 className="rounded-lg bg-gray-900 px-4 py-1.5 text-sm font-medium text-white dark:bg-white dark:text-gray-900"
               >
-                {filtered.length}종 보기
+                {t("dex.viewN", { n: filtered.length })}
               </button>
             </div>
           </div>

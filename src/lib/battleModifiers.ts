@@ -4,7 +4,7 @@
 // listed is selectable but applies no damage change. Some conditional abilities
 // (pinch boosts, weather) are treated as active when selected.
 
-import type { MoveCategory, PokemonType } from "@/lib/types";
+import type { LocalizedName, MoveCategory, PokemonType } from "@/lib/types";
 
 export interface ModContext {
   category: MoveCategory;
@@ -29,9 +29,8 @@ export interface Mods {
   immune: boolean;
 }
 
-export interface ItemOption {
+export interface ItemOption extends LocalizedName {
   id: string;
-  ko: string;
   /** PokéAPI item sprite slug; omitted for generic/none entries. */
   icon?: string;
 }
@@ -42,28 +41,86 @@ export function itemIconUrl(icon: string): string {
 }
 
 export const ATTACKER_ITEMS: ItemOption[] = [
-  { id: "", ko: "없음" },
-  { id: "choice-band", ko: "구애머리띠 (물리 ×1.5)", icon: "choice-band" },
-  { id: "choice-specs", ko: "구애안경 (특수 ×1.5)", icon: "choice-specs" },
-  { id: "life-orb", ko: "생명의구슬 (×1.3)", icon: "life-orb" },
-  { id: "expert-belt", ko: "달인의띠 (효과굉장 ×1.2)", icon: "expert-belt" },
-  { id: "muscle-band", ko: "힘의머리띠 (물리 ×1.1)", icon: "muscle-band" },
-  { id: "wise-glasses", ko: "박식안경 (특수 ×1.1)", icon: "wise-glasses" },
-  { id: "type-item", ko: "타입 강화도구 (기술 타입 ×1.2)", icon: "silk-scarf" },
+  { id: "", ko: "없음", en: "None", ja: "なし" },
+  {
+    id: "choice-band",
+    ko: "구애머리띠 (물리 ×1.5)",
+    en: "Choice Band (phys ×1.5)",
+    ja: "こだわりハチマキ (物理 ×1.5)",
+    icon: "choice-band",
+  },
+  {
+    id: "choice-specs",
+    ko: "구애안경 (특수 ×1.5)",
+    en: "Choice Specs (spec ×1.5)",
+    ja: "こだわりメガネ (特殊 ×1.5)",
+    icon: "choice-specs",
+  },
+  {
+    id: "life-orb",
+    ko: "생명의구슬 (×1.3)",
+    en: "Life Orb (×1.3)",
+    ja: "いのちのたま (×1.3)",
+    icon: "life-orb",
+  },
+  {
+    id: "expert-belt",
+    ko: "달인의띠 (효과굉장 ×1.2)",
+    en: "Expert Belt (super-eff ×1.2)",
+    ja: "たつじんのおび (効果抜群 ×1.2)",
+    icon: "expert-belt",
+  },
+  {
+    id: "muscle-band",
+    ko: "힘의머리띠 (물리 ×1.1)",
+    en: "Muscle Band (phys ×1.1)",
+    ja: "ちからのハチマキ (物理 ×1.1)",
+    icon: "muscle-band",
+  },
+  {
+    id: "wise-glasses",
+    ko: "박식안경 (특수 ×1.1)",
+    en: "Wise Glasses (spec ×1.1)",
+    ja: "ものしりメガネ (特殊 ×1.1)",
+    icon: "wise-glasses",
+  },
+  {
+    id: "type-item",
+    ko: "타입 강화도구 (기술 타입 ×1.2)",
+    en: "Type-boost item (move type ×1.2)",
+    ja: "タイプ強化アイテム (技タイプ ×1.2)",
+    icon: "silk-scarf",
+  },
   {
     id: "light-ball",
     ko: "전기구슬 (피카츄 · 공격·특공 ×2)",
+    en: "Light Ball (Pikachu · Atk/SpA ×2)",
+    ja: "でんきだま (ピカチュウ · 攻撃/特攻 ×2)",
     icon: "light-ball",
   },
 ];
 
 export const DEFENDER_ITEMS: ItemOption[] = [
-  { id: "", ko: "없음" },
-  { id: "assault-vest", ko: "돌격조끼 (특방 ×1.5)", icon: "assault-vest" },
-  { id: "eviolite", ko: "진화의휘석 (방어·특방 ×1.5)", icon: "eviolite" },
+  { id: "", ko: "없음", en: "None", ja: "なし" },
+  {
+    id: "assault-vest",
+    ko: "돌격조끼 (특방 ×1.5)",
+    en: "Assault Vest (SpD ×1.5)",
+    ja: "とつげきチョッキ (特防 ×1.5)",
+    icon: "assault-vest",
+  },
+  {
+    id: "eviolite",
+    ko: "진화의휘석 (방어·특방 ×1.5)",
+    en: "Eviolite (Def/SpD ×1.5)",
+    ja: "しんかのきせき (防御/特防 ×1.5)",
+    icon: "eviolite",
+  },
   {
     id: "resist-berry",
     ko: "약점 반감 열매 (효과굉장 ×0.5)",
+    en: "Resist Berry (super-eff ×0.5)",
+    ja: "弱点半減きのみ (効果抜群 ×0.5)",
     icon: "yache-berry",
   },
 ];

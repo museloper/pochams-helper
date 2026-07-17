@@ -76,7 +76,9 @@ const NATURES: { value: StatNature; key: TranslationKey }[] = [
 ];
 
 // A mega Pokémon must hold its Mega Stone, so its item is fixed.
-const MEGA_STONE_ITEMS: ItemOption[] = [{ id: "mega-stone", ko: "메가스톤" }];
+const MEGA_STONE_ITEMS: ItemOption[] = [
+  { id: "mega-stone", ko: "메가스톤", en: "Mega Stone", ja: "メガストーン" },
+];
 
 // Shared row-label sizing so every control row (EV sliders, toggles, selects)
 // in the attacker/defender panels lines up at the same x-offset; `truncate`
@@ -372,6 +374,7 @@ function ItemSelect({
   onChange: (v: string) => void;
 }) {
   const t = useT();
+  const lang = useLanguage((s) => s.lang);
   const [open, setOpen] = useState(false);
   const selected = items.find((it) => it.id === value) ?? items[0];
   return (
@@ -384,7 +387,7 @@ function ItemSelect({
           className="flex w-full items-center gap-1.5 rounded-lg border border-gray-300 px-2 py-1 text-left text-xs dark:border-gray-600 dark:bg-gray-900"
         >
           <ItemIcon icon={selected.icon} />
-          <span className="min-w-0 flex-1 truncate">{selected.ko}</span>
+          <span className="min-w-0 flex-1 truncate">{selected[lang]}</span>
           <span className="shrink-0 text-gray-400">▾</span>
         </button>
         {open && (
@@ -404,7 +407,7 @@ function ItemSelect({
                   }
                 >
                   <ItemIcon icon={it.icon} />
-                  <span className="whitespace-nowrap">{it.ko}</span>
+                  <span className="whitespace-nowrap">{it[lang]}</span>
                 </button>
               </li>
             ))}
