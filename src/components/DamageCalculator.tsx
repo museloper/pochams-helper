@@ -98,6 +98,15 @@ const WEATHER_LABEL_KEY: Record<Weather, TranslationKey> = {
   snow: "weather.snow",
 };
 
+// Weather Ball changes type (and doubles power) with the active weather.
+const WEATHER_BALL_TYPE: Record<Weather, PokemonType> = {
+  none: "normal",
+  sun: "fire",
+  rain: "water",
+  sand: "rock",
+  snow: "ice",
+};
+
 const STATUS_LABEL_KEY: Record<Status, TranslationKey> = {
   none: "status.none",
   burn: "status.burn",
@@ -521,6 +530,15 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   );
   const defLabel = t(physical ? "stat.defense" : "stat.spDefense");
 
+  // Weather Ball: its type follows the weather, and its power doubles (50→100)
+  // whenever any weather is active. STAB/effectiveness use this effective type.
+  const isWeatherBall = move?.slug === "weather-ball";
+  const effectiveMoveType: PokemonType | null = move
+    ? isWeatherBall
+      ? WEATHER_BALL_TYPE[weather]
+      : move.type
+    : null;
+
   // Accumulating multi-hit moves: total power depends on how many hits land.
   const perHitPowers = move ? MULTI_HIT_POWERS[move.slug] : undefined;
   const isMultiHit = !!perHitPowers;
@@ -530,7 +548,11 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
     ? cumulativePower(perHitPowers, hitCount)
     : isWeightBased && defender
       ? weightBasedPower(defender.weight)
-      : (move?.power ?? 0);
+      : isWeatherBall
+        ? weather !== "none"
+          ? 100
+          : 50
+        : (move?.power ?? 0);
 
   // Effective stats. Body Press uses the user's Defense as the offensive stat.
   const attack = move
@@ -558,9 +580,16 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const defAbility = defender?.abilities[defAbilityIdx] ?? null;
   const hasGuts = !!(atkAbility && abilitySlug(atkAbility.en) === "guts");
 
-  const stab = !!(move && attacker && attacker.types.includes(move.type));
+  const stab = !!(
+    move &&
+    attacker &&
+    effectiveMoveType &&
+    attacker.types.includes(effectiveMoveType)
+  );
   const baseTypeEff =
-    move && defender ? effectiveness(move.type, defender.types) : 1;
+    move && defender && effectiveMoveType
+      ? effectiveness(effectiveMoveType, defender.types)
+      : 1;
 
   // Combine held-item and ability modifiers.
   const mods =
@@ -568,13 +597,13 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
       ? combineMods([
           itemMods(atkItem, {
             category: move.category,
-            moveType: move.type,
+            moveType: effectiveMoveType ?? move.type,
             power: move.power ?? 0,
             typeEff: baseTypeEff,
           } satisfies ModContext),
           itemMods(defItem, {
             category: move.category,
-            moveType: move.type,
+            moveType: effectiveMoveType ?? move.type,
             power: move.power ?? 0,
             typeEff: baseTypeEff,
           } satisfies ModContext),
@@ -583,7 +612,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             "attacker",
             {
               category: move.category,
-              moveType: move.type,
+              moveType: effectiveMoveType ?? move.type,
               power: move.power ?? 0,
               typeEff: baseTypeEff,
             },
@@ -593,14 +622,14 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             "defender",
             {
               category: move.category,
-              moveType: move.type,
+              moveType: effectiveMoveType ?? move.type,
               power: move.power ?? 0,
               typeEff: baseTypeEff,
             },
           ),
           weatherMods(weather, {
             category: move.category,
-            moveType: move.type,
+            moveType: effectiveMoveType ?? move.type,
             defenderTypes: defender.types,
           }),
           statusMods(atkStatus, {
@@ -812,7 +841,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     onClick={() => setMoveListOpen(true)}
                     className="flex min-h-9 w-full items-center gap-2 rounded-lg border border-gray-300 px-3 py-1 text-sm hover:border-gray-400 dark:border-gray-600"
                   >
-                    <TypeBadge type={move.type} />
+                    <TypeBadge type={effectiveMoveType ?? move.type} />
                     <span className="min-w-0 flex-1 truncate text-left">
                       {move[lang]}
                     </span>
@@ -1009,6 +1038,10 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                       defender &&
                       ` · ${t("damage.weightInfo", {
                         weight: defender.weight,
+                        power: effectivePower,
+                      })}`}
+                    {isWeatherBall &&
+                      ` · ${t("damage.weatherBallInfo", {
                         power: effectivePower,
                       })}`}
                     {weather !== "none" &&
