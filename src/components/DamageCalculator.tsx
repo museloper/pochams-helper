@@ -28,14 +28,17 @@ import { effectiveness } from "@/lib/typeChart";
 import {
   ATTACKER_ITEMS,
   DEFENDER_ITEMS,
+  STATUS_OPTIONS,
   WEATHER_OPTIONS,
   abilityMods,
   combineMods,
   itemIconUrl,
   itemMods,
+  statusMods,
   weatherMods,
   type ItemOption,
   type ModContext,
+  type Status,
   type Weather,
 } from "@/lib/battleModifiers";
 import { moves as moveDict } from "@/lib/data/moves";
@@ -75,12 +78,31 @@ const NATURES: { value: StatNature; key: TranslationKey }[] = [
 // A mega Pokémon must hold its Mega Stone, so its item is fixed.
 const MEGA_STONE_ITEMS: ItemOption[] = [{ id: "mega-stone", ko: "메가스톤" }];
 
+// Shared row-label sizing so every control row (EV sliders, toggles, selects)
+// in the attacker/defender panels lines up at the same x-offset; `truncate`
+// guards against long translated labels ever overlapping the control itself.
+const ROW_LABEL =
+  "w-24 shrink-0 truncate text-xs text-gray-500 dark:text-gray-400";
+// Shared row height so every control row has the same vertical footprint
+// regardless of its control type (slider vs. button group vs. dropdown).
+const ROW = "flex min-h-9 items-center justify-between gap-2";
+const ROW_START = "flex min-h-9 items-center gap-2";
+
 const WEATHER_LABEL_KEY: Record<Weather, TranslationKey> = {
   none: "weather.none",
   sun: "weather.sun",
   rain: "weather.rain",
   sand: "weather.sand",
   snow: "weather.snow",
+};
+
+const STATUS_LABEL_KEY: Record<Status, TranslationKey> = {
+  none: "status.none",
+  burn: "status.burn",
+  paralysis: "status.paralysis",
+  poison: "status.poison",
+  toxic: "status.toxic",
+  sleep: "status.sleep",
 };
 
 function useUnits(pokemon: Pokemon[]): Unit[] {
@@ -225,10 +247,8 @@ function EvSlider({
   onChange: (v: number) => void;
 }) {
   return (
-    <div className="flex items-center gap-2">
-      <span className="w-20 shrink-0 text-xs text-gray-500 dark:text-gray-400">
-        {label}
-      </span>
+    <div className={ROW_START}>
+      <span className={ROW_LABEL}>{label}</span>
       <input
         type="range"
         min={0}
@@ -268,10 +288,8 @@ function AbilityToggle({
   const lang = useLanguage((s) => s.lang);
   const t = useT();
   return (
-    <div className="flex items-center justify-between gap-2">
-      <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400">
-        {t("common.ability")}
-      </span>
+    <div className={ROW}>
+      <span className={ROW_LABEL}>{t("common.ability")}</span>
       <div className="inline-flex flex-wrap justify-end gap-0.5 rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
         {abilities.map((a, i) => (
           <button
@@ -286,6 +304,41 @@ function AbilityToggle({
           >
             {a[lang]}
             {a.hidden && t("common.abilityHidden")}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/** Attacker's major status condition (Guts + Burn interaction, issue #12). */
+function StatusSelect({
+  value,
+  onChange,
+}: {
+  value: Status;
+  onChange: (v: Status) => void;
+}) {
+  const t = useT();
+  // Unlike the other rows this one spans full width (no right-aligned offset)
+  // so all options fit on a single line as an even segmented control.
+  return (
+    <div className={ROW_START}>
+      <span className={ROW_LABEL}>{t("damage.status")}</span>
+      <div className="flex flex-1 gap-0.5 rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
+        {STATUS_OPTIONS.map((s) => (
+          <button
+            key={s.value}
+            type="button"
+            onClick={() => onChange(s.value)}
+            title={s.ko}
+            className={
+              value === s.value
+                ? "flex-1 rounded-md bg-gray-900 px-1 py-1 text-xs font-medium text-white dark:bg-white dark:text-gray-900"
+                : "flex-1 rounded-md px-1 py-1 text-xs text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
+            }
+          >
+            {t(STATUS_LABEL_KEY[s.value])}
           </button>
         ))}
       </div>
@@ -322,10 +375,8 @@ function ItemSelect({
   const [open, setOpen] = useState(false);
   const selected = items.find((it) => it.id === value) ?? items[0];
   return (
-    <div className="flex items-center justify-between gap-2">
-      <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400">
-        {t("common.item")}
-      </span>
+    <div className={ROW}>
+      <span className={ROW_LABEL}>{t("common.item")}</span>
       <div className="relative min-w-0 flex-1">
         <button
           type="button"
@@ -375,10 +426,8 @@ function StageSelect({
 }) {
   const t = useT();
   return (
-    <div className="flex items-center justify-between gap-2">
-      <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400">
-        {t("common.rankOf", { stat: label })}
-      </span>
+    <div className={ROW}>
+      <span className={ROW_LABEL}>{t("common.rankOf", { stat: label })}</span>
       <div className="inline-flex items-center gap-1">
         <button
           type="button"
@@ -424,6 +473,8 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   const [atkStage, setAtkStage] = useState(0);
   // Landed-hit count for accumulating multi-hit moves (e.g. Triple Axel, #5).
   const [hitCount, setHitCount] = useState(1);
+  // Attacker's major status condition (Guts + Burn interaction, issue #12).
+  const [atkStatus, setAtkStatus] = useState<Status>("none");
 
   const [defenderKey, setDefenderKey] = useState<string | null>(null);
   const [defNature, setDefNature] = useState<StatNature>("neutral");
@@ -502,6 +553,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
 
   const atkAbility = attacker?.abilities[atkAbilityIdx] ?? null;
   const defAbility = defender?.abilities[defAbilityIdx] ?? null;
+  const hasGuts = !!(atkAbility && abilitySlug(atkAbility.en) === "guts");
 
   const stab = !!(move && attacker && attacker.types.includes(move.type));
   const baseTypeEff =
@@ -547,6 +599,11 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
             category: move.category,
             moveType: move.type,
             defenderTypes: defender.types,
+          }),
+          statusMods(atkStatus, {
+            category: move.category,
+            hasGuts,
+            usesDefense,
           }),
         ])
       : null;
@@ -750,7 +807,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                   <button
                     type="button"
                     onClick={() => setMoveListOpen(true)}
-                    className="flex w-full items-center gap-2 rounded-lg border border-gray-300 px-3 py-2 text-sm hover:border-gray-400 dark:border-gray-600"
+                    className="flex min-h-9 w-full items-center gap-2 rounded-lg border border-gray-300 px-3 py-1 text-sm hover:border-gray-400 dark:border-gray-600"
                   >
                     <TypeBadge type={move.type} />
                     <span className="min-w-0 flex-1 truncate text-left">
@@ -779,8 +836,12 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     value={atkEv}
                     onChange={setAtkEv}
                   />
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                  {/* The defender panel has two EV rows (HP + Def); this spacer
+                      keeps the following rows (nature/stage/ability/item)
+                      vertically aligned across both panels. */}
+                  <div className="min-h-9" aria-hidden />
+                  <div className={ROW}>
+                    <span className={ROW_LABEL}>
                       {t("common.natureOf", { stat: atkLabel })}
                     </span>
                     <NatureToggle value={atkNature} onChange={setAtkNature} />
@@ -791,10 +852,8 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                     onChange={setAtkStage}
                   />
                   {isMultiHit && perHitPowers && (
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="shrink-0 text-xs text-gray-500 dark:text-gray-400">
-                        {t("damage.hitCount")}
-                      </span>
+                    <div className={ROW}>
+                      <span className={ROW_LABEL}>{t("damage.hitCount")}</span>
                       <div className="inline-flex rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
                         {perHitPowers.map((_, i) => {
                           const n = i + 1;
@@ -829,6 +888,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                 value={atkItem}
                 onChange={setAtkItem}
               />
+              <StatusSelect value={atkStatus} onChange={setAtkStatus} />
             </div>
           )}
         </section>
@@ -854,7 +914,9 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
 
           {defender && (
             <div className="mt-3 space-y-3">
-              <div className="flex flex-wrap gap-1">
+              {/* min-h-9 matches the attacker's move-summary row so the two
+                  panels' subsequent rows line up (issue: panel row alignment). */}
+              <div className="flex min-h-9 flex-wrap items-center gap-1">
                 {defender.types.map((t) => (
                   <TypeBadge key={t} type={t} />
                 ))}
@@ -871,8 +933,8 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                 value={defEv}
                 onChange={setDefEv}
               />
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-xs text-gray-500 dark:text-gray-400">
+              <div className={ROW}>
+                <span className={ROW_LABEL}>
                   {t("common.natureOf", {
                     stat: move ? defLabel : t("stat.bulk"),
                   })}
@@ -948,6 +1010,16 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                       })}`}
                     {weather !== "none" &&
                       ` · ${t("damage.weather")}: ${t(WEATHER_LABEL_KEY[weather])}`}
+                    {physical &&
+                      !usesDefense &&
+                      atkStatus !== "none" &&
+                      hasGuts &&
+                      ` · ${t("damage.gutsInfo")}`}
+                    {physical &&
+                      !usesDefense &&
+                      atkStatus === "burn" &&
+                      !hasGuts &&
+                      ` · ${t("damage.burnInfo")}`}
                   </div>
                 </div>
               </div>
@@ -977,10 +1049,8 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
 
               {/* HP adjustment: survive a single hit (e.g. priority move)? */}
               <div className="mt-4 border-t border-gray-100 pt-4 dark:border-gray-800">
-                <div className="flex items-center gap-2">
-                  <span className="w-20 shrink-0 text-xs text-gray-500 dark:text-gray-400">
-                    {t("damage.remainingHp")}
-                  </span>
+                <div className={ROW_START}>
+                  <span className={ROW_LABEL}>{t("damage.remainingHp")}</span>
                   <input
                     type="range"
                     min={1}

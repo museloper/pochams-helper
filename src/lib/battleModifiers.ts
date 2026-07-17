@@ -230,6 +230,39 @@ export function weatherMods(
   }
 }
 
+// Freeze is deliberately excluded: a frozen Pokémon must thaw (status cured)
+// before it can act, so "attacking while frozen" never actually occurs.
+export type Status =
+  "none" | "burn" | "paralysis" | "poison" | "toxic" | "sleep";
+
+export const STATUS_OPTIONS: { value: Status; ko: string }[] = [
+  { value: "none", ko: "없음" },
+  { value: "burn", ko: "화상 (물리 공격 ×0.5, 근성이면 무효)" },
+  { value: "paralysis", ko: "마비 (근성 시 공격 ×1.5)" },
+  { value: "poison", ko: "독 (근성 시 공격 ×1.5)" },
+  { value: "toxic", ko: "맹독 (근성 시 공격 ×1.5)" },
+  { value: "sleep", ko: "잠듦 (근성 시 공격 ×1.5)" },
+];
+
+/**
+ * Attacker status-condition effects on damage (issue #12): Burn halves
+ * physical Attack; Guts instead boosts physical Attack ×1.5 while having any
+ * major status, and its boost overrides (bypasses) Burn's halving. Neither
+ * applies to moves that substitute Defense for Attack (e.g. Body Press,
+ * issue #9) since both effects specifically target the Attack stat.
+ */
+export function statusMods(
+  status: Status,
+  ctx: { category: MoveCategory; hasGuts: boolean; usesDefense: boolean },
+): Partial<Mods> {
+  if (status === "none" || ctx.category !== "physical" || ctx.usesDefense) {
+    return empty();
+  }
+  if (ctx.hasGuts) return { atkMult: 1.5 };
+  if (status === "burn") return { atkMult: 0.5 };
+  return empty();
+}
+
 /** Combine item/ability modifiers into a single set. */
 export function combineMods(parts: Partial<Mods>[]): Mods {
   const mods: Mods = {
