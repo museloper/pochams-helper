@@ -167,6 +167,17 @@ const ko = {
   "detail.mult.xHalf": "×½ 반감",
   "detail.mult.xQuarter": "×¼ 반감",
   "detail.mult.x0": "×0 무효",
+
+  // Home page
+  "home.tagline": "팀 빌딩 · 상성 계산 · 데미지 계산",
+  "home.dexTitle": "포켓몬 도감",
+  "home.dexDesc": "로스터 · 종족값 · 타입",
+  "home.speedDesc": "성격·노력치별 스피드 라인 비교",
+  "home.typeCalcTitle": "상성 계산기",
+  "home.typeCalcDesc": "타입별 공·방 상성 배율",
+  "home.damageDesc": "기술·노력치별 데미지와 확정/난수 1타",
+  "home.goto": "바로가기 →",
+  "home.comingSoon": "준비 중",
 } as const;
 
 type Key = keyof typeof ko;
@@ -315,6 +326,16 @@ const en: Record<Key, string> = {
   "detail.mult.xHalf": "×½ resists",
   "detail.mult.xQuarter": "×¼ resists",
   "detail.mult.x0": "×0 immune",
+
+  "home.tagline": "Team building · Type matchups · Damage calc",
+  "home.dexTitle": "Pokédex",
+  "home.dexDesc": "Roster · Base stats · Types",
+  "home.speedDesc": "Compare speed tiers by nature/EV",
+  "home.typeCalcTitle": "Type Calculator",
+  "home.typeCalcDesc": "Offensive/defensive type multipliers",
+  "home.damageDesc": "Damage and OHKO/roll odds by move/EV",
+  "home.goto": "Open →",
+  "home.comingSoon": "Coming soon",
 };
 
 const ja: Record<Key, string> = {
@@ -461,6 +482,16 @@ const ja: Record<Key, string> = {
   "detail.mult.xHalf": "×½ 半減",
   "detail.mult.xQuarter": "×¼ 半減",
   "detail.mult.x0": "×0 無効",
+
+  "home.tagline": "チーム構築 · タイプ相性 · ダメージ計算",
+  "home.dexTitle": "ポケモン図鑑",
+  "home.dexDesc": "ロスター · 種族値 · タイプ",
+  "home.speedDesc": "性格・努力値ごとの素早さライン比較",
+  "home.typeCalcTitle": "相性計算機",
+  "home.typeCalcDesc": "タイプ別の攻撃/防御倍率",
+  "home.damageDesc": "技・努力値ごとのダメージと確定/乱数1発",
+  "home.goto": "開く →",
+  "home.comingSoon": "準備中",
 };
 
 const DICTS: Record<Language, Record<Key, string>> = { ko, en, ja };
