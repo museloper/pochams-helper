@@ -1056,6 +1056,12 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                       atkStatus === "burn" &&
                       !hasGuts &&
                       ` · ${t("damage.burnInfo")}`}
+                    {mods &&
+                      mods.powerMult !== 1 &&
+                      ` · ${t("damage.powerMod", {
+                        from: effectivePower,
+                        to: Math.floor(effectivePower * mods.powerMult),
+                      })}`}
                   </div>
                 </div>
               </div>
