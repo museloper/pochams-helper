@@ -301,7 +301,8 @@ function AbilityToggle({
   return (
     <div className={ROW}>
       <span className={ROW_LABEL}>{t("common.ability")}</span>
-      <div className="inline-flex flex-wrap justify-end gap-0.5 rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
+      {/* No wrap + compact font so 3 abilities stay on one line. */}
+      <div className="inline-flex min-w-0 justify-end gap-0.5 rounded-lg border border-gray-200 p-0.5 dark:border-gray-700">
         {abilities.map((a, i) => (
           <button
             key={a.en}
@@ -309,8 +310,8 @@ function AbilityToggle({
             onClick={() => onChange(i)}
             className={
               idx === i
-                ? "rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white dark:bg-white dark:text-gray-900"
-                : "rounded-md px-2 py-1 text-xs text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
+                ? "rounded-md bg-gray-900 px-1.5 py-1 text-[11px] font-medium whitespace-nowrap text-white dark:bg-white dark:text-gray-900"
+                : "rounded-md px-1.5 py-1 text-[11px] whitespace-nowrap text-gray-500 hover:text-gray-800 dark:hover:text-gray-200"
             }
           >
             {a[lang]}
@@ -992,6 +993,14 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
           )}
         </section>
       </div>
+
+      {/* Legend for the `*` hidden-ability marker (shown once). */}
+      {(attacker?.abilities.some((a) => a.hidden) ||
+        defender?.abilities.some((a) => a.hidden)) && (
+        <p className="mt-2 text-xs text-gray-400">
+          {t("common.abilityHiddenNote")}
+        </p>
+      )}
 
       {/* Result */}
       {attacker && move && defender && (
