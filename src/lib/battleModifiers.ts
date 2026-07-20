@@ -258,33 +258,51 @@ export interface WeatherContext {
   defenderTypes: PokemonType[];
 }
 
+/**
+ * Sun/Rain's power boost or halving by move type. Split out from
+ * {@link weatherMods} so an attacker-only weather override (e.g. Mega Sol,
+ * "as if the weather were harsh sunlight" for its own moves) can apply this
+ * half while the field's real weather still drives {@link weatherDefenseMult}.
+ */
+export function weatherPowerMult(
+  weather: Weather,
+  moveType: PokemonType,
+): number {
+  if (weather === "sun") {
+    if (moveType === "fire") return 1.5;
+    if (moveType === "water") return 0.5;
+  } else if (weather === "rain") {
+    if (moveType === "water") return 1.5;
+    if (moveType === "fire") return 0.5;
+  }
+  return 1;
+}
+
+/** Sandstorm/Snow's Sp. Def/Def boost for Rock/Ice-type defenders. Always
+ * driven by the real field weather, regardless of any attacker-side override. */
+export function weatherDefenseMult(
+  weather: Weather,
+  category: MoveCategory,
+  defenderTypes: PokemonType[],
+): number {
+  const phys = category === "physical";
+  if (weather === "sand" && !phys && defenderTypes.includes("rock")) return 1.5;
+  if (weather === "snow" && phys && defenderTypes.includes("ice")) return 1.5;
+  return 1;
+}
+
 /** Weather field effects: Sun/Rain boost or halve move power by type; Sandstorm
  * and Snow raise Rock/Ice defenders' Sp. Def/Def respectively. */
 export function weatherMods(
   weather: Weather,
   ctx: WeatherContext,
 ): Partial<Mods> {
-  const phys = ctx.category === "physical";
-  switch (weather) {
-    case "sun":
-      if (ctx.moveType === "fire") return { powerMult: 1.5 };
-      if (ctx.moveType === "water") return { powerMult: 0.5 };
-      return empty();
-    case "rain":
-      if (ctx.moveType === "water") return { powerMult: 1.5 };
-      if (ctx.moveType === "fire") return { powerMult: 0.5 };
-      return empty();
-    case "sand":
-      return !phys && ctx.defenderTypes.includes("rock")
-        ? { defMult: 1.5 }
-        : empty();
-    case "snow":
-      return phys && ctx.defenderTypes.includes("ice")
-        ? { defMult: 1.5 }
-        : empty();
-    default:
-      return empty();
-  }
+  const mods: Partial<Mods> = {};
+  const power = weatherPowerMult(weather, ctx.moveType);
+  if (power !== 1) mods.powerMult = power;
+  const def = weatherDefenseMult(weather, ctx.category, ctx.defenderTypes);
+  if (def !== 1) mods.defMult = def;
+  return mods;
 }
 
 // Freeze is deliberately excluded: a frozen Pokémon must thaw (status cured)

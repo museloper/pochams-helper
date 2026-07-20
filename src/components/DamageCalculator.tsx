@@ -35,7 +35,8 @@ import {
   itemIconUrl,
   itemMods,
   statusMods,
-  weatherMods,
+  weatherDefenseMult,
+  weatherPowerMult,
   type ItemOption,
   type ModContext,
   type Status,
@@ -531,12 +532,22 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
   );
   const defLabel = t(physical ? "stat.defense" : "stat.spDefense");
 
-  // Weather Ball: its type follows the weather, and its power doubles (50→100)
-  // whenever any weather is active. STAB/effectiveness use this effective type.
+  const atkAbility = attacker?.abilities[atkAbilityIdx] ?? null;
+  // Mega Sol (Mega Meganium): "can use its moves as if the weather were harsh
+  // sunlight" regardless of the actual field weather — an attacker-only
+  // override of the offensive Fire/Water power boost (and Weather Ball).
+  const hasMegaSol = !!(
+    atkAbility && abilitySlug(atkAbility.en) === "mega-sol"
+  );
+  const attackerWeather: Weather = hasMegaSol ? "sun" : weather;
+
+  // Weather Ball: its type follows the weather (the attacker's effective one,
+  // e.g. always "sun" under Mega Sol), and its power doubles (50→100) whenever
+  // any weather is active. STAB/effectiveness use this effective type.
   const isWeatherBall = move?.slug === "weather-ball";
   const effectiveMoveType: PokemonType | null = move
     ? isWeatherBall
-      ? WEATHER_BALL_TYPE[weather]
+      ? WEATHER_BALL_TYPE[attackerWeather]
       : move.type
     : null;
 
@@ -550,7 +561,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
     : isWeightBased && defender
       ? weightBasedPower(defender.weight)
       : isWeatherBall
-        ? weather !== "none"
+        ? attackerWeather !== "none"
           ? 100
           : 50
         : (move?.power ?? 0);
@@ -577,7 +588,6 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
       : 0;
   const hp = defender ? hpValue(defender.base.hp, hpEv) : 0;
 
-  const atkAbility = attacker?.abilities[atkAbilityIdx] ?? null;
   const defAbility = defender?.abilities[defAbilityIdx] ?? null;
   const hasGuts = !!(atkAbility && abilitySlug(atkAbility.en) === "guts");
 
@@ -628,11 +638,18 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
               typeEff: baseTypeEff,
             },
           ),
-          weatherMods(weather, {
-            category: move.category,
-            moveType: effectiveMoveType ?? move.type,
-            defenderTypes: defender.types,
-          }),
+          // Power boost uses the attacker's effective weather (Mega Sol
+          // overrides to "sun"); the defensive Sand/Snow stat boost always
+          // follows the real field weather.
+          {
+            powerMult: weatherPowerMult(
+              attackerWeather,
+              effectiveMoveType ?? move.type,
+            ),
+          },
+          {
+            defMult: weatherDefenseMult(weather, move.category, defender.types),
+          },
           statusMods(atkStatus, {
             category: move.category,
             hasGuts,
@@ -1055,6 +1072,7 @@ export function DamageCalculator({ pokemon }: { pokemon: Pokemon[] }) {
                       })}`}
                     {weather !== "none" &&
                       ` · ${t("damage.weather")}: ${t(WEATHER_LABEL_KEY[weather])}`}
+                    {hasMegaSol && ` · ${t("damage.megaSolInfo")}`}
                     {physical &&
                       !usesDefense &&
                       atkStatus !== "none" &&
