@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Providers from "./providers";
 import { LanguageToggle } from "@/components/LanguageToggle";
@@ -35,6 +36,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        {/* Privacy-friendly, cookie-less pageview analytics (goatcounter.com). */}
+        <Script
+          data-goatcounter="https://pochams-helper.goatcounter.com/count"
+          src="https://gc.zgo.at/count.js"
+          strategy="afterInteractive"
+        />
         <Providers>
           <header className="sticky top-0 z-20 flex items-center justify-between border-b border-gray-200 bg-white/90 px-6 py-2.5 backdrop-blur dark:border-gray-800 dark:bg-gray-950/90">
             <SiteBrand />
