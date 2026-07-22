@@ -42,29 +42,44 @@ function hasPriorityMove(entry: Pokemon): boolean {
 }
 
 const ALL_MOVES = Object.values(moveDict);
+const MOVE_ITEMS: SearchItem[] = ALL_MOVES.map((m) => ({
+  id: m.slug,
+  ko: m.ko,
+  en: m.en,
+  ja: m.ja,
+}));
 
-/** Text search over the move dictionary; picking a result selects its slug. */
-function MoveSearch({
+type SearchItem = { id: string; ko: string; en: string; ja: string };
+
+/**
+ * Text search over a small localized name list (moves, abilities, …); picking
+ * a result selects its `id`. Shared so both filters get the same UI for free.
+ */
+function NameSearch({
+  items,
   value,
   onSelect,
   placeholder,
 }: {
+  items: SearchItem[];
   value: string | null;
-  onSelect: (slug: string | null) => void;
+  onSelect: (id: string | null) => void;
   placeholder: string;
 }) {
   const lang = useLanguage((s) => s.lang);
   const t = useT();
   const [query, setQuery] = useState("");
-  const selected = value ? moveDict[value] : null;
+  const selected = value ? (items.find((i) => i.id === value) ?? null) : null;
   const results =
     query.trim() && !selected
-      ? ALL_MOVES.filter(
-          (m) =>
-            m.ko.includes(query) ||
-            m.en.toLowerCase().includes(query.toLowerCase()) ||
-            m.ja.includes(query),
-        ).slice(0, 20)
+      ? items
+          .filter(
+            (i) =>
+              i.ko.includes(query) ||
+              i.en.toLowerCase().includes(query.toLowerCase()) ||
+              i.ja.includes(query),
+          )
+          .slice(0, 20)
       : [];
   return (
     <div className="relative">
@@ -94,17 +109,17 @@ function MoveSearch({
       )}
       {results.length > 0 && (
         <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-lg border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-900">
-          {results.map((m) => (
-            <li key={m.slug}>
+          {results.map((i) => (
+            <li key={i.id}>
               <button
                 type="button"
                 onClick={() => {
-                  onSelect(m.slug);
+                  onSelect(i.id);
                   setQuery("");
                 }}
                 className="block w-full px-3 py-1.5 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-800"
               >
-                {m[lang]}
+                {i[lang]}
               </button>
             </li>
           ))}
@@ -126,6 +141,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
   const [megaOnly, setMegaOnly] = useState(false);
   const [priorityOnly, setPriorityOnly] = useState(false);
   const [moveFilter, setMoveFilter] = useState<string | null>(null);
+  const [abilityFilter, setAbilityFilter] = useState<string | null>(null);
   const [sortStat, setSortStat] = useState<StatKey | null>(null);
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
   const [filterOpen, setFilterOpen] = useState(false);
@@ -146,6 +162,8 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
           setPriorityOnly(f.priorityOnly);
         if (f.moveFilter === null || typeof f.moveFilter === "string")
           setMoveFilter(f.moveFilter);
+        if (f.abilityFilter === null || typeof f.abilityFilter === "string")
+          setAbilityFilter(f.abilityFilter);
         if (f.sortStat === null || typeof f.sortStat === "string")
           setSortStat(f.sortStat);
         if (f.sortDir === "asc" || f.sortDir === "desc") setSortDir(f.sortDir);
@@ -163,6 +181,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
       megaOnly,
       priorityOnly,
       moveFilter,
+      abilityFilter,
       sortStat,
       sortDir,
     };
@@ -177,6 +196,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
     megaOnly,
     priorityOnly,
     moveFilter,
+    abilityFilter,
     sortStat,
     sortDir,
   ]);
@@ -211,12 +231,27 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
     [pokemon],
   );
 
+  // Unique abilities across the displayed forms (each form's own ability list,
+  // so e.g. a mega's changed ability set is respected), for the ability search.
+  // English name is the id since abilities carry no slug in the source data.
+  const abilityItems = useMemo<SearchItem[]>(() => {
+    const seen = new Map<string, SearchItem>();
+    for (const u of units) {
+      for (const a of u.abilities) {
+        if (!seen.has(a.en))
+          seen.set(a.en, { id: a.en, ko: a.ko, en: a.en, ja: a.ja });
+      }
+    }
+    return [...seen.values()].sort((a, b) => a.ko.localeCompare(b.ko));
+  }, [units]);
+
   const filtered = units.filter(
     (u) =>
       selectedTypes.every((t) => u.types.includes(t)) &&
       (!megaOnly || u.kind === "mega") &&
       (!priorityOnly || u.hasPriority) &&
-      (!moveFilter || u.learnableMoves.includes(moveFilter)),
+      (!moveFilter || u.learnableMoves.includes(moveFilter)) &&
+      (!abilityFilter || u.abilities.some((a) => a.en === abilityFilter)),
   );
 
   const sorted = sortStat
@@ -231,6 +266,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
     (megaOnly ? 1 : 0) +
     (priorityOnly ? 1 : 0) +
     (moveFilter ? 1 : 0) +
+    (abilityFilter ? 1 : 0) +
     (sortStat ? 1 : 0);
 
   useEffect(() => {
@@ -436,10 +472,23 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
               {t("dex.moveFilter")}
             </p>
             <div className="mb-4">
-              <MoveSearch
+              <NameSearch
+                items={MOVE_ITEMS}
                 value={moveFilter}
                 onSelect={setMoveFilter}
                 placeholder={t("dex.moveFilterPlaceholder")}
+              />
+            </div>
+
+            <p className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
+              {t("dex.abilityFilter")}
+            </p>
+            <div className="mb-4">
+              <NameSearch
+                items={abilityItems}
+                value={abilityFilter}
+                onSelect={setAbilityFilter}
+                placeholder={t("dex.abilityFilterPlaceholder")}
               />
             </div>
 
@@ -494,6 +543,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                   setMegaOnly(false);
                   setPriorityOnly(false);
                   setMoveFilter(null);
+                  setAbilityFilter(null);
                   setSortStat(null);
                   setSortDir("desc");
                 }}
