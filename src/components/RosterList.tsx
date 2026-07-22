@@ -26,7 +26,7 @@ type Unit = PokemonForm & {
   key: string;
   slug: string;
   hasPriority: boolean;
-  hasWideGuard: boolean;
+  learnableMoves: string[];
 };
 
 function bst(form: PokemonForm): number {
@@ -41,6 +41,79 @@ function hasPriorityMove(entry: Pokemon): boolean {
   });
 }
 
+const ALL_MOVES = Object.values(moveDict);
+
+/** Text search over the move dictionary; picking a result selects its slug. */
+function MoveSearch({
+  value,
+  onSelect,
+  placeholder,
+}: {
+  value: string | null;
+  onSelect: (slug: string | null) => void;
+  placeholder: string;
+}) {
+  const lang = useLanguage((s) => s.lang);
+  const t = useT();
+  const [query, setQuery] = useState("");
+  const selected = value ? moveDict[value] : null;
+  const results =
+    query.trim() && !selected
+      ? ALL_MOVES.filter(
+          (m) =>
+            m.ko.includes(query) ||
+            m.en.toLowerCase().includes(query.toLowerCase()) ||
+            m.ja.includes(query),
+        ).slice(0, 20)
+      : [];
+  return (
+    <div className="relative">
+      {selected ? (
+        <div className="flex items-center gap-2 rounded-lg border border-gray-300 px-3 py-2 text-sm dark:border-gray-600">
+          <span className="flex-1">{selected[lang]}</span>
+          <button
+            type="button"
+            onClick={() => {
+              onSelect(null);
+              setQuery("");
+            }}
+            aria-label={t("common.close")}
+            className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+          >
+            ✕
+          </button>
+        </div>
+      ) : (
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder={placeholder}
+          className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-gray-500 dark:border-gray-600 dark:bg-gray-900"
+        />
+      )}
+      {results.length > 0 && (
+        <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-lg border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-900">
+          {results.map((m) => (
+            <li key={m.slug}>
+              <button
+                type="button"
+                onClick={() => {
+                  onSelect(m.slug);
+                  setQuery("");
+                }}
+                className="block w-full px-3 py-1.5 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-800"
+              >
+                {m[lang]}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 /**
  * Client-side roster grid. Name language and type / mega filters; the filters
  * live in a modal opened from the toolbar. Rendered from server-provided data,
@@ -52,7 +125,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
   const [selectedTypes, setSelectedTypes] = useState<PokemonType[]>([]);
   const [megaOnly, setMegaOnly] = useState(false);
   const [priorityOnly, setPriorityOnly] = useState(false);
-  const [wideGuardOnly, setWideGuardOnly] = useState(false);
+  const [moveFilter, setMoveFilter] = useState<string | null>(null);
   const [sortStat, setSortStat] = useState<StatKey | null>(null);
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
   const [filterOpen, setFilterOpen] = useState(false);
@@ -71,8 +144,8 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
         if (typeof f.megaOnly === "boolean") setMegaOnly(f.megaOnly);
         if (typeof f.priorityOnly === "boolean")
           setPriorityOnly(f.priorityOnly);
-        if (typeof f.wideGuardOnly === "boolean")
-          setWideGuardOnly(f.wideGuardOnly);
+        if (f.moveFilter === null || typeof f.moveFilter === "string")
+          setMoveFilter(f.moveFilter);
         if (f.sortStat === null || typeof f.sortStat === "string")
           setSortStat(f.sortStat);
         if (f.sortDir === "asc" || f.sortDir === "desc") setSortDir(f.sortDir);
@@ -89,7 +162,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
       selectedTypes,
       megaOnly,
       priorityOnly,
-      wideGuardOnly,
+      moveFilter,
       sortStat,
       sortDir,
     };
@@ -103,7 +176,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
     selectedTypes,
     megaOnly,
     priorityOnly,
-    wideGuardOnly,
+    moveFilter,
     sortStat,
     sortDir,
   ]);
@@ -124,7 +197,6 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
     () =>
       pokemon.flatMap((entry) => {
         const priority = hasPriorityMove(entry);
-        const wideGuard = entry.learnableMoves.includes("wide-guard");
         const nonMega = entry.forms.filter((f) => f.kind !== "mega");
         const megas = entry.forms.filter((f) => f.kind === "mega");
         const shown = nonMega.length > 0 ? [nonMega[0], ...megas] : megas;
@@ -133,7 +205,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
           key: `${entry.slug}|${form.name}`,
           slug: entry.slug,
           hasPriority: priority,
-          hasWideGuard: wideGuard,
+          learnableMoves: entry.learnableMoves,
         }));
       }),
     [pokemon],
@@ -144,7 +216,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
       selectedTypes.every((t) => u.types.includes(t)) &&
       (!megaOnly || u.kind === "mega") &&
       (!priorityOnly || u.hasPriority) &&
-      (!wideGuardOnly || u.hasWideGuard),
+      (!moveFilter || u.learnableMoves.includes(moveFilter)),
   );
 
   const sorted = sortStat
@@ -158,7 +230,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
     selectedTypes.length +
     (megaOnly ? 1 : 0) +
     (priorityOnly ? 1 : 0) +
-    (wideGuardOnly ? 1 : 0) +
+    (moveFilter ? 1 : 0) +
     (sortStat ? 1 : 0);
 
   useEffect(() => {
@@ -358,17 +430,17 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
               >
                 {t("dex.priorityOnly")}
               </button>
-              <button
-                type="button"
-                onClick={() => setWideGuardOnly((v) => !v)}
-                className={
-                  wideGuardOnly
-                    ? "rounded-full bg-teal-500 px-3 py-1 text-xs font-medium text-white"
-                    : "rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-500 hover:border-gray-400 dark:border-gray-700"
-                }
-              >
-                {t("dex.wideGuard")}
-              </button>
+            </div>
+
+            <p className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
+              {t("dex.moveFilter")}
+            </p>
+            <div className="mb-4">
+              <MoveSearch
+                value={moveFilter}
+                onSelect={setMoveFilter}
+                placeholder={t("dex.moveFilterPlaceholder")}
+              />
             </div>
 
             <p className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
@@ -421,7 +493,7 @@ export function RosterList({ pokemon }: { pokemon: Pokemon[] }) {
                   setSelectedTypes([]);
                   setMegaOnly(false);
                   setPriorityOnly(false);
-                  setWideGuardOnly(false);
+                  setMoveFilter(null);
                   setSortStat(null);
                   setSortDir("desc");
                 }}
