@@ -43,12 +43,6 @@ const FEATURES: Feature[] = [
     ready: true,
   },
   {
-    emoji: "🔀",
-    titleKey: "home.typeCalcTitle",
-    descKey: "home.typeCalcDesc",
-    ready: false,
-  },
-  {
     href: "/damage",
     emoji: "💥",
     image: formSpriteFor("gyarados", "Mega Gyarados"),
