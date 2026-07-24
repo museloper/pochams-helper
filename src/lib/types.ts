@@ -206,9 +206,13 @@ export interface UsageEntry {
   pct: number;
 }
 
-/** Items are localized at ingest time (PokéAPI), so they carry 한/영/일 names. */
+/**
+ * Items are localized at ingest time (PokéAPI), so they carry 한/영/일 names
+ * plus a sprite URL (empty for Champions-original items PokéAPI lacks).
+ */
 export interface UsageItem extends LocalizedName {
   pct: number;
+  icon: string;
 }
 
 export interface UsageNature {
@@ -223,8 +227,10 @@ export interface UsageEvSpread {
   evs: StatSpread;
 }
 
-/** Teammates are localized at ingest time (roster lookup). */
-export type UsageTeammate = LocalizedName;
+/** Teammates are localized at ingest time (roster lookup) and carry a sprite. */
+export interface UsageTeammate extends LocalizedName {
+  sprite: string;
+}
 
 /**
  * Per-species competitive usage snapshot (Singles, current season). Tracked

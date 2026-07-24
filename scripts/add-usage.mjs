@@ -36,19 +36,20 @@ function localizedFromPokeApi(names, fallback) {
   };
 }
 
-/** Resolve a teammate's English display name to a roster LocalizedName. Tries
- * exact form/species name, then slug, then a base-species prefix match. */
+/** Resolve a teammate's English display name to a roster entry `{...names,
+ * sprite}`. Tries exact form/species name, then slug, then base-species prefix. */
 function buildTeammateResolver(roster) {
   const byEn = new Map();
   const bySlug = new Map();
   const species = [];
+  const add = (map, key, names, sprite) => {
+    if (!map.has(key)) map.set(key, { ...names, sprite });
+  };
   for (const p of roster) {
-    bySlug.set(p.slug, p.names);
-    species.push({ en: p.names.en, loc: p.names });
-    if (!byEn.has(p.names.en)) byEn.set(p.names.en, p.names);
-    for (const f of p.forms) {
-      if (!byEn.has(f.names.en)) byEn.set(f.names.en, f.names);
-    }
+    add(bySlug, p.slug, p.names, p.sprite);
+    species.push({ en: p.names.en, val: { ...p.names, sprite: p.sprite } });
+    add(byEn, p.names.en, p.names, p.sprite);
+    for (const f of p.forms) add(byEn, f.names.en, f.names, f.sprite);
   }
   return (name) => {
     const exact = byEn.get(name);
@@ -56,13 +57,13 @@ function buildTeammateResolver(roster) {
     const bySlugHit = bySlug.get(slugify(name));
     if (bySlugHit) return bySlugHit;
     const prefix = species.find((s) => name.startsWith(s.en));
-    if (prefix) return prefix.loc;
-    return { ko: name, en: name, ja: name };
+    if (prefix) return prefix.val;
+    return { ko: name, en: name, ja: name, sprite: "" };
   };
 }
 
-/** Fetch localized item names from PokéAPI for a set of English item names. */
-async function fetchItemNames(names) {
+/** Fetch localized names + sprite from PokéAPI for a set of English item names. */
+async function fetchItemData(names) {
   const entries = await pMap(
     [...names],
     async (name) => {
@@ -70,7 +71,8 @@ async function fetchItemNames(names) {
       const loc = data
         ? localizedFromPokeApi(data.names, name)
         : { ko: name, en: name, ja: name };
-      return [name, loc];
+      const icon = data?.sprites?.default ?? "";
+      return [name, { ...loc, icon }];
     },
     8,
   );
@@ -209,22 +211,23 @@ async function main() {
   const uniqueItems = new Set();
   for (const [, u] of raw) for (const it of u.items) uniqueItems.add(it.name);
   console.log(`Fetching ${uniqueItems.size} item names from PokéAPI …`);
-  const itemNames = await fetchItemNames(uniqueItems);
+  const itemData = await fetchItemData(uniqueItems);
   const resolveTeammate = buildTeammateResolver(roster);
   const rosterBySlug = new Map(roster.map((p) => [p.slug, p]));
 
   /**
-   * Localize one held item. Champions-original mega stones (e.g. Meganiumite)
-   * don't exist in PokéAPI, so PokéAPI leaves them English-only. They only
-   * appear on their own holder's page, and mega-stone names follow the
-   * "{species}나이트 / {species}ナイト" convention — so build them from the
+   * Localize one held item (name + sprite). Champions-original mega stones
+   * (e.g. Meganiumite) don't exist in PokéAPI, so it leaves them English-only
+   * and spriteless. They only appear on their own holder's page and follow the
+   * "{species}나이트 / {species}ナイト" convention — so build the name from the
    * holder species (which has official localized names).
    */
   function localizeItem(itemName, holder) {
-    const loc = itemNames.get(itemName) ?? {
+    const loc = itemData.get(itemName) ?? {
       ko: itemName,
       en: itemName,
       ja: itemName,
+      icon: "",
     };
     const isMegaStone = /ite( [XY])?$/.test(itemName);
     const holderHasMega = holder?.forms.some((f) => f.kind === "mega");
@@ -235,6 +238,7 @@ async function main() {
         ko: `${holder.names.ko}나이트${xy}`,
         en: itemName,
         ja: `${holder.names.ja}ナイト${xy}`,
+        icon: loc.icon,
       };
     }
     return loc;

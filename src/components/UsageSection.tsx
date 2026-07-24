@@ -42,21 +42,53 @@ function Bar({ pct }: { pct: number }) {
   );
 }
 
+/** Small square sprite (item icon / teammate) with a subtle surface tile. */
+function Sprite({
+  src,
+  alt,
+  size = 24,
+}: {
+  src: string;
+  alt: string;
+  size?: number;
+}) {
+  if (!src) {
+    return (
+      <span
+        className="shrink-0 rounded-md bg-gray-100 dark:bg-gray-800"
+        style={{ width: size, height: size }}
+      />
+    );
+  }
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      alt={alt}
+      width={size}
+      height={size}
+      loading="lazy"
+      className="shrink-0 object-contain"
+      style={{ width: size, height: size }}
+    />
+  );
+}
+
 function Row({
   label,
   pct,
-  icon,
+  leading,
 }: {
   label: string;
   pct: number;
-  icon?: ReactNode;
+  leading?: ReactNode;
 }) {
   return (
-    <li className="space-y-0.5">
+    <li className="space-y-1.5">
       <div className="flex items-center gap-2 text-sm">
-        {icon}
+        {leading}
         <span className="min-w-0 flex-1 truncate">{label}</span>
-        <span className="w-11 shrink-0 text-right text-xs text-gray-400 tabular-nums">
+        <span className="shrink-0 text-xs font-medium text-gray-500 tabular-nums dark:text-gray-400">
           {pct}%
         </span>
       </div>
@@ -103,22 +135,23 @@ export function UsageSection({
     return `${name} (+${up}/-${down})`;
   };
 
+  const H4 =
+    "mb-3 text-[11px] font-semibold tracking-wide text-gray-400 uppercase";
+
   return (
-    <section className="mt-4 rounded-xl border border-gray-200 p-5 dark:border-gray-700">
-      <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-        <h3 className="text-base font-bold">{t("usage.title")}</h3>
+    <section className="mt-4 rounded-2xl border border-gray-200 p-5 sm:p-7 dark:border-gray-800">
+      <div className="mb-6 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+        <h3 className="text-lg font-bold">{t("usage.title")}</h3>
         <span className="text-xs text-gray-400">
           {t("usage.seasonNote", { season: usage.season })}
         </span>
       </div>
 
-      <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
         {usage.moves.length > 0 && (
           <div>
-            <h4 className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
-              {t("usage.moves")}
-            </h4>
-            <ul className="space-y-2">
+            <h4 className={H4}>{t("usage.moves")}</h4>
+            <ul className="space-y-3.5">
               {usage.moves.slice(0, 8).map((m) => {
                 const move = moveByEn.get(m.name);
                 return (
@@ -126,7 +159,7 @@ export function UsageSection({
                     key={m.name}
                     label={move ? move[lang] : m.name}
                     pct={m.pct}
-                    icon={move && <TypeBadge type={move.type} />}
+                    leading={move && <TypeBadge type={move.type} />}
                   />
                 );
               })}
@@ -136,12 +169,15 @@ export function UsageSection({
 
         {usage.items.length > 0 && (
           <div>
-            <h4 className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
-              {t("usage.items")}
-            </h4>
-            <ul className="space-y-2">
+            <h4 className={H4}>{t("usage.items")}</h4>
+            <ul className="space-y-3.5">
               {usage.items.slice(0, 6).map((it) => (
-                <Row key={it.en} label={it[lang]} pct={it.pct} />
+                <Row
+                  key={it.en}
+                  label={it[lang]}
+                  pct={it.pct}
+                  leading={<Sprite src={it.icon} alt="" size={22} />}
+                />
               ))}
             </ul>
           </div>
@@ -149,10 +185,8 @@ export function UsageSection({
 
         {usage.abilities.length > 0 && (
           <div>
-            <h4 className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
-              {t("common.ability")}
-            </h4>
-            <ul className="space-y-2">
+            <h4 className={H4}>{t("common.ability")}</h4>
+            <ul className="space-y-3.5">
               {usage.abilities.map((a) => (
                 <Row key={a.name} label={abilityLabel(a.name)} pct={a.pct} />
               ))}
@@ -162,10 +196,8 @@ export function UsageSection({
 
         {usage.natures.length > 0 && (
           <div>
-            <h4 className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
-              {t("usage.natures")}
-            </h4>
-            <ul className="space-y-2">
+            <h4 className={H4}>{t("usage.natures")}</h4>
+            <ul className="space-y-3.5">
               {usage.natures.slice(0, 5).map((n) => (
                 <Row key={n.name} label={natureLabel(n)} pct={n.pct} />
               ))}
@@ -175,10 +207,8 @@ export function UsageSection({
 
         {usage.evSpreads.length > 0 && (
           <div>
-            <h4 className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
-              {t("usage.evSpreads")}
-            </h4>
-            <ul className="space-y-2">
+            <h4 className={H4}>{t("usage.evSpreads")}</h4>
+            <ul className="space-y-3.5">
               {usage.evSpreads.slice(0, 4).map((s, i) => (
                 <Row key={i} label={evSpreadLabel(s.evs)} pct={s.pct} />
               ))}
@@ -188,15 +218,14 @@ export function UsageSection({
 
         {usage.teammates.length > 0 && (
           <div>
-            <h4 className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
-              {t("usage.teammates")}
-            </h4>
-            <div className="flex flex-wrap gap-1.5">
+            <h4 className={H4}>{t("usage.teammates")}</h4>
+            <div className="flex flex-wrap gap-2">
               {usage.teammates.slice(0, 6).map((tm) => (
                 <span
                   key={tm.en}
-                  className="rounded-md border border-gray-200 px-2 py-1 text-xs dark:border-gray-700"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 py-1 pr-3 pl-1 text-xs dark:border-gray-700"
                 >
+                  <Sprite src={tm.sprite} alt="" size={24} />
                   {tm[lang]}
                 </span>
               ))}
