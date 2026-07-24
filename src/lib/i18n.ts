@@ -207,6 +207,16 @@ const ko = {
   "dex.sortAsc": "낮은 순 ↑",
   "dex.reset": "초기화",
   "dex.pageSubtitle": "포켓몬 챔피언스 로스터 {n}종 · 종족값 총합 기준",
+
+  // Usage data (championsbattledata.com)
+  "usage.title": "채용률",
+  "usage.seasonNote":
+    "시즌 {season} 기준 · championsbattledata.com 집계 (공식 통계 아님)",
+  "usage.moves": "기술",
+  "usage.items": "지닌도구",
+  "usage.natures": "성격",
+  "usage.evSpreads": "노력치 분배",
+  "usage.teammates": "자주 쓰는 팀원",
 } as const;
 
 type Key = keyof typeof ko;
@@ -393,6 +403,15 @@ const en: Record<Key, string> = {
   "dex.sortAsc": "Low → High ↑",
   "dex.reset": "Reset",
   "dex.pageSubtitle": "Pokémon Champions roster ({n}) · by base stat total",
+
+  "usage.title": "Usage Rate",
+  "usage.seasonNote":
+    "Season {season} · aggregated by championsbattledata.com (unofficial)",
+  "usage.moves": "Moves",
+  "usage.items": "Held Items",
+  "usage.natures": "Natures",
+  "usage.evSpreads": "EV Spreads",
+  "usage.teammates": "Common Teammates",
 };
 
 const ja: Record<Key, string> = {
@@ -577,6 +596,15 @@ const ja: Record<Key, string> = {
   "dex.sortAsc": "低い順 ↑",
   "dex.reset": "リセット",
   "dex.pageSubtitle": "ポケモンチャンピオンズ ロスター {n}種 · 種族値合計基準",
+
+  "usage.title": "採用率",
+  "usage.seasonNote":
+    "シーズン{season} · championsbattledata.com 集計（非公式）",
+  "usage.moves": "技",
+  "usage.items": "持ち物",
+  "usage.natures": "性格",
+  "usage.evSpreads": "努力値配分",
+  "usage.teammates": "よく使われるパートナー",
 };
 
 const DICTS: Record<Language, Record<Key, string>> = { ko, en, ja };

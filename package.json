@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
-    "ingest": "node scripts/ingest-pokemon.mjs"
+    "ingest": "node scripts/ingest-pokemon.mjs",
+    "usage": "node scripts/add-usage.mjs"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.101.2",

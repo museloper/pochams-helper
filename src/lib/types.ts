@@ -192,3 +192,51 @@ export interface Pokemon {
   /** Learnable move slugs, shared across forms. */
   learnableMoves: string[];
 }
+
+// ---------------------------------------------------------------------------
+// Competitive usage data (championsbattledata.com; see docs/DECISIONS.md)
+// ---------------------------------------------------------------------------
+
+/**
+ * Moves/abilities keep the source English name (localized in the UI via the
+ * move dictionary / this species' own ability list). `pct` is adoption 0–100.
+ */
+export interface UsageEntry {
+  name: string;
+  pct: number;
+}
+
+/** Items are localized at ingest time (PokéAPI), so they carry 한/영/일 names. */
+export interface UsageItem extends LocalizedName {
+  pct: number;
+}
+
+export interface UsageNature {
+  name: string;
+  pct: number;
+  statUp: string;
+  statDown: string;
+}
+
+export interface UsageEvSpread {
+  pct: number;
+  evs: StatSpread;
+}
+
+/** Teammates are localized at ingest time (roster lookup). */
+export type UsageTeammate = LocalizedName;
+
+/**
+ * Per-species competitive usage snapshot (Singles, current season). Tracked
+ * per species, not per form — a Mega Stone just shows up as a held-item
+ * option, since Champions has no separate mega-form usage entries.
+ */
+export interface PokemonUsage {
+  season: string;
+  moves: UsageEntry[];
+  items: UsageItem[];
+  abilities: UsageEntry[];
+  natures: UsageNature[];
+  evSpreads: UsageEvSpread[];
+  teammates: UsageTeammate[];
+}

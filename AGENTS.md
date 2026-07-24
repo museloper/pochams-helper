@@ -16,6 +16,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - `npm run build` — 프로덕션 빌드 + 타입 체크 (변경 후 이걸로 검증)
 - `npm run lint` — ESLint
 - `npm run format` — Prettier 전체 포맷 (파일 수정 시 훅이 자동 실행하므로 보통 직접 돌릴 필요 없음)
+- `npm run ingest` — 로스터/기술 스냅샷 재생성 (`scripts/ingest-pokemon.mjs` → `src/lib/data/*.json`)
+- `npm run usage` — 경쟁전 채용률 스냅샷 재생성 (`scripts/add-usage.mjs` → `src/lib/data/usage.json`). 소스: championsbattledata.com 채용률 API + PokéAPI(아이템 이름). 종 단위·Singles. 데이터 결정은 DECISIONS.md 참고.
 
 테스트 러너는 아직 없다. 도입 시 이 문서를 갱신할 것.
 
